@@ -1,0 +1,1229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brisco's Rise And Shine Mobile Detail | Belton, TX</title>
+<meta name="description" content="Brisco's Rise And Shine Mobile Detail in Belton, TX. Professional mobile car detailing. We come to you. 12 five-star reviews. (254) 563-6473.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --blue: #5f8ecf;
+  --blue-hover: #4a78bb;
+  --dark: #040d1f;
+  --card: #0a1528;
+  --navy: #0d1f5c;
+  --text: #f0f4ff;
+  --muted: rgba(240,244,255,0.55);
+  --border: rgba(95,142,207,0.25);
+  --card-border: rgba(95,142,207,0.2);
+  --white: #ffffff;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--muted);
+  line-height: 1.7;
+  background: var(--dark);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: var(--text);
+  line-height: 1.2;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+a { text-decoration: none; color: inherit; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* NAV */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #040d1f;
+  border-bottom: 1px solid var(--card-border);
+  z-index: 1000;
+}
+
+.nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-links a {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: rgba(240,244,255,0.7);
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--blue);
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.hamburger svg {
+  width: 28px;
+  height: 28px;
+  stroke: var(--text);
+}
+
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 76px;
+  left: 0;
+  right: 0;
+  background: #040d1f;
+  border-bottom: 1px solid var(--card-border);
+  padding: 20px 24px;
+  z-index: 999;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.mobile-menu.open {
+  display: flex;
+}
+
+.mobile-menu a {
+  font-size: 1rem;
+  font-weight: 500;
+  color: rgba(240,244,255,0.7);
+  padding: 8px 0;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+}
+
+.hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: slowZoom 20s ease-in-out infinite alternate;
+}
+
+@keyframes slowZoom {
+  from { transform: scale(1); }
+  to { transform: scale(1.08); }
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(4,13,31,0.7) 0%, rgba(4,13,31,0.45) 50%, rgba(4,13,31,0.8) 100%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 800px;
+  padding: 0 24px;
+}
+
+.hero-eyebrow {
+  display: inline-block;
+  background: var(--blue);
+  color: var(--white);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 8px 20px;
+  border-radius: 30px;
+  margin-bottom: 24px;
+}
+
+.hero h1 {
+  font-size: clamp(2.6rem, 6vw, 4.8rem);
+  font-weight: 800;
+  color: var(--white);
+  margin-bottom: 20px;
+}
+
+.hero-sub {
+  font-size: 1.15rem;
+  color: rgba(240,244,255,0.75);
+  margin-bottom: 36px;
+  line-height: 1.7;
+  max-width: 620px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.btn-primary {
+  display: inline-block;
+  background: var(--blue);
+  color: var(--white);
+  padding: 16px 36px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background 0.3s ease, transform 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background: var(--blue-hover);
+  transform: translateY(-2px);
+}
+
+.btn-ghost {
+  display: inline-block;
+  color: var(--white);
+  padding: 16px 36px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  border: 1px solid rgba(240,244,255,0.3);
+  transition: border-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-ghost:hover {
+  border-color: var(--white);
+  transform: translateY(-2px);
+}
+
+.hero-stats {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  font-size: 0.85rem;
+  color: rgba(240,244,255,0.6);
+}
+
+.hero-stats span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.hero-stats .stars {
+  color: #fbbf24;
+}
+
+.stat-divider {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: rgba(240,244,255,0.25);
+}
+
+/* ABOUT */
+.about {
+  padding: 100px 0;
+  background: var(--dark);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.about-card {
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  padding: 40px 36px;
+}
+
+.section-badge {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--blue);
+  margin-bottom: 12px;
+}
+
+.about-card h2 {
+  font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+  font-weight: 800;
+  margin-bottom: 24px;
+}
+
+.about-card p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: rgba(240,244,255,0.6);
+  margin-bottom: 16px;
+}
+
+.about-card p:last-child {
+  margin-bottom: 0;
+}
+
+.value-badges {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.value-badge {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-left: 3px solid var(--blue);
+  border-radius: 12px;
+  padding: 24px 20px;
+}
+
+.value-badge-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  background: rgba(95,142,207,0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.value-badge-icon svg {
+  width: 24px;
+  height: 24px;
+  stroke: var(--blue);
+  fill: none;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.value-badge-text {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+/* SERVICES */
+.services {
+  padding: 100px 0;
+  background: var(--card);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-header h2 {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.section-header p {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  color: var(--muted);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.service-card {
+  background: rgba(4,13,31,0.6);
+  border: 1px solid var(--card-border);
+  border-top: 3px solid var(--blue);
+  border-radius: 12px;
+  padding: 32px 28px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 40px rgba(95,142,207,0.15);
+}
+
+.service-icon {
+  color: var(--blue);
+  margin-bottom: 18px;
+  width: 44px;
+  height: 44px;
+  background: rgba(95,142,207,0.15);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-icon svg {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+}
+
+.service-card h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.service-card p {
+  font-size: 0.92rem;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+/* REVIEWS */
+.reviews {
+  padding: 80px 0;
+  background: #f0f4ff;
+}
+
+.reviews .section-header h2 {
+  color: var(--navy);
+}
+
+.reviews .section-badge {
+  color: var(--blue);
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.review-card {
+  background: white;
+  border: 1px solid rgba(13,31,92,0.08);
+  border-radius: 12px;
+  padding: 32px 28px;
+}
+
+.review-stars {
+  color: #fbbf24;
+  font-size: 1.1rem;
+  margin-bottom: 16px;
+}
+
+.review-card blockquote {
+  font-size: 0.92rem;
+  line-height: 1.7;
+  color: rgba(13,31,92,0.65);
+  margin-bottom: 20px;
+  font-style: normal;
+}
+
+.review-card .reviewer {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.reviews-summary {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--blue);
+}
+
+/* CONTACT */
+.contact {
+  padding: 100px 0;
+  background: var(--dark);
+}
+
+.contact-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.contact-card {
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 32px 28px;
+  text-align: center;
+}
+
+.contact-card-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background: rgba(95,142,207,0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+}
+
+.contact-card-icon svg {
+  width: 24px;
+  height: 24px;
+  fill: var(--blue);
+}
+
+.contact-card h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.contact-card p {
+  font-size: 0.92rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.contact-card a {
+  color: var(--blue);
+  transition: color 0.3s;
+}
+
+.contact-card a:hover {
+  color: var(--blue-hover);
+}
+
+/* FAQ */
+.faq {
+  padding: 80px 0;
+  background: #f0f4ff;
+}
+
+.faq .section-header h2 {
+  color: var(--navy);
+}
+
+.faq .section-badge {
+  color: var(--blue);
+}
+
+.faq-list {
+  max-width: 780px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.faq-item {
+  background: white;
+  border: 1px solid rgba(13,31,92,0.1);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  cursor: pointer;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--navy);
+  text-align: left;
+}
+
+.faq-question svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  stroke: var(--blue);
+  transition: transform 0.3s;
+}
+
+.faq-item.open .faq-question svg {
+  transform: rotate(45deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.faq-answer-inner {
+  padding: 0 24px 20px;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: rgba(13,31,92,0.65);
+}
+
+/* FOOTER */
+footer {
+  background: var(--dark);
+  padding: 60px 0 40px;
+  border-top: 1px solid var(--card-border);
+}
+
+.footer-inner {
+  text-align: center;
+}
+
+.footer-brand {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.footer-tagline {
+  font-size: 0.88rem;
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+
+.footer-details {
+  font-size: 0.85rem;
+  color: rgba(240,244,255,0.45);
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+
+.footer-details a {
+  color: rgba(240,244,255,0.6);
+  transition: color 0.3s;
+}
+
+.footer-details a:hover {
+  color: var(--blue);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(240,244,255,0.06);
+  padding-top: 24px;
+  font-size: 0.82rem;
+  color: rgba(240,244,255,0.3);
+}
+
+.footer-bottom a {
+  color: var(--blue);
+  font-weight: 600;
+}
+
+/* CTA SECTION */
+#cta-section {
+  padding: 80px 0;
+  background: var(--dark);
+}
+
+.cta-card {
+  max-width: 800px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, var(--card) 0%, #0f1d3d 100%);
+  border: 1px solid var(--card-border);
+  border-radius: 20px;
+  padding: 48px;
+  text-align: center;
+}
+
+.cta-photo {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--blue);
+  margin: 0 auto 24px;
+}
+
+.cta-card h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.cta-subtitle {
+  font-size: 0.92rem;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+.cta-tagline {
+  font-size: 0.82rem;
+  color: rgba(240,244,255,0.35);
+  margin-bottom: 28px;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.cta-buttons .btn-primary {
+  padding: 14px 32px;
+}
+
+.btn-outline {
+  display: inline-block;
+  color: var(--white);
+  padding: 14px 32px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  border: 1px solid rgba(240,244,255,0.2);
+  transition: border-color 0.3s ease;
+}
+
+.btn-outline:hover {
+  border-color: var(--white);
+}
+
+.cta-email {
+  font-size: 0.82rem;
+  color: rgba(240,244,255,0.4);
+}
+
+.cta-email a {
+  color: rgba(240,244,255,0.6);
+  transition: color 0.3s;
+}
+
+.cta-email a:hover {
+  color: var(--blue);
+}
+
+/* SEO SECTION */
+@media(max-width:960px){
+  #kw-layout{grid-template-columns:1fr!important;}
+  .kw-dh{display:none!important;}
+  .kw-mh{display:grid!important;}
+}
+@media(max-width:768px){
+  #kw-layout{gap:24px!important;}
+}
+
+/* RESPONSIVE */
+@media (max-width: 960px) {
+  .nav-links { display: none; }
+  .hamburger { display: block; }
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .reviews-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+  .about-grid { grid-template-columns: 1fr; gap: 32px; }
+  .contact-cards { grid-template-columns: 1fr; }
+  .cta-card { padding: 36px 24px; }
+  .cta-buttons { flex-direction: column; align-items: center; }
+  #kw-layout { grid-template-columns: 1fr !important; }
+  #br-prev, #br-next { display:none; }
+}
+
+@media (max-width: 640px) {
+  .br-visual-strip { grid-template-columns:1fr !important; height:auto !important; }
+  .br-visual-strip > div { height:220px; }
+  .value-badges { flex-direction: column; }
+}
+
+@media (max-width: 480px) {
+  .hero h1 { font-size: 2.2rem; }
+  .hero-sub { font-size: 1rem; }
+  .services-grid { grid-template-columns: 1fr; }
+  .services { padding: 60px 0; }
+  .about { padding: 60px 0; }
+  .contact { padding: 60px 0; }
+  .hero-buttons { flex-direction: column; align-items: center; }
+  .nav-inner { padding: 12px 16px; }
+}
+</style>
+<meta property="og:title" content="Brisco's Rise And Shine Mobile Detail | Belton, TX">
+<meta property="og:description" content="Professional mobile car detailing in Belton, TX. We come to you. 12 five-star reviews.">
+<meta property="og:type" content="website">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "@id": "#business",
+      "name": "Brisco's Rise And Shine Mobile Detail",
+      "description": "Professional mobile auto detailing in Belton, TX. We use modern equipment and advanced techniques to deliver impeccable results.",
+      "telephone": "(254) 563-6473",
+      "email": "monteyeb7@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Belton",
+        "addressRegion": "TX",
+        "postalCode": "76513",
+        "addressCountry": "US"
+      },
+      "areaServed": ["Belton"],
+      "openingHours": "Tu-Sa 10:00-18:00",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "reviewCount": "12"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Services",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Hand Washing" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Car Waxing" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Car Interior Shampooing" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Dash Cleaning" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Door Cleaning" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Car Buffing" } }
+        ]
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="#">
+      <div class="nav-logo" style="line-height:1.1;"><span style="color:#5f8ecf;font-size:1.1rem;font-weight:900;font-family:Plus Jakarta Sans,sans-serif;letter-spacing:-0.01em;">BRISCO'S</span><span style="color:#f0f4ff;font-size:0.58rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;display:block;">RISE AND SHINE DETAIL</span></div>
+    </a>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.mobile-menu').classList.toggle('open')">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+</nav>
+<div class="mobile-menu">
+  <a href="#services" onclick="this.parentElement.classList.remove('open')">Services</a>
+  <a href="#gallery" onclick="this.parentElement.classList.remove('open')">Gallery</a>
+  <a href="#reviews" onclick="this.parentElement.classList.remove('open')">Reviews</a>
+  <a href="#contact" onclick="this.parentElement.classList.remove('open')">Contact</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg">
+    <img src="/brisco/hero.jpg" alt="Professional mobile car detailing in Belton TX" loading="eager" fetchpriority="high">
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <span class="hero-eyebrow">BELTON, TX &middot; 12 FIVE-STAR REVIEWS</span>
+    <h1>Belton's Mobile Detailing Experts</h1>
+    <p class="hero-sub">Professional, thorough, and convenient. We come to you and we make your vehicle look brand new.</p>
+    <div class="hero-buttons">
+      <a href="#contact" class="btn-primary">Book Your Detail &rarr;</a>
+      <a href="tel:2545636473" class="btn-ghost">(254) 563-6473</a>
+    </div>
+    <div class="hero-stats">
+      <span>By Appointment</span>
+      <span class="stat-divider"></span>
+      <span><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>&nbsp;12 Five-Star Reviews</span>
+      <span class="stat-divider"></span>
+      <span>Belton, TX</span>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-card">
+        <span class="section-badge">About Us</span>
+        <h2>Passionate Detailers. Outstanding Results.</h2>
+        <p>Welcome to Brisco's Rise And Shine Mobile Detail. We are a passionate team of auto detailers based in Belton, TX. We take our work very seriously because we are car enthusiasts at heart.</p>
+        <p>Whether you need to prep your vehicle for a sale, a shoot, or just want it looking its best, we are the team to call. We use modern equipment and advanced techniques to deliver impeccable results at a pocket-friendly cost.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:24px;">
+        <img src="/brisco/stock-exterior.jpg" alt="Brisco's Rise And Shine Mobile Detail exterior work" style="border-radius:12px;width:100%;object-fit:cover;" loading="lazy">
+        <div class="value-badges">
+          <div class="value-badge">
+            <div class="value-badge-icon">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 0 0-8 8c0 5 8 13 8 13s8-8 8-13a8 8 0 0 0-8-8z"/></svg>
+            </div>
+            <span class="value-badge-text">We Come to You</span>
+          </div>
+          <div class="value-badge">
+            <div class="value-badge-icon">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+            </div>
+            <span class="value-badge-text">Advanced Equipment</span>
+          </div>
+          <div class="value-badge">
+            <div class="value-badge-icon">
+              <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
+            </div>
+            <span class="value-badge-text">Satisfaction Guaranteed</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VISUAL BREAK -->
+<section style="background:#040d1f;padding:0 0 0;">
+  <div class="br-visual-strip" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;height:340px;overflow:hidden;">
+    <div style="overflow:hidden;position:relative;">
+      <img src="/brisco/stock-exterior.jpg" alt="Exterior hand wash and wax" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center;transition:transform 0.6s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+      <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(4,13,31,0.85));padding:20px 20px 18px;pointer-events:none;">
+        <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#5f8ecf;margin-bottom:4px;">EXTERIOR</div>
+        <div style="font-size:0.95rem;font-weight:700;color:#f0f4ff;font-family:'Plus Jakarta Sans',sans-serif;">Hand Wash &amp; Wax</div>
+      </div>
+    </div>
+    <div style="overflow:hidden;position:relative;">
+      <img src="/brisco/stock-interior-steam.jpg" alt="Interior shampoo and steam clean" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center;transition:transform 0.6s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+      <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(4,13,31,0.85));padding:20px 20px 18px;pointer-events:none;">
+        <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#5f8ecf;margin-bottom:4px;">INTERIOR</div>
+        <div style="font-size:0.95rem;font-weight:700;color:#f0f4ff;font-family:'Plus Jakarta Sans',sans-serif;">Shampoo &amp; Steam Clean</div>
+      </div>
+    </div>
+    <div style="overflow:hidden;position:relative;">
+      <img src="/brisco/stock-interior-vacuum.jpg" alt="Interior vacuum and dash clean" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center;transition:transform 0.6s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+      <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(4,13,31,0.85));padding:20px 20px 18px;pointer-events:none;">
+        <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#5f8ecf;margin-bottom:4px;">INTERIOR</div>
+        <div style="font-size:0.95rem;font-weight:700;color:#f0f4ff;font-family:'Plus Jakarta Sans',sans-serif;">Vacuum &amp; Dash Clean</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge">Our Services</span>
+      <h2>Everything Your Vehicle Needs</h2>
+      <p>From hand washing to full buffing, we deliver professional results with modern equipment and advanced techniques.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v6M8 4v4M16 4v4"/><path d="M6 12c0 0-2 1-2 3s2 3 2 3"/><path d="M18 12c0 0 2 1 2 3s-2 3-2 3"/><circle cx="12" cy="16" r="2"/></svg></div>
+        <h3>Hand Washing</h3>
+        <p>Thorough hand wash using professional technique to clean every surface without scratching the paint.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+        <h3>Car Waxing</h3>
+        <p>Premium wax application for a deep shine and lasting paint protection against the elements.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2h2v4H8z"/><path d="M9 6v3"/><path d="M6 15c-1.5 1-2 3-2 5h16c0-2-.5-4-2-5"/><path d="M9 9c0 0-5 2-5 8"/><path d="M9 9c0 0 5 2 5 8"/></svg></div>
+        <h3>Car Interior Shampooing</h3>
+        <p>Deep shampoo treatment for seats, carpets, and all upholstery to remove dirt, stains, and odors.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="12" rx="2"/><line x1="6" y1="20" x2="18" y2="20"/><line x1="10" y1="16" x2="14" y2="16"/><line x1="10" y1="16" x2="10" y2="20"/><line x1="14" y1="16" x2="14" y2="20"/></svg></div>
+        <h3>Dash Cleaning</h3>
+        <p>Detailed cleaning of your dashboard, vents, and all interior panels to leave them spotless and conditioned.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="14" height="18" rx="2"/><line x1="17" y1="8" x2="21" y2="8"/><line x1="17" y1="12" x2="21" y2="12"/><circle cx="10" cy="12" r="1"/></svg></div>
+        <h3>Door Cleaning</h3>
+        <p>Full interior and exterior door panel cleaning including jambs, handles, and trim.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3c0 0 4 4 4 9s-4 9-4 9"/><path d="M12 3c0 0-4 4-4 9s4 9 4 9"/><line x1="3" y1="12" x2="21" y2="12"/></svg></div>
+        <h3>Car Buffing</h3>
+        <p>Multi-stage buffing to remove light scratches, swirl marks, and oxidation for a showroom finish.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews" id="reviews">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge">Reviews</span>
+      <h2>What Our Customers Say</h2>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>My husband and I used Brisco Rise and Shine Mobile Detail, and the service was absolutely excellent! Mr. Brisco was professional, thorough, and exceeded our expectations. My family and I will definitely be using his services again!</blockquote>
+        <div class="reviewer">TyKei By Design</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>Brisco's Rise And Shine Mobile Detail truly lives up to the name! Professional, punctual, and the attention to detail was amazing. Highly recommend if you are looking for reliable, high-quality mobile detailing!</blockquote>
+        <div class="reviewer">Ayre'ale Sally</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>Very impressive! Great attention to detail! Well worth every penny! Trustworthy, honest, well mannered, so very kind. I recommend him highly!</blockquote>
+        <div class="reviewer">Patricia Sappington</div>
+      </div>
+    </div>
+    <div class="reviews-summary">Rated 5.0 stars on Google &middot; 12 Reviews</div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge">Get In Touch</span>
+      <h2>Contact Us</h2>
+      <p>Reach out to book your detail or ask any questions. We serve Belton, TX and surrounding areas.</p>
+    </div>
+    <div class="contact-cards">
+      <div class="contact-card">
+        <div class="contact-card-icon">
+          <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1.02l-2.2 2.2z"/></svg>
+        </div>
+        <h3>Phone</h3>
+        <p><a href="tel:2545636473">(254) 563-6473</a></p>
+      </div>
+      <div class="contact-card">
+        <div class="contact-card-icon">
+          <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        </div>
+        <h3>Email</h3>
+        <p><a href="mailto:monteyeb7@gmail.com">monteyeb7@gmail.com</a></p>
+      </div>
+      <div class="contact-card">
+        <div class="contact-card-icon">
+          <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+        </div>
+        <h3>Hours</h3>
+        <p>Tue-Sat 10:00AM-6:00PM<br>Sun-Mon Closed</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge">FAQ</span>
+      <h2>Frequently Asked Questions</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-question">Do you come to my location?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+        <div class="faq-answer"><div class="faq-answer-inner">Yes. We are fully mobile and serve Belton, TX and surrounding areas.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">How do I book an appointment?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+        <div class="faq-answer"><div class="faq-answer-inner">Call (254) 563-6473 or email monteyeb7@gmail.com. We are by appointment only.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">What services do you offer?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+        <div class="faq-answer"><div class="faq-answer-inner">Hand washing, car waxing, interior shampooing, dash cleaning, door cleaning, and car buffing.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">How long does a detail take?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+        <div class="faq-answer"><div class="faq-answer-inner">It depends on the size of the vehicle and services selected. We will give you a time estimate when you book.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Do you guarantee your work?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+        <div class="faq-answer"><div class="faq-answer-inner">Yes. We take pride in our results and will make sure you are satisfied before we leave.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">Brisco's Rise And Shine Mobile Detail</div>
+      <p class="footer-tagline">Professional Mobile Detailing in Belton, TX</p>
+      <div class="footer-details">
+        Belton, Texas 76513<br>
+        <a href="tel:2545636473">(254) 563-6473</a> &middot; <a href="mailto:monteyeb7@gmail.com">monteyeb7@gmail.com</a><br>
+        Tue-Sat 10:00AM-6:00PM &middot; Sun-Mon Closed
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Brisco's Rise And Shine Mobile Detail. All rights reserved. Powered by <a href="https://zing-work.com" target="_blank">ZING</a>.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- SEO SECTION -->
+<section style="background:#0f1623;padding:80px 0;color:rgba(255,255,255,0.7);font-family:'Inter',sans-serif;">
+  <div style="max-width:1100px;margin:0 auto;padding:0 32px;">
+    <h2 style="color:white;font-size:clamp(1.8rem,3vw,2.4rem);text-align:center;margin-bottom:12px;font-family:inherit;">Your Local Competition is Already Online.</h2>
+    <p style="text-align:center;font-size:1.05rem;margin-bottom:40px;max-width:650px;margin-left:auto;margin-right:auto;color:rgba(255,255,255,0.6);">We looked at what Belton drivers search every month. Here's what you're missing.</p>
+    <div style="background:rgba(232,96,10,0.12);border:1px solid rgba(232,96,10,0.3);border-radius:10px;padding:20px 28px;text-align:center;margin-bottom:48px;font-size:1.05rem;color:#e8600a;font-weight:600;">~19,800/mo in local search volume — none of it going to Brisco's Rise And Shine right now.</div>
+    <div id="kw-layout" style="display:grid;grid-template-columns:2fr 1fr;gap:40px;margin-bottom:60px;align-items:start;">
+      <div>
+        <div class="kw-dh" style="display:grid;grid-template-columns:1fr 90px 100px;padding:10px 16px;background:rgba(255,255,255,0.04);border-bottom:1px solid rgba(255,255,255,0.08);gap:8px;">
+          <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.35);">Keyword</div>
+          <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.35);text-align:center;">Status</div>
+          <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.35);text-align:right;">Searches/mo</div>
+        </div>
+        <div class="kw-mh" style="display:none;grid-template-columns:1fr 60px 80px;padding:10px 14px;background:rgba(255,255,255,0.04);border-bottom:1px solid rgba(255,255,255,0.08);gap:6px;">
+          <div style="font-size:0.6rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.35);">Keyword</div>
+          <div style="font-size:0.6rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.35);text-align:center;">Status</div>
+          <div style="font-size:0.6rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.35);text-align:right;">Searches</div>
+        </div>
+        <div id="kw-rows"></div>
+        <p style="font-size:0.68rem;color:rgba(255,255,255,0.25);margin-top:12px;">* Search volumes est. Data sourced from DataForSEO.</p>
+      </div>
+      <div style="border:1px solid rgba(232,96,10,0.3);border-radius:12px;background:rgba(232,96,10,0.06);padding:28px 24px;position:sticky;top:88px;">
+        <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#e8600a;margin-bottom:16px;">How We Fix This</div>
+        <div style="display:flex;flex-direction:column;gap:14px;">
+          <div style="display:flex;gap:12px;align-items:flex-start;"><span style="color:#f97316;font-size:1rem;margin-top:1px;flex-shrink:0;">&#10003;</span><div><div style="font-size:0.88rem;font-weight:700;color:white;margin-bottom:2px;">50 Local Landing Pages</div><div style="font-size:0.76rem;color:rgba(255,255,255,0.45);line-height:1.5;">One page per keyword and service area, built to rank</div></div></div>
+          <div style="display:flex;gap:12px;align-items:flex-start;"><span style="color:#f97316;font-size:1rem;margin-top:1px;flex-shrink:0;">&#10003;</span><div><div style="font-size:0.88rem;font-weight:700;color:white;margin-bottom:2px;">AI Chat</div><div style="font-size:0.76rem;color:rgba(255,255,255,0.45);line-height:1.5;">Converts visitors into booked jobs 24/7, even while you sleep</div></div></div>
+          <div style="display:flex;gap:12px;align-items:flex-start;"><span style="color:#f97316;font-size:1rem;margin-top:1px;flex-shrink:0;">&#10003;</span><div><div style="font-size:0.88rem;font-weight:700;color:white;margin-bottom:2px;">SEO Keyword Strategy</div><div style="font-size:0.76rem;color:rgba(255,255,255,0.45);line-height:1.5;">Targeting the exact searches Belton drivers are making</div></div></div>
+          <div style="display:flex;gap:12px;align-items:flex-start;"><span style="color:#f97316;font-size:1rem;margin-top:1px;flex-shrink:0;">&#10003;</span><div><div style="font-size:0.88rem;font-weight:700;color:white;margin-bottom:2px;">All Done For You</div><div style="font-size:0.76rem;color:rgba(255,255,255,0.45);line-height:1.5;">You run your business. We handle everything else.</div></div></div>
+        </div>
+        <a href="https://meetings.hubspot.com/elliot-farmer" target="_blank" style="display:block;margin-top:24px;background:#f97316;color:white;padding:16px 20px;border-radius:6px;font-size:0.82rem;font-weight:700;letter-spacing:0.09em;text-transform:uppercase;text-decoration:none;text-align:center;width:100%;box-sizing:border-box;">Fix My Rankings</a>
+        <div style="text-align:center;margin-top:10px;font-size:0.72rem;color:rgba(255,255,255,0.35);">From <strong style="color:#f97316;">$59/mo</strong> &middot; No contract</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA SECTION -->
+<section id="cta-section">
+  <div class="container">
+    <div class="cta-card">
+      <img class="cta-photo" src="/brisco/elliot.png" alt="Elliot Farmer, ZING Senior Business Advisor" loading="lazy">
+      <h2>Ready to get more detailing customers in Belton? Let us talk.</h2>
+      <p class="cta-subtitle">Elliot Farmer &middot; Senior Business Advisor, ZING</p>
+      <p class="cta-tagline">Websites from $59/mo &middot; 50 local landing pages &middot; Full design included &middot; No contract</p>
+      <div class="cta-buttons">
+        <a href="https://meetings.hubspot.com/elliot-farmer" target="_blank" class="btn-primary">Book a Free Call &rarr;</a>
+        <a href="tel:7205340219" class="btn-outline">(720) 534-0219</a>
+      </div>
+      <div class="cta-email"><a href="mailto:elliot@zing-work.com">elliot@zing-work.com</a></div>
+    </div>
+  </div>
+</section>
+
+<script>
+(function(){
+  /* FAQ accordion */
+  document.querySelectorAll('.faq-question').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var item = this.parentElement;
+      var answer = item.querySelector('.faq-answer');
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(function(el){
+        el.classList.remove('open');
+        el.querySelector('.faq-answer').style.maxHeight = '0';
+      });
+      if(!isOpen){
+        item.classList.add('open');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+      }
+    });
+  });
+
+  /* Mobile menu close on resize */
+  window.addEventListener('resize', function(){
+    if(window.innerWidth > 960){
+      var mm = document.querySelector('.mobile-menu');
+      if(mm) mm.classList.remove('open');
+    }
+  });
+
+  /* SEO keyword table */
+  var kws=[
+    {kw:"mobile detailing belton tx",vol:320},
+    {kw:"car detailing belton texas",vol:480},
+    {kw:"mobile detailing near me",vol:18100},
+    {kw:"auto detailing killeen tx",vol:590},
+    {kw:"car wash belton tx",vol:260}
+  ];
+  var c=document.getElementById("kw-rows");
+  if(!c)return;
+  function render(){
+    c.innerHTML="";
+    var m=window.innerWidth<=960;
+    kws.forEach(function(item,i){
+      var row=document.createElement("div");
+      var n=String(i+1).padStart(2,"0");
+      if(m){
+        row.style.cssText="display:grid;grid-template-columns:1fr 60px 80px;padding:12px 14px;border-bottom:1px solid rgba(255,255,255,0.06);align-items:center;gap:6px;";
+        row.innerHTML='<div style="display:flex;align-items:center;gap:8px;"><span style="font-size:0.62rem;color:rgba(255,255,255,0.2);font-weight:700;flex-shrink:0;">'+n+'</span><span style="font-size:0.78rem;color:rgba(255,255,255,0.85);font-weight:500;line-height:1.3;">'+item.kw+'</span></div><div style="text-align:center;"><span style="background:rgba(239,68,68,0.12);color:#f87171;padding:3px 8px;border-radius:20px;font-size:0.68rem;font-weight:600;">Not ranking</span></div><div style="text-align:right;font-size:0.8rem;font-weight:700;color:white;">'+item.vol.toLocaleString()+'<span style="font-size:0.6rem;color:rgba(255,255,255,0.35);margin-left:2px;">est.</span></div>';
+      }else{
+        row.style.cssText="display:grid;grid-template-columns:1fr 90px 100px;padding:14px 16px;border-bottom:1px solid rgba(255,255,255,0.05);align-items:center;transition:background 0.2s;cursor:default;";
+        row.onmouseenter=function(){this.style.background="rgba(255,255,255,0.03)"};
+        row.onmouseleave=function(){this.style.background="transparent"};
+        row.innerHTML='<div style="display:flex;align-items:center;gap:10px;"><span style="font-size:0.68rem;color:rgba(255,255,255,0.2);font-weight:600;min-width:20px;flex-shrink:0;">'+n+'</span><span style="font-size:0.85rem;color:rgba(255,255,255,0.85);font-weight:500;">'+item.kw+'</span></div><div style="text-align:center;"><span style="background:rgba(239,68,68,0.12);color:#f87171;padding:4px 10px;border-radius:20px;font-size:0.72rem;font-weight:600;">Not ranking</span></div><div style="text-align:right;font-size:0.82rem;font-weight:700;color:white;">'+item.vol.toLocaleString()+' <span style="font-size:0.62rem;color:rgba(255,255,255,0.35);">est.</span></div>';
+      }
+      c.appendChild(row);
+    });
+  }
+  render();
+  window.addEventListener("resize",render);
+})();
+</script>
+</body>
+</html>

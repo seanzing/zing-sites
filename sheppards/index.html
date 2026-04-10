@@ -1,0 +1,1310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sheppards Prosperity Auto Detailing | Lake City, FL</title>
+<meta name="description" content="Sheppards Prosperity Auto Detailing in Lake City, FL. North Florida's premier auto detailing since 2010. Cars, trucks, luxury vehicles, commercial fleets, and semi-trucks. (386) 466-9305.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #080808;
+  --dark-card: #111111;
+  --accent: #d4a853;
+  --accent-hover: #c49040;
+  --text: #f5f0e8;
+  --muted: rgba(245,240,232,0.55);
+  --card-border: rgba(212,168,83,0.15);
+  --section-dark: #0d0d0d;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: rgba(245,240,232,0.7);
+  line-height: 1.7;
+  background: var(--bg);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: var(--text);
+  line-height: 1.2;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+a { text-decoration: none; color: inherit; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* NAV */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #080808;
+  border-bottom: 1px solid rgba(212,168,83,0.12);
+  z-index: 1000;
+  transition: background 0.3s ease;
+}
+
+nav.scrolled {
+  background: #080808;
+  border-bottom: 1px solid rgba(212,168,83,0.2);
+}
+
+.nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 18px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-logo img {
+  height: 44px;
+  width: auto;
+  display: block;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-links a {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: rgba(245,240,232,0.7);
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--accent);
+}
+
+.nav-cta {
+  background: var(--accent);
+  color: var(--bg) !important;
+  padding: 10px 22px;
+  border-radius: 8px;
+  font-weight: 600 !important;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.nav-cta:hover {
+  background: var(--accent-hover);
+  transform: translateY(-1px);
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--text);
+  margin: 5px 0;
+  transition: all 0.3s;
+}
+
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(8,8,8,0.97);
+  z-index: 999;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+}
+
+.mobile-menu.open {
+  display: flex;
+}
+
+.mobile-menu a {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text);
+  transition: color 0.3s;
+}
+
+.mobile-menu a:hover {
+  color: var(--accent);
+}
+
+.mobile-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  background: none;
+  border: none;
+  color: var(--text);
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  box-sizing: border-box;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+}
+
+.hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: heroZoom 20s ease-in-out infinite alternate;
+}
+
+@keyframes heroZoom {
+  from { transform: scale(1); }
+  to { transform: scale(1.08); }
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(8,8,8,0.75) 0%, rgba(8,8,8,0.4) 50%, rgba(8,8,8,0.75) 100%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 820px;
+  padding: 0 24px;
+}
+
+.hero-eyebrow {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: clamp(2.6rem, 6vw, 4.8rem);
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 20px;
+}
+
+.hero-sub {
+  font-size: 1.15rem;
+  color: rgba(245,240,232,0.75);
+  margin-bottom: 36px;
+  line-height: 1.7;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 48px;
+}
+
+.btn-primary {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--bg);
+  padding: 16px 36px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background 0.3s ease, transform 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background: var(--accent-hover);
+  transform: translateY(-2px);
+}
+
+.btn-ghost {
+  display: inline-block;
+  color: var(--text);
+  padding: 16px 36px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  border: 1px solid rgba(245,240,232,0.3);
+  transition: border-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-ghost:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.hero-stats {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.hero-stat {
+  text-align: center;
+}
+
+.hero-stat .number {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--accent);
+  display: block;
+  line-height: 1.2;
+}
+
+.hero-stat .label {
+  font-size: 0.78rem;
+  color: rgba(245,240,232,0.5);
+  font-weight: 500;
+}
+
+.stat-divider {
+  width: 1px;
+  height: 36px;
+  background: rgba(245,240,232,0.15);
+}
+
+/* ABOUT */
+.about {
+  padding: 100px 0;
+  background: var(--bg);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.about-img-wrap {
+  position: relative;
+}
+
+.about-img-wrap img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+}
+
+.about-img-wrap::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  right: 8px;
+  bottom: 8px;
+  border: 2px solid var(--accent);
+  border-radius: 12px;
+  z-index: -1;
+}
+
+.about-text h2 {
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  font-weight: 800;
+  margin-bottom: 24px;
+}
+
+.about-text p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: rgba(245,240,232,0.6);
+  margin-bottom: 24px;
+}
+
+.value-badges {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.value-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(212,168,83,0.08);
+  border: 1px solid var(--card-border);
+  border-radius: 30px;
+  padding: 10px 20px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+@media(max-width:640px) {
+  .value-badges {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .value-badge {
+    width: 100%;
+    justify-content: center;
+    font-size: 0.95rem;
+    padding: 14px 20px;
+  }
+}
+
+/* SERVICES */
+.services {
+  padding: 100px 0;
+  background: var(--section-dark);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-badge {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+
+.section-header h2 {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.section-header p {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  color: var(--muted);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.service-card {
+  background: rgba(255,255,255,0.02);
+  border: 1px solid var(--card-border);
+  border-top: 3px solid var(--accent);
+  border-radius: 12px;
+  padding: 32px 28px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 40px rgba(212,168,83,0.12);
+}
+
+.service-icon {
+  color: var(--accent);
+  margin-bottom: 18px;
+  width: 44px;
+  height: 44px;
+  background: rgba(212,168,83,0.1);
+  border: 1px solid rgba(212,168,83,0.2);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.service-icon svg {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+}
+
+.service-card h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.service-card p {
+  font-size: 0.92rem;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+/* SLIDER */
+.work-section {
+  padding: 100px 0 60px;
+  background: var(--bg);
+}
+
+.slider-wrap {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  margin-top: 40px;
+}
+
+.slide {
+  flex: 0 0 100%;
+  width: 100%;
+  max-width: 100%;
+  height: 520px;
+  overflow: hidden;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+@media(max-width:768px) {
+  .slide {
+    height: auto;
+    aspect-ratio: 4/3;
+    background: #0d0d0d;
+  }
+  .slide img {
+    object-fit: contain;
+  }
+  #slider-prev, #slider-next {
+    display: none;
+  }
+}
+
+/* CONTACT */
+.contact-section {
+  padding: 100px 0;
+  background: var(--section-dark);
+}
+
+.contact-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-bottom: 48px;
+}
+
+.contact-card {
+  background: rgba(255,255,255,0.02);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 32px 28px;
+  text-align: center;
+}
+
+.contact-card-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background: rgba(212,168,83,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+}
+
+.contact-card-icon svg {
+  width: 24px;
+  height: 24px;
+  fill: var(--accent);
+}
+
+.contact-card h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.contact-card p {
+  font-size: 0.92rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.contact-card a {
+  color: var(--accent);
+  transition: color 0.3s;
+}
+
+.contact-card a:hover {
+  color: var(--accent-hover);
+}
+
+.map-wrap {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--card-border);
+}
+
+.map-wrap iframe {
+  width: 100%;
+  height: 350px;
+  border: 0;
+  display: block;
+}
+
+/* CTA SECTION */
+#cta-section {
+  padding: 80px 0;
+  background: var(--bg);
+}
+
+.cta-card {
+  max-width: 800px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, var(--dark-card) 0%, #1a1608 100%);
+  border: 1px solid var(--card-border);
+  border-radius: 20px;
+  padding: 48px;
+  text-align: center;
+}
+
+.cta-photo {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--accent);
+  margin: 0 auto 24px;
+}
+
+.cta-card h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.cta-subtitle {
+  font-size: 0.92rem;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+.cta-tagline {
+  font-size: 0.82rem;
+  color: rgba(245,240,232,0.35);
+  margin-bottom: 28px;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.cta-buttons .btn-primary {
+  padding: 14px 32px;
+}
+
+.btn-outline {
+  display: inline-block;
+  color: var(--text);
+  padding: 14px 32px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  border: 1px solid rgba(245,240,232,0.2);
+  transition: border-color 0.3s ease;
+}
+
+.btn-outline:hover {
+  border-color: var(--accent);
+}
+
+.cta-email {
+  font-size: 0.82rem;
+  color: rgba(245,240,232,0.4);
+}
+
+.cta-email a {
+  color: rgba(245,240,232,0.6);
+  transition: color 0.3s;
+}
+
+.cta-email a:hover {
+  color: var(--accent);
+}
+
+/* FAQ */
+.faq-section {
+  padding: 100px 0;
+  background: var(--section-dark);
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--card-border);
+}
+
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 24px 0;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text);
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.faq-question:hover {
+  color: var(--accent);
+}
+
+.faq-icon {
+  flex-shrink: 0;
+  font-size: 1.3rem;
+  color: var(--accent);
+  transition: transform 0.3s;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+}
+
+.faq-answer.open {
+  max-height: 300px;
+  padding-bottom: 24px;
+}
+
+.faq-answer p {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: rgba(245,240,232,0.6);
+}
+
+/* FOOTER */
+footer {
+  background: var(--dark-card);
+  padding: 60px 0 40px;
+  color: rgba(245,240,232,0.5);
+  border-top: 1px solid var(--card-border);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footer-brand {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+
+.footer-tagline {
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+
+.footer-col h4 {
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.footer-col p,
+.footer-col a {
+  font-size: 0.88rem;
+  line-height: 1.8;
+  display: block;
+}
+
+.footer-col a:hover {
+  color: var(--accent);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(245,240,232,0.06);
+  padding-top: 24px;
+  text-align: center;
+  font-size: 0.82rem;
+  color: rgba(245,240,232,0.3);
+}
+
+.footer-bottom a {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* RESPONSIVE */
+@media (max-width: 960px) {
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .nav-links { display: none; }
+  .hamburger { display: block; }
+  .contact-cards { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+  .about-grid { grid-template-columns: 1fr; gap: 40px; }
+  .footer-grid { grid-template-columns: 1fr; gap: 30px; text-align: center; }
+  #kw-layout { grid-template-columns: 1fr !important; }
+  .cta-card { padding: 36px 24px; }
+  .cta-buttons { flex-direction: column; align-items: center; }
+  .contact-cards { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+  .hero { padding-top: 72px; padding-bottom: 60px; }
+  .hero h1 { font-size: 2.2rem; }
+  .hero-sub { font-size: 1rem; }
+  .services-grid { grid-template-columns: 1fr; }
+  .services { padding: 60px 0; }
+  .about { padding: 60px 0; }
+  .contact-section { padding: 60px 0; }
+  .faq-section { padding: 60px 0; }
+  .hero-buttons { flex-direction: column; align-items: center; }
+  .nav-inner { padding: 14px 16px; }
+  .hero-stats { gap: 20px; }
+  .stat-divider { display: none; }
+}
+</style>
+<meta property="og:title" content="Sheppards Prosperity Auto Detailing | Lake City, FL">
+<meta property="og:description" content="North Florida's Premier Auto Detailing. Cars, trucks, luxury vehicles, commercial fleets, and semi-trucks. Since 2010.">
+<meta property="og:type" content="website">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "@id": "#business",
+      "name": "Sheppards Prosperity Auto Detailing",
+      "description": "North Florida's Premier Auto Detailing. Owned and operated by Roosevelt Sheppard since 2010.",
+      "telephone": "(386) 466-9305",
+      "email": "sheppardsprosperity@yahoo.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "561 E Duval St",
+        "addressLocality": "Lake City",
+        "addressRegion": "FL",
+        "postalCode": "32055",
+        "addressCountry": "US"
+      },
+      "areaServed": ["Lake City", "North Florida"],
+      "openingHours": "Mo-Sa 08:00-18:30",
+      "founder": {
+        "@type": "Person",
+        "name": "Roosevelt Sheppard"
+      },
+      "foundingDate": "2010",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Services",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Mobile Detailing" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Full Interior & Exterior Detail" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Buffing, Waxing & Shampooing" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Clay Bar Treatment" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Luxury Vehicle Services" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Semi-Truck & Tow Truck Services" } }
+        ]
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="#"><img class="nav-logo" src="/sheppards/logo.png" alt="Sheppards Prosperity Auto Detailing" style="height:44px;width:auto;"></a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#work">Our Work</a>
+      <a href="#contact" class="nav-cta">Contact</a>
+    </div>
+    <button class="hamburger" onclick="document.getElementById('mobile-menu').classList.add('open')" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobile-menu">
+  <button class="mobile-close" onclick="this.parentElement.classList.remove('open')" aria-label="Close menu">&times;</button>
+  <a href="#about" onclick="this.parentElement.classList.remove('open')">About</a>
+  <a href="#services" onclick="this.parentElement.classList.remove('open')">Services</a>
+  <a href="#work" onclick="this.parentElement.classList.remove('open')">Our Work</a>
+  <a href="#contact" onclick="this.parentElement.classList.remove('open')">Contact</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg">
+    <img src="/sheppards/IMG_0784.jpg" alt="Black Lamborghini Urus detailed by Sheppards Prosperity Auto Detailing" loading="eager" fetchpriority="high">
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <span class="hero-eyebrow">Lake City, FL &middot; Since 2010</span>
+    <h1>North Florida's Premier Auto Detailing</h1>
+    <p class="hero-sub">From luxury vehicles to commercial fleets, Roosevelt Sheppard delivers show-quality results every time.</p>
+    <div class="hero-buttons">
+      <a href="#contact" class="btn-primary">Book Your Detail &rarr;</a>
+      <a href="tel:3864669305" class="btn-ghost">(386) 466-9305</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <span class="number">15+</span>
+        <span class="label">Years Experience</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="hero-stat">
+        <span class="number">Luxury &amp; Commercial</span>
+        <span class="label">All Vehicle Types</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="hero-stat">
+        <span class="number">Lake City, FL</span>
+        <span class="label">North Florida</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-img-wrap">
+        <img src="/sheppards/IMG_0460.jpg" alt="White Rolls-Royce Wraith detailed by Sheppards Prosperity" loading="lazy">
+      </div>
+      <div class="about-text">
+        <span class="section-badge">About</span>
+        <h2>Roosevelt Sheppard Has Been Doing This Since 2010</h2>
+        <p>Sheppards Prosperity Auto Detailing is one person, one standard. Roosevelt has built a reputation across North Florida for meticulous work on everything from daily drivers to six-figure exotics. When you book with Sheppards, you get Roosevelt, experienced, reliable, and treating your vehicle like it's his own.</p>
+        <div class="value-badges">
+          <span class="value-badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+            Consistent
+          </span>
+          <span class="value-badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            Reliable
+          </span>
+          <span class="value-badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            Treats You Like Family
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge">Services</span>
+      <h2>Everything Your Vehicle Needs</h2>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 0 0-8 8c0 5 8 13 8 13s8-8 8-13a8 8 0 0 0-8-8z"/></svg></div>
+        <h3>Mobile Detailing</h3>
+        <p>We come to you. Full detail at your home, office, or dealership.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.5 4.5H18l-3.75 2.7 1.5 4.5L12 12l-3.75 2.7 1.5-4.5L6 7.5h4.5L12 3z"/><path d="M5 17l-1 4M19 17l1 4M8 17h8"/></svg></div>
+        <h3>Full Interior &amp; Exterior Detail</h3>
+        <p>Complete top-to-bottom detail. Every surface cleaned, conditioned, and protected.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12c0-2.2 1.8-4 4-4s4 1.8 4 4-1.8 4-4 4"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2"/></svg></div>
+        <h3>Buffing, Waxing &amp; Shampooing</h3>
+        <p>Remove swirls, restore shine, deep-clean fabrics. Your car looks new again.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="8" width="20" height="8" rx="2"/><path d="M6 8V6a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2"/><line x1="12" y1="12" x2="12" y2="12.01"/></svg></div>
+        <h3>Clay Bar Treatment</h3>
+        <p>Removes embedded contaminants for a glass-smooth finish before waxing or coating.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+        <h3>Minor Scratch Removal</h3>
+        <p>Surface scratches buffed out without a trip to the body shop.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M8 6l-2-2M16 18l2 2M6 8l-2-2M18 16l2 2M4 12H2M22 12h-2M6 16l-2 2M18 8l2-2"/><circle cx="12" cy="12" r="4"/></svg></div>
+        <h3>Pressure Washing</h3>
+        <p>Deep exterior clean for vehicles, driveways, and equipment.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+        <h3>Luxury Vehicle Services</h3>
+        <p>Specialized care for Lamborghini, Rolls-Royce, Bentley, and other exotics.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+        <h3>Commercial Vehicle Services</h3>
+        <p>Fleet vehicles, company trucks, and work vans detailed on your schedule.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17H3a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v3"/><rect x="9" y="11" width="14" height="10" rx="1"/><circle cx="12" cy="21" r="1"/><circle cx="20" cy="21" r="1"/></svg></div>
+        <h3>Semi-Truck &amp; Tow Truck Services</h3>
+        <p>Full-service detail for semi-trucks, tow trucks, and heavy equipment.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OUR WORK -->
+<section class="work-section" id="work">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge">Gallery</span>
+      <h2>Our Work</h2>
+      <p>Every vehicle Roosevelt touches leaves looking its best.</p>
+    </div>
+  </div>
+  <div style="max-width:1200px;margin:0 auto;padding:0 24px;">
+    <div class="slider-wrap">
+      <div id="slider-track" style="display:flex;transition:transform 0.6s cubic-bezier(0.4,0,0.2,1);will-change:transform;">
+        <div class="slide"><img src="/sheppards/IMG_0784.jpg" alt="Lamborghini Urus black detail" loading="lazy"></div>
+        <div class="slide"><img src="/sheppards/IMG_0460.jpg" alt="Rolls-Royce Wraith white and gold" loading="lazy"></div>
+        <div class="slide"><img src="/sheppards/IMG_0380.jpg" alt="Red Dodge Challenger detail" loading="lazy"></div>
+        <div class="slide"><img src="/sheppards/IMG_0899.jpg" alt="Blue Chevy Silverado lifted truck" loading="lazy"></div>
+        <div class="slide"><img src="/sheppards/IMG_0237.jpg" alt="Black Ford F-150 lifted with orange accents" loading="lazy"></div>
+        <div class="slide"><img src="/sheppards/IMG_0970.jpg" alt="Mack semi-truck commercial detail" loading="lazy"></div>
+        <div class="slide"><img src="/sheppards/IMG_0349.jpg" alt="Sheppards Prosperity work photo" loading="lazy"></div>
+        <div class="slide"><img src="/sheppards/IMG_0358.jpg" alt="Sheppards Prosperity work photo" loading="lazy"></div>
+      </div>
+      <button id="slider-prev" onclick="moveSlider(-1)" aria-label="Previous" style="position:absolute;left:20px;top:50%;transform:translateY(-50%);background:rgba(212,168,83,0.2);border:none;color:white;width:48px;height:48px;border-radius:50%;font-size:1.4rem;cursor:pointer;backdrop-filter:blur(4px);transition:background 0.2s;z-index:2;" onmouseover="this.style.background='rgba(212,168,83,0.4)'" onmouseout="this.style.background='rgba(212,168,83,0.2)'">&#8592;</button>
+      <button id="slider-next" onclick="moveSlider(1)" aria-label="Next" style="position:absolute;right:20px;top:50%;transform:translateY(-50%);background:rgba(212,168,83,0.2);border:none;color:white;width:48px;height:48px;border-radius:50%;font-size:1.4rem;cursor:pointer;backdrop-filter:blur(4px);transition:background 0.2s;z-index:2;" onmouseover="this.style.background='rgba(212,168,83,0.4)'" onmouseout="this.style.background='rgba(212,168,83,0.2)'">&#8594;</button>
+    </div>
+    <div id="slider-dots" style="display:flex;justify-content:center;gap:8px;padding:20px 0 0;"></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge">Get in Touch</span>
+      <h2>Book Your Detail Today</h2>
+    </div>
+    <div class="contact-cards">
+      <div class="contact-card">
+        <div class="contact-card-icon">
+          <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.24 1.01l-2.2 2.2z"/></svg>
+        </div>
+        <h3>Phone</h3>
+        <p><a href="tel:3864669305">(386) 466-9305</a></p>
+      </div>
+      <div class="contact-card">
+        <div class="contact-card-icon">
+          <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        </div>
+        <h3>Email</h3>
+        <p><a href="mailto:sheppardsprosperity@yahoo.com">sheppardsprosperity@yahoo.com</a></p>
+      </div>
+      <div class="contact-card">
+        <div class="contact-card-icon">
+          <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+        </div>
+        <h3>Hours</h3>
+        <p>Monday through Saturday<br>8:00 AM to 6:30 PM<br>Sunday Closed</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section" id="faq">
+  <div class="container" style="max-width:800px;">
+    <div class="section-header">
+      <span class="section-badge">FAQ</span>
+      <h2>Common Questions</h2>
+    </div>
+    <div id="faq-list">
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">How much does auto detailing cost in Lake City, FL?<span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>Pricing depends on the vehicle, service type, and condition. Roosevelt will give you a custom quote based on your specific needs. Call (386) 466-9305 or send an email to get a price before you book.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">Do you offer mobile detailing?<span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>Yes. Roosevelt comes to you, whether that's your home, office, or dealership. Mobile detailing is available throughout the Lake City area and surrounding North Florida communities.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">Can you detail luxury and exotic vehicles?<span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>Absolutely. Sheppards Prosperity has detailed Lamborghinis, Rolls-Royces, and other exotic vehicles. Roosevelt uses appropriate products and techniques for high-end paint and surfaces.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">Do you detail commercial vehicles and semi-trucks?<span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>Yes. Commercial fleets, tow trucks, and semi-trucks are a specialty. Schedule a time that works around your operations.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">How long does a full detail take?<span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>A full interior and exterior detail typically takes 3 to 5 hours depending on vehicle size and condition. Mobile service timing is similar.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="footer-brand">Sheppards Prosperity Auto Detailing</div>
+        <p class="footer-tagline">North Florida's Premier Auto Detailing. Owned and operated by Roosevelt Sheppard since 2010.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>561 E Duval St, Lake City, FL 32055</p>
+        <a href="tel:3864669305">(386) 466-9305</a>
+        <a href="mailto:sheppardsprosperity@yahoo.com">sheppardsprosperity@yahoo.com</a>
+      </div>
+      <div class="footer-col">
+        <h4>Hours</h4>
+        <p>Monday through Saturday</p>
+        <p>8:00 AM to 6:30 PM</p>
+        <p>Sunday Closed</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Sheppards Prosperity Auto Detailing. All rights reserved. Powered by <a href="https://zing-work.com" target="_blank">ZING</a>.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- SEO SECTION -->
+<section style="background:#0f1623;padding:80px 0;color:rgba(255,255,255,0.7);font-family:'Inter',sans-serif;">
+  <div style="max-width:1100px;margin:0 auto;padding:0 32px;">
+    <h2 style="color:white;font-size:clamp(1.8rem,3vw,2.4rem);text-align:center;margin-bottom:12px;font-family:inherit;">Your Local Competition is Already Online.</h2>
+    <p style="text-align:center;font-size:1.05rem;margin-bottom:40px;max-width:650px;margin-left:auto;margin-right:auto;color:rgba(255,255,255,0.6);">We looked at what Lake City drivers search every month. Here's what you're missing.</p>
+    <div style="background:rgba(232,96,10,0.12);border:1px solid rgba(232,96,10,0.3);border-radius:10px;padding:20px 28px;text-align:center;margin-bottom:48px;font-size:1.05rem;color:#e8600a;font-weight:600;">~18,200 potential customers search for auto detailing services every month.</div>
+    <div id="kw-layout" style="display:grid;grid-template-columns:2fr 1fr;gap:40px;margin-bottom:60px;align-items:start;">
+      <div>
+        <div class="kw-dh" style="display:grid;grid-template-columns:1fr 90px 110px 100px;padding:10px 16px;background:rgba(255,255,255,0.04);border-bottom:1px solid rgba(255,255,255,0.08);gap:8px;">
+          <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.35);">Keyword</div>
+          <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.35);text-align:center;">Searches/mo</div>
+          <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.35);text-align:center;">Your Rank</div>
+          <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.35);text-align:right;">Est. Leads</div>
+        </div>
+        <div class="kw-mh" style="display:none;grid-template-columns:1fr 60px 80px;padding:10px 14px;background:rgba(255,255,255,0.04);border-bottom:1px solid rgba(255,255,255,0.08);gap:6px;">
+          <div style="font-size:0.6rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.35);">Keyword</div>
+          <div style="font-size:0.6rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.35);text-align:center;">Rank</div>
+          <div style="font-size:0.6rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.35);text-align:right;">Searches</div>
+        </div>
+        <div id="kw-rows"></div>
+        <p style="font-size:0.68rem;color:rgba(255,255,255,0.25);margin-top:12px;">* Search volumes est. Data sourced from DataForSEO.</p>
+      </div>
+      <div style="border:1px solid rgba(232,96,10,0.3);border-radius:12px;background:rgba(232,96,10,0.06);padding:28px 24px;position:sticky;top:88px;">
+        <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#e8600a;margin-bottom:16px;">How We Fix This</div>
+        <div style="display:flex;flex-direction:column;gap:14px;">
+          <div style="display:flex;gap:12px;align-items:flex-start;"><span style="color:#e8600a;font-size:1rem;margin-top:1px;flex-shrink:0;">&#10003;</span><div><div style="font-size:0.88rem;font-weight:700;color:white;margin-bottom:2px;">50 Local Landing Pages</div><div style="font-size:0.76rem;color:rgba(255,255,255,0.45);line-height:1.5;">One page per keyword and service area, built to rank</div></div></div>
+          <div style="display:flex;gap:12px;align-items:flex-start;"><span style="color:#e8600a;font-size:1rem;margin-top:1px;flex-shrink:0;">&#10003;</span><div><div style="font-size:0.88rem;font-weight:700;color:white;margin-bottom:2px;">AI Chat</div><div style="font-size:0.76rem;color:rgba(255,255,255,0.45);line-height:1.5;">Converts visitors into booked jobs 24/7, even while you sleep</div></div></div>
+          <div style="display:flex;gap:12px;align-items:flex-start;"><span style="color:#e8600a;font-size:1rem;margin-top:1px;flex-shrink:0;">&#10003;</span><div><div style="font-size:0.88rem;font-weight:700;color:white;margin-bottom:2px;">SEO Keyword Strategy</div><div style="font-size:0.76rem;color:rgba(255,255,255,0.45);line-height:1.5;">Targeting the exact searches Lake City drivers are making</div></div></div>
+          <div style="display:flex;gap:12px;align-items:flex-start;"><span style="color:#e8600a;font-size:1rem;margin-top:1px;flex-shrink:0;">&#10003;</span><div><div style="font-size:0.88rem;font-weight:700;color:white;margin-bottom:2px;">All Done For You</div><div style="font-size:0.76rem;color:rgba(255,255,255,0.45);line-height:1.5;">You run your business. We handle everything else.</div></div></div>
+        </div>
+        <a href="https://meetings.hubspot.com/elliot-farmer" target="_blank" style="display:block;margin-top:24px;background:#e8600a;color:white;padding:16px 20px;border-radius:6px;font-size:0.82rem;font-weight:700;letter-spacing:0.09em;text-transform:uppercase;text-decoration:none;text-align:center;width:100%;box-sizing:border-box;">Fix My Rankings</a>
+        <div style="text-align:center;margin-top:10px;font-size:0.72rem;color:rgba(255,255,255,0.35);">From <strong style="color:#e8600a;">$59/mo</strong> &middot; No contract</div>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+@media(max-width:960px){
+  #kw-layout{grid-template-columns:1fr!important;}
+  .kw-dh{display:none!important;}
+  .kw-mh{display:grid!important;}
+}
+@media(max-width:768px){
+  #kw-layout{gap:24px!important;}
+}
+</style>
+
+<!-- ELLIOT CTA -->
+<section id="cta-section">
+  <div class="container">
+    <div class="cta-card">
+      <img class="cta-photo" src="/sheppards/elliot.png" alt="Elliot Farmer, ZING Senior Business Advisor" loading="lazy">
+      <h2>Ready to get more detailing customers? Let's talk.</h2>
+      <p class="cta-subtitle">Elliot Farmer &middot; Senior Business Advisor, ZING</p>
+      <p class="cta-tagline">Websites from $59/mo &middot; 50 local landing pages &middot; Full design included &middot; No contract</p>
+      <div class="cta-buttons">
+        <a href="https://meetings.hubspot.com/elliot-farmer" target="_blank" class="btn-primary">Book a Free Call &rarr;</a>
+        <a href="tel:7205340219" class="btn-outline">(720) 534-0219</a>
+      </div>
+      <div class="cta-email"><a href="mailto:elliot@zing-work.com">elliot@zing-work.com</a></div>
+    </div>
+  </div>
+</section>
+
+<script>
+(function(){
+  // NAV scroll
+  var nav = document.querySelector('nav');
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > 60) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+  });
+
+  // SLIDER
+  var track = document.getElementById('slider-track');
+  var dotsEl = document.getElementById('slider-dots');
+  var total = 8;
+  var current = 0;
+  var timer;
+
+  for(var i=0;i<total;i++){
+    var d = document.createElement('button');
+    d.style.cssText='width:8px;height:8px;border-radius:50%;border:none;cursor:pointer;transition:all 0.3s;padding:0;';
+    d.style.background = i===0 ? '#d4a853' : 'rgba(245,240,232,0.25)';
+    (function(idx){d.onclick=function(){goTo(idx)};})(i);
+    dotsEl.appendChild(d);
+  }
+
+  function goTo(n){
+    current = ((n % total) + total) % total;
+    track.style.transform = 'translateX(-' + (current*100) + '%)';
+    var dots = dotsEl.children;
+    for(var j=0;j<dots.length;j++){
+      dots[j].style.background = j===current ? '#d4a853' : 'rgba(245,240,232,0.25)';
+      dots[j].style.width = j===current ? '24px' : '8px';
+      dots[j].style.borderRadius = '4px';
+    }
+  }
+
+  window.moveSlider = function(dir){ goTo(current+dir); resetTimer(); };
+
+  function resetTimer(){ clearInterval(timer); timer=setInterval(function(){goTo(current+1);},5000); }
+  resetTimer();
+
+  var touchStartX = 0;
+  var sliderEl = track.parentElement;
+  sliderEl.addEventListener('touchstart', function(e){ touchStartX = e.changedTouches[0].clientX; }, {passive:true});
+  sliderEl.addEventListener('touchend', function(e){
+    var dx = e.changedTouches[0].clientX - touchStartX;
+    if(Math.abs(dx) > 40){ goTo(dx < 0 ? current+1 : current-1); resetTimer(); }
+  }, {passive:true});
+
+  // FAQ
+  window.toggleFaq = function(btn){
+    var answer = btn.nextElementSibling;
+    var icon = btn.querySelector('.faq-icon');
+    var isOpen = answer.classList.contains('open');
+    // Close all
+    var allAnswers = document.querySelectorAll('.faq-answer');
+    var allIcons = document.querySelectorAll('.faq-icon');
+    for(var k=0;k<allAnswers.length;k++){
+      allAnswers[k].classList.remove('open');
+      allIcons[k].textContent = '+';
+    }
+    if(!isOpen){
+      answer.classList.add('open');
+      icon.textContent = '\u2212';
+    }
+  };
+
+  // SEO KEYWORD TABLE
+  var kws=[
+    {kw:"auto detailing near me",vol:4400,leads:55},
+    {kw:"car detailing near me",vol:8100,leads:101},
+    {kw:"mobile car detailing near me",vol:1600,leads:20},
+    {kw:"auto detailing lake city fl",vol:720,leads:9},
+    {kw:"car wash lake city fl",vol:590,leads:7},
+    {kw:"interior car detailing near me",vol:1900,leads:24},
+    {kw:"full detail car near me",vol:880,leads:11},
+    {kw:"luxury car detailing near me",vol:320,leads:4},
+    {kw:"semi truck detailing near me",vol:210,leads:3},
+    {kw:"clay bar treatment near me",vol:480,leads:6}
+  ];
+  var c=document.getElementById("kw-rows");
+  if(!c)return;
+  function render(){
+    c.innerHTML="";
+    var m=window.innerWidth<=960;
+    kws.forEach(function(item,i){
+      var row=document.createElement("div");
+      var n=String(i+1).padStart(2,"0");
+      if(m){
+        row.style.cssText="display:grid;grid-template-columns:1fr 60px 80px;padding:12px 14px;border-bottom:1px solid rgba(255,255,255,0.06);align-items:center;gap:6px;";
+        row.innerHTML='<div style="display:flex;align-items:center;gap:8px;"><span style="font-size:0.62rem;color:rgba(255,255,255,0.2);font-weight:700;flex-shrink:0;">'+n+'</span><span style="font-size:0.78rem;color:rgba(255,255,255,0.85);font-weight:500;line-height:1.3;">'+item.kw+'</span></div><div style="text-align:center;"><span style="font-size:0.9rem;font-weight:800;color:#f87171;">0</span></div><div style="text-align:right;font-size:0.8rem;font-weight:700;color:white;">'+item.vol.toLocaleString()+'<span style="font-size:0.6rem;color:rgba(255,255,255,0.35);margin-left:2px;">est.</span></div>';
+      }else{
+        row.style.cssText="display:grid;grid-template-columns:1fr 90px 110px 100px;padding:14px 16px;border-bottom:1px solid rgba(255,255,255,0.05);align-items:center;transition:background 0.2s;cursor:default;";
+        row.onmouseenter=function(){this.style.background="rgba(255,255,255,0.03)"};
+        row.onmouseleave=function(){this.style.background="transparent"};
+        row.innerHTML='<div style="display:flex;align-items:center;gap:10px;"><span style="font-size:0.68rem;color:rgba(255,255,255,0.2);font-weight:600;min-width:20px;flex-shrink:0;">'+n+'</span><span style="font-size:0.85rem;color:rgba(255,255,255,0.85);font-weight:500;">'+item.kw+'</span></div><div style="text-align:center;font-size:0.9rem;font-weight:700;color:white;">'+item.vol.toLocaleString()+' <span style="font-size:0.62rem;color:rgba(255,255,255,0.35);">est.</span></div><div style="text-align:center;"><span style="background:rgba(239,68,68,0.12);color:#f87171;padding:4px 10px;border-radius:20px;font-size:0.72rem;font-weight:600;">Not ranking</span></div><div style="text-align:center;font-size:0.82rem;font-weight:700;color:rgba(255,255,255,0.5);">'+item.leads+'</div>';
+      }
+      c.appendChild(row);
+    });
+  }
+  render();
+  window.addEventListener("resize",render);
+})();
+</script>
+</body>
+</html>

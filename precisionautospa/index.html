@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Precision Auto Spa | Palm Beach County, FL</title>
+<meta name="description" content="Precision Auto Spa PB, LLC offers ceramic coating, paint correction, window tinting and full detailing in Palm Beach County, FL. 25 years of excellence. Call (561) 628-9763.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --red:    #cc1f1f;
+  --red-hover: #aa1515;
+  --bg:     #ffffff;
+  --card:   #f7f7f7;
+  --dark:   #111111;
+  --navy:   #111111;
+  --text:   #1a1a1a;
+  --muted:  rgba(26,26,26,0.55);
+  --border: rgba(204,31,31,0.2);
+  --card-border: rgba(204,31,31,0.15);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body { background:#ffffff; color:#1a1a1a;
+  font-family: 'Inter', sans-serif;
+  color: var(--muted);
+  line-height: 1.7;
+  background: #ffffff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: var(--text);
+  line-height: 1.2;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+a { text-decoration: none; color: inherit; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* NAV */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #000000;
+  border-bottom: 1px solid rgba(204,31,31,0.2);
+  z-index: 1000;
+}
+
+.nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-logo-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo-wrap img {
+  height: 48px;
+  width: auto;
+  display: block;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-links a {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: rgba(240,244,255,0.7);
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--red);
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.hamburger svg {
+  width: 28px;
+  height: 28px;
+  stroke: var(--text);
+}
+
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 76px;
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  border-bottom: 1px solid var(--card-border);
+  padding: 20px 24px;
+  z-index: 999;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.mobile-menu.open {
+  display: flex;
+}
+
+.mobile-menu a {
+  font-size: 1rem;
+  font-weight: 500;
+  color: rgba(240,244,255,0.7);
+  padding: 8px 0;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+}
+
+.hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: slowZoom 20s ease-in-out infinite alternate;
+}
+
+@keyframes slowZoom {
+  from { transform: scale(1); }
+  to { transform: scale(1.08); }
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(4,13,31,0.7) 0%, rgba(4,13,31,0.45) 50%, rgba(4,13,31,0.8) 100%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 800px;
+  padding: 0 24px;
+}
+
+.hero-eyebrow {
+  display: inline-block;
+  background: var(--red);
+  color: var(--white);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 8px 20px;
+  border-radius: 30px;
+  margin-bottom: 24px;
+}
+
+.hero h1 {
+  font-size: clamp(2.6rem, 6vw, 4.8rem);
+  font-weight: 800;
+  color: var(--white);
+  margin-bottom: 20px;
+}
+
+.hero-sub {
+  font-size: 1.15rem;
+  color: rgba(26,26,26,0.7);
+  margin-bottom: 36px;
+  line-height: 1.7;
+  max-width: 620px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.btn-primary {
+  display: inline-block;
+  background: var(--red);
+  color: var(--white);
+  padding: 16px 36px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background 0.3s ease, transform 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background: var(--red-hover);
+  transform: translateY(-2px);
+}
+
+.btn-ghost {
+  display: inline-block;
+  color: var(--white);
+  padding: 16px 36px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  border: 1px solid rgba(240,244,255,0.3);
+  transition: border-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-ghost:hover {
+  border-color: var(--white);
+  transform: translateY(-2px);
+}
+
+.hero-stats {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  font-size: 0.85rem;
+  color: rgba(26,26,26,0.6);
+}
+
+.hero-stats span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.hero-stats .stars {
+  color: #fbbf24;
+}
+
+.stat-divider {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: rgba(240,244,255,0.25);
+}
+
+/* ABOUT */
+.about {
+  padding: 100px 0;
+  background: #ffffff;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.about-card {
+  background: #ffffff;
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  padding: 40px 36px;
+}
+
+.section-badge {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 12px;
+}
+
+.about-card h2 {
+  font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+  font-weight: 800;
+  margin-bottom: 24px;
+}
+
+.about-card p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: rgba(26,26,26,0.6);
+  margin-bottom: 16px;
+}
+
+.about-card p:last-child {
+  margin-bottom: 0;
+}
+
+.value-badges {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.value-badge {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: #ffffff;
+  border: 1px solid var(--card-border);
+  border-left: 3px solid var(--red);
+  border-radius: 12px;
+  padding: 24px 20px;
+}
+
+.value-badge-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  background: rgba(30,58,138,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.value-badge-icon svg {
+  width: 24px;
+  height: 24px;
+  stroke: var(--red);
+  fill: none;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.value-badge-text {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+/* SERVICES */
+.services {
+  padding: 100px 0;
+  background: #ffffff;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-header h2 {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.section-header p {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  color: var(--muted);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.service-card {
+  background: rgba(4,13,31,0.6);
+  border: 1px solid var(--card-border);
+  border-top: 3px solid var(--blue);
+  border-radius: 12px;
+  padding: 32px 28px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 40px rgba(30,58,138,0.2);
+}
+
+.service-icon {
+  color: var(--red);
+  margin-bottom: 18px;
+  width: 44px;
+  height: 44px;
+  background: rgba(30,58,138,0.25);
+  border: 1px solid rgba(30,58,138,0.4);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-icon svg {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+}
+
+.service-card h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.service-card p {
+  font-size: 0.92rem;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+/* CONTACT */
+.contact {
+  padding: 100px 0;
+  background: #ffffff;
+}
+
+.contact-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.contact-card {
+  background: #ffffff;
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 32px 28px;
+  text-align: center;
+}
+
+.contact-card-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background: rgba(30,58,138,0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+}
+
+.contact-card-icon svg {
+  width: 24px;
+  height: 24px;
+  fill: var(--red);
+}
+
+.contact-card h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.contact-card p {
+  font-size: 0.92rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.contact-card a {
+  color: var(--red);
+  transition: color 0.3s;
+}
+
+.contact-card a:hover {
+  color: var(--red-hover);
+}
+
+
+
+/* FOOTER */
+footer {
+  background: #ffffff;
+  padding: 60px 0 40px;
+  border-top: 1px solid var(--card-border);
+}
+
+.footer-inner {
+  text-align: center;
+}
+
+.footer-brand {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.footer-tagline {
+  font-size: 0.88rem;
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+
+.footer-details {
+  font-size: 0.85rem;
+  color: rgba(240,244,255,0.45);
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+
+.footer-details a {
+  color: rgba(26,26,26,0.6);
+  transition: color 0.3s;
+}
+
+.footer-details a:hover {
+  color: var(--red);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(240,244,255,0.06);
+  padding-top: 24px;
+  font-size: 0.82rem;
+  color: rgba(240,244,255,0.3);
+}
+
+.footer-bottom a {
+  color: var(--red);
+  font-weight: 600;
+}
+
+/* CTA SECTION */
+#cta-section {
+  padding: 80px 0;
+  background: #ffffff;
+}
+
+.cta-card {
+  max-width: 800px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, var(--card) 0%, #0f1d3d 100%);
+  border: 1px solid var(--card-border);
+  border-radius: 20px;
+  padding: 48px;
+  text-align: center;
+}
+
+.cta-photo {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--red);
+  margin: 0 auto 24px;
+}
+
+.cta-card h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.cta-subtitle {
+  font-size: 0.92rem;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+.cta-tagline {
+  font-size: 0.82rem;
+  color: rgba(240,244,255,0.35);
+  margin-bottom: 28px;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.cta-buttons .btn-primary {
+  padding: 14px 32px;
+}
+
+.btn-outline {
+  display: inline-block;
+  color: var(--white);
+  padding: 14px 32px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  border: 1px solid rgba(240,244,255,0.2);
+  transition: border-color 0.3s ease;
+}
+
+.btn-outline:hover {
+  border-color: var(--white);
+}
+
+.cta-email {
+  font-size: 0.82rem;
+  color: rgba(240,244,255,0.4);
+}
+
+.cta-email a {
+  color: rgba(26,26,26,0.6);
+  transition: color 0.3s;
+}
+
+.cta-email a:hover {
+  color: var(--red);
+}
+
+/* RESPONSIVE */
+@media (max-width: 960px) {
+  .nav-links { display: none; }
+  .hamburger { display: block; }
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .about-grid { grid-template-columns: 1fr; gap: 32px; }
+  .contact-cards { grid-template-columns: 1fr; }
+  .cta-card { padding: 36px 24px; }
+  .cta-buttons { flex-direction: column; align-items: center; }
+  #kw-layout { grid-template-columns: 1fr !important; }
+}
+
+@media (max-width: 480px) {
+  .hero h1 { font-size: 2.2rem; }
+  .hero-sub { font-size: 1rem; }
+  .services-grid { grid-template-columns: 1fr; }
+  .services { padding: 60px 0; }
+  .about { padding: 60px 0; }
+  .contact { padding: 60px 0; }
+  .hero-buttons { flex-direction: column; align-items: center; }
+  .nav-inner { padding: 12px 16px; }
+}
+</style>
+<meta property="og:title" content="Precision Auto Spa | Palm Beach County, FL">
+<meta property="og:description" content="Professional mobile car detailing in Palm Beach County, FL. We come to you. 53 five-star reviews.">
+<meta property="og:type" content="website">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "@id": "#business",
+      "name": "Precision Auto Spa PB, LLC",
+      "description": "Full-service mobile auto detailing in Palm Beach County, FL. Professional-grade products, state-of-the-art equipment, and complete customer satisfaction guaranteed.",
+      "telephone": "(561) 628-9763",
+      "email": "info@precisionautospamobile.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Palm Beach County",
+        "addressRegion": "TX",
+        "addressCountry": "US"
+      },
+      "areaServed": ["Palm Beach County", "Dallas", "Mesquite", "Richardson", "Rowlett", "Sachse"],
+      "openingHours": "Mo-Sa 07:30-17:00",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "reviewCount": "53"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Services",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Mobile Detailing" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Full Interior & Exterior Detail" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Buffing, Waxing & Shampooing" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Clay Bar Treatment" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Minor Scratch Removal" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pressure Washing" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Luxury Vehicle Services" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Commercial Vehicle Services" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Semi-Truck & Tow Truck Services" } }
+        ]
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="#">
+      <div class="nav-logo-wrap"><img src="/precisionautospa/logo.jpg" alt="Precision Auto Spa" style="height:54px;width:auto;border-radius:4px;"></div>
+    </a>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.mobile-menu').classList.toggle('open')">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+</nav>
+<div class="mobile-menu">
+  <a href="#services" onclick="this.parentElement.classList.remove('open')">Services</a>
+  <a href="#about" onclick="this.parentElement.classList.remove('open')">About</a>
+  <a href="#contact" onclick="this.parentElement.classList.remove('open')">Contact</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg">
+    <img src="/precisionautospa/hero.jpg" alt="Professional mobile car detailing in Palm Beach County FL" loading="eager" fetchpriority="high">
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <span class="hero-eyebrow">GARLAND, TX &middot; 53 FIVE-STAR REVIEWS</span>
+    <h1>Palm Beach County's Premier Auto Spa</h1>
+    <p class="hero-sub">Professional-grade products. State-of-the-art equipment. Premium products, cutting-edge techniques, and 25 years of passion for excellence.</p>
+    <div class="hero-buttons">
+      <a href="#contact" class="btn-primary">Book Your Detail &rarr;</a>
+      <a href="tel:5616289763" class="btn-ghost">(561) 628-9763</a>
+    </div>
+    <div class="hero-stats">
+      <span>Ceramic Coating</span>
+      <span class="stat-divider"></span>
+      <span><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>&nbsp;53 Reviews</span>
+      <span class="stat-divider"></span>
+      <span>Palm Beach County, FL</span>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" style="background:#f7f7f7" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-card" style="background:#fff;color:#1a1a1a;">
+        <span class="section-badge" style="color:#cc1f1f;">About Us</span>
+        <h2 style="color:#111111;font-size:clamp(1.8rem,3.5vw,2.4rem);font-weight:800;margin-bottom:20px;">25 Years of Precision. Zero Compromise.</h2>
+        <p style="color:#444444;font-size:1rem;line-height:1.8;margin-bottom:16px;">Precision Auto Spa PB, LLC has been serving Palm Beach County since 2000. With over 25 years of expert detailing and a passion for excellence, our team uses only premium products and cutting-edge techniques to deliver flawless results that protect and enhance your car's value.</p>
+        <p style="color:#444444;font-size:1rem;line-height:1.8;">Whether you need a full detail, swirl-free paint correction, or a ceramic coating, we offer flexible packages to fit your lifestyle and vehicle needs. Schedule your free consultation today.</p>
+      </div>
+      <div class="value-badges">
+        <div class="value-badge">
+          <div class="value-badge-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <span class="value-badge-text">Ceramic Coating Experts</span>
+        </div>
+        <div class="value-badge">
+          <div class="value-badge-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+          </div>
+          <span class="value-badge-text">Premium Products Only</span>
+        </div>
+        <div class="value-badge">
+          <div class="value-badge-icon">
+            <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
+          </div>
+          <span class="value-badge-text">Serving PBC Since 2000</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VISUAL BREAK -->
+<section style="background:#ffffff;padding:0 0 0;">
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;height:340px;overflow:hidden;">
+    <div style="overflow:hidden;position:relative;">
+      <img src="/precisionautospa/stock-exterior.jpg" alt="Exterior hand wash with foam mitt" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center;transition:transform 0.6s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+      <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(4,13,31,0.85));padding:20px 20px 18px;pointer-events:none;">
+        <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#cc1f1f;margin-bottom:4px;">EXTERIOR</div>
+        <div style="font-size:0.95rem;font-weight:700;color:#1a1a1a;font-family:'Plus Jakarta Sans',sans-serif;">Hand Wash &amp; Polish</div>
+      </div>
+    </div>
+    <div style="overflow:hidden;position:relative;">
+      <img src="/precisionautospa/stock-interior-steam.jpg" alt="Interior steam cleaning detail" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center;transition:transform 0.6s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+      <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(4,13,31,0.85));padding:20px 20px 18px;pointer-events:none;">
+        <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#cc1f1f;margin-bottom:4px;">INTERIOR</div>
+        <div style="font-size:0.95rem;font-weight:700;color:#1a1a1a;font-family:'Plus Jakarta Sans',sans-serif;">Steam Deep Clean</div>
+      </div>
+    </div>
+    <div style="overflow:hidden;position:relative;">
+      <img src="/precisionautospa/stock-interior-vacuum.jpg" alt="Interior vacuum and upholstery detail" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center;transition:transform 0.6s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+      <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(4,13,31,0.85));padding:20px 20px 18px;pointer-events:none;">
+        <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#cc1f1f;margin-bottom:4px;">INTERIOR</div>
+        <div style="font-size:0.95rem;font-weight:700;color:#1a1a1a;font-family:'Plus Jakarta Sans',sans-serif;">Vacuum &amp; Upholstery</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+@media(max-width:640px){
+  .fc-visual-strip { grid-template-columns:1fr !important; height:auto !important; }
+  .fc-visual-strip > div { height:220px; }
+}
+</style>
+
+<!-- SERVICES -->
+<section class="services" id="services" style="background:#ffffff;">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:48px;">
+      <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#cc1f1f;margin-bottom:10px;">WHAT WE OFFER</div>
+      <h2 style="font-size:clamp(1.8rem,3.5vw,2.4rem);font-weight:800;color:#111111;font-family:'Plus Jakarta Sans',sans-serif;">Everything Your Vehicle Deserves</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;">
+      <div style="background:#fff;border:1px solid #e8e8e8;border-radius:12px;padding:28px;box-shadow:0 2px 12px rgba(0,0,0,0.06);"><div style="color:#cc1f1f;margin-bottom:14px;"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg></div><h3 style="color:#111111;font-size:1rem;font-weight:700;margin-bottom:8px;">Paint Correction</h3><p style="color:rgba(26,26,26,0.65);font-size:0.88rem;line-height:1.6;">Swirl-free multi-stage paint correction restoring your vehicle to a flawless mirror-like shine.</p></div>
+      <div style="background:#fff;border:1px solid #e8e8e8;border-radius:12px;padding:28px;box-shadow:0 2px 12px rgba(0,0,0,0.06);"><div style="color:#cc1f1f;margin-bottom:14px;"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3 style="color:#111111;font-size:1rem;font-weight:700;margin-bottom:8px;">Ceramic Coating</h3><p style="color:rgba(26,26,26,0.65);font-size:0.88rem;line-height:1.6;">Long-lasting nano-ceramic protection that repels water, dirt, and UV damage for years of shine.</p></div>
+      <div style="background:#fff;border:1px solid #e8e8e8;border-radius:12px;padding:28px;box-shadow:0 2px 12px rgba(0,0,0,0.06);"><div style="color:#cc1f1f;margin-bottom:14px;"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div><h3 style="color:#111111;font-size:1rem;font-weight:700;margin-bottom:8px;">Window Tinting</h3><p style="color:rgba(26,26,26,0.65);font-size:0.88rem;line-height:1.6;">Professional window tinting for UV protection, heat reduction, and a clean finished look.</p></div>
+      <div style="background:#fff;border:1px solid #e8e8e8;border-radius:12px;padding:28px;box-shadow:0 2px 12px rgba(0,0,0,0.06);"><div style="color:#cc1f1f;margin-bottom:14px;"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div><h3 style="color:#111111;font-size:1rem;font-weight:700;margin-bottom:8px;">Paint Protection Film</h3><p style="color:rgba(26,26,26,0.65);font-size:0.88rem;line-height:1.6;">Virtually invisible PPF shields your vehicle from rock chips, scratches, and road debris.</p></div>
+      <div style="background:#fff;border:1px solid #e8e8e8;border-radius:12px;padding:28px;box-shadow:0 2px 12px rgba(0,0,0,0.06);"><div style="color:#cc1f1f;margin-bottom:14px;"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 10c-.83 0-1.5-.67-1.5-1.5v-5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5z"/><path d="M20.5 10H19V8.5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg></div><h3 style="color:#111111;font-size:1rem;font-weight:700;margin-bottom:8px;">Surface Decontamination</h3><p style="color:rgba(26,26,26,0.65);font-size:0.88rem;line-height:1.6;">Deep chemical and mechanical decontamination removing embedded contaminants and iron fallout.</p></div>
+      <div style="background:#fff;border:1px solid #e8e8e8;border-radius:12px;padding:28px;box-shadow:0 2px 12px rgba(0,0,0,0.06);"><div style="color:#cc1f1f;margin-bottom:14px;"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="6" width="22" height="13" rx="2"/><path d="M1 10h22"/></svg></div><h3 style="color:#111111;font-size:1rem;font-weight:700;margin-bottom:8px;">Full Interior &amp; Exterior Detail</h3><p style="color:rgba(26,26,26,0.65);font-size:0.88rem;line-height:1.6;">Complete top-to-bottom detail. Every surface cleaned, conditioned, and protected inside and out.</p></div>
+      <div style="background:#fff;border:1px solid #e8e8e8;border-radius:12px;padding:28px;box-shadow:0 2px 12px rgba(0,0,0,0.06);"><div style="color:#cc1f1f;margin-bottom:14px;"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div><h3 style="color:#111111;font-size:1rem;font-weight:700;margin-bottom:8px;">Paint Touch Ups</h3><p style="color:rgba(26,26,26,0.65);font-size:0.88rem;line-height:1.6;">Precise touch-up work addressing chips, scratches, and minor blemishes before they become bigger problems.</p></div>
+      <div style="background:#fff;border:1px solid #e8e8e8;border-radius:12px;padding:28px;box-shadow:0 2px 12px rgba(0,0,0,0.06);"><div style="color:#cc1f1f;margin-bottom:14px;"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/></svg></div><h3 style="color:#111111;font-size:1rem;font-weight:700;margin-bottom:8px;">Wheel Repairs</h3><p style="color:rgba(26,26,26,0.65);font-size:0.88rem;line-height:1.6;">Restore scuffed, curbed, or damaged wheels to their original finish. All wheel types and finishes.</p></div>
+      <div style="background:#fff;border:1px solid #e8e8e8;border-radius:12px;padding:28px;box-shadow:0 2px 12px rgba(0,0,0,0.06);"><div style="color:#cc1f1f;margin-bottom:14px;"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div><h3 style="color:#111111;font-size:1rem;font-weight:700;margin-bottom:8px;">Member Storage</h3><p style="color:rgba(26,26,26,0.65);font-size:0.88rem;line-height:1.6;">New indoor storage available for your vehicle. Safe, secure, and climate-controlled. Ask about membership packages.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" style="background:#f7f7f7" id="contact">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge">Get In Touch</span>
+      <h2>Contact Us</h2>
+      <p>Reach out to book your detail or ask any questions. We serve Palm Beach County, FL and surrounding areas.</p>
+    </div>
+    <div class="contact-cards">
+      <div class="contact-card">
+        <div class="contact-card-icon">
+          <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1.02l-2.2 2.2z"/></svg>
+        </div>
+        <h3>Phone</h3>
+        <p><a href="tel:5616289763">(561) 628-9763</a></p>
+      </div>
+      <div class="contact-card">
+        <div class="contact-card-icon">
+          <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        </div>
+        <h3>Email</h3>
+        <p><a href="mailto:info@precisionautospamobile.com">info@precisionautospamobile.com</a></p>
+      </div>
+      <div class="contact-card">
+        <div class="contact-card-icon">
+          <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+        </div>
+        <h3>Hours</h3>
+        <p>Monday to Saturday 7:30AM to 5:00PM<br>Sunday Closed</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer style="background:#111111;color:#ffffff">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">Precision Auto Spa</div>
+      <p class="footer-tagline">Professional mobile auto detailing in Palm Beach County, FL</p>
+      <div class="footer-details">
+        Palm Beach County, FL and surrounding areas<br>
+        <a href="tel:5616289763">(561) 628-9763</a> &middot; <a href="mailto:info@precisionautospamobile.com">info@precisionautospamobile.com</a><br>
+        Monday to Saturday 7:30AM to 5:00PM &middot; Sunday Closed
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Precision Auto Spa PB, LLC. All rights reserved. Powered by <a href="https://zing-work.com" target="_blank">ZING</a>.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- SEO SECTION -->
+<section style="background:#0f1623;padding:80px 0;color:rgba(255,255,255,0.7);font-family:'Inter',sans-serif;">
+  <div style="max-width:1100px;margin:0 auto;padding:0 32px;">
+    <h2 style="color:white;font-size:clamp(1.8rem,3vw,2.4rem);text-align:center;margin-bottom:12px;font-family:inherit;">Your Local Competition is Already Online.</h2>
+    <p style="text-align:center;font-size:1.05rem;margin-bottom:40px;max-width:650px;margin-left:auto;margin-right:auto;color:rgba(255,255,255,0.6);">We looked at what Palm Beach County drivers search every month. Here's what you're missing.</p>
+    <div style="background:rgba(232,96,10,0.12);border:1px solid rgba(232,96,10,0.3);border-radius:10px;padding:20px 28px;text-align:center;margin-bottom:48px;font-size:1.05rem;color:#e8600a;font-weight:600;">~28,600 potential customers search for mobile car detailing services every month.</div>
+    <div id="kw-layout" style="display:grid;grid-template-columns:2fr 1fr;gap:40px;margin-bottom:60px;align-items:start;">
+      <div>
+        <div class="kw-dh" style="display:grid;grid-template-columns:1fr 90px 110px 100px;padding:10px 16px;background:rgba(255,255,255,0.04);border-bottom:1px solid rgba(255,255,255,0.08);gap:8px;">
+          <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.35);">Keyword</div>
+          <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.35);text-align:center;">Your Rank</div>
+          <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.35);text-align:center;">Competition</div>
+          <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.35);text-align:right;">Searches/mo</div>
+        </div>
+        <div class="kw-mh" style="display:none;grid-template-columns:1fr 60px 80px;padding:10px 14px;background:rgba(255,255,255,0.04);border-bottom:1px solid rgba(255,255,255,0.08);gap:6px;">
+          <div style="font-size:0.6rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.35);">Keyword</div>
+          <div style="font-size:0.6rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.35);text-align:center;">Rank</div>
+          <div style="font-size:0.6rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.35);text-align:right;">Searches</div>
+        </div>
+        <div id="kw-rows"></div>
+        <p style="font-size:0.68rem;color:rgba(255,255,255,0.25);margin-top:12px;">* Search volumes est. Data sourced from DataForSEO.</p>
+      </div>
+      <div style="border:1px solid rgba(232,96,10,0.3);border-radius:12px;background:rgba(232,96,10,0.06);padding:28px 24px;position:sticky;top:88px;">
+        <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#e8600a;margin-bottom:16px;">How We Fix This</div>
+        <div style="display:flex;flex-direction:column;gap:14px;">
+          <div style="display:flex;gap:12px;align-items:flex-start;"><span style="color:#e8600a;font-size:1rem;margin-top:1px;flex-shrink:0;">&#10003;</span><div><div style="font-size:0.88rem;font-weight:700;color:white;margin-bottom:2px;">50 Local Landing Pages</div><div style="font-size:0.76rem;color:rgba(255,255,255,0.45);line-height:1.5;">One page per keyword and service area, built to rank</div></div></div>
+          <div style="display:flex;gap:12px;align-items:flex-start;"><span style="color:#e8600a;font-size:1rem;margin-top:1px;flex-shrink:0;">&#10003;</span><div><div style="font-size:0.88rem;font-weight:700;color:white;margin-bottom:2px;">AI Chat</div><div style="font-size:0.76rem;color:rgba(255,255,255,0.45);line-height:1.5;">Converts visitors into booked jobs 24/7, even while you sleep</div></div></div>
+          <div style="display:flex;gap:12px;align-items:flex-start;"><span style="color:#e8600a;font-size:1rem;margin-top:1px;flex-shrink:0;">&#10003;</span><div><div style="font-size:0.88rem;font-weight:700;color:white;margin-bottom:2px;">SEO Keyword Strategy</div><div style="font-size:0.76rem;color:rgba(255,255,255,0.45);line-height:1.5;">Targeting the exact searches Palm Beach County drivers are making</div></div></div>
+          <div style="display:flex;gap:12px;align-items:flex-start;"><span style="color:#e8600a;font-size:1rem;margin-top:1px;flex-shrink:0;">&#10003;</span><div><div style="font-size:0.88rem;font-weight:700;color:white;margin-bottom:2px;">All Done For You</div><div style="font-size:0.76rem;color:rgba(255,255,255,0.45);line-height:1.5;">You run your business. We handle everything else.</div></div></div>
+        </div>
+        <a href="https://meetings.hubspot.com/elliot-farmer" target="_blank" style="display:block;margin-top:24px;background:#e8600a;color:white;padding:16px 20px;border-radius:6px;font-size:0.82rem;font-weight:700;letter-spacing:0.09em;text-transform:uppercase;text-decoration:none;text-align:center;width:100%;box-sizing:border-box;">Fix My Rankings</a>
+        <div style="text-align:center;margin-top:10px;font-size:0.72rem;color:rgba(255,255,255,0.35);">From <strong style="color:#e8600a;">$59/mo</strong> &middot; No contract</div>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+@media(max-width:960px){
+  #kw-layout{grid-template-columns:1fr!important;}
+  .kw-dh{display:none!important;}
+  .kw-mh{display:grid!important;}
+}
+@media(max-width:768px){
+  #kw-layout{gap:24px!important;}
+}
+</style>
+
+<!-- CTA SECTION -->
+<section id="cta-section">
+  <div class="container">
+    <div class="cta-card">
+      <img class="cta-photo" src="/precisionautospa/elliot.png" alt="Elliot Farmer, ZING Senior Business Advisor" loading="lazy">
+      <h2>Ready to get more auto spa customers in Palm Beach County? Let's talk.</h2>
+      <p class="cta-subtitle">Elliot Farmer &middot; Senior Business Advisor, ZING</p>
+      <p class="cta-tagline">Websites from $59/mo &middot; 50 local landing pages &middot; Full design included &middot; No contract</p>
+      <div class="cta-buttons">
+        <a href="https://meetings.hubspot.com/elliot-farmer" target="_blank" class="btn-primary">Book a Free Call &rarr;</a>
+        <a href="tel:7205340219" class="btn-outline">(720) 534-0219</a>
+      </div>
+      <div class="cta-email"><a href="mailto:elliot@zing-work.com">elliot@zing-work.com</a></div>
+    </div>
+  </div>
+</section>
+
+<script>
+(function(){
+  
+      if(!isOpen){
+        item.classList.add('open');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+      }
+    });
+  });
+
+  /* Mobile menu close on resize */
+  window.addEventListener('resize', function(){
+    if(window.innerWidth > 960){
+      var mm = document.querySelector('.mobile-menu');
+      if(mm) mm.classList.remove('open');
+    }
+  });
+
+  /* SEO keyword table */
+  var kws=[{kw:"mobile car detailing near me",vol:8100,leads:101},{kw:"auto detailing near me",vol:4400,leads:55},{kw:"car detailing near me",vol:12100,leads:151},{kw:"mobile detailing garland tx",vol:880,leads:11},{kw:"car detailing garland tx",vol:720,leads:9},{kw:"mobile car wash near me",vol:1600,leads:20},{kw:"auto detailing garland tx",vol:590,leads:7},{kw:"ceramic coating garland tx",vol:480,leads:6},{kw:"paint correction garland tx",vol:320,leads:4},{kw:"full detail car near me",vol:410,leads:5}];
+  var c=document.getElementById("kw-rows");
+  if(!c)return;
+  function render(){
+    c.innerHTML="";
+    var m=window.innerWidth<=960;
+    kws.forEach(function(item,i){
+      var row=document.createElement("div");
+      var n=String(i+1).padStart(2,"0");
+      if(m){
+        row.style.cssText="display:grid;grid-template-columns:1fr 60px 80px;padding:12px 14px;border-bottom:1px solid rgba(255,255,255,0.06);align-items:center;gap:6px;";
+        row.innerHTML='<div style="display:flex;align-items:center;gap:8px;"><span style="font-size:0.62rem;color:rgba(255,255,255,0.2);font-weight:700;flex-shrink:0;">'+n+'</span><span style="font-size:0.78rem;color:rgba(255,255,255,0.85);font-weight:500;line-height:1.3;">'+item.kw+'</span></div><div style="text-align:center;"><span style="font-size:0.9rem;font-weight:800;color:#f87171;">0</span></div><div style="text-align:right;font-size:0.8rem;font-weight:700;color:white;">'+item.vol.toLocaleString()+'<span style="font-size:0.6rem;color:rgba(255,255,255,0.35);margin-left:2px;">est.</span></div>';
+      }else{
+        row.style.cssText="display:grid;grid-template-columns:1fr 90px 110px 100px;padding:14px 16px;border-bottom:1px solid rgba(255,255,255,0.05);align-items:center;transition:background 0.2s;cursor:default;";
+        row.onmouseenter=function(){this.style.background="rgba(255,255,255,0.03)"};
+        row.onmouseleave=function(){this.style.background="transparent"};
+        row.innerHTML='<div style="display:flex;align-items:center;gap:10px;"><span style="font-size:0.68rem;color:rgba(255,255,255,0.2);font-weight:600;min-width:20px;flex-shrink:0;">'+n+'</span><span style="font-size:0.85rem;color:rgba(255,255,255,0.85);font-weight:500;">'+item.kw+'</span></div><div style="text-align:center;font-size:0.9rem;font-weight:700;color:white;">'+item.vol.toLocaleString()+' <span style="font-size:0.62rem;color:rgba(255,255,255,0.35);">est.</span></div><div style="text-align:center;"><span style="background:rgba(239,68,68,0.12);color:#f87171;padding:4px 10px;border-radius:20px;font-size:0.72rem;font-weight:600;">Not ranking</span></div><div style="text-align:center;font-size:0.82rem;font-weight:700;color:rgba(255,255,255,0.5);">'+item.leads+'</div>';
+      }
+      c.appendChild(row);
+    });
+  }
+  render();
+  window.addEventListener("resize",render);
+})();
+</script>
+</body>
+</html>

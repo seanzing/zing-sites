@@ -1,0 +1,1297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Refinishing Wizards | Bathtub & Tile Restoration | Indian Orchard, MA</title>
+<meta name="description" content="Refinishing Wizards in Indian Orchard, MA — Bathtub Refinishing, Tile Refinishing, Countertop Refinishing and more. (413) 563-0487.">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --cream:     #f5f8ff;
+      --cream-mid: #eaf0fc;
+      --gold:      #f97316;
+      --gold-light:#fb923c;
+      --gold-pale: #fff3e8;
+      --dark:      #1a3580;
+      --mid:       #1e4099;
+      --muted:     #64748b;
+      --white:     #ffffff;
+      --border:    #d0daf0;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--cream);
+      color: var(--dark);
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 56px; height: 72px;
+      background: #ffffff;
+      backdrop-filter: none;
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.35rem; font-weight: 600; font-style: italic;
+      color: var(--dark); text-decoration: none; letter-spacing: 0.01em;
+    }
+    .nav-logo span { color: var(--gold); font-style: normal; }
+    .nav-links { display: flex; gap: 36px; align-items: center; }
+    .nav-links a {
+      font-size: 0.8rem; font-weight: 500; letter-spacing: 0.07em;
+      text-transform: uppercase; color: var(--muted); text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--dark); }
+    .nav-cta {
+      background: var(--dark) !important; color: var(--cream) !important;
+      padding: 10px 22px; border-radius: 4px;
+      font-size: 0.78rem !important; font-weight: 600 !important;
+      letter-spacing: 0.08em !important; text-transform: uppercase !important;
+      transition: background 0.2s !important;
+    }
+    .nav-cta:hover { background: var(--gold) !important; }
+
+    /* ── HERO, SPLIT LAYOUT ── */
+    .hero {
+      display: grid; grid-template-columns: 1fr 1fr;
+      min-height: 100vh; padding-top: 72px;
+    }
+    .hero-left {
+      display: flex; flex-direction: column; justify-content: space-between;
+      padding: 100px 64px 72px 56px;
+      background: var(--cream);
+    }
+    .hero-eyebrow {
+      font-size: 0.72rem; font-weight: 600; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--gold);
+      margin-bottom: 36px; display: flex; align-items: center; gap: 12px;
+    }
+    .hero-eyebrow::before {
+      content: ''; display: inline-block;
+      width: 32px; height: 1px; background: var(--gold);
+    }
+    .hero-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(3rem, 5vw, 4.8rem);
+      font-weight: 600; line-height: 1.08; letter-spacing: -0.01em;
+      color: var(--dark); margin-bottom: 36px;
+    }
+    .hero-title em { font-style: italic; color: var(--gold); }
+    .hero-sub {
+      font-size: 1rem; line-height: 1.8;
+      color: var(--muted); max-width: 100%; margin-bottom: 40px;
+    }
+    .hero-bullets {
+      list-style: none; padding: 0; margin: 0 0 44px;
+      display: flex; flex-direction: column; gap: 16px;
+    }
+    .hero-bullets li {
+      display: flex; align-items: center; gap: 10px;
+      font-size: 0.95rem; color: var(--dark); font-weight: 500;
+    }
+    .hero-bullets li::before {
+      content: ''; display: inline-block;
+      width: 18px; height: 18px; border-radius: 50%;
+      background: var(--gold); flex-shrink: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M2 6l3 3 5-5' stroke='white' stroke-width='1.8' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      background-size: 60%;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    .hero-review {
+      display: flex; align-items: center; gap: 14px;
+      padding: 22px 24px; background: var(--white);
+      border-radius: 8px; border: 1px solid var(--border);
+      margin-bottom: 40px;
+    }
+    .hero-review-stars { color: #f59e0b; font-size: 1rem; letter-spacing: 2px; }
+    .hero-review-text { font-size: 0.82rem; color: var(--muted); line-height: 1.5; }
+    .hero-review-text strong { color: var(--dark); display: block; font-size: 0.78rem; margin-bottom: 2px; }
+    .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
+    .btn-dark {
+      display: inline-block; background: var(--dark); color: var(--cream);
+      padding: 16px 36px; border-radius: 4px;
+      font-size: 0.8rem; font-weight: 600;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      text-decoration: none; transition: background 0.2s;
+    }
+    .btn-dark:hover { background: var(--gold); }
+    .btn-outline {
+      display: inline-block; color: var(--dark);
+      border-bottom: 1px solid var(--dark);
+      font-size: 0.82rem; font-weight: 500;
+      text-decoration: none; padding-bottom: 2px;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .btn-outline:hover { color: var(--gold); border-color: var(--gold); }
+    #trust-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-top: 0;
+      padding-top: 32px;
+      border-top: 1px solid var(--border);
+    }
+    .trust-item {
+      text-align: center;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 20px 12px;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      min-height: 110px;
+    }
+    .trust-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.2rem; font-weight: 700;
+      color: var(--dark); line-height: 1; margin-bottom: 6px;
+    }
+    .trust-label {
+      font-size: 0.68rem; font-weight: 600; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--muted);
+    }
+    .hero-right {
+      position: relative; overflow: hidden; min-height: 300px;
+    }
+    .hero-right img {
+      width: 100%; height: 100%;
+      object-fit: cover; object-position: center;
+      animation: slowzoom 20s ease-in-out infinite alternate;
+    }
+    @keyframes slowzoom {
+      from { transform: scale(1); }
+      to   { transform: scale(1.06); }
+    }
+    .hero-badge {
+      position: absolute; bottom: 40px; left: -20px;
+      background: var(--white);
+      padding: 20px 28px; border-radius: 8px;
+      box-shadow: 0 16px 48px rgba(0,0,0,0.12);
+      max-width: 240px;
+    }
+    .hero-badge-icon { font-size: 1.4rem; margin-bottom: 8px; }
+    .hero-badge h4 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem; font-weight: 600; margin-bottom: 4px;
+    }
+    .hero-badge p { font-size: 0.78rem; color: var(--muted); line-height: 1.5; }
+
+    /* ── PROMISE STRIP ── */
+    .promise-strip {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      background: var(--white);
+    }
+    .promise-item {
+      padding: 32px 28px; text-align: center;
+      border-right: 1px solid var(--border);
+    }
+    .promise-item:last-child { border-right: none; }
+    .promise-icon { font-size: 1.6rem; margin-bottom: 10px; }
+    .promise-item h4 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem; font-weight: 600; margin-bottom: 4px;
+    }
+    .promise-item p { font-size: 0.8rem; color: var(--muted); line-height: 1.5; }
+
+    /* ── PROCESS SECTION ── */
+    .process-section { padding: 112px 56px; background: var(--cream); }
+    .process-inner { max-width: 1100px; margin: 0 auto; }
+    .section-eyebrow {
+      font-size: 0.7rem; font-weight: 600; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--gold);
+      margin-bottom: 16px; display: flex; align-items: center; gap: 12px;
+    }
+    .section-eyebrow::before {
+      content: ''; width: 28px; height: 1px; background: var(--gold);
+    }
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      font-weight: 600; line-height: 1.18; margin-bottom: 64px;
+      max-width: 560px;
+    }
+    .process-steps {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+    }
+    .process-step {
+      padding: 48px 40px;
+      border: 1px solid var(--border);
+      border-right: none;
+      transition: background 0.3s;
+    }
+    .process-step:last-child { border-right: 1px solid var(--border); }
+    .process-step:hover { background: var(--gold-pale); }
+    .step-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 4rem; font-weight: 700; line-height: 1;
+      color: var(--gold-pale); margin-bottom: 20px;
+      /* outline text effect */
+      -webkit-text-stroke: 1px var(--gold-light);
+      color: transparent;
+    }
+    .process-step h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem; font-weight: 600; margin-bottom: 12px;
+    }
+    .process-step p { font-size: 0.88rem; color: var(--muted); line-height: 1.7; }
+
+    /* ── SERVICES, EDITORIAL GRID ── */
+    .services-section { padding: 0; background: var(--dark); }
+    .services-header {
+      padding: 80px 56px 56px;
+    }
+    .services-header .section-eyebrow { color: var(--gold-light); }
+    .services-header .section-eyebrow::before { background: var(--gold-light); }
+    .services-header .section-title { color: var(--cream); margin-bottom: 0; }
+    .services-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      grid-template-rows: 340px 340px;
+    }
+    .svc {
+      position: relative; overflow: hidden; cursor: default;
+    }
+    .svc-img {
+      position: absolute; inset: 0;
+      background-size: cover; background-position: center;
+      transition: transform 0.6s ease;
+    }
+    .svc:hover .svc-img { transform: scale(1.06); }
+    .svc-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(26,21,16,0.92) 0%, rgba(26,21,16,0.3) 60%, transparent 100%);
+      transition: background 0.3s;
+    }
+    .svc:hover .svc-overlay {
+      background: linear-gradient(to top, rgba(26,21,16,0.95) 0%, rgba(26,21,16,0.5) 70%, rgba(26,21,16,0.1) 100%);
+    }
+    .svc-content {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      padding: 32px 28px;
+    }
+    .svc-tag {
+      font-size: 0.65rem; font-weight: 600; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--gold-light);
+      margin-bottom: 8px;
+    }
+    .svc h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem; font-weight: 600;
+      color: white; margin-bottom: 8px;
+    }
+    .svc p {
+      font-size: 0.82rem; color: rgba(255,255,255,0.7);
+      line-height: 1.6; max-height: 0; overflow: hidden;
+      transition: max-height 0.4s ease;
+    }
+    .svc:hover p { max-height: 80px; }
+
+    /* Grid placement */
+    .svc-1 { grid-column: 1; grid-row: 1 / 3; }
+    .svc-2 { grid-column: 2; grid-row: 1; }
+    .svc-3 { grid-column: 3; grid-row: 1; }
+    .svc-4 { grid-column: 2; grid-row: 2; }
+    .svc-5 { grid-column: 3; grid-row: 2; }
+    .svc-6 { display: none; } /* 5-card editorial grid */
+
+    /* ── TRANSFORMATION SECTION ── */
+    .transform-section {
+      padding: 112px 56px;
+      background: var(--cream-mid);
+    }
+    .transform-inner { max-width: 1100px; margin: 0 auto; }
+    .transform-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 80px; align-items: center;
+    }
+    .transform-image {
+      position: relative; border-radius: 2px;
+      overflow: hidden; box-shadow: 0 32px 80px rgba(0,0,0,0.12);
+    }
+    .transform-image img { width: 100%; height: 480px; object-fit: cover; display: block; }
+    .transform-label {
+      position: absolute; bottom: 24px; right: 24px;
+      background: var(--white); padding: 10px 18px;
+      border-radius: 4px;
+      font-size: 0.72rem; font-weight: 600;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--gold); box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    }
+    .transform-copy { display: flex; flex-direction: column; gap: 32px; }
+    .savings-row {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 20px 0; border-bottom: 1px solid var(--border);
+    }
+    .savings-row:first-of-type { border-top: 1px solid var(--border); }
+    .savings-label {
+      font-size: 0.9rem; color: var(--mid); font-weight: 500;
+    }
+    .savings-compare { display: flex; gap: 20px; align-items: center; }
+    .price-old {
+      font-size: 0.88rem; color: var(--muted);
+      text-decoration: line-through;
+    }
+    .price-new {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem; font-weight: 700; color: var(--gold);
+    }
+    .transform-cta {
+      background: var(--gold-pale);
+      border: 1px solid var(--gold-light);
+      border-radius: 8px; padding: 28px 32px;
+    }
+    .transform-cta h4 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem; font-weight: 600; margin-bottom: 8px;
+    }
+    .transform-cta p { font-size: 0.88rem; color: var(--muted); margin-bottom: 20px; }
+
+    /* ── CONTACT SECTION ── */
+    .contact-section {
+      display: grid; grid-template-columns: 1fr 1fr;
+      min-height: 600px;
+    }
+    .contact-left {
+      background: var(--dark); padding: 96px 64px;
+      display: flex; flex-direction: column; justify-content: center;
+    }
+    .contact-left .section-eyebrow { color: var(--gold-light); }
+    .contact-left .section-eyebrow::before { background: var(--gold-light); }
+    .contact-left .section-title { color: var(--cream); font-size: 2.4rem; margin-bottom: 40px; }
+    .contact-detail { display: flex; flex-direction: column; gap: 24px; }
+    .contact-row { border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 20px; }
+    .contact-row label {
+      font-size: 0.68rem; font-weight: 600; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--gold-light); display: block; margin-bottom: 6px;
+    }
+    .contact-row a, .contact-row p {
+      font-size: 1rem; color: rgba(255,255,255,0.85);
+      text-decoration: none; font-weight: 400;
+    }
+    .contact-row a:hover { color: var(--gold-light); }
+    .contact-warranty {
+      margin-top: 40px; padding: 24px 28px;
+      border: 1px solid rgba(154,123,79,0.3);
+      border-radius: 6px; background: rgba(154,123,79,0.06);
+    }
+    .contact-warranty p {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem; font-style: italic;
+      color: var(--gold-light); line-height: 1.6;
+    }
+    .contact-right { background: var(--white); padding: 96px 64px; display: flex; flex-direction: column; justify-content: center; }
+    .contact-right h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.6rem; font-weight: 600; margin-bottom: 32px;
+    }
+    .form { display: flex; flex-direction: column; gap: 20px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .form-group { display: flex; flex-direction: column; gap: 8px; }
+    .form-group label {
+      font-size: 0.72rem; font-weight: 600; letter-spacing: 0.07em;
+      text-transform: uppercase; color: var(--muted);
+    }
+    .form-group input, .form-group select, .form-group textarea {
+      border: 1px solid var(--border);
+      background: var(--cream); color: var(--dark);
+      padding: 14px 16px; border-radius: 4px;
+      font-size: 0.92rem; font-family: 'Inter', sans-serif;
+      outline: none; transition: border-color 0.2s;
+    }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+      border-color: var(--gold);
+    }
+    .form-group textarea { resize: vertical; min-height: 100px; }
+    .form-submit {
+      background: var(--dark); color: var(--cream); border: none;
+      padding: 16px 32px; border-radius: 4px;
+      font-size: 0.78rem; font-weight: 600; letter-spacing: 0.09em;
+      text-transform: uppercase; cursor: pointer;
+      align-self: flex-start; transition: background 0.2s;
+    }
+    .form-submit:hover { background: var(--gold); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--cream-mid);
+      border-top: 1px solid var(--border);
+      padding: 36px 56px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .footer-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem; font-style: italic; font-weight: 600; color: var(--dark);
+    }
+    .footer-logo span { color: var(--gold); font-style: normal; }
+    footer p { font-size: 0.8rem; color: var(--muted); }
+    .footer-badges { display: flex; gap: 10px; }
+    .fbadge {
+      font-size: 0.68rem; font-weight: 600; letter-spacing: 0.06em;
+      text-transform: uppercase; padding: 5px 12px;
+      border: 1px solid var(--border); border-radius: 20px;
+      color: var(--gold); background: var(--white);
+    }
+
+    /* ── ANIMATIONS ── */
+    .fade-up {
+      opacity: 0; transform: none;
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 960px) {
+      /* NAV */
+      nav { padding: 0 24px; }
+      .nav-links { display: none; }
+
+      /* HERO — stack image below text */
+      .hero { grid-template-columns: 1fr; min-height: unset; padding-top: 60px; }
+      .hero-left { padding: 18px 24px 40px; order: 1; justify-content: flex-start; gap: 0; }
+      .hero-right { height: 56vw; min-height: 220px; order: 2; }
+      .hero-badge { display: none; }
+      .hero-actions { flex-direction: column; }
+      .btn-dark, .btn-outline { text-align: center; }
+      .hero-bullets { margin-bottom: 24px; }
+      .hero-review { margin-bottom: 20px; }
+
+      /* TRUST GRID — 2x2 */
+      #trust-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+      .trust-item { min-height: 100px; padding: 16px 10px; }
+      .trust-num { font-size: 1.9rem; }
+
+      /* PROMISE STRIP */
+      .promise-strip { grid-template-columns: repeat(2, 1fr); }
+
+      /* PROCESS */
+      .process-section, .transform-section { padding: 56px 20px; }
+      .process-steps { grid-template-columns: 1fr; }
+      .process-step { border-right: 1px solid var(--border); }
+
+      /* SERVICES */
+      .services-grid { grid-template-columns: 1fr; grid-template-rows: auto; }
+      .svc-1 { grid-column: 1; grid-row: auto; height: 280px; }
+      .svc-2,.svc-3,.svc-4,.svc-5 { grid-column: 1; grid-row: auto; height: 220px; }
+
+      /* SAVINGS / TRANSFORM */
+      .transform-grid { grid-template-columns: 1fr; gap: 32px; }
+
+      /* CONTACT */
+      .contact-section { grid-template-columns: 1fr; }
+      .contact-left { padding: 56px 24px 32px; }
+      .contact-right { padding: 32px 24px 56px; }
+      .form-row { grid-template-columns: 1fr; }
+
+      /* SEO SECTION */
+      #seo-heading { padding: 48px 20px 0; }
+      #seo-heading h2 { font-size: 1.6rem; }
+      #seo-section { padding: 40px 20px 56px; }
+      #seo-header { text-align: left; margin-bottom: 36px; }
+      #seo-header p { max-width: 100%; }
+      #seo-banner { padding: 28px 24px; flex-direction: column; gap: 12px; text-align: center; }
+      #seo-banner > div { width: 100%; }
+      #seo-banner > div > div { text-align: center; }
+      #seo-banner h3 { text-align: center; font-size: 1.5rem !important; }
+      #seo-banner p { text-align: center; }
+      #kw-layout { grid-template-columns: 1fr; }
+      /* kw table handled via inline scroll wrapper */
+      #kw-header-desktop { display: none !important; }
+      #kw-header-mobile { display: grid !important; }
+      #kw-table-wrap { overflow-x: visible; }
+
+      /* ELIZABETH CTA — mobile stacked layout */
+      #elizabeth-cta {
+        flex-direction: column !important;
+        align-items: center !important;
+        padding: 32px 24px !important;
+        gap: 16px !important;
+        text-align: center !important;
+      }
+      #eliz-photo { order: 1; width: 90px !important; height: 90px !important; }
+      #eliz-headline { order: 2; font-size: 1.3rem !important; text-align: center; min-width: unset !important; flex: none !important; }
+      #eliz-btn { order: 3; width: 100% !important; text-align: center !important; box-sizing: border-box !important; white-space: normal !important; padding: 18px 20px !important; }
+      #eliz-contact { order: 4; text-align: center !important; }
+      #eliz-tagline { order: 5; }
+
+      /* HOW WE FIX THIS — full width below table on mobile */
+      #kw-layout { grid-template-columns: 1fr !important; }
+      #kw-layout > div:last-child {
+        position: static !important;
+        width: 100% !important;
+      }
+      #kw-layout > div:last-child a[style*="Fix My Rankings"] {
+        width: 100% !important;
+        box-sizing: border-box !important;
+        text-align: center !important;
+        display: block !important;
+        font-size: 0.9rem !important;
+        padding: 18px 20px !important;
+      }
+
+      /* ELIZABETH CTA */
+      .book-btn { width: 100%; text-align: center; box-sizing: border-box; }
+
+      /* FOOTER */
+      footer { flex-direction: column; gap: 14px; text-align: center; padding: 28px 20px; }
+      .footer-badges { justify-content: center; }
+
+      /* HERO SUB + IMAGE GAP — tighten on mobile */
+      .hero-sub { margin-bottom: 20px !important; }
+      #mobile-hero-img { margin: 10px 0 20px !important; }
+
+      /* HERO IMAGE — show inline, hide right panel */
+      #mobile-hero-img { display: block !important; }
+      .hero-right { display: none !important; }
+
+      /* DISABLE FADE ANIMATIONS — show all content immediately on mobile */
+      .fade-up { opacity: 1 !important; transform: none !important; transition: none !important; }
+
+      /* SAVINGS / NUMBERS SECTION */
+      .transform-section { padding: 56px 20px; }
+      .transform-inner { max-width: 100%; }
+      .transform-image { display: none; }
+      .transform-copy { gap: 0; }
+      .savings-row {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 16px 0;
+        gap: 0;
+        flex-wrap: nowrap;
+      }
+      .savings-label {
+        font-size: 0.78rem;
+        font-weight: 600;
+        color: var(--dark);
+        flex: 0 0 auto;
+        max-width: 38%;
+      }
+      .savings-compare {
+        display: contents;
+      }
+      .price-old {
+        font-size: 0.82rem;
+        flex: 1;
+        text-align: center;
+      }
+      .price-new {
+        font-size: 1.25rem;
+        flex: 0 0 auto;
+        text-align: right;
+      }
+      .transform-cta { padding: 20px; margin-top: 16px; }
+      .transform-cta h4 { font-size: 1.2rem; }
+    }
+  
+/* CTA SECTION */
+#cta-section {
+  padding: 80px 0;
+  background: var(--dark, #1a0a2e);
+}
+#cta-section .cta-card {
+  max-width: 800px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, rgba(30,10,50,0.95) 0%, rgba(45,20,70,0.9) 100%);
+  border: 1px solid rgba(124,58,237,0.25);
+  border-radius: 20px;
+  padding: 48px;
+  text-align: center;
+}
+#cta-section .cta-photo {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top center;
+  border: 3px solid #7c3aed;
+  display: block;
+  margin: 0 auto 24px;
+}
+#cta-section .cta-card h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: white;
+}
+#cta-section .cta-subtitle {
+  font-size: 0.92rem;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 6px;
+}
+#cta-section .cta-tagline {
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.35);
+  margin-bottom: 28px;
+}
+#cta-section .cta-buttons {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+#cta-section .btn-primary {
+  background: #7c3aed;
+  color: white;
+  padding: 14px 32px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+#cta-section .btn-primary:hover {
+  background: #6d28d9;
+}
+#cta-section .btn-outline {
+  display: inline-block;
+  color: white;
+  padding: 14px 32px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  border: 1px solid rgba(255,255,255,0.2);
+  text-decoration: none;
+  transition: border-color 0.3s ease;
+}
+#cta-section .btn-outline:hover {
+  border-color: #7c3aed;
+}
+#cta-section .cta-email {
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.35);
+}
+#cta-section .cta-email a {
+  color: rgba(255,255,255,0.6);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+@media(max-width:640px) {
+  #cta-section .cta-card { padding: 32px 20px; }
+  #cta-section .cta-buttons { flex-direction: column; align-items: center; }
+}
+</style>
+<meta property="og:title" content="Refinishing Wizards | Indian Orchard, MA">
+<meta property="og:description" content="Refinishing Wizards in Indian Orchard, MA — Bathtub Refinishing, Tile Refinishing, Countertop Refinishing and more. (413) 563-0487.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://yourwebsiteexample.com/refinishingwizard/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "LocalBusiness",
+        "HomeAndConstructionBusiness"
+      ],
+      "@id": "https://yourwebsiteexample.com/refinishingwizard/#business",
+      "name": "Refinishing Wizards",
+      "description": "Professional bathtub, tile, and countertop refinishing in Indian Orchard, MA. Restore your surfaces without costly replacement.",
+      "url": "https://yourwebsiteexample.com/refinishingwizard/",
+      "telephone": "+14135630487",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1004 Berkshire Ave.",
+        "addressLocality": "Indian Orchard",
+        "addressRegion": "MA",
+        "postalCode": "01151",
+        "addressCountry": "US"
+      },
+      "areaServed": "Springfield, MA area",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Bathtub Refinishing"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Tile Refinishing"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Countertop Refinishing"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Shower Refinishing"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Fiberglass Repair"
+            }
+          }
+        ]
+      },
+      "sameAs": []
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://yourwebsiteexample.com/refinishingwizard/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much does bathtub refinishing cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most bathtub refinishing jobs in the Springfield area range from $300 to $600 depending on the size, condition, and material. This is significantly less than full tub replacement which can cost $1,500 to $5,000 or more."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does bathtub refinishing last?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A professionally refinished bathtub typically lasts 10 to 15 years with proper care. Avoiding abrasive cleaners and using a bath mat will extend the finish life considerably."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does the refinishing process take?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most jobs are completed in 4 to 6 hours. We recommend waiting 24 to 48 hours before using the tub to allow the finish to fully cure."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you refinish showers and tile as well?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We refinish bathtubs, tile surrounds, shower pans, fiberglass enclosures, and countertops. If it's a surface you want restored, we can likely help."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What areas do you serve?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We serve Indian Orchard, Springfield, Chicopee, Holyoke, and the broader Western Massachusetts area. Contact us to confirm service availability at your address."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#" class="nav-logo"><img src="/refinishingwizard/logo.webp" alt="Refinishing Wizards" style="height:48px;width:auto;object-fit:contain;"></a>
+    <div class="nav-links">
+      <a href="#process">How It Works</a>
+      <a href="#services">Services</a>
+      <a href="#savings">Savings</a>
+      <a href="#contact">Contact</a>
+      <a href="tel:4135630487" class="nav-cta">(413) 563-0487</a>
+    </div>
+  </nav>
+
+  <!-- HERO, SPLIT SCREEN -->
+  <div class="hero">
+    <div class="hero-left">
+      <div class="hero-eyebrow">Indian Orchard, Massachusetts</div>
+      <h1 class="hero-title">
+        Your Bathroom.<br>
+        <em>Transformed.</em> Today.
+      </h1>
+      <p class="hero-sub">
+        Stop paying for demolition. Refinishing Wizards restores your bathtub, tile, and shower to like-new condition in a single day, at a fraction of the replacement cost.
+      </p>
+      <div id="mobile-hero-img" style="display:none; margin: 20px 0; border-radius: 8px; overflow: hidden; height: 52vw; position: relative;">
+        <img src="https://images.unsplash.com/photo-1760546120487-ccb54df9838c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800&q=85" alt="Luxury refinished bathroom" style="width:100%; height:100%; object-fit:cover; display:block;">
+      </div>
+      <ul class="hero-bullets">
+        <li>Bathtub, tile &amp; shower restoration in one day</li>
+        <li>Save up to 80% compared to full replacement</li>
+        <li>Eco-friendly process, no demolition, no dust</li>
+        <li>5-year warranty on every job</li>
+      </ul>
+      <div class="hero-review">
+        <div>
+          <div class="hero-review-stars">★★★★★</div>
+          <div style="font-size:0.72rem; color:var(--muted); margin-top:2px;">Google Reviews · 4.9 avg</div>
+        </div>
+        <div class="hero-review-text">
+          <strong>"Absolutely incredible results"</strong>
+          My tub looks brand new. Done in 6 hours, half the price I expected. Would hire again in a heartbeat.
+        </div>
+      </div>
+      <div class="hero-actions">
+        <a href="#contact" class="btn-dark">Get a Free Estimate</a>
+        <a href="tel:4135630487" class="btn-outline">Call (413) 563-0487</a>
+      </div>
+      <div id="trust-grid">
+        <div class="trust-item">
+          <div class="trust-num">80%</div>
+          <div class="trust-label">Less Than<br>Replacement</div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-num">1 Day</div>
+          <div class="trust-label">Most Jobs<br>Completed</div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-num">5 Yr</div>
+          <div class="trust-label">Warranty<br>Included</div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-num">Zero</div>
+          <div class="trust-label">Demo-<br>lition</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-right">
+      <img src="https://images.unsplash.com/photo-1760546120487-ccb54df9838c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=1200&q=90" alt="Luxury refinished bathroom with freestanding tub and marble tile">
+      <div class="hero-badge">
+        <div class="hero-badge-icon">🛡️</div>
+        <h4>Licensed &amp; Insured</h4>
+        <p>Every job fully covered with a limited 5-year warranty</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROMISE STRIP -->
+  <div class="promise-strip">
+    <div class="promise-item fade-up">
+      <div class="promise-icon">✨</div>
+      <h4>Showroom Finish</h4>
+      <p>Smooth, glossy, porcelain-like results every time</p>
+    </div>
+    <div class="promise-item fade-up">
+      <div class="promise-icon">⚡</div>
+      <h4>Done Same Day</h4>
+      <p>No weeks of downtime, most jobs finish in hours</p>
+    </div>
+    <div class="promise-item fade-up">
+      <div class="promise-icon">🏠</div>
+      <h4>Zero Demolition</h4>
+      <p>No crews, no debris, no structural disruption</p>
+    </div>
+    <div class="promise-item fade-up">
+      <div class="promise-icon">💰</div>
+      <h4>Save Thousands</h4>
+      <p>Up to 80% less than full bathtub or tile replacement</p>
+    </div>
+  </div>
+
+  <!-- PROCESS -->
+  <section class="process-section" id="process">
+    <div class="process-inner">
+      <div class="section-eyebrow">How It Works</div>
+      <h2 class="section-title">From Worn to Wow, In Three Simple Steps</h2>
+      <div class="process-steps fade-up">
+        <div class="process-step">
+          <div class="step-num">01</div>
+          <h3>Free Estimate</h3>
+          <p>Call or text us. We assess your tub, tile, or shower, tell you exactly what we'll do, what it will cost, and how long it takes. No surprises.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-num">02</div>
+          <h3>One-Day Restoration</h3>
+          <p>Our professional coating system is applied with expert precision. We protect your space, do the work cleanly, and leave no mess behind.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-num">03</div>
+          <h3>Enjoy Your Bathroom</h3>
+          <p>24 hours after we finish, your surface is ready for daily use, gleaming, smooth, and covered by our 5-year limited warranty.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES, EDITORIAL GRID -->
+  <section class="services-section" id="services">
+    <div class="services-header fade-up">
+      <div class="section-eyebrow">What We Restore</div>
+      <h2 class="section-title">Every Surface. Flawless Results.</h2>
+    </div>
+    <div class="services-grid">
+
+      <div class="svc svc-1 fade-up">
+        <div class="svc-img" style="background-image:url('https://images.unsplash.com/photo-1773867567838-3292f16e4aca?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=1200&q=85');"></div>
+        <div class="svc-overlay"></div>
+        <div class="svc-content">
+          <div class="svc-tag">Signature Service</div>
+          <h3>Bathtub Refinishing</h3>
+          <p>Our most popular service. Eliminate stains, discoloration, chips, and scratches, restore your tub to a smooth, glossy, porcelain-like finish that looks and feels brand new.</p>
+        </div>
+      </div>
+
+      <div class="svc svc-2 fade-up">
+        <div class="svc-img" style="background-image:url('https://images.unsplash.com/photo-1771372012124-f7696f374a5a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800&q=85');"></div>
+        <div class="svc-overlay"></div>
+        <div class="svc-content">
+          <div class="svc-tag">Most Requested</div>
+          <h3>Tile &amp; Grout Refinishing</h3>
+          <p>Transform dated, stained tile without demolition. Fresh grout color included.</p>
+        </div>
+      </div>
+
+      <div class="svc svc-3 fade-up">
+        <div class="svc-img" style="background-image:url('https://images.unsplash.com/photo-1575245122563-776ff6af7411?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800&q=85');"></div>
+        <div class="svc-overlay"></div>
+        <div class="svc-content">
+          <div class="svc-tag">Full Restoration</div>
+          <h3>Shower Restoration</h3>
+          <p>Mold, stains, dull grout, permanently eliminated in a single visit.</p>
+        </div>
+      </div>
+
+      <div class="svc svc-4 fade-up">
+        <div class="svc-img" style="background-image:url('https://images.unsplash.com/photo-1770941326576-eb1520695ec8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800&q=85');"></div>
+        <div class="svc-overlay"></div>
+        <div class="svc-content">
+          <div class="svc-tag">Precision Work</div>
+          <h3>Chip &amp; Crack Repair</h3>
+          <p>Seamless repairs blended perfectly, you won't find where the damage was.</p>
+        </div>
+      </div>
+
+      <div class="svc svc-5 fade-up">
+        <div class="svc-img" style="background-image:url('https://images.unsplash.com/photo-1737372826589-baf8fd032d2f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800&q=85');"></div>
+        <div class="svc-overlay"></div>
+        <div class="svc-content">
+          <div class="svc-tag">Safety Upgrade</div>
+          <h3>Slip Guard &amp; Color Change</h3>
+          <p>New color in one day. Built-in anti-slip coating replaces moldy bath mats.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TRANSFORMATION / SAVINGS -->
+  <section class="transform-section" id="savings">
+    <div class="transform-inner">
+      <div class="section-eyebrow fade-up">The Smart Choice</div>
+      <h2 class="section-title fade-up">The Numbers That Make Refinishing the Obvious Decision</h2>
+      <div class="transform-grid">
+        <div class="transform-image fade-up">
+          <img src="https://images.unsplash.com/photo-1631773022853-905dfbd2cdf8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=900&q=85" alt="Gleaming restored bathtub with chrome fittings">
+          <div class="transform-label">After Refinishing</div>
+        </div>
+        <div class="transform-copy fade-up">
+          <div>
+            <div class="savings-row">
+              <span class="savings-label">Bathtub Replacement</span>
+              <div class="savings-compare">
+                <span class="price-old">$3,000 – $10,000</span>
+                <span class="price-new">$300 – $600</span>
+              </div>
+            </div>
+            <div class="savings-row">
+              <span class="savings-label">Tile Wall (per sq ft)</span>
+              <div class="savings-compare">
+                <span class="price-old">$25 – $50</span>
+                <span class="price-new">$3 – $7</span>
+              </div>
+            </div>
+            <div class="savings-row">
+              <span class="savings-label">Shower Surround</span>
+              <div class="savings-compare">
+                <span class="price-old">$2,500 – $8,000</span>
+                <span class="price-new">$400 – $900</span>
+              </div>
+            </div>
+            <div class="savings-row">
+              <span class="savings-label">Time to Complete</span>
+              <div class="savings-compare">
+                <span class="price-old">2 – 6 weeks</span>
+                <span class="price-new">1 Day</span>
+              </div>
+            </div>
+          </div>
+          <div class="transform-cta">
+            <h4>Ready to Save Thousands?</h4>
+            <p>Most homeowners are stunned by how affordable refinishing is, and how remarkable the results look.</p>
+            <a href="#contact" class="btn-dark">Get Your Free Estimate</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT, SPLIT LAYOUT -->
+  <div class="contact-section" id="contact">
+    <div class="contact-left">
+      <div class="section-eyebrow">Get In Touch</div>
+      <h2 class="section-title">Let's Restore Your Bathroom</h2>
+      <div class="contact-detail">
+        <div class="contact-row">
+          <label>Call or Text</label>
+          <a href="tel:4135630487">(413) 563-0487</a>
+        </div>
+        <div class="contact-row">
+          <label>Email</label>
+          <a href="mailto:jarin12ga@yahoo.com">jarin12ga@yahoo.com</a>
+        </div>
+        <div class="contact-row">
+          <label>Address</label>
+          <p>1004 Berkshire Ave.<br>Indian Orchard, MA 01151</p>
+        </div>
+        <div class="contact-row">
+          <label>Response Time</label>
+          <p>Same-day on most inquiries.<br>Free estimates, zero obligation.</p>
+        </div>
+      </div>
+      <div class="contact-warranty">
+        <p>"Every surface we restore is covered by our 5-year limited warranty. We don't leave until the finish is perfect."</p>
+      </div>
+    </div>
+    <div class="contact-right">
+      <h3>Request a Free Estimate</h3>
+      <form class="form">
+        <div class="form-row">
+          <div class="form-group">
+            <label>First Name</label>
+            <input type="text" placeholder="Jane">
+          </div>
+          <div class="form-group">
+            <label>Last Name</label>
+            <input type="text" placeholder="Smith">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Phone</label>
+            <input type="tel" placeholder="(413) 555-0000">
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" placeholder="jane@example.com">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>What needs refinishing?</label>
+          <select>
+            <option value="">Select a service...</option>
+            <option>Bathtub Refinishing</option>
+            <option>Tile &amp; Grout Refinishing</option>
+            <option>Shower Restoration</option>
+            <option>Color Change</option>
+            <option>Chip &amp; Crack Repair</option>
+            <option>Slip Guard Coating</option>
+            <option>Multiple Services</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Additional Details</label>
+          <textarea placeholder="Describe the surface condition, your timeline, any questions..."></textarea>
+        </div>
+        <button type="submit" class="form-submit">Send Estimate Request</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  
+<!-- FAQ SECTION -->
+<section id="faq-section" style="background:#f5f8ff; padding:64px 48px; font-family:\'Inter\',sans-serif; border-top:1px solid #d0daf0">
+  <div style="max-width:760px; margin:0 auto;">
+    <div style="font-size:0.68rem; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#f97316; margin-bottom:12px;">FAQ</div>
+    <h2 style="font-size:clamp(1.4rem,2.5vw,2rem); color:#1a3580; margin-bottom:32px; font-weight:700; line-height:1.3;">Common Questions About Refinishing Wizards</h2>
+    <div id="faq-list">
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false">How much does bathtub refinishing cost?<span class="faq-icon">+</span></button>
+      <div class="faq-a"><p>Most bathtub refinishing jobs in the Springfield area range from $300 to $600 depending on the size, condition, and material. This is significantly less than full tub replacement which can cost $1,500 to $5,000 or more.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false">How long does bathtub refinishing last?<span class="faq-icon">+</span></button>
+      <div class="faq-a"><p>A professionally refinished bathtub typically lasts 10 to 15 years with proper care. Avoiding abrasive cleaners and using a bath mat will extend the finish life considerably.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false">How long does the refinishing process take?<span class="faq-icon">+</span></button>
+      <div class="faq-a"><p>Most jobs are completed in 4 to 6 hours. We recommend waiting 24 to 48 hours before using the tub to allow the finish to fully cure.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false">Do you refinish showers and tile as well?<span class="faq-icon">+</span></button>
+      <div class="faq-a"><p>Yes. We refinish bathtubs, tile surrounds, shower pans, fiberglass enclosures, and countertops. If it's a surface you want restored, we can likely help.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false">What areas do you serve?<span class="faq-icon">+</span></button>
+      <div class="faq-a"><p>We serve Indian Orchard, Springfield, Chicopee, Holyoke, and the broader Western Massachusetts area. Contact us to confirm service availability at your address.</p></div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+    <div class="footer-logo"><img src="/refinishingwizard/logo.webp" alt="Refinishing Wizards" style="height:40px;width:auto;object-fit:contain;"></div>
+    <p>© 2025 Refinishing Wizards · Indian Orchard, MA · (413) 563-0487</p>
+    <div class="footer-badges">
+      <span class="fbadge">Licensed</span>
+      <span class="fbadge">Insured</span>
+      <span class="fbadge">5-Yr Warranty</span>
+    </div>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(el => {
+        if (el.isIntersecting) {
+          el.target.classList.add('visible');
+          el.target.querySelectorAll('.fade-up').forEach((child, i) => {
+            setTimeout(() => child.classList.add('visible'), i * 100);
+          });
+        }
+      });
+    }, { threshold: 0.08 });
+
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  </script>
+
+
+  <!-- Section Divider Heading -->
+  <div id="seo-heading" style="background:#0f1623; padding:64px 56px 0; text-align:center;">
+    <h2 style="font-family:'Cormorant Garamond',serif; font-size:clamp(2.2rem,4vw,3.6rem); font-weight:700; color:#ffffff; letter-spacing:0.04em; text-transform:uppercase;">
+      Your Current Website Performance
+    </h2>
+    <div style="width:60px; height:3px; background:#f97316; margin:20px auto 0;"></div>
+  </div>
+
+  <!-- SEO REPORT SECTION -->
+  
+<style>
+.faq-item { border-bottom:1px solid #d0daf0; }
+.faq-q { width:100%; background:none; border:none; color:#1a3580; font-size:0.92rem; font-weight:600; padding:18px 0; display:flex; justify-content:space-between; align-items:center; cursor:pointer; text-align:left; gap:16px; font-family:'Inter',sans-serif; }
+.faq-q:hover { color:#1e4099; }
+.faq-icon { color:#f97316; font-size:1.2rem; font-weight:300; flex-shrink:0; transition:transform 0.3s; }
+.faq-q[aria-expanded="true"] .faq-icon { transform:rotate(45deg); }
+.faq-a { max-height:0; overflow:hidden; transition:max-height 0.35s ease; }
+.faq-a.open { max-height:300px; }
+.faq-a p { padding:0 0 18px; font-size:0.86rem; color:#64748b; line-height:1.75; }
+</style>
+<script>
+document.querySelectorAll('.faq-q').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const expanded = btn.getAttribute('aria-expanded') === 'true';
+    document.querySelectorAll('.faq-q').forEach(b => { b.setAttribute('aria-expanded','false'); b.nextElementSibling.classList.remove('open'); });
+    if (!expanded) { btn.setAttribute('aria-expanded','true'); btn.nextElementSibling.classList.add('open'); }
+  });
+});
+</script>
+
+<!-- SEO SECTION -->
+<section style="background:#0f1623;padding:80px 0;color:rgba(255,255,255,0.7);font-family:'Inter',sans-serif;">
+  <div style="max-width:1100px;margin:0 auto;padding:0 32px;">
+    <h2 style="color:white;font-size:clamp(1.8rem,3vw,2.4rem);text-align:center;margin-bottom:12px;font-family:inherit;">Your Local Competition is Already Online.</h2>
+    <p style="text-align:center;font-size:1.05rem;margin-bottom:40px;max-width:650px;margin-left:auto;margin-right:auto;color:rgba(255,255,255,0.6);">We looked at what Springfield homeowners search every month. Here's what you're missing.</p>
+    <div style="background:rgba(232,96,10,0.12);border:1px solid rgba(232,96,10,0.3);border-radius:10px;padding:20px 28px;text-align:center;margin-bottom:48px;font-size:1.05rem;color:#e8600a;font-weight:600;">~14,200 potential customers search for bathtub refinishing services every month.</div>
+    <div id="kw-layout" style="display:grid;grid-template-columns:2fr 1fr;gap:40px;margin-bottom:60px;align-items:start;">
+      <div>
+        <div class="kw-dh" style="display:grid;grid-template-columns:1fr 90px 110px 100px;padding:10px 16px;background:rgba(255,255,255,0.04);border-bottom:1px solid rgba(255,255,255,0.08);gap:8px;">
+          <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.35);">Keyword</div>
+          <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.35);text-align:center;">Your Rank</div>
+          <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.35);text-align:center;">Competition</div>
+          <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.35);text-align:right;">Searches/mo</div>
+        </div>
+        <div class="kw-mh" style="display:none;grid-template-columns:1fr 60px 80px;padding:10px 14px;background:rgba(255,255,255,0.04);border-bottom:1px solid rgba(255,255,255,0.08);gap:6px;">
+          <div style="font-size:0.6rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.35);">Keyword</div>
+          <div style="font-size:0.6rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.35);text-align:center;">Rank</div>
+          <div style="font-size:0.6rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.35);text-align:right;">Searches</div>
+        </div>
+        <div id="kw-rows"></div>
+        <p style="font-size:0.68rem;color:rgba(255,255,255,0.25);margin-top:12px;">* Search volumes est. Data sourced from DataForSEO.</p>
+      </div>
+      <div style="border:1px solid rgba(232,96,10,0.3);border-radius:12px;background:rgba(232,96,10,0.06);padding:28px 24px;position:sticky;top:88px;">
+        <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#e8600a;margin-bottom:16px;">How We Fix This</div>
+        <div style="display:flex;flex-direction:column;gap:14px;">
+          <div style="display:flex;gap:12px;align-items:flex-start;"><span style="color:#e8600a;font-size:1rem;margin-top:1px;flex-shrink:0;">&#10003;</span><div><div style="font-size:0.88rem;font-weight:700;color:white;margin-bottom:2px;">50 Local Landing Pages</div><div style="font-size:0.76rem;color:rgba(255,255,255,0.45);line-height:1.5;">One page per keyword and service area, built to rank</div></div></div>
+          <div style="display:flex;gap:12px;align-items:flex-start;"><span style="color:#e8600a;font-size:1rem;margin-top:1px;flex-shrink:0;">&#10003;</span><div><div style="font-size:0.88rem;font-weight:700;color:white;margin-bottom:2px;">AI Chat</div><div style="font-size:0.76rem;color:rgba(255,255,255,0.45);line-height:1.5;">Converts visitors into booked jobs 24/7, even while you sleep</div></div></div>
+          <div style="display:flex;gap:12px;align-items:flex-start;"><span style="color:#e8600a;font-size:1rem;margin-top:1px;flex-shrink:0;">&#10003;</span><div><div style="font-size:0.88rem;font-weight:700;color:white;margin-bottom:2px;">SEO Keyword Strategy</div><div style="font-size:0.76rem;color:rgba(255,255,255,0.45);line-height:1.5;">Targeting the exact searches Springfield homeowners are making</div></div></div>
+          <div style="display:flex;gap:12px;align-items:flex-start;"><span style="color:#e8600a;font-size:1rem;margin-top:1px;flex-shrink:0;">&#10003;</span><div><div style="font-size:0.88rem;font-weight:700;color:white;margin-bottom:2px;">All Done For You</div><div style="font-size:0.76rem;color:rgba(255,255,255,0.45);line-height:1.5;">You run your business. We handle everything else.</div></div></div>
+        </div>
+        <a href="https://meetings.hubspot.com/elizabeth41" target="_blank" style="display:block;margin-top:24px;background:#e8600a;color:white;padding:16px 20px;border-radius:6px;font-size:0.82rem;font-weight:700;letter-spacing:0.09em;text-transform:uppercase;text-decoration:none;text-align:center;width:100%;box-sizing:border-box;">Fix My Rankings</a>
+        <div style="text-align:center;margin-top:10px;font-size:0.72rem;color:rgba(255,255,255,0.35);">From <strong style="color:#e8600a;">$59/mo</strong> &middot; No contract</div>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+@media(max-width:960px){
+  #kw-layout{grid-template-columns:1fr!important;}
+  .kw-dh{display:none!important;}
+  .kw-mh{display:grid!important;}
+}
+@media(max-width:768px){
+  #kw-layout{gap:24px!important;}
+}
+</style>
+<script>
+(function(){
+var kws=[{kw:"bathtub refinishing near me",vol:3600,leads:45},{kw:"bathtub resurfacing near me",vol:2900,leads:36},{kw:"tub refinishing near me",vol:2400,leads:30},{kw:"bathtub reglazing near me",vol:1900,leads:24},{kw:"bathroom refinishing near me",vol:1600,leads:20},{kw:"tub resurfacing cost",vol:1300,leads:16},{kw:"bathtub refinishing springfield ma",vol:480,leads:6},{kw:"tub reglazing springfield ma",vol:320,leads:4},{kw:"bathtub resurfacing cost near me",vol:260,leads:3},{kw:"porcelain tub refinishing near me",vol:210,leads:3}];
+var c=document.getElementById("kw-rows");
+if(!c)return;
+function render(){
+  c.innerHTML="";
+  var m=window.innerWidth<=960;
+  kws.forEach(function(item,i){
+    var row=document.createElement("div");
+    var n=String(i+1).padStart(2,"0");
+    if(m){
+      row.style.cssText="display:grid;grid-template-columns:1fr 60px 80px;padding:12px 14px;border-bottom:1px solid rgba(255,255,255,0.06);align-items:center;gap:6px;";
+      row.innerHTML='<div style="display:flex;align-items:center;gap:8px;"><span style="font-size:0.62rem;color:rgba(255,255,255,0.2);font-weight:700;flex-shrink:0;">'+n+'</span><span style="font-size:0.78rem;color:rgba(255,255,255,0.85);font-weight:500;line-height:1.3;">'+item.kw+'</span></div><div style="text-align:center;"><span style="font-size:0.9rem;font-weight:800;color:#f87171;">0</span></div><div style="text-align:right;font-size:0.8rem;font-weight:700;color:white;">'+item.vol.toLocaleString()+'<span style="font-size:0.6rem;color:rgba(255,255,255,0.35);margin-left:2px;">est.</span></div>';
+    }else{
+      row.style.cssText="display:grid;grid-template-columns:1fr 90px 110px 100px;padding:14px 16px;border-bottom:1px solid rgba(255,255,255,0.05);align-items:center;transition:background 0.2s;cursor:default;";
+      row.onmouseenter=function(){this.style.background="rgba(255,255,255,0.03)"};
+      row.onmouseleave=function(){this.style.background="transparent"};
+      row.innerHTML='<div style="display:flex;align-items:center;gap:10px;"><span style="font-size:0.68rem;color:rgba(255,255,255,0.2);font-weight:600;min-width:20px;flex-shrink:0;">'+n+'</span><span style="font-size:0.85rem;color:rgba(255,255,255,0.85);font-weight:500;">'+item.kw+'</span></div><div style="text-align:center;font-size:0.9rem;font-weight:700;color:white;">'+item.vol.toLocaleString()+' <span style="font-size:0.62rem;color:rgba(255,255,255,0.35);">est.</span></div><div style="text-align:center;"><span style="background:rgba(239,68,68,0.12);color:#f87171;padding:4px 10px;border-radius:20px;font-size:0.72rem;font-weight:600;">Not ranking</span></div><div style="text-align:center;font-size:0.82rem;font-weight:700;color:rgba(255,255,255,0.5);">'+item.leads+'</div>';
+    }
+    c.appendChild(row);
+  });
+}
+render();
+window.addEventListener("resize",render);
+})();
+</script>
+
+<section id="cta-section">
+  <div style="max-width:1100px;margin:0 auto;padding:0 32px;">
+    <div class="cta-card">
+      <img class="cta-photo" src="/refinishingwizard/elizabeth.jpg" alt="Elizabeth Adams, Senior Business Advisor, ZING" loading="lazy">
+      <h2>Ready to get more refinishing customers? Let's talk.</h2>
+      <p class="cta-subtitle">Elizabeth Adams &middot; Senior Business Advisor, ZING</p>
+      <p class="cta-tagline">Websites from $59/mo &middot; 50 local landing pages &middot; Full design included &middot; No contract</p>
+      <div class="cta-buttons">
+        <a href="https://meetings.hubspot.com/elizabeth41" target="_blank" class="btn-primary">Book a Free Call &rarr;</a>
+        <a href="tel:7205340218" class="btn-outline">(720) 534-0218</a>
+      </div>
+      <div class="cta-email"><a href="mailto:elizabeth@zing-work.com">elizabeth@zing-work.com</a></div>
+    </div>
+  </div>
+</section>
+</body>
+</html>

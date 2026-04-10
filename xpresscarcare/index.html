@@ -1,0 +1,1317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Xpress Car Care LLC | Luxury Car Care Services at an Affordable Price | Auburn, AL</title>
+<meta name="description" content="Xpress Car Care LLC in Auburn, AL — Basic Exterior Wash, Interior Detailing, Premium Detail and more. (334) 854-8147.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --dark: #1a0a2e;
+  --purple: #6b21a8;
+  --blue: #2563eb;
+  --red: #dc2626;
+  --cream: #fafafa;
+  --mid: #4b5563;
+  --white: #ffffff;
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--mid);
+  background: var(--cream);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cormorant Garamond', serif;
+  line-height: 1.2;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* NAV */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: var(--white);
+  padding: 16px 0;
+  transition: box-shadow 0.3s;
+}
+
+.nav.scrolled {
+  box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+}
+
+.nav .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-logo {
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.nav-logo .logo-xpress {
+  font-weight: 900;
+  color: var(--blue);
+  letter-spacing: -0.02em;
+}
+
+.nav-logo .logo-carcare {
+  font-style: italic;
+  color: var(--blue);
+  font-weight: 400;
+}
+
+.nav-phone {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--blue);
+  color: var(--white);
+  text-decoration: none;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: background 0.3s;
+}
+
+.nav-phone:hover {
+  background: #1d4ed8;
+}
+
+.nav-phone svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero-bg div {
+  width: 100%;
+  height: 100%;
+  background: url('/xpresscarcare/hero.jpg?v=1775677732') center/cover no-repeat;
+  animation: slowZoom 25s ease-in-out infinite alternate;
+}
+
+@keyframes slowZoom {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.08); }
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(10,5,20,0.65);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 720px;
+  padding: 0 24px;
+}
+
+.hero-badge {
+  display: inline-block;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: rgba(255,255,255,0.9);
+  padding: 8px 20px;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  color: var(--white);
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.hero-sub {
+  font-size: 1.15rem;
+  color: rgba(255,255,255,0.8);
+  margin-bottom: 36px;
+  line-height: 1.7;
+}
+
+.btn-primary {
+  display: inline-block;
+  background: var(--blue);
+  color: var(--white);
+  text-decoration: none;
+  padding: 16px 40px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.btn-primary:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+/* ABOUT */
+.about {
+  padding: 100px 0;
+  background: var(--cream);
+}
+
+.about .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+}
+
+.about-image-mobile {
+  display: none;
+}
+
+.about-image-mobile img {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+  margin-bottom: 24px;
+}
+
+.section-badge {
+  display: inline-block;
+  background: rgba(37,99,235,0.08);
+  color: var(--blue);
+  padding: 6px 16px;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.about-text h2 {
+  font-size: 2.8rem;
+  color: var(--dark);
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--mid);
+}
+
+/* VALUE PROPS */
+.value-props {
+  padding: 80px 0;
+  background: var(--dark);
+}
+
+.value-props .container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.value-card {
+  text-align: center;
+  padding: 40px 30px;
+}
+
+.value-icon {
+  width: 56px;
+  height: 56px;
+  background: rgba(37,99,235,0.15);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+
+.value-icon svg {
+  width: 28px;
+  height: 28px;
+  stroke: var(--blue);
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.value-card h3 {
+  font-size: 1.6rem;
+  color: var(--white);
+  margin-bottom: 12px;
+}
+
+.value-card p {
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.7;
+}
+
+/* SERVICES */
+.services {
+  padding: 100px 0;
+  background: var(--cream);
+}
+
+.services-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.services-header h2 {
+  font-size: 2.8rem;
+  color: var(--dark);
+  margin-bottom: 12px;
+}
+
+.services-header p {
+  font-size: 1.05rem;
+  color: var(--mid);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.service-card {
+  background: var(--white);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  transition: transform 0.3s, box-shadow 0.3s;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+}
+
+@keyframes fadeInUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.service-card:nth-child(1) { animation-delay: 0.05s; }
+.service-card:nth-child(2) { animation-delay: 0.1s; }
+.service-card:nth-child(3) { animation-delay: 0.15s; }
+.service-card:nth-child(4) { animation-delay: 0.2s; }
+.service-card:nth-child(5) { animation-delay: 0.25s; }
+.service-card:nth-child(6) { animation-delay: 0.3s; }
+.service-card:nth-child(7) { animation-delay: 0.35s; }
+.service-card:nth-child(8) { animation-delay: 0.4s; }
+.service-card:nth-child(9) { animation-delay: 0.45s; }
+.service-card:nth-child(10) { animation-delay: 0.5s; }
+.service-card:nth-child(11) { animation-delay: 0.55s; }
+
+.service-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.service-body {
+  padding: 24px;
+}
+
+.service-body h3 {
+  font-size: 1.35rem;
+  color: var(--dark);
+  margin-bottom: 8px;
+}
+
+.service-badge {
+  display: inline-block;
+  background: rgba(37,99,235,0.08);
+  color: var(--blue);
+  padding: 4px 12px;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.service-body p {
+  font-size: 0.9rem;
+  color: var(--mid);
+  line-height: 1.7;
+}
+
+/* CTA */
+.cta-section {
+  padding: 80px 0;
+  background: var(--dark);
+  text-align: center;
+}
+
+.cta-section h2 {
+  font-size: 2.8rem;
+  color: var(--white);
+  margin-bottom: 16px;
+}
+
+.cta-section .cta-phone {
+  font-size: 2.2rem;
+  color: var(--blue);
+  font-weight: 800;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 28px;
+  font-family: 'Inter', sans-serif;
+}
+
+.cta-section .cta-phone:hover {
+  color: #60a5fa;
+}
+
+/* FOOTER */
+.footer {
+  background: var(--dark);
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding: 60px 0 40px;
+}
+
+.footer .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+}
+
+.footer-logo {
+  font-size: 1.4rem;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.footer-logo .logo-xpress {
+  font-weight: 900;
+  color: var(--blue);
+  letter-spacing: -0.02em;
+}
+
+.footer-logo .logo-carcare {
+  font-style: italic;
+  color: var(--blue);
+  font-weight: 400;
+}
+
+.footer-tagline {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.5);
+  font-style: italic;
+}
+
+.footer h4 {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 16px;
+}
+
+.footer p, .footer a {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.7);
+  line-height: 1.8;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: var(--blue);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.3);
+}
+
+/* SEO REPORT */
+.seo-report {
+  background: #0f1623;
+  padding: 80px 0;
+}
+
+.seo-report .section-badge {
+  background: rgba(239,68,68,0.1);
+  color: #f87171;
+}
+
+.seo-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.seo-header h2 {
+  font-size: 2.4rem;
+  color: var(--white);
+  margin-bottom: 12px;
+}
+
+.seo-header p {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.5);
+}
+
+.seo-banner {
+  background: linear-gradient(135deg, rgba(239,68,68,0.12), rgba(239,68,68,0.04));
+  border: 1px solid rgba(239,68,68,0.15);
+  border-radius: 12px;
+  padding: 20px 28px;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #fca5a5;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.seo-banner strong {
+  color: #f87171;
+}
+
+#kw-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.kw-table {
+  background: rgba(255,255,255,0.03);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.kw-table-header {
+  display: grid;
+  grid-template-columns: 1fr 90px 110px 90px;
+  padding: 14px 16px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(255,255,255,0.35);
+}
+
+.kw-table-header-mobile {
+  display: none;
+  grid-template-columns: 1fr 52px 72px;
+  padding: 12px 14px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  font-size: 0.62rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(255,255,255,0.35);
+}
+
+.how-we-fix {
+  background: rgba(37,99,235,0.06);
+  border: 1px solid rgba(37,99,235,0.15);
+  border-radius: 16px;
+  padding: 36px 28px;
+}
+
+.how-we-fix h3 {
+  font-size: 1.5rem;
+  color: var(--white);
+  margin-bottom: 24px;
+}
+
+.fix-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.fix-check {
+  width: 28px;
+  height: 28px;
+  background: rgba(37,99,235,0.15);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.fix-check svg {
+  width: 14px;
+  height: 14px;
+  stroke: var(--blue);
+  fill: none;
+  stroke-width: 2.5;
+}
+
+.fix-item span {
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.8);
+  font-weight: 500;
+}
+
+.fix-btn {
+  display: block;
+  width: 100%;
+  background: var(--blue);
+  color: var(--white);
+  text-align: center;
+  padding: 14px 24px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  margin-top: 28px;
+  transition: background 0.3s;
+}
+
+.fix-btn:hover {
+  background: #1d4ed8;
+}
+
+/* ELLIOT CTA */
+#elizabeth-cta {
+  background: linear-gradient(135deg, #0f1623, #162033);
+  border: 1px solid rgba(37,99,235,0.12);
+  border-radius: 16px;
+  padding: 36px 48px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 28px;
+  row-gap: 16px;
+  margin-top: 48px;
+}
+
+#eliz-photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(37,99,235,0.3);
+}
+
+#eliz-headline {
+  flex: 1;
+  font-size: 1.5rem;
+  color: var(--white);
+  line-height: 1.4;
+}
+
+#eliz-btn {
+  display: inline-block;
+  background: var(--blue);
+  color: var(--white);
+  text-decoration: none;
+  padding: 22px 48px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: background 0.3s;
+  white-space: nowrap;
+}
+
+#eliz-btn:hover {
+  background: #1d4ed8;
+}
+
+#eliz-contact {
+  width: 100%;
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  font-size: 0.85rem;
+}
+
+#eliz-contact a {
+  color: rgba(255,255,255,0.6);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+#eliz-contact a:hover {
+  color: var(--blue);
+}
+
+.eliz-tagline {
+  width: 100%;
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.3);
+  font-style: italic;
+}
+
+/* RESPONSIVE */
+@media (max-width: 960px) {
+  .hero h1 { font-size: 2.8rem; }
+
+  .about .container { grid-template-columns: 1fr; gap: 32px; }
+  .about-image { display: none; }
+  .about-image-mobile { display: block; }
+
+  .value-props .container { grid-template-columns: 1fr; gap: 20px; }
+  .value-card { padding: 30px 24px; }
+
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .footer .container { grid-template-columns: 1fr; gap: 28px; text-align: center; }
+
+  .service-card { opacity: 1 !important; transform: none !important; animation: none !important; }
+
+  #kw-layout { grid-template-columns: 1fr; }
+  .kw-table-header { display: none; }
+  .kw-table-header-mobile { display: grid; }
+
+  #elizabeth-cta {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    padding: 36px 28px;
+  }
+  #eliz-photo { display: block !important; margin: 0 auto !important; order: 1; }
+  #eliz-headline { flex: none !important; width: 100% !important; text-align: center !important; font-size: 1.35rem !important; order: 2; }
+  #eliz-btn { display: block !important; width: 100% !important; max-width: 100% !important; box-sizing: border-box !important; white-space: normal !important; text-align: center !important; padding: 16px 20px !important; order: 3; }
+  #eliz-contact { text-align: center !important; width: 100%; order: 4; justify-content: center; }
+  .eliz-tagline { order: 5; text-align: center; }
+}
+
+@media (max-width: 768px) {
+  .services-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .hero h1 { font-size: 2.4rem; }
+  .services-header h2, .about-text h2, .cta-section h2 { font-size: 2.2rem; }
+  .seo-header h2 { font-size: 1.8rem; }
+}
+
+@media (max-width: 480px) {
+  .services-grid { grid-template-columns: 1fr; }
+  .hero h1 { font-size: 2rem; }
+  .hero-sub { font-size: 1rem; }
+  .nav-phone span { display: none; }
+  .cta-section .cta-phone { font-size: 1.6rem; }
+}
+
+/* CTA SECTION */
+#cta-section {
+  padding: 80px 0;
+  background: #0d0618;
+}
+#cta-section .cta-card {
+  max-width: 800px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #130a24 0%, #1a1030 100%);
+  border: 1px solid rgba(107,33,168,0.3);
+  border-radius: 20px;
+  padding: 48px;
+  text-align: center;
+}
+#cta-section .cta-photo {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top center;
+  border: 3px solid #6b21a8;
+  display: block;
+  margin: 0 auto 24px;
+}
+#cta-section .cta-card h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: white;
+}
+#cta-section .cta-subtitle {
+  font-size: 0.92rem;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 6px;
+}
+#cta-section .cta-tagline {
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.3);
+  margin-bottom: 28px;
+}
+#cta-section .cta-buttons {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+#cta-section .btn-primary {
+  background: #6b21a8;
+  color: white;
+  padding: 14px 32px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+#cta-section .btn-primary:hover {
+  background: #581c87;
+}
+#cta-section .btn-outline {
+  display: inline-block;
+  color: white;
+  padding: 14px 32px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  border: 1px solid rgba(255,255,255,0.15);
+  text-decoration: none;
+  transition: border-color 0.3s ease;
+}
+#cta-section .btn-outline:hover {
+  border-color: #6b21a8;
+}
+#cta-section .cta-email {
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.3);
+}
+#cta-section .cta-email a {
+  color: rgba(255,255,255,0.55);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+@media(max-width:640px) {
+  #cta-section .cta-card { padding: 32px 20px; }
+  #cta-section .cta-buttons { flex-direction: column; align-items: center; }
+}
+</style>
+<meta property="og:title" content="Xpress Car Care LLC | Auburn, AL">
+<meta property="og:description" content="Xpress Car Care LLC in Auburn, AL — Basic Exterior Wash, Interior Detailing, Premium Detail and more. (334) 854-8147.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://yourwebsiteexample.com/xpresscarcare/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "LocalBusiness",
+        "AutoWash"
+      ],
+      "@id": "https://yourwebsiteexample.com/xpresscarcare/#business",
+      "name": "Xpress Car Care LLC",
+      "description": "Luxury car care services at affordable prices in Auburn, AL. Detailing, washing, and specialty services for cars, trucks, ATVs, boats, and RVs.",
+      "url": "https://yourwebsiteexample.com/xpresscarcare/",
+      "telephone": "+13348548147",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "517 Webster Road",
+        "addressLocality": "Auburn",
+        "addressRegion": "AL",
+        "postalCode": "36832",
+        "addressCountry": "US"
+      },
+      "areaServed": "Auburn, Opelika, and Lee County, AL",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Basic Exterior Wash"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Interior Detailing"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Premium Detail"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Ultimate Detail"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Pet Hair Removal"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Exterior Polish"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "ATV Detail"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Boat Detailing"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "RV Detailing"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Fleet Washing"
+            }
+          }
+        ]
+      },
+      "sameAs": []
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://yourwebsiteexample.com/xpresscarcare/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much does car detailing cost in Auburn AL?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our detailing packages start at $30 for a basic exterior wash and range up to $250 for our Ultimate Detail. Interior-only details start at $125. We offer competitive luxury-quality detailing at prices you will not find at chain car washes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does a full car detail take?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A basic wash takes about 1 hour. A full interior and exterior detail typically takes 3 to 4 hours. Our Ultimate Detail package, which includes clay bar and finishing polish, takes approximately 4 hours."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you detail boats, ATVs, and RVs?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We detail all vehicle types including cars, trucks, ATVs, boats, RVs, and commercial fleet vehicles. Call us for a custom quote on specialty vehicles."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer fleet washing services?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We offer fleet washing programs for businesses with multiple vehicles. Regular fleet washing keeps your vehicles looking professional and maintains resale value. Call for a fleet pricing quote."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where are you located in Auburn AL?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We are located at 517 Webster Road, Auburn, AL 36832. We are open Monday through Friday 9am to 6pm and Saturday 9am to 5pm. Closed Sunday."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="container">
+    <a href="#" class="nav-logo">
+      <span class="logo-xpress">XPRESS</span> <span class="logo-carcare">Car Care</span>
+    </a>
+    <a href="tel:3348548147" class="nav-phone">
+      <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <span>(334) 854-8147</span>
+    </a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg"><div></div></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-badge">Auburn, AL &middot; Luxury Car Care</div>
+    <h1>Your Car Deserves the Best.</h1>
+    <p class="hero-sub">Professional detailing, washing, and car care services for every vehicle. Luxury results at prices you will love.</p>
+    <a href="#contact" class="btn-primary">Book Your Service</a>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-image">
+      <img src="/xpresscarcare/about.jpg?v=1775677732" alt="Xpress Car Care team at work" loading="lazy">
+    </div>
+    <div class="about-text">
+      <div class="section-badge">About Us</div>
+      <div class="about-image-mobile">
+        <img src="/xpresscarcare/about.jpg?v=1775677732" alt="Xpress Car Care team at work" loading="lazy">
+      </div>
+      <h2>More Than a Car Wash</h2>
+      <p>At Xpress Car Care, we understand that your car is more than just a mode of transportation -- it is a reflection of your personality and style. That is why we offer a range of luxury car care services at affordable prices. Our team of experienced professionals is dedicated to providing you with fast service, attention to detail, and excellent customer service. We believe that every car deserves the best care, and we are here to provide it.</p>
+    </div>
+  </div>
+</section>
+
+<!-- VALUE PROPS -->
+<section class="value-props">
+  <div class="container">
+    <div class="value-card">
+      <div class="value-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      </div>
+      <h3>Luxury Results</h3>
+      <p>Premium-grade products and techniques that deliver showroom-quality results every time.</p>
+    </div>
+    <div class="value-card">
+      <div class="value-icon">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      </div>
+      <h3>Fast Turnaround</h3>
+      <p>We respect your time. Most services completed while you wait.</p>
+    </div>
+    <div class="value-card">
+      <div class="value-icon">
+        <svg viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13" rx="2"/><polygon points="23 7 16 12 16 7 16 2 23 7"/><line x1="1" y1="20" x2="23" y2="20"/><line x1="5" y1="20" x2="5" y2="16"/><line x1="19" y1="20" x2="19" y2="16"/></svg>
+      </div>
+      <h3>Every Vehicle</h3>
+      <p>Cars, trucks, ATVs, boats, RVs, and fleet vehicles. We clean them all.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="services-header">
+      <div class="section-badge">Our Services</div>
+      <h2>What We Offer</h2>
+      <p>Professional car care services for every need and budget.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <img src="/xpresscarcare/service-basic-exterior-wash.jpg" alt="Xpress Basic Exterior Wash" class="service-img" loading="lazy">
+        <div class="service-body">
+          <h3>Xpress Basic Exterior Wash</h3>
+          <span class="service-badge">From $30 &middot; 1 hr</span>
+          <p>A thorough exterior wash that removes dirt, grime, and road debris. Your car comes out clean and shining every time.</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="/xpresscarcare/service-basic-wash-vacuum.jpg" alt="Basic Wash + Vacuum Detail" class="service-img" loading="lazy">
+        <div class="service-body">
+          <h3>Basic Wash + Vacuum Detail</h3>
+          <span class="service-badge">From $60 &middot; 1.5 hrs</span>
+          <p>Full exterior wash plus interior vacuum. A quick refresh that covers the essentials inside and out.</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="/xpresscarcare/service-interior-detail.jpg" alt="Interior Detail" class="service-img" loading="lazy">
+        <div class="service-body">
+          <h3>Interior Detail</h3>
+          <span class="service-badge">From $125 &middot; 2 hrs</span>
+          <p>Deep clean of your entire interior. Seats, carpets, dashboard, and every surface leaves spotless.</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="/xpresscarcare/service-premium-detail.jpg" alt="Premium Detail" class="service-img" loading="lazy">
+        <div class="service-body">
+          <h3>Premium Detail</h3>
+          <span class="service-badge">From $150 &middot; 3 hrs</span>
+          <p>Our premium package combines a full exterior wash with a complete interior detail for a like-new finish.</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="/xpresscarcare/service-ultimate-detail.jpg" alt="Ultimate Detail" class="service-img" loading="lazy">
+        <div class="service-body">
+          <h3>Ultimate Detail</h3>
+          <span class="service-badge">From $250 &middot; 4 hrs</span>
+          <p>The works. Hand wash, clay bar, interior deep clean, and finishing polish. The best we offer.</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="/xpresscarcare/service-pet-hair-removal.jpg" alt="Pet Hair Removal" class="service-img" loading="lazy">
+        <div class="service-body">
+          <h3>Pet Hair Removal</h3>
+          <span class="service-badge">From $50 &middot; 1 hr</span>
+          <p>Specialized tools and techniques to remove embedded pet hair from seats, carpets, and floor mats.</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="/xpresscarcare/service-exterior-polish.jpg" alt="Exterior Polish" class="service-img" loading="lazy">
+        <div class="service-body">
+          <h3>Exterior Polish</h3>
+          <span class="service-badge">From $200 &middot; 1 hr</span>
+          <p>Restore your paint's depth and shine with our professional exterior polish service.</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="/xpresscarcare/service-atv-detail.jpg" alt="ATV Detail" class="service-img" loading="lazy">
+        <div class="service-body">
+          <h3>ATV Detail</h3>
+          <span class="service-badge">Call for Quote &middot; 1 hr</span>
+          <p>Mud, dust, and trail grime don't stand a chance. We detail ATVs to a showroom finish.</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="/xpresscarcare/service-boat-detail.jpg" alt="Boat Detail" class="service-img" loading="lazy">
+        <div class="service-body">
+          <h3>Boat Detail</h3>
+          <span class="service-badge">Call for Quote &middot; 2 hrs</span>
+          <p>Full boat detailing inside and out. Gel coat, upholstery, hull, and deck cleaned and protected.</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="/xpresscarcare/service-rv-detail.jpg" alt="RV Detail" class="service-img" loading="lazy">
+        <div class="service-body">
+          <h3>RV Detail</h3>
+          <span class="service-badge">Call for Quote &middot; 2 hrs</span>
+          <p>Complete RV wash and detail. Exterior panels, windows, awnings, and interior spaces all handled.</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="/xpresscarcare/service-fleet-wash.jpg" alt="Fleet Wash" class="service-img" loading="lazy">
+        <div class="service-body">
+          <h3>Fleet Wash</h3>
+          <span class="service-badge">Call for Quote &middot; 5 hrs</span>
+          <p>Keep your entire fleet clean and professional. Regular fleet washing programs available.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section" id="contact">
+  <div class="container">
+    <h2>Ready to Book?</h2>
+    <a href="tel:3348548147" class="cta-phone">(334) 854-8147</a>
+    <a href="tel:3348548147" class="btn-primary">Call Now</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div>
+      <span class="footer-logo">
+        <span class="logo-xpress">XPRESS</span> <span class="logo-carcare">Car Care</span>
+      </span>
+      <p class="footer-tagline">Luxury Car Care Services at an Affordable Price</p>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p>
+        <a href="tel:3348548147">(334) 854-8147</a><br>
+        517 Webster Road<br>
+        Auburn, AL 36832
+      </p>
+    </div>
+    <div>
+      <h4>Hours</h4>
+      <p>
+        Mon - Fri: 9:00 AM - 6:00 PM<br>
+        Saturday: 9:00 AM - 5:00 PM<br>
+        Sunday: Closed
+      </p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy; 2026 Xpress Car Care LLC. All rights reserved.
+  </div>
+</footer>
+
+<script>
+(function() {
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) { entry.target.classList.add("visible"); observer.unobserve(entry.target); }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll(".fade-in, .service-card, .cat-grid, .values-grid, .locations-grid, .review-card, .stat-card, .about-text, .review-grid").forEach(function(el) { observer.observe(el); });
+  var nav = document.querySelector("nav") || document.querySelector("header");
+  if (nav) {
+    window.addEventListener("scroll", function() { nav.classList.toggle("scrolled", window.scrollY > 60); }, { passive: true });
+  }
+  document.querySelectorAll("a[href^="#"]").forEach(function(a) {
+    a.addEventListener("click", function(e) {
+      var t = document.querySelector(this.getAttribute("href"));
+      if (t) { e.preventDefault(); t.scrollIntoView({ behavior: "smooth", block: "start" }); }
+    });
+  });
+})();
+</script>
+<!-- SEO SECTION -->
+<section style="background:#0f1623;padding:80px 0;color:rgba(255,255,255,0.7);font-family:'Inter',sans-serif;">
+  <div style="max-width:1100px;margin:0 auto;padding:0 32px;">
+    <h2 style="color:white;font-size:clamp(1.8rem,3vw,2.4rem);text-align:center;margin-bottom:12px;font-family:inherit;">Your Local Competition is Already Online.</h2>
+    <p style="text-align:center;font-size:1.05rem;margin-bottom:40px;max-width:650px;margin-left:auto;margin-right:auto;color:rgba(255,255,255,0.6);">We looked at what Auburn drivers search every month. Here's what you're missing.</p>
+    <div style="background:rgba(232,96,10,0.12);border:1px solid rgba(232,96,10,0.3);border-radius:10px;padding:20px 28px;text-align:center;margin-bottom:48px;font-size:1.05rem;color:#e8600a;font-weight:600;">~23,600 potential customers search for car care and detailing services every month.</div>
+    <div id="kw-layout" style="display:grid;grid-template-columns:2fr 1fr;gap:40px;margin-bottom:60px;align-items:start;">
+      <div>
+        <div class="kw-dh" style="display:grid;grid-template-columns:1fr 90px 110px 100px;padding:10px 16px;background:rgba(255,255,255,0.04);border-bottom:1px solid rgba(255,255,255,0.08);gap:8px;">
+          <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.35);">Keyword</div>
+          <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.35);text-align:center;">Your Rank</div>
+          <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.35);text-align:center;">Competition</div>
+          <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.35);text-align:right;">Searches/mo</div>
+        </div>
+        <div class="kw-mh" style="display:none;grid-template-columns:1fr 60px 80px;padding:10px 14px;background:rgba(255,255,255,0.04);border-bottom:1px solid rgba(255,255,255,0.08);gap:6px;">
+          <div style="font-size:0.6rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.35);">Keyword</div>
+          <div style="font-size:0.6rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.35);text-align:center;">Rank</div>
+          <div style="font-size:0.6rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.35);text-align:right;">Searches</div>
+        </div>
+        <div id="kw-rows"></div>
+        <p style="font-size:0.68rem;color:rgba(255,255,255,0.25);margin-top:12px;">* Search volumes est. Data sourced from DataForSEO.</p>
+      </div>
+      <div style="border:1px solid rgba(232,96,10,0.3);border-radius:12px;background:rgba(232,96,10,0.06);padding:28px 24px;position:sticky;top:88px;">
+        <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#e8600a;margin-bottom:16px;">How We Fix This</div>
+        <div style="display:flex;flex-direction:column;gap:14px;">
+          <div style="display:flex;gap:12px;align-items:flex-start;"><span style="color:#e8600a;font-size:1rem;margin-top:1px;flex-shrink:0;">&#10003;</span><div><div style="font-size:0.88rem;font-weight:700;color:white;margin-bottom:2px;">50 Local Landing Pages</div><div style="font-size:0.76rem;color:rgba(255,255,255,0.45);line-height:1.5;">One page per keyword and service area, built to rank</div></div></div>
+          <div style="display:flex;gap:12px;align-items:flex-start;"><span style="color:#e8600a;font-size:1rem;margin-top:1px;flex-shrink:0;">&#10003;</span><div><div style="font-size:0.88rem;font-weight:700;color:white;margin-bottom:2px;">AI Chat</div><div style="font-size:0.76rem;color:rgba(255,255,255,0.45);line-height:1.5;">Converts visitors into booked jobs 24/7, even while you sleep</div></div></div>
+          <div style="display:flex;gap:12px;align-items:flex-start;"><span style="color:#e8600a;font-size:1rem;margin-top:1px;flex-shrink:0;">&#10003;</span><div><div style="font-size:0.88rem;font-weight:700;color:white;margin-bottom:2px;">SEO Keyword Strategy</div><div style="font-size:0.76rem;color:rgba(255,255,255,0.45);line-height:1.5;">Targeting the exact searches Auburn drivers are making</div></div></div>
+          <div style="display:flex;gap:12px;align-items:flex-start;"><span style="color:#e8600a;font-size:1rem;margin-top:1px;flex-shrink:0;">&#10003;</span><div><div style="font-size:0.88rem;font-weight:700;color:white;margin-bottom:2px;">All Done For You</div><div style="font-size:0.76rem;color:rgba(255,255,255,0.45);line-height:1.5;">You run your business. We handle everything else.</div></div></div>
+        </div>
+        <a href="https://meetings.hubspot.com/elliot-farmer" target="_blank" style="display:block;margin-top:24px;background:#e8600a;color:white;padding:16px 20px;border-radius:6px;font-size:0.82rem;font-weight:700;letter-spacing:0.09em;text-transform:uppercase;text-decoration:none;text-align:center;width:100%;box-sizing:border-box;">Fix My Rankings</a>
+        <div style="text-align:center;margin-top:10px;font-size:0.72rem;color:rgba(255,255,255,0.35);">From <strong style="color:#e8600a;">$59/mo</strong> &middot; No contract</div>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+@media(max-width:960px){
+  #kw-layout{grid-template-columns:1fr!important;}
+  .kw-dh{display:none!important;}
+  .kw-mh{display:grid!important;}
+}
+@media(max-width:768px){
+  #kw-layout{gap:24px!important;}
+}
+</style>
+<script>
+(function(){
+var kws=[{kw:"car wash near me",vol:8100,leads:101},{kw:"car detailing near me",vol:4400,leads:55},{kw:"auto detailing near me",vol:3600,leads:45},{kw:"car detail near me",vol:2900,leads:36},{kw:"interior car detailing near me",vol:1900,leads:24},{kw:"mobile car detailing near me",vol:1600,leads:20},{kw:"car wash auburn al",vol:480,leads:6},{kw:"auto detailing auburn al",vol:320,leads:4},{kw:"boat detailing near me",vol:210,leads:3},{kw:"rv detailing near me",vol:170,leads:2}];
+var c=document.getElementById("kw-rows");
+if(!c)return;
+function render(){
+  c.innerHTML="";
+  var m=window.innerWidth<=960;
+  kws.forEach(function(item,i){
+    var row=document.createElement("div");
+    var n=String(i+1).padStart(2,"0");
+    if(m){
+      row.style.cssText="display:grid;grid-template-columns:1fr 60px 80px;padding:12px 14px;border-bottom:1px solid rgba(255,255,255,0.06);align-items:center;gap:6px;";
+      row.innerHTML='<div style="display:flex;align-items:center;gap:8px;"><span style="font-size:0.62rem;color:rgba(255,255,255,0.2);font-weight:700;flex-shrink:0;">'+n+'</span><span style="font-size:0.78rem;color:rgba(255,255,255,0.85);font-weight:500;line-height:1.3;">'+item.kw+'</span></div><div style="text-align:center;"><span style="font-size:0.9rem;font-weight:800;color:#f87171;">0</span></div><div style="text-align:right;font-size:0.8rem;font-weight:700;color:white;">'+item.vol.toLocaleString()+'<span style="font-size:0.6rem;color:rgba(255,255,255,0.35);margin-left:2px;">est.</span></div>';
+    }else{
+      row.style.cssText="display:grid;grid-template-columns:1fr 90px 110px 100px;padding:14px 16px;border-bottom:1px solid rgba(255,255,255,0.05);align-items:center;transition:background 0.2s;cursor:default;";
+      row.onmouseenter=function(){this.style.background="rgba(255,255,255,0.03)"};
+      row.onmouseleave=function(){this.style.background="transparent"};
+      row.innerHTML='<div style="display:flex;align-items:center;gap:10px;"><span style="font-size:0.68rem;color:rgba(255,255,255,0.2);font-weight:600;min-width:20px;flex-shrink:0;">'+n+'</span><span style="font-size:0.85rem;color:rgba(255,255,255,0.85);font-weight:500;">'+item.kw+'</span></div><div style="text-align:center;font-size:0.9rem;font-weight:700;color:white;">'+item.vol.toLocaleString()+' <span style="font-size:0.62rem;color:rgba(255,255,255,0.35);">est.</span></div><div style="text-align:center;"><span style="background:rgba(239,68,68,0.12);color:#f87171;padding:4px 10px;border-radius:20px;font-size:0.72rem;font-weight:600;">Not ranking</span></div><div style="text-align:center;font-size:0.82rem;font-weight:700;color:rgba(255,255,255,0.5);">'+item.leads+'</div>';
+    }
+    c.appendChild(row);
+  });
+}
+render();
+window.addEventListener("resize",render);
+})();
+</script>
+
+<section id="cta-section">
+  <div style="max-width:1100px;margin:0 auto;padding:0 32px;">
+    <div class="cta-card">
+      <img class="cta-photo" src="/xpresscarcare/elliot.png" alt="Elliot Farmer, Senior Business Advisor, ZING" loading="lazy">
+      <h2>Ready to get more car care customers in Auburn? Let's talk.</h2>
+      <p class="cta-subtitle">Elliot Farmer &middot; Senior Business Advisor, ZING</p>
+      <p class="cta-tagline">Websites from $59/mo &middot; 50 local landing pages &middot; Full design included &middot; No contract</p>
+      <div class="cta-buttons">
+        <a href="https://meetings.hubspot.com/elliot-farmer" target="_blank" class="btn-primary">Book a Free Call &rarr;</a>
+        <a href="tel:7205340219" class="btn-outline">(720) 534-0219</a>
+      </div>
+      <div class="cta-email"><a href="mailto:elliot@zing-work.com">elliot@zing-work.com</a></div>
+    </div>
+  </div>
+</section>
+</body>
+</html>

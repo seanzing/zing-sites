@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GBS TILE INC. | Expert Tile Installation in Houston, TX</title>
+  <meta name="description" content="GBS TILE INC. in Houston, TX — Floor Tile Installation, Bathroom Tile, Kitchen Backsplash and more. (832) 428-7769.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --slate: #1e2a3a;
+      --cream: #f8f4ef;
+      --clay: #c4703f;
+      --mid: #5a6a7a;
+      --white: #ffffff;
+      --border: #d4cdc4;
+      --dark-footer: #111820;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--slate);
+      background: var(--white);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img { display: block; max-width: 100%; }
+    a { text-decoration: none; color: inherit; }
+
+    /* ── CONTAINER ── */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+
+    /* ── NAV ── */
+    .nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: 72px;
+      background: var(--white);
+      display: flex;
+      align-items: center;
+      z-index: 100;
+      transition: box-shadow 0.3s ease;
+    }
+    .nav.scrolled { box-shadow: 0 2px 20px rgba(0,0,0,0.10); }
+    .nav-inner {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      color: var(--slate);
+    }
+    .nav-phone {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--clay);
+      letter-spacing: 0.01em;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-top: 72px;
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background: url('hero.jpg') center/cover no-repeat;
+      animation: slowzoom 18s ease-in-out infinite alternate;
+      z-index: 0;
+    }
+    @keyframes slowzoom {
+      from { transform: scale(1); }
+      to   { transform: scale(1.07); }
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(20, 30, 45, 0.52);
+      z-index: 1;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      color: var(--white);
+      padding: 60px 40px;
+      max-width: 900px;
+    }
+    .hero-label {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--clay);
+      margin-bottom: 20px;
+    }
+    .hero-content h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 72px;
+      font-weight: 700;
+      line-height: 1.08;
+      margin-bottom: 24px;
+    }
+    .hero-content p {
+      font-size: 20px;
+      font-weight: 300;
+      line-height: 1.6;
+      opacity: 0.88;
+      margin-bottom: 40px;
+      max-width: 560px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .btn-primary {
+      display: inline-block;
+      background: var(--clay);
+      color: var(--white);
+      padding: 16px 40px;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+    .btn-primary:hover { background: #a85e30; transform: translateY(-1px); }
+
+    /* ── SECTION BASE ── */
+    .section { padding: 100px 0; }
+    .section-label {
+      display: block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--clay);
+      margin-bottom: 16px;
+    }
+    .section-header {
+      text-align: center;
+      margin-bottom: 64px;
+    }
+    .section-header h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 1.15;
+      color: var(--slate);
+      margin-bottom: 16px;
+    }
+    .section-header p {
+      font-size: 17px;
+      color: var(--mid);
+      max-width: 560px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    /* ── ABOUT ── */
+    .about { background: var(--cream); }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      align-items: stretch;
+      min-height: 560px;
+    }
+    .about-image {
+      width: 100%;
+      height: 100%;
+      min-height: 480px;
+      object-fit: cover;
+    }
+    .about-text {
+      padding: 80px 64px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .about-text h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 44px;
+      font-weight: 700;
+      line-height: 1.15;
+      color: var(--slate);
+      margin-bottom: 24px;
+    }
+    .about-text p {
+      font-size: 16px;
+      color: var(--mid);
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+    .about-image-mobile { display: none; }
+
+    .about-badge {
+      display: inline-block;
+      background: var(--clay);
+      color: var(--white);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      margin-bottom: 24px;
+    }
+
+    /* ── VALUE PROPS ── */
+    .values { background: var(--slate); }
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 48px;
+    }
+    .value-item {
+      text-align: center;
+    }
+    .value-icon {
+      width: 48px;
+      height: 48px;
+      margin: 0 auto 20px;
+      color: var(--clay);
+    }
+    .value-item h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+    .value-item p {
+      font-size: 15px;
+      color: rgba(255,255,255,0.65);
+      line-height: 1.7;
+    }
+
+    /* ── SERVICES ── */
+    .services { background: var(--white); }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+    .service-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.10);
+    }
+    .service-card-img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      display: block;
+    }
+    .service-card-body {
+      padding: 28px 28px 32px;
+    }
+    .service-card-body h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--slate);
+      margin-bottom: 10px;
+    }
+    .service-card-body p {
+      font-size: 14px;
+      color: var(--mid);
+      line-height: 1.7;
+    }
+
+    /* Fifth card centered when odd */
+    .services-grid .service-card:nth-child(4) { grid-column: 1; }
+    .services-grid .service-card:nth-child(5) { grid-column: 2; }
+
+    /* ── GALLERY ── */
+    .gallery-section { background: var(--cream); }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+    .gallery-item {
+      overflow: hidden;
+      aspect-ratio: 4/3;
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+    .gallery-item:hover img { transform: scale(1.04); }
+
+    /* ── CTA ── */
+    .cta-section {
+      background: var(--slate);
+      padding: 120px 0;
+      text-align: center;
+    }
+    .cta-section h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 56px;
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+    .cta-section p {
+      font-size: 18px;
+      color: rgba(255,255,255,0.65);
+      margin-bottom: 36px;
+    }
+    .cta-phone {
+      display: block;
+      font-family: 'Inter', sans-serif;
+      font-size: 48px;
+      font-weight: 700;
+      color: var(--clay);
+      margin-bottom: 36px;
+      letter-spacing: -0.01em;
+      transition: opacity 0.2s;
+    }
+    .cta-phone:hover { opacity: 0.85; }
+    .btn-outline {
+      display: inline-block;
+      border: 2px solid rgba(255,255,255,0.5);
+      color: var(--white);
+      padding: 14px 36px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .btn-outline:hover { border-color: var(--white); background: rgba(255,255,255,0.08); }
+
+    /* ── FOOTER ── */
+    .footer { background: var(--dark-footer); padding: 72px 0 0; }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 48px;
+      padding-bottom: 48px;
+    }
+    .footer-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--clay);
+      letter-spacing: 0.04em;
+      margin-bottom: 12px;
+    }
+    .footer-tagline {
+      font-size: 14px;
+      color: rgba(255,255,255,0.45);
+      line-height: 1.6;
+    }
+    .footer-col h4 {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+      margin-bottom: 20px;
+    }
+    .footer-col p,
+    .footer-col a {
+      font-size: 14px;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.9;
+      display: block;
+    }
+    .footer-col a:hover { color: var(--clay); }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding: 24px 0;
+      text-align: center;
+    }
+    .footer-bottom p {
+      font-size: 13px;
+      color: rgba(255,255,255,0.25);
+    }
+
+    /* ── FADE ANIMATIONS ── */
+    .fade-in {
+      opacity: 1;
+      transform: none;
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 960px) {
+      .container { padding: 0 24px; }
+      .nav-inner { padding: 0 24px; }
+      .section { padding: 72px 0; }
+
+      .hero-content h1 { font-size: 44px; }
+      .hero-content p { font-size: 17px; }
+
+      .about-grid { grid-template-columns: 1fr; }
+      .about-image { display: none; }
+      .about-image-mobile { display: block; width: 100%; height: 260px; object-fit: cover; border-radius: 4px; margin-bottom: 24px; }
+      .about-text { padding: 48px 24px; }
+      .about-text h2 { font-size: 36px; }
+
+      .values-grid { grid-template-columns: 1fr; gap: 40px; }
+
+      .services-grid { grid-template-columns: 1fr 1fr; gap: 20px; }
+      .services-grid .service-card:nth-child(4) { grid-column: auto; }
+      .services-grid .service-card:nth-child(5) { grid-column: auto; }
+
+      .section-header h2 { font-size: 36px; }
+
+      .cta-section { padding: 80px 0; }
+      .cta-section h2 { font-size: 38px; }
+      .cta-phone { font-size: 36px; }
+
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+      .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+
+      .fade-in {
+        opacity: 1 !important;
+        transform: translateY(0) !important;
+      }
+    }
+
+    /* ── SEO SECTION MOBILE ── */
+    @media (max-width: 960px) {
+      #seo-section { padding: 40px 20px 56px; }
+      #seo-header { text-align: left; margin-bottom: 36px; }
+      #seo-header p { max-width: 100%; }
+      #seo-banner { padding: 28px 24px; flex-direction: column; gap: 12px; text-align: center; }
+      #seo-banner > div { width: 100%; }
+      #seo-banner > div > div { text-align: center; }
+      #seo-banner h3 { text-align: center; font-size: 1.5rem !important; }
+      #seo-banner p { text-align: center; }
+      #kw-layout { grid-template-columns: 1fr !important; }
+      #kw-layout > div:last-child { position: static !important; }
+      #kw-layout > div:last-child a { width: 100% !important; box-sizing: border-box; }
+      #kw-header-desktop { display: none !important; }
+      #kw-header-mobile { display: grid !important; }
+      #elizabeth-cta { padding: 36px 28px; gap: 20px; flex-direction: column; align-items: center; text-align: center; overflow: hidden; }
+      #eliz-photo { order: 1; margin: 0 auto !important; flex-shrink: 0; display: block !important; }
+      #eliz-headline { order: 2; text-align: center !important; font-size: 1.35rem !important; flex: none !important; width: 100% !important; min-width: 0 !important; }
+      #eliz-btn { order: 3; display: block !important; width: 100% !important; max-width: 100% !important; text-align: center !important; box-sizing: border-box !important; white-space: normal !important; padding: 16px 20px !important; }
+      #eliz-contact { order: 4; text-align: center !important; width: 100%; min-width: 0; }
+      #eliz-tagline { order: 5; text-align: center; width: 100%; }
+    }
+
+    @media (max-width: 480px) {
+      .hero-content h1 { font-size: 36px; }
+      .services-grid { grid-template-columns: 1fr; }
+      .service-card-img { height: 200px; }
+    }
+  
+/* CTA SECTION */
+#cta-section {
+  padding: 80px 0;
+  background: #0a0f1e;
+}
+#cta-section .cta-card {
+  max-width: 800px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #0e1628 0%, #162035 100%);
+  border: 1px solid rgba(29,78,216,0.25);
+  border-radius: 20px;
+  padding: 48px;
+  text-align: center;
+}
+#cta-section .cta-photo {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top center;
+  border: 3px solid #1d4ed8;
+  display: block;
+  margin: 0 auto 24px;
+}
+#cta-section .cta-card h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: white;
+}
+#cta-section .cta-subtitle {
+  font-size: 0.92rem;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 6px;
+}
+#cta-section .cta-tagline {
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.3);
+  margin-bottom: 28px;
+}
+#cta-section .cta-buttons {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+#cta-section .btn-primary {
+  background: #1d4ed8;
+  color: white;
+  padding: 14px 32px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+#cta-section .btn-primary:hover {
+  background: #1e40af;
+}
+#cta-section .btn-outline {
+  display: inline-block;
+  color: white;
+  padding: 14px 32px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  border: 1px solid rgba(255,255,255,0.15);
+  text-decoration: none;
+  transition: border-color 0.3s ease;
+}
+#cta-section .btn-outline:hover {
+  border-color: #1d4ed8;
+}
+#cta-section .cta-email {
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.3);
+}
+#cta-section .cta-email a {
+  color: rgba(255,255,255,0.55);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+@media(max-width:640px) {
+  #cta-section .cta-card { padding: 32px 20px; }
+  #cta-section .cta-buttons { flex-direction: column; align-items: center; }
+}
+</style>
+<meta property="og:title" content="GBS TILE INC. | Houston, TX">
+<meta property="og:description" content="GBS TILE INC. in Houston, TX — Floor Tile Installation, Bathroom Tile, Kitchen Backsplash and more. (832) 428-7769.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://yourwebsiteexample.com/gbstile/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "LocalBusiness",
+        "HomeAndConstructionBusiness"
+      ],
+      "@id": "https://yourwebsiteexample.com/gbstile/#business",
+      "name": "GBS TILE INC.",
+      "description": "Expert tile installation for kitchens, bathrooms, and living spaces in Houston, TX. Family owned since 1998.",
+      "url": "https://yourwebsiteexample.com/gbstile/",
+      "telephone": "+18324287769",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "2411 Karbach St Suite 5",
+        "addressLocality": "Houston",
+        "addressRegion": "TX",
+        "postalCode": "77092",
+        "addressCountry": "US"
+      },
+      "areaServed": "Houston, TX",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Floor Tile Installation"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Bathroom Tile"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Kitchen Backsplash"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Shower Tile"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Custom Tile Work"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Tile Repair"
+            }
+          }
+        ]
+      },
+      "sameAs": []
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://yourwebsiteexample.com/gbstile/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much does tile installation cost in Houston?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tile installation in Houston typically ranges from $8 to $25 per square foot depending on tile material, pattern complexity, and subfloor prep required. We provide free estimates for all projects."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does tile installation take?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A standard bathroom floor can be tiled in 1 to 2 days. Larger projects like full kitchen floors or shower surrounds may take 3 to 5 days including setting time before grouting."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are you a licensed tile contractor?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. GBS TILE INC. is a fully licensed and insured tile contractor in Texas with over 25 years of experience serving the Houston area."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What types of tile do you install?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We install ceramic, porcelain, natural stone, marble, travertine, glass, and mosaic tile for floors, walls, showers, backsplashes, and outdoor spaces."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What Houston neighborhoods do you serve?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We serve all of Houston and surrounding areas including Katy, Sugar Land, The Woodlands, Pearland, Pasadena, and Cypress."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <span class="nav-logo">GBS TILE INC.</span>
+      <a href="tel:8324287769" class="nav-phone">(832) 428-7769</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="hero-label">Houston, Texas · Est. 1998</span>
+      <h1>Expert Tile Installation in Houston, TX</h1>
+      <p>Transforming spaces with precision craftsmanship since 1998. Family owned, locally trusted.</p>
+      <a href="#contact" class="btn-primary">Get a Free Quote</a>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section about" id="about">
+    <div class="about-grid">
+      <img class="about-image" src="about.jpg" alt="GBS TILE INC. installer at work" loading="lazy">
+      <div class="about-text">
+        <span class="about-badge">About Us</span>
+        <img class="about-image-mobile" src="about.jpg" alt="GBS TILE INC. installer at work" loading="lazy">
+        <h2>A Family Tradition of Excellence</h2>
+        <p>GBS TILE INC. was founded in 1998 by Fernando Guerrero right here in Houston, Texas. What started as a one-man operation has grown into a trusted family business serving homeowners and businesses across the greater Houston area.</p>
+        <p>We specialize in all tile installations: kitchens, bathrooms, living areas, foyers, bedrooms, and full remodeling projects. Over 25 years of hands-on experience means every job is done right the first time.</p>
+        <p>When you work with us, you work with the Guerrero family. That means honest pricing, premium materials, and a team that genuinely cares about your home.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALUE PROPS -->
+  <section class="section values">
+    <div class="container">
+      <div class="values-grid">
+        <div class="value-item fade-in">
+          <svg class="value-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="24" cy="24" r="20"/>
+            <path d="M24 10v4M24 34v4M14 24h-4M38 24h-4"/>
+            <path d="M17 17l3 3M28 28l3 3M17 31l3-3M28 20l3-3"/>
+            <circle cx="24" cy="24" r="5" fill="currentColor" stroke="none" opacity="0.3"/>
+          </svg>
+          <h3>Affordable Pricing</h3>
+          <p>Competitive rates without compromising on quality or materials, every time.</p>
+        </div>
+        <div class="value-item fade-in">
+          <svg class="value-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="24,4 29,18 44,18 32,27 37,42 24,33 11,42 16,27 4,18 19,18"/>
+          </svg>
+          <h3>Finest Materials</h3>
+          <p>We source only premium tiles and surfaces for every project, ensuring lasting beauty.</p>
+        </div>
+        <div class="value-item fade-in">
+          <svg class="value-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M8 32c0-6 4-10 10-10h12c6 0 10 4 10 10"/>
+            <circle cx="24" cy="16" r="7"/>
+            <path d="M4 40c0-4 3-7 7-7M44 40c0-4-3-7-7-7"/>
+            <circle cx="10" cy="28" r="5"/>
+            <circle cx="38" cy="28" r="5"/>
+          </svg>
+          <h3>We Work With You</h3>
+          <p>Collaborative from start to finish. We make sure every expectation is met before we leave.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section services" id="services">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label">Our Services</span>
+        <h2>Craftsmanship for Every Space</h2>
+        <p>From kitchens to living rooms, expert tile installation tailored to your home.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card fade-in">
+          <img class="service-card-img" src="service-kitchen.jpg" alt="Kitchen tile installation" loading="lazy">
+          <div class="service-card-body">
+            <h3>Kitchen Tile</h3>
+            <p>Backsplashes, floors, and countertops that make your kitchen the heart of the home.</p>
+          </div>
+        </div>
+        <div class="service-card fade-in">
+          <img class="service-card-img" src="service-bathroom.jpg" alt="Bathroom tile installation" loading="lazy">
+          <div class="service-card-body">
+            <h3>Bathroom Tile</h3>
+            <p>Custom showers, elegant floors, and feature walls that transform your bathroom into a retreat.</p>
+          </div>
+        </div>
+        <div class="service-card fade-in">
+          <img class="service-card-img" src="service-living.jpg" alt="Living room tile flooring" loading="lazy">
+          <div class="service-card-body">
+            <h3>Living Room</h3>
+            <p>Luxury tile flooring and feature walls that add sophistication to your living spaces.</p>
+          </div>
+        </div>
+        <div class="service-card fade-in">
+          <img class="service-card-img" src="service-foyer.jpg" alt="Foyer and entryway tile" loading="lazy">
+          <div class="service-card-body">
+            <h3>Foyer &amp; Entryway</h3>
+            <p>First impressions that last. A welcoming entrance that sets the tone for your entire home.</p>
+          </div>
+        </div>
+        <div class="service-card fade-in">
+          <img class="service-card-img" src="service-remodel.jpg" alt="Full remodeling tile work" loading="lazy">
+          <div class="service-card-body">
+            <h3>Full Remodeling</h3>
+            <p>End-to-end renovation projects handled with precision, from concept to completion.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OUR WORK GALLERY -->
+  <section class="section gallery-section" id="our-work">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label">Our Work</span>
+        <h2>Real Projects. Real Results.</h2>
+        <p>Every photo below is a completed GBS TILE INC. installation. Fernando's work, right here in Houston.</p>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item fade-in"><img src="gallery-1.jpg" alt="GBS TILE INC. completed installation" loading="lazy"></div>
+        <div class="gallery-item fade-in"><img src="gallery-2.jpg" alt="GBS TILE INC. tile work" loading="lazy"></div>
+        <div class="gallery-item fade-in"><img src="gallery-3.jpg" alt="GBS TILE INC. bathroom tile" loading="lazy"></div>
+        <div class="gallery-item fade-in"><img src="gallery-4.jpg" alt="GBS TILE INC. kitchen tile" loading="lazy"></div>
+        <div class="gallery-item fade-in"><img src="gallery-7.jpg" alt="GBS TILE INC. shower tile" loading="lazy"></div>
+        <div class="gallery-item fade-in"><img src="gallery-8.jpg" alt="GBS TILE INC. completed project" loading="lazy"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section" id="contact">
+    <div class="container">
+      <h2 class="fade-in">Ready to Transform Your Space?</h2>
+      <p class="fade-in">Call us today for a free quote. No obligation.</p>
+      <a href="tel:8324287769" class="cta-phone fade-in">(832) 428-7769</a>
+      <a href="tel:8324287769" class="btn-outline fade-in">Call for a Free Quote</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  
+<!-- FAQ SECTION -->
+<section id="faq-section" style="background:#f8f4ef; padding:64px 48px; font-family:\'Inter\',sans-serif; border-top:1px solid #d4cdc4">
+  <div style="max-width:760px; margin:0 auto;">
+    <div style="font-size:0.68rem; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#c4703f; margin-bottom:12px;">FAQ</div>
+    <h2 style="font-size:clamp(1.4rem,2.5vw,2rem); color:#1e2a3a; margin-bottom:32px; font-weight:700; line-height:1.3;">Common Questions About GBS TILE INC.</h2>
+    <div id="faq-list">
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false">How much does tile installation cost in Houston?<span class="faq-icon">+</span></button>
+      <div class="faq-a"><p>Tile installation in Houston typically ranges from $8 to $25 per square foot depending on tile material, pattern complexity, and subfloor prep required. We provide free estimates for all projects.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false">How long does tile installation take?<span class="faq-icon">+</span></button>
+      <div class="faq-a"><p>A standard bathroom floor can be tiled in 1 to 2 days. Larger projects like full kitchen floors or shower surrounds may take 3 to 5 days including setting time before grouting.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false">Are you a licensed tile contractor?<span class="faq-icon">+</span></button>
+      <div class="faq-a"><p>Yes. GBS TILE INC. is a fully licensed and insured tile contractor in Texas with over 25 years of experience serving the Houston area.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false">What types of tile do you install?<span class="faq-icon">+</span></button>
+      <div class="faq-a"><p>We install ceramic, porcelain, natural stone, marble, travertine, glass, and mosaic tile for floors, walls, showers, backsplashes, and outdoor spaces.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false">What Houston neighborhoods do you serve?<span class="faq-icon">+</span></button>
+      <div class="faq-a"><p>We serve all of Houston and surrounding areas including Katy, Sugar Land, The Woodlands, Pearland, Pasadena, and Cypress.</p></div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-logo">GBS TILE INC.</div>
+          <p class="footer-tagline">Expert tile installation in Houston, TX since 1998. Family owned and operated.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <p>2411 Karbach St Suite 5</p>
+          <p>Houston, TX 77092</p>
+          <a href="tel:8324287769">(832) 428-7769</a>
+        </div>
+        <div class="footer-col">
+          <h4>Hours</h4>
+          <p>Mon – Thu: 7:00 AM – 6:30 PM</p>
+          <p>Friday: 7:00 AM – 5:30 PM</p>
+          <p>Saturday: 9:00 AM – 2:00 PM</p>
+          <p>Sunday: Closed</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 GBS TILE INC. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+<!-- SEO REPORT SECTION -->
+  
+<style>
+.faq-item { border-bottom:1px solid #d4cdc4; }
+.faq-q { width:100%; background:none; border:none; color:#1e2a3a; font-size:0.92rem; font-weight:600; padding:18px 0; display:flex; justify-content:space-between; align-items:center; cursor:pointer; text-align:left; gap:16px; font-family:'Inter',sans-serif; }
+.faq-q:hover { color:#c4703f; }
+.faq-icon { color:#c4703f; font-size:1.2rem; font-weight:300; flex-shrink:0; transition:transform 0.3s; }
+.faq-q[aria-expanded="true"] .faq-icon { transform:rotate(45deg); }
+.faq-a { max-height:0; overflow:hidden; transition:max-height 0.35s ease; }
+.faq-a.open { max-height:300px; }
+.faq-a p { padding:0 0 18px; font-size:0.86rem; color:#5a6a7a; line-height:1.75; }
+</style>
+<script>
+document.querySelectorAll('.faq-q').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const expanded = btn.getAttribute('aria-expanded') === 'true';
+    document.querySelectorAll('.faq-q').forEach(b => { b.setAttribute('aria-expanded','false'); b.nextElementSibling.classList.remove('open'); });
+    if (!expanded) { btn.setAttribute('aria-expanded','true'); btn.nextElementSibling.classList.add('open'); }
+  });
+});
+</script>
+
+<script>
+(function() {
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) { entry.target.classList.add("visible"); observer.unobserve(entry.target); }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll(".fade-in, .service-card, .cat-grid, .values-grid, .locations-grid, .review-card, .stat-card, .about-text, .review-grid").forEach(function(el) { observer.observe(el); });
+  var nav = document.querySelector("nav") || document.querySelector("header");
+  if (nav) {
+    window.addEventListener("scroll", function() { nav.classList.toggle("scrolled", window.scrollY > 60); }, { passive: true });
+  }
+  document.querySelectorAll("a[href^="#"]").forEach(function(a) {
+    a.addEventListener("click", function(e) {
+      var t = document.querySelector(this.getAttribute("href"));
+      if (t) { e.preventDefault(); t.scrollIntoView({ behavior: "smooth", block: "start" }); }
+    });
+  });
+})();
+</script>
+<!-- SEO SECTION -->
+<section style="background:#0f1623;padding:80px 0;color:rgba(255,255,255,0.7);font-family:'Inter',sans-serif;">
+  <div style="max-width:1100px;margin:0 auto;padding:0 32px;">
+    <h2 style="color:white;font-size:clamp(1.8rem,3vw,2.4rem);text-align:center;margin-bottom:12px;font-family:inherit;">Your Local Competition is Already Online.</h2>
+    <p style="text-align:center;font-size:1.05rem;margin-bottom:40px;max-width:650px;margin-left:auto;margin-right:auto;color:rgba(255,255,255,0.6);">We looked at what Houston homeowners search every month. Here's what you're missing.</p>
+    <div style="background:rgba(232,96,10,0.12);border:1px solid rgba(232,96,10,0.3);border-radius:10px;padding:20px 28px;text-align:center;margin-bottom:48px;font-size:1.05rem;color:#e8600a;font-weight:600;">~22,400 potential customers search for tile contractor services every month.</div>
+    <div id="kw-layout" style="display:grid;grid-template-columns:2fr 1fr;gap:40px;margin-bottom:60px;align-items:start;">
+      <div>
+        <div class="kw-dh" style="display:grid;grid-template-columns:1fr 90px 110px 100px;padding:10px 16px;background:rgba(255,255,255,0.04);border-bottom:1px solid rgba(255,255,255,0.08);gap:8px;">
+          <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.35);">Keyword</div>
+          <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.35);text-align:center;">Your Rank</div>
+          <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.35);text-align:center;">Competition</div>
+          <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.35);text-align:right;">Searches/mo</div>
+        </div>
+        <div class="kw-mh" style="display:none;grid-template-columns:1fr 60px 80px;padding:10px 14px;background:rgba(255,255,255,0.04);border-bottom:1px solid rgba(255,255,255,0.08);gap:6px;">
+          <div style="font-size:0.6rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.35);">Keyword</div>
+          <div style="font-size:0.6rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.35);text-align:center;">Rank</div>
+          <div style="font-size:0.6rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.35);text-align:right;">Searches</div>
+        </div>
+        <div id="kw-rows"></div>
+        <p style="font-size:0.68rem;color:rgba(255,255,255,0.25);margin-top:12px;">* Search volumes est. Data sourced from DataForSEO.</p>
+      </div>
+      <div style="border:1px solid rgba(232,96,10,0.3);border-radius:12px;background:rgba(232,96,10,0.06);padding:28px 24px;position:sticky;top:88px;">
+        <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#e8600a;margin-bottom:16px;">How We Fix This</div>
+        <div style="display:flex;flex-direction:column;gap:14px;">
+          <div style="display:flex;gap:12px;align-items:flex-start;"><span style="color:#e8600a;font-size:1rem;margin-top:1px;flex-shrink:0;">&#10003;</span><div><div style="font-size:0.88rem;font-weight:700;color:white;margin-bottom:2px;">50 Local Landing Pages</div><div style="font-size:0.76rem;color:rgba(255,255,255,0.45);line-height:1.5;">One page per keyword and service area, built to rank</div></div></div>
+          <div style="display:flex;gap:12px;align-items:flex-start;"><span style="color:#e8600a;font-size:1rem;margin-top:1px;flex-shrink:0;">&#10003;</span><div><div style="font-size:0.88rem;font-weight:700;color:white;margin-bottom:2px;">AI Chat</div><div style="font-size:0.76rem;color:rgba(255,255,255,0.45);line-height:1.5;">Converts visitors into booked jobs 24/7, even while you sleep</div></div></div>
+          <div style="display:flex;gap:12px;align-items:flex-start;"><span style="color:#e8600a;font-size:1rem;margin-top:1px;flex-shrink:0;">&#10003;</span><div><div style="font-size:0.88rem;font-weight:700;color:white;margin-bottom:2px;">SEO Keyword Strategy</div><div style="font-size:0.76rem;color:rgba(255,255,255,0.45);line-height:1.5;">Targeting the exact searches Houston homeowners are making</div></div></div>
+          <div style="display:flex;gap:12px;align-items:flex-start;"><span style="color:#e8600a;font-size:1rem;margin-top:1px;flex-shrink:0;">&#10003;</span><div><div style="font-size:0.88rem;font-weight:700;color:white;margin-bottom:2px;">All Done For You</div><div style="font-size:0.76rem;color:rgba(255,255,255,0.45);line-height:1.5;">You run your business. We handle everything else.</div></div></div>
+        </div>
+        <a href="https://meetings.hubspot.com/elliot-farmer" target="_blank" style="display:block;margin-top:24px;background:#e8600a;color:white;padding:16px 20px;border-radius:6px;font-size:0.82rem;font-weight:700;letter-spacing:0.09em;text-transform:uppercase;text-decoration:none;text-align:center;width:100%;box-sizing:border-box;">Fix My Rankings</a>
+        <div style="text-align:center;margin-top:10px;font-size:0.72rem;color:rgba(255,255,255,0.35);">From <strong style="color:#e8600a;">$59/mo</strong> &middot; No contract</div>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+@media(max-width:960px){
+  #kw-layout{grid-template-columns:1fr!important;}
+  .kw-dh{display:none!important;}
+  .kw-mh{display:grid!important;}
+}
+@media(max-width:768px){
+  #kw-layout{gap:24px!important;}
+}
+</style>
+<script>
+(function(){
+var kws=[{kw:"tile contractor near me",vol:5400,leads:68},{kw:"tile installation near me",vol:4400,leads:55},{kw:"floor tile installation near me",vol:3600,leads:45},{kw:"bathroom tile installation near me",vol:2900,leads:36},{kw:"tile installer near me",vol:2400,leads:30},{kw:"tile contractor houston tx",vol:1600,leads:20},{kw:"floor tiling houston",vol:880,leads:11},{kw:"bathroom remodel tile houston",vol:720,leads:9},{kw:"kitchen tile installation houston",vol:480,leads:6},{kw:"backsplash tile installation near me",vol:480,leads:6}];
+var c=document.getElementById("kw-rows");
+if(!c)return;
+function render(){
+  c.innerHTML="";
+  var m=window.innerWidth<=960;
+  kws.forEach(function(item,i){
+    var row=document.createElement("div");
+    var n=String(i+1).padStart(2,"0");
+    if(m){
+      row.style.cssText="display:grid;grid-template-columns:1fr 60px 80px;padding:12px 14px;border-bottom:1px solid rgba(255,255,255,0.06);align-items:center;gap:6px;";
+      row.innerHTML='<div style="display:flex;align-items:center;gap:8px;"><span style="font-size:0.62rem;color:rgba(255,255,255,0.2);font-weight:700;flex-shrink:0;">'+n+'</span><span style="font-size:0.78rem;color:rgba(255,255,255,0.85);font-weight:500;line-height:1.3;">'+item.kw+'</span></div><div style="text-align:center;"><span style="font-size:0.9rem;font-weight:800;color:#f87171;">0</span></div><div style="text-align:right;font-size:0.8rem;font-weight:700;color:white;">'+item.vol.toLocaleString()+'<span style="font-size:0.6rem;color:rgba(255,255,255,0.35);margin-left:2px;">est.</span></div>';
+    }else{
+      row.style.cssText="display:grid;grid-template-columns:1fr 90px 110px 100px;padding:14px 16px;border-bottom:1px solid rgba(255,255,255,0.05);align-items:center;transition:background 0.2s;cursor:default;";
+      row.onmouseenter=function(){this.style.background="rgba(255,255,255,0.03)"};
+      row.onmouseleave=function(){this.style.background="transparent"};
+      row.innerHTML='<div style="display:flex;align-items:center;gap:10px;"><span style="font-size:0.68rem;color:rgba(255,255,255,0.2);font-weight:600;min-width:20px;flex-shrink:0;">'+n+'</span><span style="font-size:0.85rem;color:rgba(255,255,255,0.85);font-weight:500;">'+item.kw+'</span></div><div style="text-align:center;font-size:0.9rem;font-weight:700;color:white;">'+item.vol.toLocaleString()+' <span style="font-size:0.62rem;color:rgba(255,255,255,0.35);">est.</span></div><div style="text-align:center;"><span style="background:rgba(239,68,68,0.12);color:#f87171;padding:4px 10px;border-radius:20px;font-size:0.72rem;font-weight:600;">Not ranking</span></div><div style="text-align:center;font-size:0.82rem;font-weight:700;color:rgba(255,255,255,0.5);">'+item.leads+'</div>';
+    }
+    c.appendChild(row);
+  });
+}
+render();
+window.addEventListener("resize",render);
+})();
+</script>
+
+<section id="cta-section">
+  <div style="max-width:1100px;margin:0 auto;padding:0 32px;">
+    <div class="cta-card">
+      <img class="cta-photo" src="/gbstile/elliot.png" alt="Elliot Farmer, Senior Business Advisor, ZING" loading="lazy">
+      <h2>Ready to get more tile jobs in Houston? Let's talk.</h2>
+      <p class="cta-subtitle">Elliot Farmer &middot; Senior Business Advisor, ZING</p>
+      <p class="cta-tagline">Websites from $59/mo &middot; 50 local landing pages &middot; Full design included &middot; No contract</p>
+      <div class="cta-buttons">
+        <a href="https://meetings.hubspot.com/elliot-farmer" target="_blank" class="btn-primary">Book a Free Call &rarr;</a>
+        <a href="tel:7205340219" class="btn-outline">(720) 534-0219</a>
+      </div>
+      <div class="cta-email"><a href="mailto:elliot@zing-work.com">elliot@zing-work.com</a></div>
+    </div>
+  </div>
+</section>
+</body>
+</html>

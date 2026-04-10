@@ -1,0 +1,39 @@
+# Xpress Car Care LLC
+> Luxury car care services at affordable prices in Auburn, AL. Detailing, washing, and specialty services for cars, trucks, ATVs, boats, and RVs.
+
+## Business
+- Name: Xpress Car Care LLC
+- Type: AutoWash
+- Phone: (334) 854-8147
+- Address: 517 Webster Road, Auburn, AL 36832
+- Area Served: Auburn, Opelika, and Lee County, AL
+- Website: https://yourwebsiteexample.com/xpresscarcare/
+
+## Services
+- Basic Exterior Wash
+- Interior Detailing
+- Premium Detail
+- Ultimate Detail
+- Pet Hair Removal
+- Exterior Polish
+- ATV Detail
+- Boat Detailing
+- RV Detailing
+- Fleet Washing
+
+## Frequently Asked Questions
+**How much does car detailing cost in Auburn AL?**
+Our detailing packages start at $30 for a basic exterior wash and range up to $250 for our Ultimate Detail. Interior-only details start at $125. We offer competitive luxury-quality detailing at prices you will not find at chain car washes.
+
+**How long does a full car detail take?**
+A basic wash takes about 1 hour. A full interior and exterior detail typically takes 3 to 4 hours. Our Ultimate Detail package, which includes clay bar and finishing polish, takes approximately 4 hours.
+
+**Do you detail boats, ATVs, and RVs?**
+Yes. We detail all vehicle types including cars, trucks, ATVs, boats, RVs, and commercial fleet vehicles. Call us for a custom quote on specialty vehicles.
+
+**Do you offer fleet washing services?**
+Yes. We offer fleet washing programs for businesses with multiple vehicles. Regular fleet washing keeps your vehicles looking professional and maintains resale value. Call for a fleet pricing quote.
+
+**Where are you located in Auburn AL?**
+We are located at 517 Webster Road, Auburn, AL 36832. We are open Monday through Friday 9am to 6pm and Saturday 9am to 5pm. Closed Sunday.
+
