@@ -1177,7 +1177,7 @@ document.getElementById('contact-form').addEventListener('submit', async functio
   const data = Object.fromEntries(new FormData(this).entries());
 
   try {
-    const res = await fetch('https://web-production-6de39.up.railway.app/submit', {
+    const res = await fetch('https://forms.zingmigration.com/submit', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data)
