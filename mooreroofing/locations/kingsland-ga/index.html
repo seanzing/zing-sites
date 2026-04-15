@@ -1,0 +1,1380 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Moore Roofing | Licensed Roofing Contractor | Kingsland, GA</title>
+<meta name="description" content="Moore Roofing in Kingsland, GA — Roof Replacement, Roof Repair, Roof Inspection and more. 7203245551.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&amp;family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+:root {
+  --dark: #1e3530;
+  --teal: #2a7c6f;
+  --light-teal: #95bdb6;
+  --cream: #fffcf8;
+  --mid: #4a5568;
+  --white: #ffffff;
+  --border: #d4e6e3;
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--mid);
+  line-height: 1.6;
+  background: var(--cream);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cormorant Garamond', serif;
+  color: var(--dark);
+  line-height: 1.2;
+}
+
+/* NAV */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 48px;
+  transition: box-shadow 0.3s;
+}
+
+.nav.scrolled {
+  box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+}
+
+.nav-logo img {
+  max-height: 90px;
+  width: auto;
+  display: block;
+}
+
+.nav-phone {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--dark);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+}
+
+.nav-phone:hover { color: var(--teal); }
+
+/* HERO */
+.hero {
+  position: relative;
+  height: 100vh;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: url('./hero.jpg') center/cover no-repeat;
+  animation: slowZoom 20s ease-in-out infinite alternate;
+}
+
+@keyframes slowZoom {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.08); }
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(15,25,20,0.60);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 800px;
+  padding: 0 24px;
+  animation: fadeUp 1s ease-out;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-badge {
+  display: inline-block;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: var(--light-teal);
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 8px 20px;
+  border-radius: 30px;
+  letter-spacing: 0.04em;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  font-size: 3.8rem;
+  color: var(--white);
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.hero-sub {
+  font-size: 1.15rem;
+  color: rgba(255,255,255,0.8);
+  max-width: 600px;
+  margin: 0 auto 36px;
+  line-height: 1.7;
+}
+
+.btn-primary {
+  display: inline-block;
+  background: var(--teal);
+  color: var(--white);
+  padding: 16px 36px;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.3s, transform 0.2s;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background: #237064;
+  transform: translateY(-2px);
+}
+
+/* ABOUT */
+.about {
+  background: var(--cream);
+  padding: 100px 48px;
+}
+
+.about-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+}
+
+.about-image-mobile {
+  display: none;
+}
+
+.about-image-mobile img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+  margin-bottom: 24px;
+}
+
+.about-badge {
+  display: inline-block;
+  background: rgba(42,124,111,0.08);
+  color: var(--teal);
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 6px 16px;
+  border-radius: 20px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.about-text h2 {
+  font-size: 2.6rem;
+  margin-bottom: 24px;
+}
+
+.about-text p {
+  margin-bottom: 16px;
+  font-size: 1.02rem;
+  line-height: 1.8;
+}
+
+/* VALUE PROPS */
+.values {
+  background: var(--dark);
+  padding: 80px 48px;
+}
+
+.values-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.value-card {
+  text-align: center;
+  padding: 40px 28px;
+}
+
+.value-icon {
+  width: 56px;
+  height: 56px;
+  background: rgba(42,124,111,0.25);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+
+.value-icon svg {
+  width: 26px;
+  height: 26px;
+  fill: none;
+  stroke: var(--light-teal);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.value-card h3 {
+  font-family: 'Inter', sans-serif;
+  color: var(--white);
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.value-card p {
+  color: rgba(255,255,255,0.65);
+  font-size: 0.92rem;
+  line-height: 1.7;
+}
+
+/* SERVICES */
+.services {
+  background: var(--cream);
+  padding: 100px 48px;
+}
+
+.services-header {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 60px;
+}
+
+.services-header h2 {
+  font-size: 2.6rem;
+  margin-bottom: 16px;
+}
+
+.services-header p {
+  font-size: 1.05rem;
+  color: var(--mid);
+}
+
+.services-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.service-card {
+  background: var(--white);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 36px rgba(0,0,0,0.1);
+}
+
+.service-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.service-card-body {
+  padding: 28px 24px;
+}
+
+.service-card h3 {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.08rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--dark);
+}
+
+.service-card p {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--mid);
+}
+
+/* CTA */
+.cta-section {
+  background: var(--dark);
+  padding: 80px 48px;
+  text-align: center;
+}
+
+.cta-section h2 {
+  font-size: 2.8rem;
+  color: var(--white);
+  margin-bottom: 16px;
+}
+
+.cta-phone {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--light-teal);
+  text-decoration: none;
+  display: block;
+  margin-bottom: 28px;
+  font-family: 'Inter', sans-serif;
+}
+
+.cta-phone:hover { color: var(--white); }
+
+/* FOOTER */
+footer {
+  background: var(--dark);
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding: 60px 48px 40px;
+}
+
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+}
+
+.footer-col h4 {
+  font-family: 'Inter', sans-serif;
+  color: var(--white);
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 16px;
+}
+
+.footer-col p, .footer-col a {
+  color: rgba(255,255,255,0.6);
+  font-size: 0.9rem;
+  line-height: 1.8;
+  text-decoration: none;
+}
+
+.footer-col a:hover { color: var(--light-teal); }
+
+.footer-logo img {
+  max-height: 50px;
+  width: auto;
+  margin-bottom: 14px;
+}
+
+.footer-tagline {
+  color: rgba(255,255,255,0.5);
+  font-size: 0.88rem;
+  font-style: italic;
+}
+
+.footer-bottom {
+  max-width: 1100px;
+  margin: 36px auto 0;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  text-align: center;
+  color: rgba(255,255,255,0.35);
+  font-size: 0.8rem;
+}
+
+/* SEO SECTION */
+.seo-section {
+  background: #0f1623;
+  padding: 80px 48px;
+}
+
+.seo-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.seo-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.seo-header h2 {
+  font-size: 2.4rem;
+  color: var(--white);
+  margin-bottom: 12px;
+}
+
+.seo-header p {
+  color: rgba(255,255,255,0.55);
+  font-size: 1.02rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.seo-banner {
+  background: rgba(42,124,111,0.12);
+  border: 1px solid rgba(42,124,111,0.3);
+  border-radius: 10px;
+  padding: 20px 28px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.seo-banner p {
+  color: var(--light-teal);
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+#kw-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.kw-table {
+  background: rgba(255,255,255,0.03);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+#kw-header-desktop {
+  display: grid;
+  grid-template-columns: 1fr 90px 110px 90px;
+  padding: 14px 16px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+#kw-header-desktop span {
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.35);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+#kw-header-desktop span:nth-child(n+2) { text-align: center; }
+
+#kw-header-mobile {
+  display: none;
+  grid-template-columns: 1fr 52px 72px;
+  padding: 12px 14px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+#kw-header-mobile span {
+  font-size: 0.62rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.35);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+#kw-header-mobile span:nth-child(n+2) { text-align: center; }
+#kw-header-mobile span:last-child { text-align: right; }
+
+.fix-box {
+  background: rgba(42,124,111,0.06);
+  border: 1px solid rgba(42,124,111,0.3);
+  border-radius: 12px;
+  padding: 32px 28px;
+}
+
+.fix-box h3 {
+  font-family: 'Inter', sans-serif;
+  color: var(--white);
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.fix-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.fix-check {
+  width: 22px;
+  height: 22px;
+  min-width: 22px;
+  background: rgba(42,124,111,0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2px;
+}
+
+.fix-check svg {
+  width: 12px;
+  height: 12px;
+  stroke: var(--teal);
+  stroke-width: 3;
+  fill: none;
+}
+
+.fix-item-text h4 {
+  font-family: 'Inter', sans-serif;
+  color: var(--white);
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.fix-item-text p {
+  color: rgba(255,255,255,0.45);
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+.fix-btn {
+  display: block;
+  width: 100%;
+  background: var(--teal);
+  color: var(--white);
+  text-align: center;
+  padding: 14px 24px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-decoration: none;
+  margin-top: 24px;
+  transition: background 0.3s;
+}
+
+.fix-btn:hover { background: #237064; }
+
+.fix-tagline {
+  text-align: center;
+  color: rgba(255,255,255,0.35);
+  font-size: 0.8rem;
+  margin-top: 12px;
+}
+
+/* ELLIOT CTA */
+#elizabeth-cta {
+  max-width: 900px;
+  margin: 48px auto 0;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 14px;
+  padding: 36px 48px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 28px;
+  row-gap: 16px;
+}
+
+#eliz-photo {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--teal);
+}
+
+#eliz-headline {
+  flex: 1;
+  color: var(--white);
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+#eliz-btn {
+  display: inline-block;
+  background: var(--teal);
+  color: var(--white);
+  padding: 22px 48px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.3s;
+  white-space: nowrap;
+}
+
+#eliz-btn:hover { background: #237064; }
+
+#eliz-contact {
+  width: 100%;
+  color: rgba(255,255,255,0.45);
+  font-size: 0.82rem;
+}
+
+#eliz-contact a {
+  color: var(--light-teal);
+  text-decoration: none;
+}
+
+#eliz-contact a:hover { color: var(--white); }
+
+.eliz-tagline {
+  width: 100%;
+  color: rgba(255,255,255,0.3);
+  font-size: 0.78rem;
+  font-style: italic;
+}
+
+/* ANIMATIONS */
+.fade-in {
+  opacity: 1;
+  transform: none;
+  transition: opacity 0.7s, transform 0.7s;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* RESPONSIVE */
+@media (max-width: 960px) {
+  .nav { padding: 12px 24px; }
+  .hero h1 { font-size: 2.6rem; }
+  .about { padding: 60px 24px; }
+  .about-inner { grid-template-columns: 1fr; gap: 0; }
+  .about-image { display: none; }
+  .about-image-mobile { display: block; }
+  .values { padding: 60px 24px; }
+  .values-inner { grid-template-columns: 1fr; gap: 20px; }
+  .value-card { padding: 28px 20px; }
+  .services { padding: 60px 24px; }
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .cta-section { padding: 60px 24px; }
+  .cta-section h2 { font-size: 2rem; }
+  .cta-phone { font-size: 1.6rem; }
+  footer { padding: 40px 24px 30px; }
+  .footer-inner { grid-template-columns: 1fr; gap: 28px; }
+  .seo-section { padding: 60px 24px; }
+  .seo-header h2 { font-size: 1.8rem; }
+  #kw-layout { grid-template-columns: 1fr; }
+  #kw-header-desktop { display: none; }
+  #kw-header-mobile { display: grid; }
+  .fade-in { opacity: 1 !important; transform: none !important; }
+  #elizabeth-cta {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    padding: 36px 28px;
+  }
+  #eliz-photo { display: block !important; margin: 0 auto !important; order: 1; }
+  #eliz-headline { flex: none !important; width: 100% !important; text-align: center !important; font-size: 1.35rem !important; order: 2; }
+  #eliz-btn { display: block !important; width: 100% !important; max-width: 100% !important; box-sizing: border-box !important; white-space: normal !important; text-align: center !important; padding: 16px 20px !important; order: 3; }
+  #eliz-contact { text-align: center !important; width: 100%; order: 4; }
+  .eliz-tagline { order: 5; }
+}
+
+@media (max-width: 768px) {
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .hero h1 { font-size: 2.2rem; }
+  .about-text h2 { font-size: 2rem; }
+}
+
+@media (max-width: 480px) {
+  .nav { padding: 10px 16px; }
+  .nav-logo img { max-height: 44px; }
+  .nav-phone { font-size: 0.9rem; }
+  .hero h1 { font-size: 1.8rem; }
+  .hero-sub { font-size: 0.95rem; }
+  .services-grid { grid-template-columns: 1fr; }
+  .service-card img { height: 180px; }
+  .cta-section h2 { font-size: 1.6rem; }
+  .cta-phone { font-size: 1.3rem; }
+}
+
+/* CTA SECTION */
+#cta-section {
+  padding: 80px 0;
+  background: #0c0a0a;
+}
+#cta-section .cta-card {
+  max-width: 800px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #1a1410 0%, #221a12 100%);
+  border: 1px solid rgba(180,83,9,0.3);
+  border-radius: 20px;
+  padding: 48px;
+  text-align: center;
+}
+#cta-section .cta-photo {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top center;
+  border: 3px solid #b45309;
+  display: block;
+  margin: 0 auto 24px;
+}
+#cta-section .cta-card h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: white;
+}
+#cta-section .cta-subtitle {
+  font-size: 0.92rem;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 6px;
+}
+#cta-section .cta-tagline {
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.3);
+  margin-bottom: 28px;
+}
+#cta-section .cta-buttons {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+#cta-section .btn-primary {
+  background: #b45309;
+  color: white;
+  padding: 14px 32px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+#cta-section .btn-primary:hover {
+  background: #92400e;
+}
+#cta-section .btn-outline {
+  display: inline-block;
+  color: white;
+  padding: 14px 32px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  border: 1px solid rgba(255,255,255,0.15);
+  text-decoration: none;
+  transition: border-color 0.3s ease;
+}
+#cta-section .btn-outline:hover {
+  border-color: #b45309;
+}
+#cta-section .cta-email {
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.3);
+}
+#cta-section .cta-email a {
+  color: rgba(255,255,255,0.55);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+@media(max-width:640px) {
+  #cta-section .cta-card { padding: 32px 20px; }
+  #cta-section .cta-buttons { flex-direction: column; align-items: center; }
+}
+</style>
+<meta property="og:title" content="Moore Roofing | Orange Park, FL">
+<meta property="og:description" content="Moore Roofing in Orange Park, FL — Roof Replacement, Roof Repair, Roof Inspection and more. 7203245551.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://yourwebsiteexample.com/mooreroofing/">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "LocalBusiness",
+        "RoofingContractor"
+      ],
+      "@id": "https://yourwebsiteexample.com/mooreroofing/#business",
+      "name": "Moore Roofing",
+      "description": "Licensed roofing contractor serving Northeast Florida. Roof replacement, repair, inspection, and storm damage. CCC License #1334514.",
+      "url": "https://yourwebsiteexample.com/mooreroofing/",
+      "telephone": "+19043765712",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "752 Blanding Blvd Suite 100",
+        "addressLocality": "Orange Park",
+        "addressRegion": "FL",
+        "postalCode": "32065",
+        "addressCountry": "US"
+      },
+      "areaServed": "Orange Park, Jacksonville, and Northeast Florida",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Roof Replacement"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Roof Repair"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Roof Inspection"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Storm Damage Repair"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Shingle Roofing"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Gutter Installation"
+            }
+          }
+        ]
+      },
+      "sameAs": []
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://yourwebsiteexample.com/mooreroofing/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much does a new roof cost in Florida?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In Northeast Florida, roof replacement typically ranges from $8,000 to $20,000 depending on home size, pitch, and roofing material. Architectural shingles are the most common choice in our area. We provide free inspections and detailed estimates."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does roof replacement take?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most residential roof replacements in Orange Park and Jacksonville are completed in 1 to 2 days. Larger or more complex roofs may take 3 days. We work to minimize disruption to your household."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you handle insurance claims for storm damage?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We work with homeowners through the entire insurance claim process for wind, hail, and storm damage. We document damage thoroughly and can communicate directly with your adjuster."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Moore Roofing a licensed contractor?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Moore Roofing holds Florida CCC License #1334514. We are fully licensed, bonded, and insured for all roofing work in Florida."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What areas in Northeast Florida do you serve?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We serve Orange Park, Jacksonville, Fleming Island, Middleburg, Green Cove Springs, Fernandina Beach, and surrounding Northeast Florida communities."
+          }
+        }
+      ]
+    }
+  ]
+}</script>
+<link rel="canonical" href="/mooreroofing/locations/kingsland-ga/"></head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <a href="#" class="nav-logo"><img src="./logo.jpg" alt="Moore Roofing"></a>
+  <a href="tel:7203245551" class="nav-phone">7203245551</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <span class="hero-badge">Orange Park, FL · Licensed Roofing Contractor</span>
+    <div class="location-badge" style="display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);color:rgba(255,255,255,0.9);font-size:13px;font-weight:600;padding:5px 13px;border-radius:100px;margin-bottom:16px;">📍 Serving Kingsland, GA</div><h1>Your Roof. Done Right. Guaranteed.</h1>
+    <p class="hero-sub">From storm damage to full replacements, Moore Roofing serves Northeast Florida with honest pricing and quality that lasts.</p>
+    <a href="#contact" class="btn-primary">Get a Free Inspection</a>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="about-inner fade-in">
+    <div class="about-image">
+      <img src="./about.jpg" alt="Moore Roofing completed project">
+    </div>
+    <div class="about-text">
+      <span class="about-badge">About Moore Roofing</span>
+      <div class="about-image-mobile">
+        <img src="./about.jpg" alt="Moore Roofing completed project">
+      </div>
+      <h2>Northeast Florida's Trusted Roofer</h2>
+      <p>Born and raised in Florida, Brian Moore is a licensed Roofing Contractor serving Northeast Florida. We provide a comprehensive range of roofing services and prioritize our clients' needs and satisfaction above everything else. We take care of every detail, big and small, so you don't have to.</p>
+      <p>Our commitment is simple: quality materials, honest pricing, and workmanship that lasts. Whether you need a full roof replacement or a quick repair, we show up, do it right, and stand behind our work.</p>
+    </div>
+  </div>
+</section>
+
+<!-- VALUE PROPS -->
+<section class="values">
+  <div class="values-inner">
+    <div class="value-card fade-in">
+      <div class="value-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+      </div>
+      <h3>Licensed &amp; Insured</h3>
+      <p>CCC License #1334514. Fully licensed and insured for your protection and peace of mind.</p>
+    </div>
+    <div class="value-card fade-in">
+      <div class="value-icon">
+        <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+      </div>
+      <h3>Northeast Florida Experts</h3>
+      <p>Born and raised here. We know the Florida climate, storm patterns, and what your roof needs to last.</p>
+    </div>
+    <div class="value-card fade-in">
+      <div class="value-icon">
+        <svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+      </div>
+      <h3>Honest Pricing</h3>
+      <p>Free inspections. Upfront quotes. No surprises on your invoice, ever.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="services-header fade-in">
+    <span class="about-badge">Our Services</span>
+    <h2>What We Do</h2>
+    <p>Comprehensive roofing solutions for homes and businesses across Northeast Florida.</p>
+  </div>
+  <div class="services-grid">
+    <div class="service-card fade-in">
+      <img src="./service-roof-replacement.jpg" alt="Roof Replacement">
+      <div class="service-card-body">
+        <h3>Roof Replacement</h3>
+        <p>Full roof replacements done right from day one. We assess your roof, recommend the best materials for Florida's climate, and complete the job with minimal disruption to your daily life.</p>
+      </div>
+    </div>
+    <div class="service-card fade-in">
+      <img src="./service-roof-repair.jpg" alt="Roof Repair">
+      <div class="service-card-body">
+        <h3>Roof Repair</h3>
+        <p>Leaks, missing shingles, damaged flashing. We diagnose and fix the problem at its source, not just the symptom. Fast turnaround, lasting results.</p>
+      </div>
+    </div>
+    <div class="service-card fade-in">
+      <img src="./service-roof-inspection.jpg" alt="Roof Inspection">
+      <div class="service-card-body">
+        <h3>Roof Inspection</h3>
+        <p>Not sure what's going on up there? We provide free, thorough roof inspections with no pressure and no obligation. Know exactly what you're dealing with before making any decisions.</p>
+      </div>
+    </div>
+    <div class="service-card fade-in">
+      <img src="./service-storm-damage.jpg" alt="Storm Damage Repair">
+      <div class="service-card-body">
+        <h3>Storm Damage Repair</h3>
+        <p>Florida storms move fast. We respond faster. From hail hits to hurricane damage, we assess, document, and repair storm damage, and we work directly with insurance companies.</p>
+      </div>
+    </div>
+    <div class="service-card fade-in">
+      <img src="./service-shingle-roofing.jpg" alt="Shingle Roofing">
+      <div class="service-card-body">
+        <h3>Shingle Roofing</h3>
+        <p>Architectural shingles, 3-tab, designer styles. We install the right shingle system for your home, budget, and Florida's unique weather demands.</p>
+      </div>
+    </div>
+    <div class="service-card fade-in">
+      <img src="./service-gutter.jpg" alt="Gutter Installation &amp; Repair">
+      <div class="service-card-body">
+        <h3>Gutter Installation &amp; Repair</h3>
+        <p>Properly installed gutters protect your foundation, siding, and landscaping from water damage. We install seamless aluminum gutters and repair existing systems.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<!-- OUR WORK SLIDER -->
+<section style="background:#1e3530; padding:0;">
+  <div style="position:relative; overflow:hidden;">
+    <div id="slider-track" style="display:flex; transition:transform 0.6s cubic-bezier(0.4,0,0.2,1); will-change:transform;">
+      <div class="slide"><img src="./gallery-1.jpg" alt="Moore Roofing completed project" loading="lazy"></div>
+      <div class="slide"><img src="./gallery-2.jpg" alt="Shingle roofing close-up" loading="lazy"></div>
+      <div class="slide"><img src="./gallery-3.jpg" alt="Florida home roof replacement" loading="lazy"></div>
+      <div class="slide"><img src="./gallery-4.jpg" alt="Premium residential roofing" loading="lazy"></div>
+    </div>
+    <button id="slider-prev" onclick="moveSlider(-1)" aria-label="Previous" style="position:absolute;left:20px;top:50%;transform:translateY(-50%);background:rgba(255,255,255,0.15);border:none;color:white;width:48px;height:48px;border-radius:50%;font-size:1.4rem;cursor:pointer;backdrop-filter:blur(4px);transition:background 0.2s;z-index:2;" onmouseover="this.style.background='rgba(255,255,255,0.3)'" onmouseout="this.style.background='rgba(255,255,255,0.15)'">←</button>
+    <button id="slider-next" onclick="moveSlider(1)" aria-label="Next" style="position:absolute;right:20px;top:50%;transform:translateY(-50%);background:rgba(255,255,255,0.15);border:none;color:white;width:48px;height:48px;border-radius:50%;font-size:1.4rem;cursor:pointer;backdrop-filter:blur(4px);transition:background 0.2s;z-index:2;" onmouseover="this.style.background='rgba(255,255,255,0.3)'" onmouseout="this.style.background='rgba(255,255,255,0.15)'">→</button>
+  </div>
+  <div id="slider-dots" style="display:flex;justify-content:center;gap:8px;padding:20px 0 40px;"></div>
+</section>
+
+<style>
+.slide { flex:0 0 100%; width:100%; max-width:100%; height:480px; overflow:hidden; }
+.slide img { width:100%; height:100%; object-fit:cover; object-position:center 35%; display:block; }
+@media(max-width:768px){ .slide { height:auto; aspect-ratio:2.5/1; background:#1e3530; } .slide img { object-fit:contain; object-position:center center; } #slider-prev, #slider-next { display:none; } }
+</style>
+<script>
+(function(){
+  const track = document.getElementById('slider-track');
+  const dotsEl = document.getElementById('slider-dots');
+  const total = 4;
+  let current = 0;
+  let timer;
+
+  // Build dots
+  for(let i=0;i<total;i++){
+    const d = document.createElement('button');
+    d.style.cssText='width:8px;height:8px;border-radius:50%;border:none;cursor:pointer;transition:all 0.3s;padding:0;';
+    d.style.background = i===0 ? '#2a7c6f' : 'rgba(255,255,255,0.25)';
+    d.onclick=()=>goTo(i);
+    dotsEl.appendChild(d);
+  }
+
+  function goTo(n){
+    current = (n + total) % total;
+    track.style.transform = `translateX(-${current*100}%)`;
+    Array.from(dotsEl.children).forEach((d,i)=>{
+      d.style.background = i===current ? '#2a7c6f' : 'rgba(255,255,255,0.25)';
+      d.style.width = i===current ? '24px' : '8px';
+      d.style.borderRadius = '4px';
+    });
+  }
+
+  window.moveSlider = function(dir){ goTo(current+dir); resetTimer(); };
+
+  function resetTimer(){ clearInterval(timer); timer=setInterval(()=>goTo(current+1),4500); }
+  resetTimer();
+
+  // Touch swipe support
+  let touchStartX = 0;
+  const sliderEl = track.parentElement;
+  sliderEl.addEventListener('touchstart', function(e){ touchStartX = e.changedTouches[0].clientX; }, {passive:true});
+  sliderEl.addEventListener('touchend', function(e){
+    const dx = e.changedTouches[0].clientX - touchStartX;
+    if(Math.abs(dx) > 40){ goTo(dx < 0 ? current+1 : current-1); resetTimer(); }
+  }, {passive:true});
+})();
+</script>
+
+<section class="cta-section" id="contact">
+  <h2>Ready for a Free Inspection?</h2>
+  <a href="tel:7203245551" class="cta-phone">7203245551</a>
+  <a href="tel:7203245551" class="btn-primary" style="margin-bottom:48px;">Call Now</a>
+
+  <div style="max-width:560px; margin:0 auto; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); border-radius:16px; padding:40px 36px;">
+    <h3 style="font-size:1.3rem; font-weight:700; color:#fff; margin:0 0 8px;">Or Send Us a Message</h3>
+    <p style="color:rgba(255,255,255,0.6); font-size:0.95rem; margin:0 0 28px;">We'll get back to you within one business day.</p>
+    <form id="contact-form" style="display:flex; flex-direction:column; gap:16px;">
+      <!-- honeypot -->
+      <input type="text" name="website" style="display:none;" tabindex="-1" autocomplete="off">
+      <input type="hidden" name="site_id" value="mooreroofing">
+      <input type="hidden" name="form_type" value="contact">
+
+      <input type="text" name="name" placeholder="Your Name" required="" style="padding:14px 16px; border-radius:8px; border:1px solid rgba(255,255,255,0.15); background:rgba(255,255,255,0.08); color:#fff; font-size:1rem; font-family:inherit; outline:none;" onfocus="this.style.borderColor='#2a7c6f'" onblur="this.style.borderColor='rgba(255,255,255,0.15)'">
+
+      <input type="tel" name="phone" placeholder="Phone Number" required="" style="padding:14px 16px; border-radius:8px; border:1px solid rgba(255,255,255,0.15); background:rgba(255,255,255,0.08); color:#fff; font-size:1rem; font-family:inherit; outline:none;" onfocus="this.style.borderColor='#2a7c6f'" onblur="this.style.borderColor='rgba(255,255,255,0.15)'">
+
+      <input type="email" name="email" placeholder="Email Address (optional)" style="padding:14px 16px; border-radius:8px; border:1px solid rgba(255,255,255,0.15); background:rgba(255,255,255,0.08); color:#fff; font-size:1rem; font-family:inherit; outline:none;" onfocus="this.style.borderColor='#2a7c6f'" onblur="this.style.borderColor='rgba(255,255,255,0.15)'">
+
+      <textarea name="message" placeholder="Tell us about your roof (optional)" rows="4" style="padding:14px 16px; border-radius:8px; border:1px solid rgba(255,255,255,0.15); background:rgba(255,255,255,0.08); color:#fff; font-size:1rem; font-family:inherit; outline:none; resize:vertical;" onfocus="this.style.borderColor='#2a7c6f'" onblur="this.style.borderColor='rgba(255,255,255,0.15)'"></textarea>
+
+      <button type="submit" id="form-submit" style="padding:16px; background:#2a7c6f; color:#fff; border:none; border-radius:8px; font-size:1rem; font-weight:700; font-family:inherit; cursor:pointer; transition:background 0.2s; letter-spacing:0.04em; text-transform:uppercase;" onmouseover="this.style.background='#1e3530'" onmouseout="this.style.background='#2a7c6f'">
+        Request Free Inspection
+      </button>
+
+      <div id="form-msg" style="display:none; text-align:center; font-size:0.95rem; padding:12px; border-radius:8px;"></div>
+    </form>
+  </div>
+</section>
+
+<script>
+document.getElementById('contact-form').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const btn = document.getElementById('form-submit');
+  const msg = document.getElementById('form-msg');
+  btn.disabled = true;
+  btn.textContent = 'Sending...';
+
+  const data = Object.fromEntries(new FormData(this).entries());
+
+  try {
+    const res = await fetch('https://forms.zingmigration.com/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    });
+    const json = await res.json();
+    if (res.ok) {
+      msg.style.display = 'block';
+      msg.style.background = 'rgba(42,124,111,0.2)';
+      msg.style.color = '#95bdb6';
+      msg.textContent = json.message || "Thanks! We'll be in touch soon.";
+      this.reset();
+      btn.textContent = 'Sent!';
+    } else {
+      throw new Error(json.error || 'Something went wrong.');
+    }
+  } catch(err) {
+    msg.style.display = 'block';
+    msg.style.background = 'rgba(200,50,50,0.2)';
+    msg.style.color = '#ffaaaa';
+    msg.textContent = err.message;
+    btn.disabled = false;
+    btn.textContent = 'Request Free Inspection';
+  }
+});
+</script>
+<!-- FOOTER -->
+<!-- FAQ SECTION -->
+<section id="faq-section" style="background:#f4f9f8; padding:64px 48px; font-family:\'Inter\',sans-serif; border-top:1px solid #d4e6e3">
+  <div style="max-width:760px; margin:0 auto;">
+    <div style="font-size:0.68rem; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#2a7c6f; margin-bottom:12px;">FAQ</div>
+    <h2 style="font-size:clamp(1.4rem,2.5vw,2rem); color:#1e3530; margin-bottom:32px; font-weight:700; line-height:1.3;">Common Questions About Moore Roofing</h2>
+    <div id="faq-list">
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false">How much does a new roof cost in Florida?<span class="faq-icon">+</span></button>
+      <div class="faq-a"><p>In Northeast Florida, roof replacement typically ranges from $8,000 to $20,000 depending on home size, pitch, and roofing material. Architectural shingles are the most common choice in our area. We provide free inspections and detailed estimates.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false">How long does roof replacement take?<span class="faq-icon">+</span></button>
+      <div class="faq-a"><p>Most residential roof replacements in Orange Park and Jacksonville are completed in 1 to 2 days. Larger or more complex roofs may take 3 days. We work to minimize disruption to your household.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false">Do you handle insurance claims for storm damage?<span class="faq-icon">+</span></button>
+      <div class="faq-a"><p>Yes. We work with homeowners through the entire insurance claim process for wind, hail, and storm damage. We document damage thoroughly and can communicate directly with your adjuster.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false">Is Moore Roofing a licensed contractor?<span class="faq-icon">+</span></button>
+      <div class="faq-a"><p>Yes. Moore Roofing holds Florida CCC License #1334514. We are fully licensed, bonded, and insured for all roofing work in Florida.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false">What areas in Northeast Florida do you serve?<span class="faq-icon">+</span></button>
+      <div class="faq-a"><p>We serve Orange Park, Jacksonville, Fleming Island, Middleburg, Green Cove Springs, Fernandina Beach, and surrounding Northeast Florida communities.</p></div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-col">
+      <div class="footer-logo">
+        <img src="./logo.jpg" alt="Moore Roofing">
+      </div>
+      <p class="footer-tagline">Licensed, trusted, and built to last.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <p><a href="tel:7203245551">7203245551</a></p>
+      <p><a href="mailto:brian76.moore@gmail.com">brian76.moore@gmail.com</a></p>
+      <p>752 Blanding Blvd, Suite 100<br>Orange Park, FL 32065</p>
+      <p style="margin-top:8px;font-size:0.82rem;">CCC License #1334514</p>
+    </div>
+    <div class="footer-col">
+      <h4>Hours</h4>
+      <p>Mon - Fri: 8:00 AM - 6:00 PM</p>
+      <p>Saturday: 9:00 AM - 2:00 PM</p>
+      <p>Sunday: Closed</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    © 2026 Moore Roofing &amp; Designs Inc. All rights reserved.
+  </div>
+</footer>
+<style>
+.faq-item { border-bottom:1px solid #d4e6e3; }
+.faq-q { width:100%; background:none; border:none; color:#1e3530; font-size:0.92rem; font-weight:600; padding:18px 0; display:flex; justify-content:space-between; align-items:center; cursor:pointer; text-align:left; gap:16px; font-family:'Inter',sans-serif; }
+.faq-q:hover { color:#2a7c6f; }
+.faq-icon { color:#2a7c6f; font-size:1.2rem; font-weight:300; flex-shrink:0; transition:transform 0.3s; }
+.faq-q[aria-expanded="true"] .faq-icon { transform:rotate(45deg); }
+.faq-a { max-height:0; overflow:hidden; transition:max-height 0.35s ease; }
+.faq-a.open { max-height:300px; }
+.faq-a p { padding:0 0 18px; font-size:0.86rem; color:#4a5568; line-height:1.75; }
+</style>
+<script>
+document.querySelectorAll('.faq-q').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const expanded = btn.getAttribute('aria-expanded') === 'true';
+    document.querySelectorAll('.faq-q').forEach(b => { b.setAttribute('aria-expanded','false'); b.nextElementSibling.classList.remove('open'); });
+    if (!expanded) { btn.setAttribute('aria-expanded','true'); btn.nextElementSibling.classList.add('open'); }
+  });
+});
+</script>
+
+<script>
+(function() {
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) { entry.target.classList.add("visible"); observer.unobserve(entry.target); }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll(".fade-in, .service-card, .cat-grid, .values-grid, .locations-grid, .review-card, .stat-card, .about-text, .review-grid").forEach(function(el) { observer.observe(el); });
+  var nav = document.querySelector("nav") || document.querySelector("header");
+  if (nav) {
+    window.addEventListener("scroll", function() { nav.classList.toggle("scrolled", window.scrollY > 60); }, { passive: true });
+  }
+  document.querySelectorAll("a[href^="#"]").forEach(function(a) {
+    a.addEventListener("click", function(e) {
+      var t = document.querySelector(this.getAttribute("href"));
+      if (t) { e.preventDefault(); t.scrollIntoView({ behavior: "smooth", block: "start" }); }
+    });
+  });
+})();
+</script>
+<!-- SEO SECTION -->
+<section style="background:#0f1623;padding:80px 0;color:rgba(255,255,255,0.7);font-family:'Inter',sans-serif;">
+  <div style="max-width:1100px;margin:0 auto;padding:0 32px;">
+    <h2 style="color:white;font-size:clamp(1.8rem,3vw,2.4rem);text-align:center;margin-bottom:12px;font-family:inherit;">Your Local Competition is Already Online.</h2>
+    <p style="text-align:center;font-size:1.05rem;margin-bottom:40px;max-width:650px;margin-left:auto;margin-right:auto;color:rgba(255,255,255,0.6);">We looked at what Orange Park homeowners search every month. Here's what you're missing.</p>
+    <div style="background:rgba(232,96,10,0.12);border:1px solid rgba(232,96,10,0.3);border-radius:10px;padding:20px 28px;text-align:center;margin-bottom:48px;font-size:1.05rem;color:#e8600a;font-weight:600;">~18,900 potential customers search for roofing services every month.</div>
+    <div id="kw-layout" style="display:grid;grid-template-columns:2fr 1fr;gap:40px;margin-bottom:60px;align-items:start;">
+      <div>
+        <div class="kw-dh" style="display:grid;grid-template-columns:1fr 90px 110px 100px;padding:10px 16px;background:rgba(255,255,255,0.04);border-bottom:1px solid rgba(255,255,255,0.08);gap:8px;">
+          <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.35);">Keyword</div>
+          <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.35);text-align:center;">Your Rank</div>
+          <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.35);text-align:center;">Competition</div>
+          <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.35);text-align:right;">Searches/mo</div>
+        </div>
+        <div class="kw-mh" style="display:none;grid-template-columns:1fr 60px 80px;padding:10px 14px;background:rgba(255,255,255,0.04);border-bottom:1px solid rgba(255,255,255,0.08);gap:6px;">
+          <div style="font-size:0.6rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.35);">Keyword</div>
+          <div style="font-size:0.6rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.35);text-align:center;">Rank</div>
+          <div style="font-size:0.6rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.35);text-align:right;">Searches</div>
+        </div>
+        <div id="kw-rows"></div>
+        <p style="font-size:0.68rem;color:rgba(255,255,255,0.25);margin-top:12px;">* Search volumes est. Data sourced from DataForSEO.</p>
+      </div>
+      <div style="border:1px solid rgba(232,96,10,0.3);border-radius:12px;background:rgba(232,96,10,0.06);padding:28px 24px;position:sticky;top:88px;">
+        <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#e8600a;margin-bottom:16px;">How We Fix This</div>
+        <div style="display:flex;flex-direction:column;gap:14px;">
+          <div style="display:flex;gap:12px;align-items:flex-start;"><span style="color:#e8600a;font-size:1rem;margin-top:1px;flex-shrink:0;">✓</span><div><div style="font-size:0.88rem;font-weight:700;color:white;margin-bottom:2px;">50 Local Landing Pages</div><div style="font-size:0.76rem;color:rgba(255,255,255,0.45);line-height:1.5;">One page per keyword and service area, built to rank</div></div></div>
+          <div style="display:flex;gap:12px;align-items:flex-start;"><span style="color:#e8600a;font-size:1rem;margin-top:1px;flex-shrink:0;">✓</span><div><div style="font-size:0.88rem;font-weight:700;color:white;margin-bottom:2px;">AI Chat</div><div style="font-size:0.76rem;color:rgba(255,255,255,0.45);line-height:1.5;">Converts visitors into booked jobs 24/7, even while you sleep</div></div></div>
+          <div style="display:flex;gap:12px;align-items:flex-start;"><span style="color:#e8600a;font-size:1rem;margin-top:1px;flex-shrink:0;">✓</span><div><div style="font-size:0.88rem;font-weight:700;color:white;margin-bottom:2px;">SEO Keyword Strategy</div><div style="font-size:0.76rem;color:rgba(255,255,255,0.45);line-height:1.5;">Targeting the exact searches Orange Park homeowners are making</div></div></div>
+          <div style="display:flex;gap:12px;align-items:flex-start;"><span style="color:#e8600a;font-size:1rem;margin-top:1px;flex-shrink:0;">✓</span><div><div style="font-size:0.88rem;font-weight:700;color:white;margin-bottom:2px;">All Done For You</div><div style="font-size:0.76rem;color:rgba(255,255,255,0.45);line-height:1.5;">You run your business. We handle everything else.</div></div></div>
+        </div>
+        <a href="https://meetings.hubspot.com/elliot-farmer" target="_blank" style="display:block;margin-top:24px;background:#e8600a;color:white;padding:16px 20px;border-radius:6px;font-size:0.82rem;font-weight:700;letter-spacing:0.09em;text-transform:uppercase;text-decoration:none;text-align:center;width:100%;box-sizing:border-box;">Fix My Rankings</a>
+        <div style="text-align:center;margin-top:10px;font-size:0.72rem;color:rgba(255,255,255,0.35);">From <strong style="color:#e8600a;">$59/mo</strong> · No contract</div>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+@media(max-width:960px){
+  #kw-layout{grid-template-columns:1fr!important;}
+  .kw-dh{display:none!important;}
+  .kw-mh{display:grid!important;}
+}
+@media(max-width:768px){
+  #kw-layout{gap:24px!important;}
+}
+</style>
+<script>
+(function(){
+var kws=[{kw:"roofing near me",vol:6600,leads:83},{kw:"roof replacement near me",vol:3200,leads:40},{kw:"roofing contractor near me",vol:2900,leads:36},{kw:"roof repair near me",vol:2400,leads:30},{kw:"roofer near me",vol:1900,leads:24},{kw:"roofing company orange park fl",vol:720,leads:9},{kw:"roof replacement orange park fl",vol:480,leads:6},{kw:"roof repair jacksonville fl",vol:390,leads:5},{kw:"metal roofing near me",vol:320,leads:4},{kw:"storm damage roof repair near me",vol:260,leads:3}];
+var c=document.getElementById("kw-rows");
+if(!c)return;
+function render(){
+  c.innerHTML="";
+  var m=window.innerWidth<=960;
+  kws.forEach(function(item,i){
+    var row=document.createElement("div");
+    var n=String(i+1).padStart(2,"0");
+    if(m){
+      row.style.cssText="display:grid;grid-template-columns:1fr 60px 80px;padding:12px 14px;border-bottom:1px solid rgba(255,255,255,0.06);align-items:center;gap:6px;";
+      row.innerHTML='<div style="display:flex;align-items:center;gap:8px;"><span style="font-size:0.62rem;color:rgba(255,255,255,0.2);font-weight:700;flex-shrink:0;">'+n+'</span><span style="font-size:0.78rem;color:rgba(255,255,255,0.85);font-weight:500;line-height:1.3;">'+item.kw+'</span></div><div style="text-align:center;"><span style="font-size:0.9rem;font-weight:800;color:#f87171;">0</span></div><div style="text-align:right;font-size:0.8rem;font-weight:700;color:white;">'+item.vol.toLocaleString()+'<span style="font-size:0.6rem;color:rgba(255,255,255,0.35);margin-left:2px;">est.</span></div>';
+    }else{
+      row.style.cssText="display:grid;grid-template-columns:1fr 90px 110px 100px;padding:14px 16px;border-bottom:1px solid rgba(255,255,255,0.05);align-items:center;transition:background 0.2s;cursor:default;";
+      row.onmouseenter=function(){this.style.background="rgba(255,255,255,0.03)"};
+      row.onmouseleave=function(){this.style.background="transparent"};
+      row.innerHTML='<div style="display:flex;align-items:center;gap:10px;"><span style="font-size:0.68rem;color:rgba(255,255,255,0.2);font-weight:600;min-width:20px;flex-shrink:0;">'+n+'</span><span style="font-size:0.85rem;color:rgba(255,255,255,0.85);font-weight:500;">'+item.kw+'</span></div><div style="text-align:center;font-size:0.9rem;font-weight:700;color:white;">'+item.vol.toLocaleString()+' <span style="font-size:0.62rem;color:rgba(255,255,255,0.35);">est.</span></div><div style="text-align:center;"><span style="background:rgba(239,68,68,0.12);color:#f87171;padding:4px 10px;border-radius:20px;font-size:0.72rem;font-weight:600;">Not ranking</span></div><div style="text-align:center;font-size:0.82rem;font-weight:700;color:rgba(255,255,255,0.5);">'+item.leads+'</div>';
+    }
+    c.appendChild(row);
+  });
+}
+render();
+window.addEventListener("resize",render);
+})();
+</script>
+
+<section id="cta-section">
+  <div style="max-width:1100px;margin:0 auto;padding:0 32px;">
+    <div class="cta-card">
+      <img class="cta-photo" src="./elliot.png" alt="Elliot Farmer, Senior Business Advisor, ZING" loading="lazy">
+      <h2>Ready to get more roofing customers in Orange Park? Let's talk.</h2>
+      <p class="cta-subtitle">Elliot Farmer · Senior Business Advisor, ZING</p>
+      <p class="cta-tagline">Websites from $59/mo · 50 local landing pages · Full design included · No contract</p>
+      <div class="cta-buttons">
+        <a href="https://meetings.hubspot.com/elliot-farmer" target="_blank" class="btn-primary">Book a Free Call →</a>
+        <a href="tel:7205340219" class="btn-outline">(720) 534-0219</a>
+      </div>
+      <div class="cta-email"><a href="mailto:elliot@zing-work.com">elliot@zing-work.com</a></div>
+    </div>
+  </div>
+</section>
+
+
+</body></html>
