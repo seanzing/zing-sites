@@ -1,0 +1,1265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Christie's Castle Cleaning, LLC - Professional Cleaning Services in Your City, US</title>
+  <meta name="description" content="Christie's Castle Cleaning, LLC in Your City, US. Professional cleaning services. Call (843) 303-4280.">
+  <meta property="og:title" content="Christie's Castle Cleaning, LLC | Cleaning Services in Your City, US">
+  <meta property="og:description" content="Christie's Castle Cleaning, LLC in Your City, US. Professional cleaning services. Call (843) 303-4280.">
+  <meta property="og:type" content="website">
+  <meta name="llms-txt" content="This is a professional cleaning service website for Christie's Castle Cleaning, LLC in Your City, US.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Christie's Castle Cleaning, LLC","telephone":"(843) 303-4280","address":{"@type":"PostalAddress","streetAddress":"Your City, US","addressLocality":"Your City","addressRegion":"US","addressCountry":"US"},"url":"https://yourwebsiteexample.com/christiescastleclean/"}</script>
+  <style>
+    :root {
+      --primary: #1e7fcb;
+      --primary-hover: #15578a;
+      --primary-rgb: 30,127,203;
+      --accent: #e03e3e;
+      --dark: #1a1a2e;
+      --white: #ffffff;
+      --red: #dc2626;
+      --text: #1e293b;
+      --muted: #64748b;
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --border: #e2e8f0;
+    }
+
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      line-height: 1.2;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ── Buttons ── */
+    .btn {
+      display: inline-block;
+      padding: 14px 32px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: none;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: var(--white);
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(var(--primary-rgb), 0.3);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--white);
+      border: 2px solid var(--white);
+    }
+
+    .btn-outline:hover {
+      background: var(--white);
+      color: var(--primary);
+    }
+
+    /* ── Sticky Nav ── */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: var(--white);
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    }
+
+    .navbar .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 70px;
+    }
+
+    .nav-brand {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--primary);
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .nav-phone {
+      color: var(--text);
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .nav-phone:hover {
+      color: var(--primary);
+    }
+
+    .nav-cta {
+      padding: 10px 24px;
+      font-size: 0.9rem;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 4px;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 26px;
+      height: 3px;
+      background: var(--text);
+      border-radius: 2px;
+      transition: 0.3s;
+    }
+
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 70px;
+      left: 0;
+      width: 100%;
+      background: var(--white);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 24px;
+      z-index: 999;
+      flex-direction: column;
+      gap: 16px;
+      align-items: center;
+    }
+
+    .mobile-menu.active {
+      display: flex;
+    }
+
+    /* ── Hero ── */
+    .hero {
+      position: relative;
+      min-height: 600px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+      margin-top: 70px;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('../shared/cleaning-hero.jpg');
+      background-size: cover;
+      background-position: center;
+      animation: slowZoom 20s ease-in-out infinite alternate;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.45);
+    }
+
+    @keyframes slowZoom {
+      from { transform: scale(1); }
+      to { transform: scale(1.08); }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      color: var(--white);
+      max-width: 800px;
+      padding: 60px 24px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: 16px;
+      letter-spacing: -0.02em;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 32px;
+      opacity: 0.95;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* ── Trust Bar ── */
+    .trust-bar {
+      background: #f1f5f9;
+      padding: 24px 0;
+    }
+
+    .trust-bar .container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 32px;
+    }
+
+    .trust-badge {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--text);
+    }
+
+    .trust-badge .check {
+      color: var(--primary);
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+
+    /* ── Section shared ── */
+    .section {
+      padding: 80px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2.2rem;
+      font-weight: 800;
+      margin-bottom: 16px;
+      color: var(--text);
+    }
+
+    .section-sub {
+      text-align: center;
+      color: var(--muted);
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto 48px;
+    }
+
+    /* ── Services ── */
+    .services {
+      background: var(--bg);
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .service-card {
+      background: var(--card-bg);
+      border-radius: 12px;
+      padding: 32px 24px;
+      border-top: 4px solid var(--primary);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+    }
+
+    .service-icon {
+      font-size: 2rem;
+      margin-bottom: 16px;
+    }
+
+    .service-card h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: var(--text);
+    }
+
+    .service-card p {
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    /* ── Why Choose Us ── */
+    .why-us {
+      background: #f0f7ff;
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+
+    .why-item {
+      text-align: center;
+      padding: 24px;
+    }
+
+    .why-icon {
+      font-size: 2.5rem;
+      margin-bottom: 16px;
+    }
+
+    .why-item h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .why-item p {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    /* ── How It Works ── */
+    .how-it-works {
+      background: var(--white);
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+
+    .step {
+      text-align: center;
+      padding: 24px;
+    }
+
+    .step-number {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      font-weight: 800;
+      margin: 0 auto 20px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    .step h3 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .step p {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    /* ── Testimonials ── */
+    .testimonials {
+      background: #f1f5f9;
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .testimonial-card {
+      background: var(--card-bg);
+      border-radius: 12px;
+      padding: 32px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+
+    .stars {
+      color: #f59e0b;
+      font-size: 1.2rem;
+      margin-bottom: 16px;
+      letter-spacing: 2px;
+    }
+
+    .testimonial-card blockquote {
+      font-size: 0.95rem;
+      color: var(--text);
+      line-height: 1.7;
+      margin-bottom: 16px;
+      font-style: italic;
+    }
+
+    .testimonial-author {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.9rem;
+    }
+
+    /* ── CTA Section ── */
+    #cta-section {
+      background: var(--white);
+      padding: 80px 0;
+    }
+
+    .cta-heading {
+      text-align: center;
+      font-size: 2.2rem;
+      font-weight: 800;
+      margin-bottom: 48px;
+      color: var(--text);
+    }
+
+    .cta-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+
+    .salesperson-card {
+      background: var(--bg);
+      border-radius: 16px;
+      padding: 32px;
+      text-align: center;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+
+    .salesperson-photo {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 16px;
+      border: 3px solid var(--primary);
+    }
+
+    .salesperson-card h3 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .salesperson-card .sp-title {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-bottom: 16px;
+    }
+
+    .salesperson-info {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+
+    .salesperson-info a {
+      color: var(--text);
+      font-size: 0.95rem;
+      transition: color 0.3s;
+    }
+
+    .salesperson-info a:hover {
+      color: var(--primary);
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      padding: 14px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: 1rem;
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      transition: border-color 0.3s;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      outline: none;
+      border-color: var(--primary);
+    }
+
+    .contact-form textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .contact-form .btn {
+      width: 100%;
+    }
+
+    /* ── Footer ── */
+    /* ── Business CTA Band ── */
+    .biz-cta-band {
+      padding: 60px 24px;
+      background: #e8f4fd;
+    }
+    .biz-cta-card {
+      max-width: 860px;
+      margin: 0 auto;
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      background-image: url('../shared/cleaning-cta.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+    .biz-cta-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(14, 80, 145, 0.72);
+      border-radius: 16px;
+    }
+    .biz-cta-inner {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+      flex-wrap: wrap;
+      padding: 52px 48px;
+    }
+    .biz-cta-text h2 {
+      font-size: 1.9rem;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+    .biz-cta-text p {
+      color: rgba(255,255,255,0.88);
+      font-size: 1rem;
+      max-width: 420px;
+    }
+    .biz-cta-actions {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      flex-shrink: 0;
+    }
+    .btn-white {
+      background: #fff;
+      color: var(--primary);
+      font-weight: 700;
+    }
+    .btn-white:hover {
+      background: #f0f7ff;
+      transform: translateY(-2px);
+    }
+    .btn-outline-white {
+      background: transparent;
+      color: #fff;
+      border: 2px solid rgba(255,255,255,0.7);
+      font-weight: 600;
+    }
+    .btn-outline-white:hover {
+      background: rgba(255,255,255,0.15);
+    }
+    @media (max-width: 768px) {
+      .biz-cta-inner { flex-direction: column; text-align: center; padding: 40px 24px; }
+      .biz-cta-actions { justify-content: center; }
+      .biz-cta-text h2 { font-size: 1.5rem; }
+    }
+
+    .footer {
+      background: var(--dark);
+      color: rgba(255,255,255,0.8);
+      padding: 48px 0 24px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 48px;
+      margin-bottom: 32px;
+    }
+
+    .footer-brand {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+
+    .footer-info p {
+      font-size: 0.9rem;
+      margin-bottom: 6px;
+    }
+
+    .footer-links h4 {
+      color: var(--white);
+      font-size: 1rem;
+      margin-bottom: 12px;
+    }
+
+    .footer-links ul {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 8px;
+    }
+
+    .footer-links a {
+      font-size: 0.9rem;
+      transition: color 0.3s;
+    }
+
+    .footer-links a:hover {
+      color: var(--white);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 20px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.5);
+    }
+
+    /* ── SEO Section ── */
+    .seo-section {
+      background: var(--white);
+      padding: 64px 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .seo-banner {
+      text-align: center;
+      margin-bottom: 12px;
+    }
+
+    .seo-banner h2 {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--text);
+    }
+
+    .seo-banner h2 span {
+      color: var(--primary);
+    }
+
+    .seo-sub {
+      text-align: center;
+      color: var(--muted);
+      font-size: 1.05rem;
+      margin-bottom: 40px;
+    }
+
+    #kw-layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 32px;
+      align-items: start;
+    }
+
+    .kw-table-wrap {
+      overflow-x: auto;
+    }
+
+    .kw-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+    }
+
+    .kw-table th {
+      background: var(--primary);
+      color: var(--white);
+      padding: 12px 16px;
+      text-align: left;
+      font-weight: 600;
+    }
+
+    .kw-table td {
+      padding: 10px 16px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .kw-table tr:hover td {
+      background: rgba(var(--primary-rgb), 0.04);
+    }
+
+    .seo-fix-box {
+      background: var(--bg);
+      border-left: 4px solid #f97316;
+      border-radius: 8px;
+      padding: 28px;
+    }
+
+    .seo-fix-box h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+      color: var(--text);
+    }
+
+    .seo-fix-box ul {
+      list-style: none;
+      margin-bottom: 20px;
+    }
+
+    .seo-fix-box li {
+      padding: 6px 0;
+      font-size: 0.95rem;
+      color: var(--text);
+    }
+
+    .seo-fix-box li::before {
+      content: "\2713  ";
+      color: var(--primary);
+      font-weight: 700;
+    }
+
+    .seo-fix-box .seo-tagline {
+      font-size: 0.95rem;
+      color: var(--muted);
+      margin-bottom: 16px;
+      font-weight: 500;
+    }
+
+    /* ── FAQ ── */
+    .faq-section {
+      background: var(--bg);
+      padding: 80px 0;
+    }
+
+    .faq-list {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      background: var(--card-bg);
+      border-radius: 10px;
+      margin-bottom: 12px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+      overflow: hidden;
+    }
+
+    .faq-question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 24px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 1rem;
+      color: var(--text);
+      background: none;
+      border: none;
+      width: 100%;
+      text-align: left;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .faq-question:hover {
+      color: var(--primary);
+    }
+
+    .faq-toggle {
+      font-size: 1.4rem;
+      font-weight: 300;
+      transition: transform 0.3s;
+      color: var(--primary);
+    }
+
+    .faq-item.open .faq-toggle {
+      transform: rotate(45deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+
+    .faq-answer-inner {
+      padding: 0 24px 20px;
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+
+    /* ── Fade-in animation ── */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 1024px) {
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-right {
+        display: none;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+
+      .services-grid,
+      .why-grid,
+      .steps,
+      .testimonials-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      #kw-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .section-title,
+      .cta-heading {
+        font-size: 1.7rem;
+      }
+
+      .seo-banner h2 {
+        font-size: 1.5rem;
+      }
+
+      .trust-bar .container {
+        gap: 16px;
+      }
+
+      .trust-badge {
+        font-size: 0.85rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── Nav ── -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="#" class="nav-brand">Christie's Castle Cleaning, LLC</a>
+      <div class="nav-right">
+        <a href="tel:8433034280" class="nav-phone">(843) 303-4280</a>
+        <a href="#cta-section" class="btn btn-primary nav-cta">Get a Free Quote</a>
+      </div>
+      <button class="hamburger" onclick="document.querySelector('.mobile-menu').classList.toggle('active')" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="mobile-menu">
+    <a href="tel:8433034280" class="nav-phone">(843) 303-4280</a>
+    <a href="#cta-section" class="btn btn-primary" onclick="document.querySelector('.mobile-menu').classList.remove('active')">Get a Free Quote</a>
+  </div>
+
+  <!-- ── Hero ── -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Your City's Trusted Cleaning Service</h1>
+      <p>Christie's Castle Cleaning keeps your home spotless with reliable, professional service tailored to your local community.</p>
+      <div class="hero-buttons">
+        <a href="tel:8433034280" class="btn btn-primary">Call Now</a>
+        <a href="#cta-section" class="btn btn-outline">Get a Free Quote</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Trust Bar ── -->
+  <section class="trust-bar">
+    <div class="container">
+      <div class="trust-badge"><span class="check">&#10003;</span> Insured &amp; Bonded</div>
+      <div class="trust-badge"><span class="check">&#10003;</span> Background Checked</div>
+      <div class="trust-badge"><span class="check">&#10003;</span> Eco-Friendly Products</div>
+      <div class="trust-badge"><span class="check">&#10003;</span> Satisfaction Guaranteed</div>
+    </div>
+  </section>
+
+  <!-- ── Services ── -->
+  <section class="section services fade-in">
+    <div class="container">
+      <h2 class="section-title">Our Cleaning Services</h2>
+      <p class="section-sub">Professional cleaning solutions tailored to your needs in Your City and surrounding areas.</p>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">🏠</div>
+          <h3>Residential Cleaning</h3>
+          <p>Regular home cleaning tailored to your schedule and specific needs.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">✨</div>
+          <h3>Deep Cleaning</h3>
+          <p>Top-to-bottom scrubbing of every surface, corner, and appliance.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">📦</div>
+          <h3>Move-In / Move-Out</h3>
+          <p>Leave your old place spotless or arrive to a fresh, clean new home.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🏢</div>
+          <h3>Commercial Cleaning</h3>
+          <p>Professional office and commercial space cleaning, day or night.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🛏️</div>
+          <h3>Airbnb Turnover</h3>
+          <p>Fast, reliable cleaning between guests to keep your reviews shining.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">💼</div>
+          <h3>Office Cleaning</h3>
+          <p>A clean workspace boosts productivity. We handle the mess.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Why Choose Us ── -->
+  <section class="section why-us fade-in">
+    <div class="container">
+      <h2 class="section-title">Why Choose Christie's Castle Cleaning, LLC</h2>
+      <p class="section-sub">We go above and beyond to deliver a spotless experience every time.</p>
+      <div class="why-grid">
+        <div class="why-item">
+          <div class="why-icon">🛡️</div>
+          <h3>Trusted Professionals</h3>
+          <p>Every team member is background-checked, insured, and trained to deliver exceptional results with every visit.</p>
+        </div>
+        <div class="why-item">
+          <div class="why-icon">🌿</div>
+          <h3>Eco-Friendly Cleaning</h3>
+          <p>We use safe, environmentally responsible products that protect your family, pets, and the planet.</p>
+        </div>
+        <div class="why-item">
+          <div class="why-icon">⭐</div>
+          <h3>100% Satisfaction</h3>
+          <p>Not happy with our work? We will come back and re-clean at no extra charge. Your satisfaction is our priority.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── How It Works ── -->
+  <section class="section how-it-works fade-in">
+    <div class="container">
+      <h2 class="section-title">How It Works</h2>
+      <p class="section-sub">Getting a clean space is easy. Just three simple steps.</p>
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h3>Book Online</h3>
+          <p>Fill out our quick form or give us a call. We will find a time that works best for your schedule.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <h3>We Show Up</h3>
+          <p>Our professional team arrives on time, fully equipped, and ready to make your space shine.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <h3>Enjoy a Clean Space</h3>
+          <p>Sit back and enjoy your freshly cleaned home or office. It is that simple.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Business CTA Band ── -->
+  <section class="biz-cta-band">
+    <div class="biz-cta-card">
+      <div class="biz-cta-overlay"></div>
+      <div class="biz-cta-inner">
+        <div class="biz-cta-text">
+          <h2>Book Your First Clean Today</h2>
+          <p>Professional, reliable, and eco-friendly cleaning services in Your City. Satisfaction guaranteed or we come back, free.</p>
+        </div>
+        <div class="biz-cta-actions">
+          <a href="tel:8433034280" class="btn btn-white">Call (843) 303-4280</a>
+          <a href="#faq" class="btn btn-outline-white">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Testimonials ── -->
+  <section class="section testimonials fade-in">
+    <div class="container">
+      <h2 class="section-title">What Our Clients Say</h2>
+      <p class="section-sub">Real reviews from happy customers in Your City.</p>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <blockquote>"Absolutely spotless every time. The team is professional, thorough, and always on schedule."</blockquote>
+          <div class="testimonial-author">Jennifer M. — Your City, US</div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <blockquote>"Used them for a move-out clean and got my full deposit back. Could not believe how great the place looked."</blockquote>
+          <div class="testimonial-author">Marcus T. — Your City, US</div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <blockquote>"Best cleaning service I have ever hired. They show up on time and do an incredible job every visit."</blockquote>
+          <div class="testimonial-author">Sarah K. — Your City, US</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FAQ ── -->
+  <section class="faq-section fade-in" id="faq">
+    <div class="container">
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <p class="section-sub">Got questions? We have answers.</p>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>Do you bring your own cleaning supplies?</span>
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer"><div class="faq-answer-inner">Yes. We bring all our own eco-friendly, non-toxic products and equipment at no extra charge.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>Are your cleaners background checked?</span>
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer"><div class="faq-answer-inner">Every team member passes a thorough background check and completes our training program before their first job.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>What is your satisfaction guarantee?</span>
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer"><div class="faq-answer-inner">If you are not 100% satisfied, contact us within 24 hours and we will return to make it right at no cost.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>How do I book a cleaning?</span>
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer"><div class="faq-answer-inner">Call us, use our online booking form, or send us a message. We can usually schedule within 48 hours.</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-info">
+          <div class="footer-brand">Christie's Castle Cleaning, LLC</div>
+          <p>Your City, US</p>
+          <p><a href="tel:8433034280">(843) 303-4280</a></p>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#">Services</a></li>
+            <li><a href="#cta-section">Get a Quote</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 Christie's Castle Cleaning, LLC. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── SEO Section ── -->
+  <section class="seo-section" id="seo-report">
+    <div class="container">
+      <div class="seo-banner">
+        <h2><span>3,320</span> potential customers search <span>cleaning services in your area</span> every month</h2>
+      </div>
+      <p class="seo-sub">Here's what's being missed without a proper web presence</p>
+      <div id="kw-layout">
+        <div class="kw-table-wrap">
+          <table class="kw-table">
+            <thead><tr><th>Keyword</th><th>Monthly Searches</th></tr></thead>
+            <tbody id="kw-body"></tbody>
+          </table>
+        </div>
+        <div class="seo-fix-box">
+          <h3>How We Fix This</h3>
+          <ul>
+            <li>50 Local Landing Pages</li>
+            <li>Google Business Optimization</li>
+            <li>Monthly SEO Reports</li>
+            <li>AI-Powered Content</li>
+          </ul>
+          <p class="seo-tagline">$59/mo · No contract · Full design included</p>
+          <a href="https://meetings.hubspot.com/elizabeth41" class="btn btn-primary" target="_blank">Book a Free Call &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA Section ── -->
+  <section id="cta-section">
+    <div class="container">
+      <h2 class="cta-heading">Ready to Get More Clients?</h2>
+      <div class="cta-grid">
+        <div class="salesperson-card">
+          <img src="../../shared/elizabeth.jpg" alt="Elizabeth Adams" class="salesperson-photo">
+          <h3>Elizabeth Adams</h3>
+          <p class="sp-title">Sales Advisor, ZING</p>
+          <div class="salesperson-info">
+            <a href="tel:7205340218">(720) 534-0218</a>
+            <a href="/cdn-cgi/l/email-protection#4f2a2326352e2d2a3b270f352621286238203d24612c2022"><span class="__cf_email__" data-cfemail="6500090c1f040700110d251f0c0b0248120a170e4b060a08">[email&#160;protected]</span></a>
+          </div>
+          <a href="https://meetings.hubspot.com/elizabeth41" class="btn btn-primary" target="_blank">Book a Call</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js" defer></script><script>
+    (function() {
+      try {
+        var keywords = [{"keyword":"house cleaning your city","volume":1200,"est":true},{"keyword":"cleaning services your city","volume":880,"est":true},{"keyword":"maid service your city","volume":590,"est":true},{"keyword":"deep cleaning your city","volume":390,"est":true},{"keyword":"move out cleaning your city","volume":260,"est":true}];
+        var tbody = document.getElementById('kw-body');
+        if (keywords && tbody) {
+          keywords.forEach(function(kw) {
+            var tr = document.createElement('tr');
+            tr.innerHTML = '<td>' + kw.keyword + '</td><td>' + (kw.est ? kw.volume.toLocaleString() + ' <em>(est.)</em>' : kw.volume.toLocaleString()) + '</td>';
+            tbody.appendChild(tr);
+          });
+        }
+      } catch(e) {}
+    })();
+
+    function toggleFaq(btn) {
+      var item = btn.closest('.faq-item');
+      var answer = item.querySelector('.faq-answer');
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(function(el) {
+        el.classList.remove('open');
+        el.querySelector('.faq-answer').style.maxHeight = null;
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+      }
+    }
+
+    (function() {
+      var faders = document.querySelectorAll('.fade-in');
+      if ('IntersectionObserver' in window) {
+        var observer = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.1 });
+        faders.forEach(function(el) { observer.observe(el); });
+      } else {
+        faders.forEach(function(el) { el.classList.add('visible'); });
+      }
+    })();
+
+    // Mobile nav
+    var hamburger = document.getElementById('hamburger');
+    var mobileMenu = document.getElementById('mobile-menu');
+    if (hamburger && mobileMenu) {
+      hamburger.addEventListener('click', function() {
+        mobileMenu.classList.toggle('active');
+      });
+    }
+  </script>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"dbb7c448bfa648ed9195a7f99b49a4fa","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
