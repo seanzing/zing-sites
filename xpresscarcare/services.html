@@ -105,7 +105,7 @@ h1, h2, h3, h4, h5, h6 {
 /* HERO */
 .hero {
   position: relative;
-  min-height: 50vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -121,7 +121,7 @@ h1, h2, h3, h4, h5, h6 {
 .hero-bg div {
   width: 100%;
   height: 100%;
-  background: url('./hero.jpg?v=1775677732') center 60%/cover no-repeat;
+  background: url('./hero.jpg?v=1775677732') center/cover no-repeat;
   animation: slowZoom 25s ease-in-out infinite alternate;
 }
 
@@ -317,27 +317,25 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--mid);
 }
 
-.services-list {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  max-width: 1000px;
-  margin: 0 auto;
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
 }
 
-.service-item {
+.service-card {
   background: var(--white);
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-  display: grid;
-  grid-template-columns: 300px 1fr;
-  gap: 0;
-  transition: box-shadow 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s;
+  opacity: 1;
+  transform: translateY(0);
 }
 
-.service-item:hover {
-  box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.1);
 }
 
 @keyframes fadeInUp {
@@ -356,18 +354,18 @@ h1, h2, h3, h4, h5, h6 {
 .service-card:nth-child(10) { animation-delay: 0.5s; }
 .service-card:nth-child(11) { animation-delay: 0.55s; }
 
-.service-item-img {
+.service-img {
   width: 100%;
-  height: 240px;
+  height: 220px;
   object-fit: cover;
 }
 
-.service-item-content {
-  padding: 32px;
+.service-body {
+  padding: 24px;
 }
 
-.service-item-content h3 {
-  font-size: 1.6rem;
+.service-body h3 {
+  font-size: 1.35rem;
   color: var(--dark);
   margin-bottom: 8px;
 }
@@ -383,10 +381,10 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 12px;
 }
 
-.service-item-content p {
-  font-size: 1rem;
+.service-body p {
+  font-size: 0.9rem;
   color: var(--mid);
-  line-height: 1.8;
+  line-height: 1.7;
 }
 
 /* CTA */
@@ -710,8 +708,7 @@ h1, h2, h3, h4, h5, h6 {
   .value-props .container { grid-template-columns: 1fr; gap: 20px; }
   .value-card { padding: 30px 24px; }
 
-  .service-item { grid-template-columns: 1fr; }
-  .service-item-img { min-height: 250px; }
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
 
   .footer .container { grid-template-columns: 1fr; gap: 28px; text-align: center; }
 
@@ -736,15 +733,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 768px) {
-  .services-list { gap: 24px; }
+  .services-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
   .hero h1 { font-size: 2.4rem; }
   .services-header h2, .about-text h2, .cta-section h2 { font-size: 2.2rem; }
   .seo-header h2 { font-size: 1.8rem; }
 }
 
 @media (max-width: 480px) {
-  .service-item-content { padding: 24px; }
-  .service-item-content h3 { font-size: 1.4rem; }
+  .services-grid { grid-template-columns: 1fr; }
   .hero h1 { font-size: 2rem; }
   .hero-sub { font-size: 1rem; }
   .nav-phone span { display: none; }
@@ -1021,11 +1017,61 @@ h1, h2, h3, h4, h5, h6 {
   </div>
 </section>
 
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-image">
+      <img src="/test-logo.svg.png" alt="Xpress Car Care team at work" loading="lazy">
+    </div>
+    <div class="about-text">
+      <div class="section-badge">About Us</div>
+      <div class="about-image-mobile">
+        <img src="./about.jpg?v=1775677732" alt="Xpress Car Care team at work" loading="lazy">
+      </div>
+      <h2>More Than a Car Wash</h2>
+      <p>At Xpress Car Care, we understand that your car is more than just a mode of transportation -- it is a reflection of your personality and style. That is why we offer a range of luxury car care services at affordable prices. Our team of experienced professionals is dedicated to providing you with fast service, attention to detail, and excellent customer service. We believe that every car deserves the best care, and we are here to provide it.</p>
+    </div>
+  </div>
+</section>
 
+<!-- VALUE PROPS -->
+<section class="value-props">
+  <div class="container">
+    <div class="value-card">
+      <div class="value-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+      </div>
+      <h3>Luxury Results</h3>
+      <p>Premium-grade products and techniques that deliver showroom-quality results every time.</p>
+    </div>
+    <div class="value-card">
+      <div class="value-icon">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+      </div>
+      <h3>Fast Turnaround</h3>
+      <p>We respect your time. Most services completed while you wait.</p>
+    </div>
+    <div class="value-card">
+      <div class="value-icon">
+        <svg viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13" rx="2"></rect><polygon points="23 7 16 12 16 7 16 2 23 7"></polygon><line x1="1" y1="20" x2="23" y2="20"></line><line x1="5" y1="20" x2="5" y2="16"></line><line x1="19" y1="20" x2="19" y2="16"></line></svg>
+      </div>
+      <h3>Every Vehicle</h3>
+      <p>Cars, trucks, ATVs, boats, RVs, and fleet vehicles. We clean them all.</p>
+    </div>
+  </div>
+</section>
 
-
-
-
+<!-- ECO-FRIENDLY -->
+<section class="about" style="background: var(--white); padding: 80px 0;">
+  <div class="container">
+    <div class="about-text" style="max-width: 800px; margin: 0 auto; text-align: center;">
+      <div class="section-badge">Eco-Friendly Commitment</div>
+      <h2>Safe for Your Family, Safe for the Planet</h2>
+      <p style="margin-bottom: 24px;">At Xpress Car Care, we believe luxury car care should not come at the expense of the environment. That is why we use eco-friendly, biodegradable products for all our interior detailing services. Our cleaning solutions are safe for children, pets, and the environment, while still delivering the professional results you expect.</p>
+      <p>From our upholstery cleaners to our dashboard treatments, every product we use is carefully selected to minimize environmental impact without compromising on quality. You get a spotless, fresh-smelling interior you can feel good about.</p>
+    </div>
+  </div>
+</section>
 
 <!-- SERVICES -->
 <section class="services" id="services">
@@ -1035,90 +1081,90 @@ h1, h2, h3, h4, h5, h6 {
       <h2>What We Offer</h2>
       <p>Professional car care services for every need and budget.</p>
     </div>
-    <div class="services-list">
-      <div class="service-item">
-        <img src="/test-logo.svg.png" alt="Xpress Basic Exterior Wash" class="service-item-img" loading="lazy">
-        <div class="service-item-content">
+    <div class="services-grid">
+      <div class="service-card">
+        <img src="/test-logo.svg.png" alt="Xpress Basic Exterior Wash" class="service-img" loading="lazy">
+        <div class="service-body">
           <h3>Xpress Basic Exterior Wash</h3>
           <span class="service-badge">From $30 · 1 hr</span>
           <p>A thorough exterior wash that removes dirt, grime, and road debris. Your car comes out clean and shining every time.</p>
         </div>
       </div>
-      <div class="service-item">
-        <img src="./service-basic-wash-vacuum.jpg" alt="Basic Wash + Vacuum Detail" class="service-item-img" loading="lazy">
-        <div class="service-item-content">
+      <div class="service-card">
+        <img src="./service-basic-wash-vacuum.jpg" alt="Basic Wash + Vacuum Detail" class="service-img" loading="lazy">
+        <div class="service-body">
           <h3>Basic Wash + Vacuum Detail</h3>
           <span class="service-badge">From $60 · 1.5 hrs</span>
           <p>Full exterior wash plus interior vacuum. A quick refresh that covers the essentials inside and out.</p>
         </div>
       </div>
-      <div class="service-item">
-        <img src="./service-interior-detail.jpg" alt="Interior Detail" class="service-item-img" loading="lazy">
-        <div class="service-item-content">
+      <div class="service-card">
+        <img src="./service-interior-detail.jpg" alt="Interior Detail" class="service-img" loading="lazy">
+        <div class="service-body">
           <h3>Interior Detail</h3>
           <span class="service-badge">From $125 · 2 hrs</span>
           <p>Deep clean of your entire interior. Seats, carpets, dashboard, and every surface leaves spotless.</p>
         </div>
       </div>
-      <div class="service-item">
-        <img src="./service-premium-detail.jpg" alt="Premium Detail" class="service-item-img" loading="lazy">
-        <div class="service-item-content">
+      <div class="service-card">
+        <img src="./service-premium-detail.jpg" alt="Premium Detail" class="service-img" loading="lazy">
+        <div class="service-body">
           <h3>Premium Detail</h3>
           <span class="service-badge">From $150 · 3 hrs</span>
           <p>Our premium package combines a full exterior wash with a complete interior detail for a like-new finish.</p>
         </div>
       </div>
-      <div class="service-item">
-        <img src="./service-ultimate-detail.jpg" alt="Ultimate Detail" class="service-item-img" loading="lazy">
-        <div class="service-item-content">
+      <div class="service-card">
+        <img src="./service-ultimate-detail.jpg" alt="Ultimate Detail" class="service-img" loading="lazy">
+        <div class="service-body">
           <h3>Ultimate Detail</h3>
           <span class="service-badge">From $250 · 4 hrs</span>
           <p>The works. Hand wash, clay bar, interior deep clean, and finishing polish. The best we offer.</p>
         </div>
       </div>
-      <div class="service-item">
-        <img src="./service-pet-hair-removal.jpg" alt="Pet Hair Removal" class="service-item-img" loading="lazy">
-        <div class="service-item-content">
+      <div class="service-card">
+        <img src="./service-pet-hair-removal.jpg" alt="Pet Hair Removal" class="service-img" loading="lazy">
+        <div class="service-body">
           <h3>Pet Hair Removal</h3>
           <span class="service-badge">From $50 · 1 hr</span>
           <p>Specialized tools and techniques to remove embedded pet hair from seats, carpets, and floor mats.</p>
         </div>
       </div>
-      <div class="service-item">
-        <img src="./service-exterior-polish.jpg" alt="Exterior Polish" class="service-item-img" loading="lazy">
-        <div class="service-item-content">
+      <div class="service-card">
+        <img src="./service-exterior-polish.jpg" alt="Exterior Polish" class="service-img" loading="lazy">
+        <div class="service-body">
           <h3>Exterior Polish</h3>
           <span class="service-badge">From $200 · 1 hr</span>
           <p>Restore your paint's depth and shine with our professional exterior polish service.</p>
         </div>
       </div>
-      <div class="service-item">
-        <img src="./service-atv-detail.jpg" alt="ATV Detail" class="service-item-img" loading="lazy">
-        <div class="service-item-content">
+      <div class="service-card">
+        <img src="./service-atv-detail.jpg" alt="ATV Detail" class="service-img" loading="lazy">
+        <div class="service-body">
           <h3>ATV Detail</h3>
           <span class="service-badge">Call for Quote · 1 hr</span>
           <p>Mud, dust, and trail grime don't stand a chance. We detail ATVs to a showroom finish.</p>
         </div>
       </div>
-      <div class="service-item">
-        <img src="./service-boat-detail.jpg" alt="Boat Detail" class="service-item-img" loading="lazy">
-        <div class="service-item-content">
+      <div class="service-card">
+        <img src="./service-boat-detail.jpg" alt="Boat Detail" class="service-img" loading="lazy">
+        <div class="service-body">
           <h3>Boat Detail</h3>
           <span class="service-badge">Call for Quote · 2 hrs</span>
           <p>Full boat detailing inside and out. Gel coat, upholstery, hull, and deck cleaned and protected.</p>
         </div>
       </div>
-      <div class="service-item">
-        <img src="./service-rv-detail.jpg" alt="RV Detail" class="service-item-img" loading="lazy">
-        <div class="service-item-content">
+      <div class="service-card">
+        <img src="./service-rv-detail.jpg" alt="RV Detail" class="service-img" loading="lazy">
+        <div class="service-body">
           <h3>RV Detail</h3>
           <span class="service-badge">Call for Quote · 2 hrs</span>
           <p>Complete RV wash and detail. Exterior panels, windows, awnings, and interior spaces all handled.</p>
         </div>
       </div>
-      <div class="service-item">
-        <img src="./service-fleet-wash.jpg" alt="Fleet Wash" class="service-item-img" loading="lazy">
-        <div class="service-item-content">
+      <div class="service-card">
+        <img src="./service-fleet-wash.jpg" alt="Fleet Wash" class="service-img" loading="lazy">
+        <div class="service-body">
           <h3>Fleet Wash</h3>
           <span class="service-badge">Call for Quote · 5 hrs</span>
           <p>Keep your entire fleet clean and professional. Regular fleet washing programs available.</p>
