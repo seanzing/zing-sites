@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pete's Car Detailing Service | Auto Detailing in Boom County, US</title>
+<meta name="description" content="Pete's Car Detailing Service in Boom County, US. Professional mobile auto detailing with exterior wash, full detail packages, and paint correction. Call (658) 322-1850.">
+<meta property="og:title" content="Pete's Car Detailing Service | Boom County">
+<meta property="og:description" content="Professional mobile car detailing in Boom County. We clean cars really well. Expert exterior wash, full detail packages, and paint correction.">
+<meta property="og:image" content="/get-started/stock/stock2.jpg">
+<meta property="og:url" content="https://petescardetailing.com">
+<meta property="og:type" content="business.business">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/shared/fa/css/all.min.css">
+<style>
+:root {
+  --primary: #3b82f6;
+  --primary-hover: #2563eb;
+  --primary-rgb: 59, 130, 246;
+  --accent: #f59e0b;
+  --dark: #040d1f;
+  --card: #0a1528;
+  --white: #ffffff;
+  --red: #e53e3e;
+  --text: #f0f4ff;
+  --muted: rgba(240, 244, 255, 0.55);
+  --border: rgba(59, 130, 246, 0.4);
+  --card-border: rgba(59, 130, 246, 0.3);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--muted);
+  line-height: 1.7;
+  background: var(--dark);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: var(--text);
+  line-height: 1.2;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* NAV */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #040d1f;
+  border-bottom: 1px solid rgba(59, 130, 246, 0.3);
+  z-index: 1000;
+  transition: box-shadow 0.3s ease;
+}
+
+nav.scrolled {
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+}
+
+.nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-logo {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.nav-phone {
+  font-weight: 600;
+  color: var(--accent);
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-phone svg {
+  width: 18px;
+  height: 18px;
+  fill: var(--accent);
+}
+
+@media (max-width: 768px) {
+  .nav-phone-text {
+    display: none;
+  }
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-top: 64px;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: url('/get-started/stock/stock2.jpg') center/cover no-repeat;
+  animation: slowZoom 20s ease-in-out infinite alternate;
+}
+
+@keyframes slowZoom {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.08);
+  }
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(4, 13, 31, 0.7) 0%, rgba(4, 13, 31, 0.45) 50%, rgba(4, 13, 31, 0.8) 100%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 800px;
+  padding: 0 24px;
+}
+
+.hero-eyebrow {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--white);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 8px 20px;
+  border-radius: 30px;
+  margin-bottom: 24px;
+}
+
+.hero h1 {
+  font-size: clamp(2.6rem, 6vw, 4.8rem);
+  font-weight: 800;
+  color: var(--white);
+  margin-bottom: 20px;
+}
+
+.hero-sub {
+  font-size: 1.15rem;
+  color: rgba(240, 244, 255, 0.75);
+  margin-bottom: 36px;
+  line-height: 1.7;
+  max-width: 620px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--white);
+  padding: 16px 36px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background 0.3s ease, transform 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+.btn-ghost {
+  display: inline-block;
+  color: var(--white);
+  padding: 16px 36px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  border: 1px solid rgba(240, 244, 255, 0.3);
+  transition: border-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-ghost:hover {
+  border-color: var(--white);
+  transform: translateY(-2px);
+}
+
+/* ABOUT */
+.about {
+  padding: 100px 0;
+  background: var(--dark);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.about-card {
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  padding: 40px 36px;
+}
+
+.section-badge {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+
+.about-card h2 {
+  font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+  font-weight: 800;
+  margin-bottom: 24px;
+}
+
+.about-card p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: rgba(240, 244, 255, 0.6);
+  margin-bottom: 16px;
+}
+
+.about-card p:last-child {
+  margin-bottom: 0;
+}
+
+.value-badges {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.value-badge {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-left: 3px solid var(--accent);
+  border-radius: 12px;
+  padding: 24px 20px;
+}
+
+.value-badge-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  background: rgba(59, 130, 246, 0.25);
+  border: 1px solid rgba(59, 130, 246, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.value-badge-icon svg {
+  width: 24px;
+  height: 24px;
+  stroke: var(--accent);
+  fill: none;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.value-badge-text {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+/* SERVICES */
+.services {
+  padding: 100px 0;
+  background: var(--card);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-header h2 {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.section-header p {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  color: var(--muted);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.service-card {
+  background: rgba(4, 13, 31, 0.6);
+  border: 1px solid var(--card-border);
+  border-top: 3px solid var(--primary);
+  border-radius: 12px;
+  padding: 32px 28px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 40px rgba(59, 130, 246, 0.2);
+}
+
+.service-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.service-icon {
+  color: var(--accent);
+  margin-bottom: 18px;
+  width: 44px;
+  height: 44px;
+  background: rgba(59, 130, 246, 0.25);
+  border: 1px solid rgba(59, 130, 246, 0.4);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+}
+
+.service-card h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  color: rgba(240, 244, 255, 0.6);
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-header {
+    text-align: center;
+  }
+
+  .section-header h2 {
+    text-align: center;
+  }
+
+  .section-header p {
+    text-align: center;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .about-card {
+    text-align: center;
+  }
+
+  .about-card h2 {
+    text-align: center;
+  }
+}
+
+/* HOURS SECTION */
+.hours-section {
+  padding: 100px 0;
+  background: var(--dark);
+}
+
+.hours-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.hours-header h2 {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.hours-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.hours-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.hours-table tr {
+  border-bottom: 1px solid var(--card-border);
+}
+
+.hours-table tr:last-child {
+  border-bottom: none;
+}
+
+.hours-table td {
+  padding: 16px 20px;
+  font-size: 0.95rem;
+}
+
+.hours-table td:first-child {
+  font-weight: 600;
+  color: var(--text);
+  width: 40%;
+}
+
+.hours-table td:last-child {
+  color: var(--accent);
+  text-align: right;
+}
+
+@media (max-width: 768px) {
+  .hours-section {
+    padding: 80px 0;
+  }
+
+  .hours-header {
+    text-align: center;
+  }
+
+  .hours-header h2 {
+    text-align: center;
+  }
+
+  .hours-table td {
+    display: block;
+    width: 100%;
+    padding: 12px 16px;
+    text-align: left;
+  }
+
+  .hours-table td:first-child {
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 8px;
+  }
+
+  .hours-table td:last-child {
+    text-align: left;
+    padding-top: 0;
+  }
+
+  .hours-table tr {
+    display: block;
+    margin-bottom: 24px;
+    background: var(--card);
+    border: 1px solid var(--card-border);
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 12px;
+  }
+
+  .hours-table tr:last-child {
+    border-bottom: 1px solid var(--card-border);
+  }
+}
+
+/* CONTACT SECTION */
+.contact {
+  padding: 80px 0;
+  background: var(--card);
+  border-top: 1px solid var(--card-border);
+}
+
+.contact-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.contact-header h2 {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.contact-card {
+  background: rgba(4, 13, 31, 0.6);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 40px 32px;
+  text-align: center;
+}
+
+.contact-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 20px;
+  background: rgba(59, 130, 246, 0.25);
+  border: 1px solid rgba(59, 130, 246, 0.4);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  color: var(--accent);
+}
+
+.contact-card h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.contact-card p {
+  font-size: 1rem;
+  color: var(--muted);
+  margin-bottom: 16px;
+}
+
+.contact-value {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.contact-value a {
+  color: var(--accent);
+  transition: opacity 0.3s ease;
+}
+
+.contact-value a:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .contact {
+    padding: 60px 0;
+  }
+
+  .contact-header {
+    text-align: center;
+  }
+
+  .contact-header h2 {
+    text-align: center;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+/* CTA SECTION */
+#cta-section {
+  padding: 120px 0;
+  background-image: url('/shared/contact-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  text-align: center;
+}
+
+#cta-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(4, 13, 31, 0.75) 0%, rgba(4, 13, 31, 0.65) 100%);
+  z-index: 1;
+}
+
+.cta-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.cta-content h2 {
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  font-weight: 800;
+  color: var(--white);
+  margin-bottom: 20px;
+}
+
+.cta-content p {
+  font-size: 1.1rem;
+  color: rgba(240, 244, 255, 0.8);
+  margin-bottom: 40px;
+  line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+  #cta-section {
+    padding: 80px 0;
+  }
+
+  .cta-content h2 {
+    text-align: center;
+  }
+
+  .cta-content p {
+    text-align: center;
+  }
+}
+
+/* FOOTER */
+footer {
+  background: #030810;
+  border-top: 1px solid var(--card-border);
+  padding: 40px 0;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footer-section h4 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.footer-section p {
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.footer-section a {
+  color: var(--accent);
+  transition: opacity 0.3s ease;
+}
+
+.footer-section a:hover {
+  opacity: 0.8;
+}
+
+.footer-divider {
+  height: 1px;
+  background: var(--card-border);
+  margin-bottom: 24px;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.footer-bottom p {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .footer-section h4 {
+    text-align: center;
+  }
+
+  .footer-section p {
+    text-align: center;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+
+.features { padding: 90px 0; background: var(--card, #071a2e); }
+.features-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 48px; max-width: 1100px; margin-left: auto; margin-right: auto; }
+.feature-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 32px 24px; text-align: center; }
+.feature-icon { font-size: 1.8rem; color: var(--accent, #2563eb); margin-bottom: 16px; }
+.feature-card h3 { font-size: 1rem; font-weight: 700; color: #fff; margin-bottom: 10px; }
+.feature-card p { font-size: 0.85rem; color: rgba(255,255,255,0.55); line-height: 1.6; margin: 0; }
+@media(max-width:900px){ .features-grid { grid-template-columns: 1fr 1fr; } }
+@media(max-width:500px){ .features-grid { grid-template-columns: 1fr; } }
+@media(max-width:768px){ .features h2, .features .section-sub, .features .section-eyebrow { text-align: center; } .feature-card { text-align: center; } }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Pete's Car Detailing Service",
+  "image": "/get-started/stock/stock2.jpg",
+  "description": "Professional mobile car detailing service in Boom County. We clean cars really well with expert exterior wash, full detail packages, and paint correction.",
+  "telephone": "(658) 322-1850",
+  "email": "molloy.p@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Boom County",
+    "addressRegion": "US",
+    "addressCountry": "US"
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "Boom County"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Monday",
+      "opens": "08:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Tuesday",
+      "opens": "08:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Wednesday",
+      "opens": "08:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Thursday",
+      "opens": "08:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Friday",
+      "opens": "08:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "09:00",
+      "closes": "16:00"
+    }
+  ],
+  "priceRange": "$$",
+  "serviceType": "Auto Detailing"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What areas do you service?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We provide mobile car detailing throughout Boom County. We come to your location for your convenience."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long have you been in business?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pete's Car Detailing Service has been serving Boom County for 1 to 2 years, providing quality mobile detailing services."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What services do you offer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We offer Exterior Wash & Wax, Full Detail Package, and Paint Correction services for all vehicle types."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can I book an appointment?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Call us at (658) 322-1850 or email molloy.p@gmail.com to schedule your mobile detailing appointment."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<nav id="navbar">
+  <div class="nav-inner">
+    <div class="nav-logo">Pete's Car Detailing</div>
+    <div class="nav-phone">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3 8a2 2 0 0 1 1.85 2.75L3.5 20a2 2 0 0 0 0 2h17a2 2 0 0 0 2-2v-9a2 2 0 0 1-2-2h-10a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h2V4a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v4z"/>
+      </svg>
+      <a href="tel:(658)322-1850" class="nav-phone-text">(658) 322-1850</a>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Premium Mobile Detailing</div>
+    <h1>Your Car Deserves to Shine</h1>
+    <p class="hero-sub">Professional car detailing right to your door in Boom County. Expert exterior wash, complete detail packages, and paint correction to keep your vehicle looking showroom fresh.</p>
+    <div class="hero-buttons">
+      <a href="#contact" class="btn-primary">Book Now</a>
+      <a href="#services" class="btn-ghost">View Services</a>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="features" id="why-us">
+  <div class="container">
+    <div class="section-eyebrow">WHY CHOOSE US</div>
+    <h2>The Pete’s car detailing service Difference</h2>
+    <p class="section-sub">What sets us apart from other Boom County detailers</p>
+    <div class="features-grid">
+    <div class="feature-card">
+      <div class="feature-icon"><i class="fa-solid fa-car-side"></i></div>
+      <h3>We Come to You</h3>
+      <p>We bring the full detail experience to your door - home, office, or wherever works for you.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon"><i class="fa-regular fa-clock"></i></div>
+      <h3>Flexible Hours</h3>
+      <p>We work around your schedule, including evenings and weekends, so detailing fits your life.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon"><i class="fa-solid fa-layer-group"></i></div>
+      <h3>Premium Products</h3>
+      <p>Professional-grade products and tools only - the same used by the best detailing shops around.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon"><i class="fa-solid fa-house"></i></div>
+      <h3>Local &amp; Trusted</h3>
+      <p>Locally owned and operated. We're your neighbors and we take pride in serving our community.</p>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="services">
+  <div class="container">
+    <div class="section-header">
+      <h2>Our Services</h2>
+      <p>Professional detailing solutions tailored to keep your vehicle looking its absolute best.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <img src="/shared/stock-exterior.jpg" alt="Exterior Wash & Wax" class="service-image" loading="lazy">
+        <div class="service-icon">
+          <i class="fa-solid fa-soap"></i>
+        </div>
+        <h3>Exterior Wash & Wax</h3>
+        <p>Complete exterior cleaning with premium wax application to protect and enhance your car's finish. We use professional-grade products for lasting shine and protection.</p>
+      </div>
+      <div class="service-card">
+        <img src="/shared/stock-interior-vacuum.jpg" alt="Full Detail Package" class="service-image" loading="lazy">
+        <div class="service-icon">
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <h3>Full Detail Package</h3>
+        <p>Comprehensive interior and exterior detailing including vacuuming, leather conditioning, carpet cleaning, and complete exterior wash with protective wax application.</p>
+      </div>
+      <div class="service-card">
+        <img src="/shared/stock-paint-correction.jpg" alt="Paint Correction" class="service-image" loading="lazy">
+        <div class="service-icon">
+          <i class="fa-solid fa-palette"></i>
+        </div>
+        <h3>Paint Correction</h3>
+        <p>Professional paint correction services to remove swirl marks, oxidation, and scratches. We restore your vehicle's paint to its original clarity and depth for a flawless finish.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-card">
+        <div class="section-badge">About Us</div>
+        <h2>Pete's Car Detailing Service</h2>
+        <p>Welcome to Pete's Car Detailing Service, your trusted partner for professional mobile car detailing in Boom County. We have been serving the community for 1 to 2 years, building our reputation on quality work and customer satisfaction.</p>
+        <p>We believe that every vehicle deserves premium care. Our team is dedicated to delivering exceptional detailing services that protect your investment and keep your car looking showroom fresh. Whether you need a quick exterior wash or a complete detail package, we bring professional-grade expertise right to your doorstep.</p>
+      </div>
+      <div class="about-card">
+        <div class="section-badge">Why Choose Us</div>
+        <h2>Why We're Different</h2>
+        <div class="value-badges">
+          <div class="value-badge">
+            <div class="value-badge-icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </div>
+            <div class="value-badge-text">Mobile Service Convenience</div>
+          </div>
+          <div class="value-badge">
+            <div class="value-badge-icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </div>
+            <div class="value-badge-text">Professional-Grade Products</div>
+          </div>
+          <div class="value-badge">
+            <div class="value-badge-icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </div>
+            <div class="value-badge-text">Dedicated Local Expertise</div>
+          </div>
+          <div class="value-badge">
+            <div class="value-badge-icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </div>
+            <div class="value-badge-text">Customer Satisfaction First</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hours-section">
+  <div class="container">
+    <div class="hours-header">
+      <h2>Business Hours</h2>
+      <p>We're ready to detail your vehicle. Find our available hours below.</p>
+    </div>
+    <div class="hours-content">
+      <table class="hours-table">
+        <tr>
+          <td>Monday</td>
+          <td>8:00 AM - 6:00 PM</td>
+        </tr>
+        <tr>
+          <td>Tuesday</td>
+          <td>8:00 AM - 6:00 PM</td>
+        </tr>
+        <tr>
+          <td>Wednesday</td>
+          <td>8:00 AM - 6:00 PM</td>
+        </tr>
+        <tr>
+          <td>Thursday</td>
+          <td>8:00 AM - 6:00 PM</td>
+        </tr>
+        <tr>
+          <td>Friday</td>
+          <td>8:00 AM - 6:00 PM</td>
+        </tr>
+        <tr>
+          <td>Saturday</td>
+          <td>9:00 AM - 4:00 PM</td>
+        </tr>
+        <tr>
+          <td>Sunday</td>
+          <td>Closed</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="container">
+    <div class="contact-header">
+      <h2>Get in Touch</h2>
+      <p>Ready to get your car looking showroom fresh? Contact us today to book your mobile detailing appointment.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <div class="contact-icon">
+          <i class="fa-solid fa-phone"></i>
+        </div>
+        <h3>Call Us</h3>
+        <p>Talk to our team about your detailing needs.</p>
+        <div class="contact-value">
+          <a href="tel:(658)322-1850">(658) 322-1850</a>
+        </div>
+      </div>
+      <div class="contact-card">
+        <div class="contact-icon">
+          <i class="fa-solid fa-envelope"></i>
+        </div>
+        <h3>Email Us</h3>
+        <p>Send us a message with your details and we will respond promptly.</p>
+        <div class="contact-value">
+          <a href="mailto:molloy.p@gmail.com">molloy.p@gmail.com</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="cta-section">
+  <div class="container">
+    <div class="cta-content">
+      <h2>Ready for a Showroom Shine?</h2>
+      <p>Our mobile detailing service brings professional-grade care right to your location in Boom County. Book your appointment today and experience the Pete's difference.</p>
+      <a href="tel:(658)322-1850" class="btn-primary">Schedule Your Detail</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>Pete's Car Detailing</h4>
+        <p>Professional mobile car detailing serving Boom County with premium services including exterior wash, full detail packages, and paint correction.</p>
+      </div>
+      <div class="footer-section">
+        <h4>Services</h4>
+        <p><a href="#services">Exterior Wash & Wax</a><br><a href="#services">Full Detail Package</a><br><a href="#services">Paint Correction</a></p>
+      </div>
+      <div class="footer-section">
+        <h4>Contact</h4>
+        <p><a href="tel:(658)322-1850">(658) 322-1850</a><br><a href="mailto:molloy.p@gmail.com">molloy.p@gmail.com</a><br>Boom County, US</p>
+      </div>
+    </div>
+    <div class="footer-divider"></div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Pete's Car Detailing Service. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 50) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  });
+});
+</script>
+
+</body>
+</html>
