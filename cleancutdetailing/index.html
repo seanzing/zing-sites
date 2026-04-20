@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clean Cut Detailing | Professional Car Detailing in Your City, US</title>
+<meta name="description" content="Clean Cut Detailing provides professional mobile and shop car detailing services in Your City, US. Expert exterior wash, interior detailing, and full packages. Call (720) 555-0111.">
+<meta property="og:title" content="Clean Cut Detailing | Car Detailing in Your City, US">
+<meta property="og:description" content="Professional mobile and shop car detailing services. Exterior wash, interior detailing, full detail packages.">
+<meta property="og:image" content="/shared/hero.jpg">
+<meta property="og:url" content="https://cleancutdetailing.local">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/shared/fa/css/all.min.css">
+<style>
+:root {
+  --primary: #3b82f6;
+  --primary-hover: #2563eb;
+  --primary-rgb: 59,130,246;
+  --accent: #10b981;
+  --dark: #040d1f;
+  --card: #0a1528;
+  --white: #ffffff;
+  --red: #e53e3e;
+  --text: #f0f4ff;
+  --muted: rgba(240,244,255,0.55);
+  --border: rgba(59,130,246,0.4);
+  --card-border: rgba(59,130,246,0.3);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--muted);
+  line-height: 1.7;
+  background: var(--dark);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: var(--text);
+  line-height: 1.2;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+a { text-decoration: none; color: inherit; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: var(--dark);
+  border-bottom: 1px solid var(--card-border);
+  z-index: 1000;
+  transition: box-shadow 0.3s ease;
+}
+
+nav.scrolled {
+  box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+}
+
+.nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-logo {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.nav-phone {
+  font-weight: 600;
+  color: var(--accent);
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-phone svg {
+  width: 18px;
+  height: 18px;
+  fill: var(--accent);
+}
+
+@media (max-width: 768px) {
+  .nav-phone-text { display: none; }
+}
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-top: 60px;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: url('/get-started/stock/stock1.jpg') center/cover no-repeat;
+  animation: slowZoom 20s ease-in-out infinite alternate;
+}
+
+@keyframes slowZoom {
+  from { transform: scale(1); }
+  to { transform: scale(1.08); }
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(4,13,31,0.7) 0%, rgba(4,13,31,0.45) 50%, rgba(4,13,31,0.8) 100%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 800px;
+  padding: 0 24px;
+}
+
+.hero-eyebrow {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--white);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 8px 20px;
+  border-radius: 30px;
+  margin-bottom: 24px;
+}
+
+.hero h1 {
+  font-size: clamp(2.6rem, 6vw, 4.8rem);
+  font-weight: 800;
+  color: var(--white);
+  margin-bottom: 20px;
+}
+
+.hero-sub {
+  font-size: 1.15rem;
+  color: rgba(240,244,255,0.75);
+  margin-bottom: 36px;
+  line-height: 1.7;
+  max-width: 620px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--white);
+  padding: 16px 36px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background 0.3s ease, transform 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+.btn-ghost {
+  display: inline-block;
+  color: var(--white);
+  padding: 16px 36px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  border: 1px solid rgba(240,244,255,0.3);
+  transition: border-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+  background: transparent;
+}
+
+.btn-ghost:hover {
+  border-color: var(--white);
+  transform: translateY(-2px);
+}
+
+.about {
+  padding: 100px 0;
+  background: var(--dark);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.about-card {
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  padding: 40px 36px;
+}
+
+.section-badge {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+
+.about-card h2 {
+  font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+  font-weight: 800;
+  margin-bottom: 24px;
+}
+
+.about-card p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: rgba(240,244,255,0.6);
+  margin-bottom: 16px;
+}
+
+.about-card p:last-child { margin-bottom: 0; }
+
+.value-badges {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.value-badge {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-left: 3px solid var(--accent);
+  border-radius: 12px;
+  padding: 24px 20px;
+}
+
+.value-badge-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  background: rgba(59,130,246,0.25);
+  border: 1px solid rgba(59,130,246,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.value-badge-icon svg {
+  width: 24px;
+  height: 24px;
+  stroke: var(--accent);
+  fill: none;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.value-badge-text {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.services {
+  padding: 100px 0;
+  background: var(--card);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-header h2 {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.section-header p {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  color: var(--muted);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+}
+
+.service-card {
+  background: rgba(4,13,31,0.6);
+  border: 1px solid var(--card-border);
+  border-top: 3px solid var(--primary);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 40px rgba(59,130,246,0.2);
+}
+
+.service-card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.service-card-content {
+  padding: 32px 28px;
+}
+
+.service-icon {
+  color: var(--accent);
+  margin-bottom: 18px;
+  width: 44px;
+  height: 44px;
+  background: rgba(59,130,246,0.25);
+  border: 1px solid rgba(59,130,246,0.4);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-icon i {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+}
+
+.service-card h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--text);
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.why-choose {
+  padding: 100px 0;
+  background: var(--dark);
+}
+
+.why-choose-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.why-choose-content h2 {
+  font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+  font-weight: 800;
+  margin-bottom: 24px;
+}
+
+.why-choose-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.why-item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.why-item-check {
+  width: 28px;
+  height: 28px;
+  background: var(--accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.why-item-check i {
+  width: 14px;
+  height: 14px;
+  color: var(--white);
+}
+
+.why-item-text h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: var(--text);
+}
+
+.why-item-text p {
+  font-size: 0.95rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.hours-contact {
+  padding: 100px 0;
+  background: var(--card);
+}
+
+.hours-contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+}
+
+.hours-section h2,
+.contact-section h2 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 32px;
+  color: var(--text);
+}
+
+.hours-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.hours-table tr {
+  border-bottom: 1px solid var(--card-border);
+}
+
+.hours-table td {
+  padding: 16px 0;
+  font-size: 1rem;
+}
+
+.hours-table td:first-child {
+  font-weight: 600;
+  color: var(--text);
+  width: 40%;
+}
+
+.hours-table td:last-child {
+  text-align: right;
+  color: var(--muted);
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.contact-item {
+  display: flex;
+  gap: 16px;
+}
+
+.contact-icon {
+  width: 48px;
+  height: 48px;
+  background: rgba(59,130,246,0.25);
+  border: 1px solid rgba(59,130,246,0.4);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contact-icon i {
+  width: 24px;
+  height: 24px;
+  color: var(--accent);
+}
+
+.contact-details h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+  color: var(--text);
+}
+
+.contact-details p {
+  font-size: 1rem;
+  color: var(--accent);
+}
+
+.contact-details a {
+  color: var(--accent);
+  transition: color 0.3s ease;
+}
+
+.contact-details a:hover {
+  color: var(--primary);
+}
+
+.cta-section {
+  position: relative;
+  padding: 100px 0;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-image: url('/shared/contact-bg.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.cta-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(4,13,31,0.75);
+}
+
+.cta-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 700px;
+  padding: 0 24px;
+}
+
+.cta-section h2 {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: var(--white);
+}
+
+.cta-section p {
+  font-size: 1.1rem;
+  color: rgba(240,244,255,0.75);
+  margin-bottom: 36px;
+  line-height: 1.7;
+}
+
+footer {
+  background: var(--dark);
+  border-top: 1px solid var(--card-border);
+  padding: 40px 0;
+  text-align: center;
+}
+
+footer p {
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .section-header {
+    text-align: center;
+  }
+
+  .section-header h2 {
+    text-align: center;
+  }
+
+  .section-header p {
+    text-align: center;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .why-choose-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .hours-contact-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .hours-table td:last-child {
+    text-align: left;
+  }
+
+  .about-card {
+    text-align: center;
+  }
+
+  .about-card h2 {
+    text-align: center;
+  }
+
+  .section-badge {
+    justify-content: center;
+    display: flex;
+  }
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Clean Cut Detailing",
+  "image": "/shared/hero.jpg",
+  "description": "Professional mobile and shop car detailing services in Your City, US.",
+  "url": "https://cleancutdetailing.local",
+  "telephone": "(720) 555-0111",
+  "email": "test@test.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Your City",
+    "addressRegion": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "38.8338",
+    "longitude": "-104.8202"
+  },
+  "priceRange": "$$",
+  "areaServed": "Your City, US",
+  "foundingDate": "2020",
+  "sameAs": []
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do you offer mobile detailing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we offer mobile detailing services where we come to your location in Your City. We bring all necessary equipment and supplies to detail your vehicle where it sits."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does a full detail take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our full detail package typically takes 4-6 hours depending on the vehicle condition and size. We'll provide an estimate when you schedule."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is included in the full detail package?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our full detail package includes exterior wash and wax, interior vacuuming, steam cleaning, leather conditioning, and all finishing touches."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you detail vehicles other than cars?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we detail all types of vehicles including trucks, SUVs, and vans. Contact us at (720) 555-0111 for details on your specific vehicle."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <div class="nav-logo">Clean Cut Detailing</div>
+    <a href="tel:(720) 555-0111" class="nav-phone">
+      <i class="fas fa-phone"></i>
+      <span class="nav-phone-text">(720) 555-0111</span>
+    </a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Professional Car Detailing</div>
+    <h1>Showroom Shine Delivered</h1>
+    <p class="hero-sub">Professional mobile and shop car detailing services for Your City. We bring your vehicle back to pristine condition, whether we come to you or you visit our facility.</p>
+    <div class="hero-buttons">
+      <a href="#contact" class="btn-primary">Book Now</a>
+      <a href="#services" class="btn-ghost">View Services</a>
+    </div>
+  </div>
+</section>
+
+<section class="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-card">
+        <span class="section-badge">About Us</span>
+        <h2>Professional Detailing Since 2020</h2>
+        <p>Clean Cut Detailing has been providing exceptional car detailing services to Your City for 4 years. Our team of experienced professionals is dedicated to delivering the highest quality results, whether you choose our mobile service or visit our facility.</p>
+        <p>We use premium products and proven techniques to protect your vehicle's paint, restore interior surfaces, and keep your car looking showroom-ready. Every detail matters to us.</p>
+      </div>
+      <div>
+        <div class="value-badges">
+          <div class="value-badge">
+            <div class="value-badge-icon">
+              <i class="fas fa-car"></i>
+            </div>
+            <div class="value-badge-text">Mobile and Shop Services</div>
+          </div>
+          <div class="value-badge">
+            <div class="value-badge-icon">
+              <i class="fas fa-check"></i>
+            </div>
+            <div class="value-badge-text">4 Years of Experience</div>
+          </div>
+          <div class="value-badge">
+            <div class="value-badge-icon">
+              <i class="fas fa-star"></i>
+            </div>
+            <div class="value-badge-text">Premium Quality Products</div>
+          </div>
+          <div class="value-badge">
+            <div class="value-badge-icon">
+              <i class="fas fa-shield"></i>
+            </div>
+            <div class="value-badge-text">Satisfaction Guaranteed</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-header">
+      <h2>Our Services</h2>
+      <p>From quick exterior touch-ups to comprehensive detail packages, we have the perfect solution for your vehicle.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <img src="/shared/stock-exterior.jpg" alt="Exterior Wash and Wax Service" class="service-card-image" loading="lazy">
+        <div class="service-card-content">
+          <div class="service-icon">
+            <i class="fas fa-soap"></i>
+          </div>
+          <h3>Exterior Wash and Wax</h3>
+          <p>Professional washing, drying, and protective wax application to keep your paint looking brilliant and protected.</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="/shared/stock-interior-steam.jpg" alt="Interior Detailing Service" class="service-card-image" loading="lazy">
+        <div class="service-card-content">
+          <div class="service-icon">
+            <i class="fas fa-couch"></i>
+          </div>
+          <h3>Interior Detailing</h3>
+          <p>Deep cleaning of seats, carpets, and surfaces using steam cleaning and premium conditioning products.</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="/shared/stock-interior-vacuum.jpg" alt="Full Detail Package" class="service-card-image" loading="lazy">
+        <div class="service-card-content">
+          <div class="service-icon">
+            <i class="fas fa-star"></i>
+          </div>
+          <h3>Full Detail Package</h3>
+          <p>Complete interior and exterior detailing, including wash, wax, vacuuming, steam cleaning, and finishing touches.</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="/shared/stock-mobile-service.jpg" alt="Mobile Car Detailing Service" class="service-card-image" loading="lazy">
+        <div class="service-card-content">
+          <div class="service-icon">
+            <i class="fas fa-location-dot"></i>
+          </div>
+          <h3>Mobile Service</h3>
+          <p>We bring professional detailing to your location. Same quality service, at your home or office.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="why-choose">
+  <div class="container">
+    <div class="why-choose-grid">
+      <div class="why-choose-content">
+        <span class="section-badge">Why Choose Us</span>
+        <h2>The Clean Cut Difference</h2>
+        <div class="why-choose-list">
+          <div class="why-item">
+            <div class="why-item-check">
+              <i class="fas fa-check"></i>
+            </div>
+            <div class="why-item-text">
+              <h3>Expert Technicians</h3>
+              <p>Our certified detailers bring years of experience and attention to every detail of your vehicle.</p>
+            </div>
+          </div>
+          <div class="why-item">
+            <div class="why-item-check">
+              <i class="fas fa-check"></i>
+            </div>
+            <div class="why-item-text">
+              <h3>Premium Products</h3>
+              <p>We use only high-quality detailing products that are safe for your vehicle and deliver superior results.</p>
+            </div>
+          </div>
+          <div class="why-item">
+            <div class="why-item-check">
+              <i class="fas fa-check"></i>
+            </div>
+            <div class="why-item-text">
+              <h3>Flexible Service Options</h3>
+              <p>Choose mobile detailing at your location or visit our shop facility, whatever works best for you.</p>
+            </div>
+          </div>
+          <div class="why-item">
+            <div class="why-item-check">
+              <i class="fas fa-check"></i>
+            </div>
+            <div class="why-item-text">
+              <h3>Customer Satisfaction</h3>
+              <p>Your satisfaction is our guarantee. We stand behind every detail service we provide.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="background: var(--card); border: 1px solid var(--card-border); border-radius: 16px; padding: 40px; height: fit-content;">
+        <h3 style="font-size: 1.3rem; font-weight: 800; margin-bottom: 24px; color: var(--text); text-align: center;">Ready for Expert Detailing?</h3>
+        <p style="text-align: center; color: var(--muted); margin-bottom: 28px;">Call us today to schedule your service and see the difference professional detailing makes.</p>
+        <a href="tel:(720) 555-0111" class="btn-primary" style="width: 100%; text-align: center; display: block;">
+          <i class="fas fa-phone" style="margin-right: 8px;"></i>(720) 555-0111
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hours-contact" id="contact">
+  <div class="container">
+    <div class="hours-contact-grid">
+      <div class="hours-section">
+        <h2>Business Hours</h2>
+        <table class="hours-table">
+          <tr>
+            <td>Monday</td>
+            <td>Closed</td>
+          </tr>
+          <tr>
+            <td>Tuesday</td>
+            <td>Closed</td>
+          </tr>
+          <tr>
+            <td>Wednesday</td>
+            <td>Closed</td>
+          </tr>
+          <tr>
+            <td>Thursday</td>
+            <td>Closed</td>
+          </tr>
+          <tr>
+            <td>Friday</td>
+            <td>Closed</td>
+          </tr>
+          <tr>
+            <td>Saturday</td>
+            <td>Closed</td>
+          </tr>
+          <tr>
+            <td>Sunday</td>
+            <td>Closed</td>
+          </tr>
+        </table>
+      </div>
+      <div class="contact-section">
+        <h2>Contact Us</h2>
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-phone"></i>
+            </div>
+            <div class="contact-details">
+              <h3>Phone</h3>
+              <p><a href="tel:(720) 555-0111">(720) 555-0111</a></p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="contact-details">
+              <h3>Email</h3>
+              <p><a href="mailto:test@test.com">test@test.com</a></p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="contact-details">
+              <h3>Service Area</h3>
+              <p>Your City, US</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-car"></i>
+            </div>
+            <div class="contact-details">
+              <h3>Service Type</h3>
+              <p>Mobile and Shop Detailing</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section" id="cta-section">
+  <div class="cta-overlay"></div>
+  <div class="cta-content">
+    <h2>Ready for a Showroom Shine?</h2>
+    <p>Let our professional team restore your vehicle to pristine condition. Contact Clean Cut Detailing today to book your appointment.</p>
+    <a href="tel:(720) 555-0111" class="btn-primary">Call (720) 555-0111</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>&copy; 2024 Clean Cut Detailing. Professional car detailing in Your City, US. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+window.addEventListener('scroll', function() {
+  const nav = document.querySelector('nav');
+  if (window.scrollY > 50) {
+    nav.classList.add('scrolled');
+  } else {
+    nav.classList.remove('scrolled');
+  }
+});
+</script>
+
+</body>
+</html>
