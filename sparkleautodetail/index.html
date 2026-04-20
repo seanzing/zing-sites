@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sparkle Auto Detail | Auto Detailing in Austin, TX</title>
+<meta name="description" content="Sparkle Auto Detail in Austin, TX. Premium mobile auto detailing services at your door. Exterior wash, interior detailing, ceramic coating and more. (512) 555-0144.">
+<meta property="og:title" content="Sparkle Auto Detail | Mobile Auto Detailing in Austin, TX">
+<meta property="og:description" content="Locally owned mobile detailing serving Austin drivers with premium results at your door.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="/get-started/stock/stock1.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --primary: #3b82f6;
+  --primary-hover: #2563eb;
+  --primary-rgb: 59, 130, 246;
+  --accent: #60a5fa;
+  --dark: #040d1f;
+  --card: #0a1528;
+  --white: #ffffff;
+  --red: #e53e3e;
+  --text: #f0f4ff;
+  --muted: rgba(240,244,255,0.55);
+  --border: rgba(var(--primary-rgb),0.4);
+  --card-border: rgba(var(--primary-rgb),0.3);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--muted);
+  line-height: 1.7;
+  background: var(--dark);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: var(--text);
+  line-height: 1.2;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+a { text-decoration: none; color: inherit; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #040d1f;
+  border-bottom: 1px solid rgba(var(--primary-rgb),0.3);
+  z-index: 1000;
+  transition: box-shadow 0.3s ease;
+}
+
+nav.scrolled {
+  box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+}
+
+.nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-logo {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.nav-phone {
+  font-weight: 600;
+  color: var(--accent);
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-phone svg {
+  width: 18px;
+  height: 18px;
+  fill: var(--accent);
+}
+@media (max-width: 768px) {
+  .nav-phone-text { display: none; }
+}
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: url('/get-started/stock/stock1.jpg') center/cover no-repeat;
+  animation: slowZoom 20s ease-in-out infinite alternate;
+}
+
+@keyframes slowZoom {
+  from { transform: scale(1); }
+  to { transform: scale(1.08); }
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(4,13,31,0.7) 0%, rgba(4,13,31,0.45) 50%, rgba(4,13,31,0.8) 100%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 800px;
+  padding: 0 24px;
+}
+
+.hero-eyebrow {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--white);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 8px 20px;
+  border-radius: 30px;
+  margin-bottom: 24px;
+}
+
+.hero h1 {
+  font-size: clamp(2.6rem, 6vw, 4.8rem);
+  font-weight: 800;
+  color: var(--white);
+  margin-bottom: 20px;
+}
+
+.hero-sub {
+  font-size: 1.15rem;
+  color: rgba(240,244,255,0.75);
+  margin-bottom: 36px;
+  line-height: 1.7;
+  max-width: 620px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--white);
+  padding: 16px 36px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background 0.3s ease, transform 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+.btn-ghost {
+  display: inline-block;
+  color: var(--white);
+  padding: 16px 36px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  border: 1px solid rgba(240,244,255,0.3);
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-ghost:hover {
+  border-color: var(--white);
+  transform: translateY(-2px);
+}
+
+.about {
+  padding: 100px 0;
+  background: var(--dark);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.about-card {
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  padding: 40px 36px;
+}
+
+.section-badge {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+
+.about-card h2 {
+  font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+  font-weight: 800;
+  margin-bottom: 24px;
+}
+
+.about-card p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: rgba(240,244,255,0.6);
+  margin-bottom: 16px;
+}
+
+.about-card p:last-child { margin-bottom: 0; }
+
+.value-badges {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.value-badge {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-left: 3px solid var(--accent);
+  border-radius: 12px;
+  padding: 24px 20px;
+}
+
+.value-badge-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  background: rgba(var(--primary-rgb),0.25);
+  border: 1px solid rgba(var(--primary-rgb),0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.value-badge-icon svg {
+  width: 24px;
+  height: 24px;
+  stroke: var(--accent);
+  fill: none;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.value-badge-text {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.services {
+  padding: 100px 0;
+  background: var(--card);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-header h2 {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.section-header p {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  color: var(--muted);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px;
+}
+
+.service-card {
+  background: rgba(4,13,31,0.6);
+  border: 1px solid var(--card-border);
+  border-top: 3px solid var(--primary);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 40px rgba(var(--primary-rgb),0.2);
+}
+
+.service-card-image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.service-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.service-card:hover .service-card-image img {
+  transform: scale(1.05);
+}
+
+.service-card-content {
+  padding: 32px 28px;
+}
+
+.service-icon {
+  color: var(--accent);
+  margin-bottom: 18px;
+  width: 44px;
+  height: 44px;
+  background: rgba(var(--primary-rgb),0.25);
+  border: 1px solid rgba(var(--primary-rgb),0.4);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-icon svg {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  stroke: var(--accent);
+  fill: none;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.service-card h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--text);
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+.why-choose {
+  padding: 100px 0;
+  background: var(--dark);
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+  margin-top: 50px;
+}
+
+.why-card {
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 36px 28px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.why-card:hover {
+  transform: translateY(-4px);
+}
+
+.why-icon {
+  width: 56px;
+  height: 56px;
+  background: rgba(var(--primary-rgb),0.25);
+  border: 1px solid rgba(var(--primary-rgb),0.4);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+
+.why-icon svg {
+  width: 28px;
+  height: 28px;
+  stroke: var(--accent);
+  fill: none;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.why-card h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--text);
+}
+
+.why-card p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+.faq {
+  padding: 100px 0;
+  background: var(--card);
+}
+
+.faq-list {
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.faq-item {
+  background: rgba(4,13,31,0.6);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 28px 32px;
+  margin-bottom: 20px;
+}
+
+.faq-item h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--text);
+}
+
+.faq-item p {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: var(--muted);
+}
+
+.hours-contact {
+  padding: 100px 0;
+  background: var(--dark);
+}
+
+.hours-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-top: 50px;
+}
+
+.hours-card {
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  padding: 40px 36px;
+}
+
+.hours-card h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: var(--text);
+}
+
+.hours-list {
+  list-style: none;
+}
+
+.hours-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(var(--primary-rgb),0.2);
+  font-size: 0.95rem;
+}
+
+.hours-list li:last-child {
+  border-bottom: none;
+}
+
+.hours-day {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.hours-time {
+  color: var(--muted);
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.contact-icon {
+  width: 48px;
+  height: 48px;
+  background: rgba(var(--primary-rgb),0.25);
+  border: 1px solid rgba(var(--primary-rgb),0.4);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contact-icon svg {
+  width: 22px;
+  height: 22px;
+  stroke: var(--accent);
+  fill: none;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.contact-text a {
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.contact-text a:hover {
+  color: var(--primary-hover);
+}
+
+.contact-text p {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+.cta-section {
+  position: relative;
+  padding: 120px 0;
+  overflow: hidden;
+  background-image: url('/shared/contact-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.cta-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(4,13,31,0.85), rgba(4,13,31,0.9));
+}
+
+.cta-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.cta-content h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: var(--white);
+}
+
+.cta-content p {
+  font-size: 1.1rem;
+  margin-bottom: 36px;
+  color: rgba(240,244,255,0.75);
+}
+
+footer {
+  background: #020817;
+  border-top: 1px solid rgba(var(--primary-rgb),0.3);
+  padding: 40px 0;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.footer-logo {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+
+.footer-content p {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+
+.footer-content a {
+  color: var(--accent);
+  transition: color 0.3s ease;
+}
+
+.footer-content a:hover {
+  color: var(--primary-hover);
+}
+
+@media (max-width: 968px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .hours-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+  
+  .hero-sub {
+    font-size: 1rem;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .btn-primary, .btn-ghost {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .about {
+    padding: 60px 0;
+  }
+  
+  .services {
+    padding: 60px 0;
+  }
+  
+  .why-choose {
+    padding: 60px 0;
+  }
+  
+  .faq {
+    padding: 60px 0;
+  }
+  
+  .hours-contact {
+    padding: 60px 0;
+  }
+  
+  .cta-section {
+    padding: 80px 0;
+  }
+}
+
+.visual-strip { background: var(--dark, #04111e); padding: 0; }
+.visual-strip-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0; height: 340px; overflow: hidden; }
+.visual-strip-panel { overflow: hidden; position: relative; }
+.visual-strip-panel img { width: 100%; height: 100%; object-fit: cover; object-position: center; transition: transform 0.6s ease; }
+.visual-strip-panel:hover img { transform: scale(1.05); }
+.visual-strip-caption { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(4,13,31,0.85)); padding: 20px 20px 18px; pointer-events: none; }
+.visual-strip-label { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent, #e53e3e); margin-bottom: 4px; }
+.visual-strip-title { font-size: 0.95rem; font-weight: 700; color: #fff; }
+@media (max-width: 768px) { .visual-strip-grid { grid-template-columns: 1fr; height: auto; } .visual-strip-panel { height: 220px; } }
+
+.features { padding: 90px 0; background: var(--card, #071a2e); }
+.features-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 48px; }
+.feature-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 32px 24px; text-align: center; }
+.feature-icon { font-size: 1.8rem; color: var(--accent, #2563eb); margin-bottom: 16px; }
+.feature-card h3 { font-size: 1rem; font-weight: 700; color: #fff; margin-bottom: 10px; }
+.feature-card p { font-size: 0.85rem; color: rgba(255,255,255,0.55); line-height: 1.6; margin: 0; }
+@media(max-width:900px){ .features-grid { grid-template-columns: 1fr 1fr; } }
+@media(max-width:500px){ .features-grid { grid-template-columns: 1fr; } }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Sparkle Auto Detail",
+  "image": "/get-started/stock/stock1.jpg",
+  "description": "Locally owned mobile detailing serving Austin drivers with premium results at your door.",
+  "@id": "",
+  "url": "",
+  "telephone": "(512) 555-0144",
+  "email": "test@sparkle.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "",
+    "addressLocality": "Austin",
+    "addressRegion": "TX",
+    "postalCode": "",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 30.2672,
+    "longitude": -97.7431
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "08:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "09:00",
+      "closes": "16:00"
+    }
+  ],
+  "priceRange": "$$",
+  "serviceArea": {
+    "@type": "City",
+    "name": "Austin, TX"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do you really come to my location in Austin?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely! We are a fully mobile detailing service. We bring all our equipment, water, and supplies directly to your home, office, or anywhere in the Austin area. Just park your vehicle and we handle the rest."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does a full detail take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A full detail package typically takes 3 to 4 hours depending on the size and condition of your vehicle. Exterior-only services usually take 1 to 2 hours, while interior detailing takes about 2 to 3 hours. We always work efficiently while maintaining our high quality standards."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What areas of Austin do you serve?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We serve all of Austin and surrounding areas. Whether you're downtown, in South Austin, North Austin, or the surrounding suburbs, we'll come to you. If you're unsure whether we cover your area, just give us a call at (512) 555-0144."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need to provide water or electricity?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No! We are 100% self-sufficient. Our mobile units carry their own water tanks and power generators, so you don't need to provide anything. We can detail your vehicle anywhere there's space to park."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How often should I get my car detailed?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We recommend a full detail every 3 to 6 months to maintain your vehicle's appearance and protect its value. However, exterior washes can be done monthly, especially in Austin's hot climate where dust, pollen, and UV rays can take a toll on your paint."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <div class="nav-logo">Sparkle Auto Detail</div>
+    <a href="tel:+15125550144" class="nav-phone">
+      <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+      <span class="nav-phone-text">(512) 555-0144</span>
+    </a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Mobile Detailing Austin, TX</div>
+    <h1>Premium Auto Detailing That Comes to You</h1>
+    <p class="hero-sub">Sparkle Auto Detail brings professional, showroom-quality car care directly to your doorstep. Experience the convenience of expert mobile detailing anywhere in Austin.</p>
+    <div class="hero-buttons">
+      <a href="tel:+15125550144" class="btn-primary">Call Now: (512) 555-0144</a>
+      <a href="#services" class="btn-ghost">View Services</a>
+    </div>
+  </div>
+</section>
+
+<!-- VISUAL STRIP -->
+<section class="visual-strip">
+  <div class="visual-strip-grid">
+    <div class="visual-strip-panel">
+      <img src="/shared/stock-exterior.jpg" alt="Exterior hand wash with foam mitt" loading="lazy">
+      <div class="visual-strip-caption">
+        <div class="visual-strip-label">EXTERIOR</div>
+        <div class="visual-strip-title">Hand Wash &amp; Polish</div>
+      </div>
+    </div>
+    <div class="visual-strip-panel">
+      <img src="/shared/stock-interior-steam.jpg" alt="Interior steam cleaning detail" loading="lazy">
+      <div class="visual-strip-caption">
+        <div class="visual-strip-label">INTERIOR</div>
+        <div class="visual-strip-title">Steam Deep Clean</div>
+      </div>
+    </div>
+    <div class="visual-strip-panel">
+      <img src="/shared/stock-interior-vacuum.jpg" alt="Interior vacuum and upholstery detail" loading="lazy">
+      <div class="visual-strip-caption">
+        <div class="visual-strip-label">INTERIOR</div>
+        <div class="visual-strip-title">Vacuum &amp; Upholstery</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-card">
+        <span class="section-badge">About Us</span>
+        <h2>Locally Owned, Locally Trusted</h2>
+        <p>Sparkle Auto Detail is a locally owned mobile detailing service proudly serving Austin drivers with premium results at your door. We believe your car deserves the same care and attention you give to your home, and we bring that level of quality directly to you.</p>
+        <p>Whether you're at home, at work, or anywhere in the Austin area, our team arrives fully equipped with professional-grade products and equipment. No need to disrupt your day or wait at a shop. We handle everything on-site so you can focus on what matters.</p>
+        <p>Since starting our journey in Austin, we've built our reputation on reliability, quality, and genuine care for every vehicle we touch. Your satisfaction is our success.</p>
+      </div>
+      <div class="value-badges">
+        <div class="value-badge">
+          <div class="value-badge-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
+          </div>
+          <div class="value-badge-text">Fully Mobile Service, We Come to You</div>
+        </div>
+        <div class="value-badge">
+          <div class="value-badge-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="7"></circle><path d="M8.21 13.89L7 23l5-3 5 3-1.21-9.12"></path></svg>
+          </div>
+          <div class="value-badge-text">Professional Grade Products and Equipment</div>
+        </div>
+        <div class="value-badge">
+          <div class="value-badge-icon">
+            <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          </div>
+          <div class="value-badge-text">Experienced, Detail-Obsessed Team</div>
+        </div>
+        <div class="value-badge">
+          <div class="value-badge-icon">
+            <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+          </div>
+          <div class="value-badge-text">Fast Turnaround Without Compromise</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="services">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge">Our Services</span>
+      <h2>Complete Care for Your Vehicle</h2>
+      <p>From quick washes to complete transformations, we offer a full range of professional detailing services tailored to your needs.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-card-image">
+          <img src="/shared/stock-exterior.jpg" alt="Exterior Wash and Wax">
+        </div>
+        <div class="service-card-content">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 0 1 0 8h-1M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><path d="M6 1v4M10 1v4M14 1v4"></path></svg>
+          </div>
+          <h3>Exterior Wash & Wax</h3>
+          <p>Thorough hand wash, clay bar treatment, and premium wax protection. Your paint will shine like new and stay protected from Austin's harsh sun and elements.</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-card-image">
+          <img src="/shared/stock-interior-steam.jpg" alt="Interior Detailing">
+        </div>
+        <div class="service-card-content">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg>
+          </div>
+          <h3>Interior Detailing</h3>
+          <p>Deep vacuum, steam cleaning, leather conditioning, and stain removal. We refresh every surface, leaving your cabin spotless and smelling fresh.</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-card-image">
+          <img src="/shared/stock-interior-vacuum.jpg" alt="Full Detail Package">
+        </div>
+        <div class="service-card-content">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+          </div>
+          <h3>Full Detail Package</h3>
+          <p>The complete transformation. Combines our best exterior and interior services for a bumper-to-bumper rejuvenation that makes your car feel brand new.</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-card-image">
+          <img src="/shared/stock-exterior.jpg" alt="Ceramic Coating">
+        </div>
+        <div class="service-card-content">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+          </div>
+          <h3>Ceramic Coating</h3>
+          <p>Long-lasting paint protection with a mirror-like finish. Our ceramic coating shields your vehicle from UV rays, dirt, and scratches for years to come.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="why-choose">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge">Why Choose Us</span>
+      <h2>The Sparkle Difference</h2>
+      <p>What sets us apart from other detailing services in Austin.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+        </div>
+        <h3>We Come to You</h3>
+        <p>No need to drive anywhere or wait at a shop. We bring our full mobile setup to your home, office, or any location in Austin. Convenience is our specialty.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+        </div>
+        <h3>Flexible Scheduling</h3>
+        <p>We work around your busy schedule. Morning, afternoon, or weekend appointments available. Book a time that works for you and we'll be there.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="7"></circle><path d="M8.21 13.89L7 23l5-3 5 3-1.21-9.12"></path></svg>
+        </div>
+        <h3>Premium Results</h3>
+        <p>We use only professional-grade products and proven techniques. Every vehicle gets meticulous attention and leaves looking showroom-ready.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+        </div>
+        <h3>Locally Owned</h3>
+        <p>We're your neighbors. As a locally owned business, we care about our community and building long-term relationships with Austin drivers.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge">FAQ</span>
+      <h2>Questions We Hear Often</h2>
+      <p>Here are answers to some common questions about our mobile detailing service.</p>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <h3>Do you really come to my location in Austin?</h3>
+        <p>Absolutely! We are a fully mobile detailing service. We bring all our equipment, water, and supplies directly to your home, office, or anywhere in the Austin area. Just park your vehicle and we handle the rest.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How long does a full detail take?</h3>
+        <p>A full detail package typically takes 3 to 4 hours depending on the size and condition of your vehicle. Exterior-only services usually take 1 to 2 hours, while interior detailing takes about 2 to 3 hours. We always work efficiently while maintaining our high quality standards.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What areas of Austin do you serve?</h3>
+        <p>We serve all of Austin and surrounding areas. Whether you're downtown, in South Austin, North Austin, or the surrounding suburbs, we'll come to you. If you're unsure whether we cover your area, just give us a call at (512) 555-0144.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Do I need to provide water or electricity?</h3>
+        <p>No! We are 100% self-sufficient. Our mobile units carry their own water tanks and power generators, so you don't need to provide anything. We can detail your vehicle anywhere there's space to park.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How often should I get my car detailed?</h3>
+        <p>We recommend a full detail every 3 to 6 months to maintain your vehicle's appearance and protect its value. However, exterior washes can be done monthly, especially in Austin's hot climate where dust, pollen, and UV rays can take a toll on your paint.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hours-contact">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge">Get In Touch</span>
+      <h2>Hours & Contact</h2>
+      <p>Reach out to schedule your appointment or ask any questions.</p>
+    </div>
+    <div class="hours-grid">
+      <div class="hours-card">
+        <h3>Business Hours</h3>
+        <ul class="hours-list">
+          <li><span class="hours-day">Monday</span><span class="hours-time">8:00 AM - 6:00 PM</span></li>
+          <li><span class="hours-day">Tuesday</span><span class="hours-time">8:00 AM - 6:00 PM</span></li>
+          <li><span class="hours-day">Wednesday</span><span class="hours-time">8:00 AM - 6:00 PM</span></li>
+          <li><span class="hours-day">Thursday</span><span class="hours-time">8:00 AM - 6:00 PM</span></li>
+          <li><span class="hours-day">Friday</span><span class="hours-time">8:00 AM - 6:00 PM</span></li>
+          <li><span class="hours-day">Saturday</span><span class="hours-time">9:00 AM - 4:00 PM</span></li>
+          <li><span class="hours-day">Sunday</span><span class="hours-time">Closed</span></li>
+        </ul>
+      </div>
+      <div class="hours-card">
+        <h3>Contact Information</h3>
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            </div>
+            <div class="contact-text">
+              <a href="tel:+15125550144">(512) 555-0144</a>
+              <p>Call or text for booking</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </div>
+            <div class="contact-text">
+              <a href="mailto:test@sparkle.com">test@sparkle.com</a>
+              <p>Email us anytime</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            </div>
+            <div class="contact-text">
+              <p><strong>Austin, TX</strong></p>
+              <p>Mobile service, we come to you</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="cta-section" class="cta-section">
+  <div class="cta-overlay"></div>
+  <div class="container">
+    <div class="cta-content">
+      <h2>Ready for a Showroom Shine?</h2>
+      <p>Let Sparkle Auto Detail bring professional car care right to your driveway. Book your mobile detailing appointment today and experience the convenience of premium results at your door.</p>
+      <a href="tel:+15125550144" class="btn-primary">Call Now: (512) 555-0144</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-content">
+    <div class="footer-logo">Sparkle Auto Detail</div>
+    <p>Professional mobile auto detailing serving Austin, TX</p>
+    <p><a href="tel:+15125550144">(512) 555-0144</a> | <a href="mailto:test@sparkle.com">test@sparkle.com</a></p>
+    <p style="margin-top: 20px; font-size: 0.85rem;">&copy; 2024 Sparkle Auto Detail. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
