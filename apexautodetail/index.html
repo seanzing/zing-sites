@@ -3,39 +3,43 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Apex Auto Detailing | Scottsdale's Premier Auto Detailing Studio</title>
-<meta name="description" content="Apex Auto Detailing in Scottsdale, AZ. Paint correction, ceramic coatings, complete details. Every vehicle treated like a trophy. (480) 609-3200.">
+<title>Apex Auto Detail | Auto Detailing in Mt Pleasant, MI</title>
+<meta name="description" content="Apex Auto Detail in Mt Pleasant, MI. Professional auto detailing services. (810) 853-7664.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@700&family=Inter:wght@400;500;600;700&display=swap');
 :root {
-  --black: #08080f;
-  --navy: #0d1117;
-  --blue: #3b82f6;
-  --cyan: #06b6d4;
-  --white: #f8fafc;
-  --muted: rgba(248,250,252,0.5);
+  --primary: #1e3a8a;
+  --primary-hover: #11204b;
+  --primary-rgb: 30,58,138;
+  --accent: #e03e3e;
+  --dark: #040d1f;
+  --card: #0a1528;
+  --white: #ffffff;
+  --text: #f0f4ff;
+  --muted: rgba(240,244,255,0.55);
+  --border: rgba(var(--primary-rgb),0.4);
+  --card-border: rgba(var(--primary-rgb),0.3);
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
-
 html { scroll-behavior: smooth; }
 
 body {
   font-family: 'Inter', sans-serif;
   color: var(--muted);
   line-height: 1.7;
-  background: var(--black);
+  background: var(--dark);
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Rajdhani', sans-serif;
-  color: var(--white);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: var(--text);
   line-height: 1.2;
-  font-weight: 700;
 }
 
 img { max-width: 100%; height: auto; display: block; }
-
 a { text-decoration: none; color: inherit; }
 
 .container {
@@ -50,88 +54,48 @@ nav {
   top: 0;
   left: 0;
   right: 0;
-  background: transparent;
+  background: #040d1f;
+  border-bottom: 1px solid rgba(var(--primary-rgb),0.3);
   z-index: 1000;
-  transition: background 0.3s ease, backdrop-filter 0.3s ease;
+  transition: box-shadow 0.3s ease;
 }
 
 nav.scrolled {
-  background: rgba(13,17,23,0.85);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 2px 20px rgba(0,0,0,0.3);
 }
 
 .nav-inner {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 18px 24px;
+  padding: 14px 24px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .nav-logo {
-  font-family: 'Rajdhani', sans-serif;
-  font-size: 1.6rem;
-  font-weight: 700;
-  color: var(--white);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--text);
 }
 
-.nav-logo span {
-  color: var(--cyan);
-}
-
-.nav-links {
+.nav-phone {
+  font-weight: 600;
+  color: var(--accent);
+  font-size: 0.95rem;
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 8px;
 }
 
-.nav-links a {
-  font-size: 0.88rem;
-  font-weight: 500;
-  color: rgba(248,250,252,0.7);
-  transition: color 0.3s;
+.nav-phone svg {
+  width: 18px;
+  height: 18px;
+  fill: var(--accent);
 }
-
-.nav-links a:hover {
-  color: var(--white);
-}
-
-.btn-primary {
-  display: inline-block;
-  background: var(--blue);
-  color: var(--white);
-  padding: 12px 28px;
-  border-radius: 6px;
-  font-weight: 600;
-  font-size: 0.9rem;
-  transition: background 0.3s ease, transform 0.3s ease;
-  border: none;
-  cursor: pointer;
-}
-
-.btn-primary:hover {
-  background: #2563eb;
-  transform: translateY(-2px);
-}
-
-.btn-ghost {
-  display: inline-block;
-  border: 1px solid rgba(248,250,252,0.3);
-  color: var(--white);
-  padding: 12px 28px;
-  border-radius: 6px;
-  font-weight: 600;
-  font-size: 0.9rem;
-  transition: border-color 0.3s ease, transform 0.3s ease;
-  cursor: pointer;
-  background: transparent;
-}
-
-.btn-ghost:hover {
-  border-color: var(--white);
-  transform: translateY(-2px);
+@media (max-width: 768px) {
+  .nav-phone-text { display: none; }
 }
 
 /* HERO */
@@ -147,12 +111,7 @@ nav.scrolled {
 .hero-bg {
   position: absolute;
   inset: 0;
-}
-
-.hero-bg img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  background: url('https://yourwebsiteexample.com/shared/hero.jpg') center/cover no-repeat;
   animation: slowZoom 20s ease-in-out infinite alternate;
 }
 
@@ -164,39 +123,45 @@ nav.scrolled {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(8,8,15,0.60);
+  background: linear-gradient(to bottom, rgba(4,13,31,0.7) 0%, rgba(4,13,31,0.45) 50%, rgba(4,13,31,0.8) 100%);
 }
 
 .hero-content {
   position: relative;
   z-index: 2;
   text-align: center;
-  max-width: 820px;
+  max-width: 800px;
   padding: 0 24px;
 }
 
 .hero-eyebrow {
   display: inline-block;
-  font-size: 0.8rem;
+  background: var(--accent);
+  color: var(--white);
+  font-size: 0.7rem;
   font-weight: 700;
-  letter-spacing: 3px;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--cyan);
-  margin-bottom: 20px;
+  padding: 8px 20px;
+  border-radius: 30px;
+  margin-bottom: 24px;
 }
 
 .hero h1 {
-  font-size: 3.8rem;
+  font-size: clamp(2.6rem, 6vw, 4.8rem);
+  font-weight: 800;
   color: var(--white);
-  font-weight: 700;
   margin-bottom: 20px;
 }
 
 .hero-sub {
   font-size: 1.15rem;
-  color: rgba(248,250,252,0.8);
+  color: rgba(240,244,255,0.75);
   margin-bottom: 36px;
   line-height: 1.7;
+  max-width: 620px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero-buttons {
@@ -204,65 +169,193 @@ nav.scrolled {
   gap: 16px;
   justify-content: center;
   flex-wrap: wrap;
-  margin-bottom: 48px;
 }
 
-.hero-trust {
+.btn-primary {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--white);
+  padding: 16px 36px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background 0.3s ease, transform 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+.btn-ghost {
+  display: inline-block;
+  color: var(--white);
+  padding: 16px 36px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  border: 1px solid rgba(240,244,255,0.3);
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-ghost:hover {
+  border-color: var(--white);
+  transform: translateY(-2px);
+}
+
+/* ABOUT */
+.about {
+  padding: 100px 0;
+  background: var(--dark);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.about-card {
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  padding: 40px 36px;
+}
+
+.section-badge {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+
+.about-card h2 {
+  font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+  font-weight: 800;
+  margin-bottom: 24px;
+}
+
+.about-card p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: rgba(240,244,255,0.6);
+  margin-bottom: 16px;
+}
+
+.about-card p:last-child { margin-bottom: 0; }
+
+.value-badges {
   display: flex;
-  gap: 40px;
-  justify-content: center;
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 16px;
 }
 
-.hero-trust-item {
-  font-size: 0.85rem;
-  color: rgba(248,250,252,0.6);
+.value-badge {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 16px;
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-left: 3px solid var(--accent);
+  border-radius: 12px;
+  padding: 24px 20px;
 }
 
-.hero-trust-item svg {
-  width: 18px;
-  height: 18px;
-  fill: var(--cyan);
+.value-badge-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  background: rgba(var(--primary-rgb),0.25);
+  border: 1px solid rgba(var(--primary-rgb),0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex-shrink: 0;
 }
 
-/* TRUST BAR */
-.trust-bar {
-  background: var(--navy);
-  padding: 48px 0;
+.value-badge-icon svg {
+  width: 24px;
+  height: 24px;
+  stroke: var(--accent);
+  fill: none;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
-.trust-bar-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
-  text-align: center;
-}
-
-.trust-stat-number {
-  font-family: 'Rajdhani', sans-serif;
-  font-size: 2.4rem;
-  font-weight: 700;
-  color: var(--blue);
-  line-height: 1.1;
-}
-
-.trust-stat-label {
-  font-size: 0.75rem;
+.value-badge-text {
+  font-size: 1rem;
   font-weight: 600;
-  letter-spacing: 1.5px;
+  color: var(--text);
+}
+
+/* VISUAL STRIP */
+.visual-strip {
+  background: var(--dark);
+  padding: 0;
+}
+
+.visual-strip-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0;
+  height: 340px;
+  overflow: hidden;
+}
+
+.visual-strip-panel {
+  overflow: hidden;
+  position: relative;
+}
+
+.visual-strip-panel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.6s ease;
+}
+
+.visual-strip-panel:hover img {
+  transform: scale(1.05);
+}
+
+.visual-strip-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(4,13,31,0.85));
+  padding: 20px 20px 18px;
+  pointer-events: none;
+}
+
+.visual-strip-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--muted);
-  margin-top: 4px;
+  color: var(--accent);
+  margin-bottom: 4px;
+}
+
+.visual-strip-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text);
+  font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
 /* SERVICES */
 .services {
   padding: 100px 0;
-  background: var(--black);
+  background: var(--card);
 }
 
 .section-header {
@@ -270,18 +363,9 @@ nav.scrolled {
   margin-bottom: 60px;
 }
 
-.section-badge {
-  display: inline-block;
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 2.5px;
-  text-transform: uppercase;
-  color: var(--cyan);
-  margin-bottom: 12px;
-}
-
 .section-header h2 {
-  font-size: 2.8rem;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 800;
   margin-bottom: 16px;
 }
 
@@ -294,230 +378,222 @@ nav.scrolled {
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
 }
 
 .service-card {
-  background: rgba(13,17,23,0.8);
+  background: rgba(4,13,31,0.6);
+  border: 1px solid var(--card-border);
+  border-top: 3px solid var(--primary);
   border-radius: 12px;
   padding: 32px 28px;
-  border-top: 3px solid var(--blue);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .service-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 8px 40px rgba(59,130,246,0.15);
+  box-shadow: 0 12px 40px rgba(var(--primary-rgb),0.2);
+}
+
+.service-icon {
+  color: var(--accent);
+  margin-bottom: 18px;
+  width: 44px;
+  height: 44px;
+  background: rgba(var(--primary-rgb),0.25);
+  border: 1px solid rgba(var(--primary-rgb),0.4);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-icon svg {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
 }
 
 .service-card h3 {
-  font-size: 1.3rem;
-  margin-bottom: 8px;
-}
-
-.service-card .price {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 700;
-  color: var(--cyan);
   margin-bottom: 12px;
 }
 
 .service-card p {
   font-size: 0.92rem;
+  line-height: 1.7;
   color: var(--muted);
-  line-height: 1.6;
-}
-
-/* ABOUT */
-.about {
-  background: var(--navy);
-  padding: 100px 0;
-}
-
-.about-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: center;
-}
-
-.about-text h2 {
-  font-size: 2.6rem;
-  margin-bottom: 24px;
-}
-
-.about-text p {
-  margin-bottom: 16px;
-  font-size: 1.02rem;
-  color: var(--muted);
-  line-height: 1.8;
-}
-
-.about-stats {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-}
-
-.about-stat-card {
-  background: rgba(8,8,15,0.5);
-  border: 1px solid rgba(59,130,246,0.15);
-  border-radius: 12px;
-  padding: 28px 20px;
-  text-align: center;
-}
-
-.about-stat-card .stat-num {
-  font-family: 'Rajdhani', sans-serif;
-  font-size: 2.2rem;
-  font-weight: 700;
-  color: var(--blue);
-  line-height: 1.1;
-}
-
-.about-stat-card .stat-label {
-  font-size: 0.82rem;
-  color: var(--muted);
-  margin-top: 6px;
 }
 
 /* REVIEWS */
 .reviews {
-  padding: 100px 0;
-  background: var(--black);
+  padding: 80px 0;
+  background: var(--dark);
 }
 
 .reviews-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  gap: 28px;
 }
 
 .review-card {
-  background: rgba(13,17,23,0.8);
-  border: 1px solid rgba(248,250,252,0.06);
+  background: var(--card);
+  border: 1px solid var(--card-border);
   border-radius: 12px;
   padding: 32px 28px;
 }
 
 .review-stars {
-  color: #f59e0b;
+  color: #fbbf24;
   font-size: 1.1rem;
   margin-bottom: 16px;
-  letter-spacing: 2px;
 }
 
-.review-card blockquote {
+.review-text {
   font-size: 0.95rem;
-  color: rgba(248,250,252,0.8);
   line-height: 1.7;
-  margin-bottom: 20px;
-  font-style: normal;
+  color: rgba(240,244,255,0.7);
+  margin-bottom: 16px;
+  font-style: italic;
 }
 
 .review-author {
   font-size: 0.85rem;
   font-weight: 600;
-  color: var(--white);
+  color: var(--text);
 }
 
-.review-location {
-  font-size: 0.78rem;
-  color: var(--muted);
-}
+/* DIAGONAL DIVIDERS */
+.about { padding: 80px 0; }
+.services { padding: 80px 0; }
 
 /* CONTACT */
 .contact {
   padding: 100px 0;
-  background: var(--navy);
+  position: relative;
+  background:
+    linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.72)),
+    url('https://yourwebsiteexample.com/shared/contact-bg.jpg') center/cover no-repeat;
 }
 
-.contact-grid {
+.contact-cards {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: start;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
-.contact-info h2 {
-  font-size: 2.6rem;
-  margin-bottom: 24px;
+.contact-card {
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 32px 28px;
+  text-align: center;
 }
 
-.contact-info p {
-  font-size: 0.95rem;
-  color: var(--muted);
+.contact-card-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background: rgba(var(--primary-rgb),0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+}
+
+.contact-card-icon svg {
+  width: 24px;
+  height: 24px;
+  fill: var(--accent);
+}
+
+.contact-card h3 {
+  font-size: 1rem;
+  font-weight: 700;
   margin-bottom: 8px;
-  line-height: 1.8;
 }
 
-.contact-info a {
-  color: var(--cyan);
+.contact-card p {
+  font-size: 0.92rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.contact-card a {
+  color: var(--accent);
   transition: color 0.3s;
 }
 
-.contact-info a:hover {
-  color: var(--blue);
+.contact-card a:hover { color: var(--primary-hover); }
+
+/* FOOTER */
+footer {
+  background: var(--dark);
+  padding: 60px 0 40px;
+  border-top: 1px solid var(--card-border);
 }
 
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+.footer-inner { text-align: center; }
+
+.footer-brand {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 8px;
 }
 
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 14px 18px;
-  border-radius: 8px;
-  border: 1px solid rgba(248,250,252,0.1);
-  background: rgba(8,8,15,0.5);
-  color: var(--white);
-  font-family: 'Inter', sans-serif;
-  font-size: 0.92rem;
-  outline: none;
-  transition: border-color 0.3s;
+.footer-tagline {
+  font-size: 0.88rem;
+  color: var(--muted);
+  margin-bottom: 20px;
 }
 
-.contact-form input:focus,
-.contact-form textarea:focus {
-  border-color: var(--blue);
+.footer-details {
+  font-size: 0.85rem;
+  color: rgba(240,244,255,0.45);
+  line-height: 1.8;
+  margin-bottom: 24px;
 }
 
-.contact-form textarea {
-  min-height: 120px;
-  resize: vertical;
+.footer-details a {
+  color: rgba(240,244,255,0.6);
+  transition: color 0.3s;
 }
 
-.contact-form input::placeholder,
-.contact-form textarea::placeholder {
-  color: rgba(248,250,252,0.3);
+.footer-details a:hover { color: var(--accent); }
+
+.footer-bottom {
+  border-top: 1px solid rgba(240,244,255,0.06);
+  padding-top: 24px;
+  font-size: 0.82rem;
+  color: rgba(240,244,255,0.3);
 }
 
-.btn-full {
-  width: 100%;
-  padding: 16px;
-  font-size: 1rem;
+.footer-bottom a {
+  color: var(--accent);
+  font-weight: 600;
 }
 
 /* CTA SECTION */
 #cta-section {
   padding: 80px 0;
-  background: var(--black);
-  text-align: center;
+  background: var(--dark);
 }
 
 .cta-card {
-  background: linear-gradient(135deg, var(--navy) 0%, #151b26 100%);
-  border-radius: 16px;
-  padding: 48px;
   max-width: 800px;
   margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  background: linear-gradient(135deg, var(--card) 0%, #0f1d3d 100%);
+  border: 1px solid var(--card-border);
+  border-radius: 20px;
+  padding: 48px;
+  text-align: center;
 }
 
 .cta-photo {
@@ -525,111 +601,68 @@ nav.scrolled {
   height: 110px;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid var(--blue);
-  margin-bottom: 24px;
+  border: 3px solid var(--accent);
+  margin: 0 auto 24px;
 }
 
 .cta-card h2 {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
+  font-weight: 700;
   margin-bottom: 8px;
 }
 
 .cta-subtitle {
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   color: var(--muted);
   margin-bottom: 6px;
 }
 
 .cta-tagline {
-  font-size: 0.85rem;
-  color: rgba(248,250,252,0.4);
-  margin-bottom: 24px;
+  font-size: 0.82rem;
+  color: rgba(240,244,255,0.35);
+  margin-bottom: 28px;
 }
 
 .cta-buttons {
   display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
+  gap: 14px;
   justify-content: center;
+  flex-wrap: wrap;
   margin-bottom: 16px;
 }
 
+.cta-buttons .btn-primary { padding: 14px 32px; }
+
+.btn-outline {
+  display: inline-block;
+  color: var(--white);
+  padding: 14px 32px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  border: 1px solid rgba(240,244,255,0.2);
+  transition: border-color 0.3s ease;
+}
+
+.btn-outline:hover { border-color: var(--white); }
+
 .cta-email {
-  font-size: 0.85rem;
-  color: rgba(248,250,252,0.5);
+  font-size: 0.82rem;
+  color: rgba(240,244,255,0.4);
 }
 
 .cta-email a {
-  color: rgba(248,250,252,0.7);
+  color: rgba(240,244,255,0.6);
   transition: color 0.3s;
 }
 
-.cta-email a:hover {
-  color: var(--cyan);
-}
-
-/* FOOTER */
-footer {
-  background: #05050a;
-  padding: 60px 0 40px;
-  color: rgba(248,250,252,0.5);
-}
-
-.footer-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
-  margin-bottom: 40px;
-}
-
-.footer-logo {
-  font-family: 'Rajdhani', sans-serif;
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--white);
-  margin-bottom: 12px;
-}
-
-.footer-logo span {
-  color: var(--cyan);
-}
-
-.footer-tagline {
-  font-size: 0.88rem;
-  line-height: 1.6;
-}
-
-.footer-col h4 {
-  color: var(--white);
-  font-size: 1rem;
-  margin-bottom: 16px;
-  font-family: 'Inter', sans-serif;
-  font-weight: 600;
-}
-
-.footer-col p,
-.footer-col a {
-  font-size: 0.88rem;
-  line-height: 1.8;
-  display: block;
-}
-
-.footer-col a:hover {
-  color: var(--cyan);
-}
-
-.footer-bottom {
-  border-top: 1px solid rgba(248,250,252,0.08);
-  padding-top: 24px;
-  text-align: center;
-  font-size: 0.82rem;
-}
+.cta-email a:hover { color: var(--accent); }
 
 /* FADE ANIMATIONS */
 .fade-in {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
+  opacity: 1;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
 .fade-in.visible {
@@ -639,144 +672,180 @@ footer {
 
 /* RESPONSIVE */
 @media (max-width: 960px) {
-  .hero h1 { font-size: 2.8rem; }
-  .about-text h2 { font-size: 2.2rem; }
-  .section-header h2 { font-size: 2.2rem; }
-  .contact-info h2 { font-size: 2.2rem; }
-  .nav-links { display: none; }
-  .trust-bar-grid { grid-template-columns: repeat(2, 1fr); }
-  .about-grid { grid-template-columns: 1fr; gap: 40px; }
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
   .reviews-grid { grid-template-columns: 1fr; }
-  .contact-grid { grid-template-columns: 1fr; }
-  .footer-grid { grid-template-columns: 1fr; gap: 30px; text-align: center; }
+  .visual-strip-grid { grid-template-columns: 1fr; height: auto; }
+  .visual-strip-panel { height: 220px; }
   #kw-layout { grid-template-columns: 1fr !important; }
+  #kw-layout > div:last-child { position: static !important; }
+  #kw-layout > div:last-child a { width: 100% !important; box-sizing: border-box; }
+  #kw-header-desktop { display: none !important; }
+  #kw-header-mobile { display: grid !important; }
+  .fade-in { opacity: 1 !important; transform: translateY(0) !important; }
+  #elizabeth-cta { padding: 36px 28px; gap: 20px; flex-direction: column; align-items: center; text-align: center; overflow: hidden; }
+  #eliz-photo { order: 1; margin: 0 auto !important; flex-shrink: 0; display: block !important; }
+  #eliz-headline { order: 2; text-align: center !important; font-size: 1.35rem !important; flex: none !important; width: 100% !important; min-width: 0 !important; }
+  #eliz-btn { order: 3; display: block !important; width: 100% !important; max-width: 100% !important; text-align: center !important; box-sizing: border-box !important; white-space: normal !important; padding: 16px 20px !important; }
+  #eliz-contact { order: 4; text-align: center !important; width: 100%; min-width: 0; }
+  #eliz-tagline { order: 5; text-align: center; width: 100%; }
+}
+
+@media (max-width: 768px) {
+  .about-grid { grid-template-columns: 1fr; gap: 32px; }
+  .contact-cards { grid-template-columns: 1fr; }
   .cta-card { padding: 36px 24px; }
-  .cta-card h2 { font-size: 1.5rem; }
-  .service-card, .fade-in { opacity: 1 !important; transform: none !important; }
+  .cta-buttons { flex-direction: column; align-items: center; }
 }
 
 @media (max-width: 480px) {
   .hero h1 { font-size: 2.2rem; }
   .hero-sub { font-size: 1rem; }
-  .hero-trust { gap: 20px; }
-  .trust-bar-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
-  .nav-inner { padding: 14px 16px; }
-  .nav-logo { font-size: 1.3rem; }
+  .services-grid { grid-template-columns: 1fr; }
   .services { padding: 60px 0; }
   .about { padding: 60px 0; }
-  .reviews { padding: 60px 0; }
   .contact { padding: 60px 0; }
+  .hero-buttons { flex-direction: column; align-items: center; }
+  .nav-inner { padding: 12px 16px; }
 }
 </style>
-<meta property="og:title" content="Apex Auto Detailing | Scottsdale, AZ">
-<meta property="og:description" content="Apex Auto Detailing in Scottsdale, AZ. Paint correction, ceramic coatings, complete details. (480) 609-3200.">
+<meta property="og:title" content="Apex Auto Detail | Mt Pleasant, MI">
+<meta property="og:description" content="Apex Auto Detail in Mt Pleasant, MI. Professional auto detailing services. (810) 853-7664.">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://yourwebsiteexample.com/apexautodetail/">
+<link rel="alternate" type="text/plain" href="/llms.txt">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "LocalBusiness",
-      "@id": "#business",
-      "name": "Apex Auto Detailing",
-      "description": "Scottsdale's premier auto detailing studio. Paint correction, ceramic coatings, PPF, and complete details.",
-      "telephone": "+14806093200",
+      "@id": "https://yourwebsiteexample.com/apexautodetail/#business",
+      "name": "Apex Auto Detail",
+      "description": "Professional auto detailing in Mt Pleasant, MI. Apex Auto Detail brings showroom shine to every vehicle in Mt Pleasant with professional detailing that actually lasts.",
+      "telephone": "(810) 853-7664",
       "email": "info@apexautodetail.com",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "7355 E. Shoeman Lane Suite 12",
-        "addressLocality": "Scottsdale",
-        "addressRegion": "AZ",
-        "postalCode": "85251",
+        "addressLocality": "Mt Pleasant",
+        "addressRegion": "MI",
         "addressCountry": "US"
       },
-      "areaServed": ["Scottsdale", "Phoenix", "Tempe", "Chandler", "Mesa", "Paradise Valley"],
-      "openingHours": ["Mo-Sa 08:00-18:00"],
+      "areaServed": "Mt Pleasant, MI",
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "Services",
         "itemListElement": [
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Essential Wash & Vacuum" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Full Interior Detail" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Full Exterior Detail" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Complete Detail Package" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Paint Correction" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Ceramic Coating" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Paint Protection Film" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Fleet Detailing" } }
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Full Detail"}},
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Exterior Wash & Polish"}},
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Interior Deep Clean"}},
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Ceramic Coating"}},
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Paint Correction"}},
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Window Tinting"}},
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Engine Bay Clean"}},
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Headlight Restoration"}},
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Odor Elimination"}},
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Mobile Service"}}
         ]
       }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://yourwebsiteexample.com/apexautodetail/#faq",
+      "mainEntity": [
+        {"@type":"Question","name":"How long does a full detail take?","acceptedAnswer":{"@type":"Answer","text":"Most full details take 3 to 5 hours depending on vehicle size and condition."}},
+        {"@type":"Question","name":"Do you offer mobile detailing?","acceptedAnswer":{"@type":"Answer","text":"Yes. We come to your home or office in Mt Pleasant and surrounding areas."}},
+        {"@type":"Question","name":"What is ceramic coating?","acceptedAnswer":{"@type":"Answer","text":"Ceramic coating is a liquid polymer applied to your vehicle's exterior that provides long-lasting protection and a deep gloss finish."}}
+      ]
     }
   ]
 }
 </script>
+<link rel="preload" as="image" href="https://yourwebsiteexample.com/shared/hero.jpg" fetchpriority="high">
 </head>
 <body>
 
 <!-- NAV -->
-<nav>
+<nav id="nav">
   <div class="nav-inner">
-    <a href="#" class="nav-logo">APEX <span>AUTO</span></a>
-    <div class="nav-links">
-      <a href="#services">Services</a>
-      <a href="#about">About</a>
-      <a href="#reviews">Reviews</a>
-      <a href="#contact">Contact</a>
-      <a href="#contact" class="btn-primary">Book Now</a>
-    </div>
+    <span class="nav-logo">Apex Auto Detail</span>
+    <a href="tel:8108537664" class="nav-phone">
+      <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.36 11.36 0 003.58.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.36 11.36 0 00.57 3.58 1 1 0 01-.24 1.01l-2.2 2.2z"/></svg>
+      <span class="nav-phone-text">(810) 853-7664</span>
+    </a>
   </div>
 </nav>
 
 <!-- HERO -->
 <section class="hero" id="home">
-  <div class="hero-bg">
-    <img src="./hero.jpg" alt="Apex Auto Detailing Scottsdale" loading="eager" fetchpriority="high">
-  </div>
+  <div class="hero-bg"></div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <span class="hero-eyebrow">Scottsdale's Premier Detail Studio</span>
-    <h1>Car Detailing in Scottsdale, AZ</h1>
-    <p class="hero-sub">Paint correction. Ceramic coatings. Complete details. Every vehicle treated like a trophy.</p>
+    <span class="hero-eyebrow">Mt Pleasant, MI &middot; AUTO DETAILING</span>
+    <h1>Mt Pleasant's Premier Auto Detailing</h1>
+    <p class="hero-sub">Apex Auto Detail brings showroom shine to every vehicle in Mt Pleasant with professional detailing that actually lasts.</p>
     <div class="hero-buttons">
-      <a href="#contact" class="btn-primary">Book Your Detail</a>
-      <a href="#services" class="btn-ghost">View Services</a>
+      <a href="#contact" class="btn-primary">Book Your Detail &rarr;</a>
+      <a href="tel:8108537664" class="btn-ghost">(810) 853-7664</a>
     </div>
-    <div class="hero-trust">
-      <div class="hero-trust-item">
-        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg>
-        200+ Five-Star Reviews
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about fade-in" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-card">
+        <span class="section-badge">About Us</span>
+        <h2>Your Car Deserves Better Than a Quick Wash</h2>
+        <p>Apex Auto Detail is Mt Pleasant's trusted detailing crew. We treat every car like it's our own, using proven techniques and premium products that protect your paint and keep your interior fresh.</p>
+        <p>Quality isn't negotiable here. Every detail gets our full attention because we know your car is an investment. That's why Mt Pleasant drivers come back to us again and again.</p>
       </div>
-      <div class="hero-trust-item">
-        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-        10+ Years in Scottsdale
-      </div>
-      <div class="hero-trust-item">
-        <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
-        Same-Week Availability
+      <div class="value-badges">
+        <div class="value-badge fade-in">
+          <div class="value-badge-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <span class="value-badge-text">Ceramic Coating Experts</span>
+        </div>
+        <div class="value-badge fade-in">
+          <div class="value-badge-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+          </div>
+          <span class="value-badge-text">Same-Day Availability</span>
+        </div>
+        <div class="value-badge fade-in">
+          <div class="value-badge-icon">
+            <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
+          </div>
+          <span class="value-badge-text">Lifetime Warranty Options</span>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- TRUST BAR -->
-<section class="trust-bar">
-  <div class="container">
-    <div class="trust-bar-grid">
-      <div class="fade-in">
-        <div class="trust-stat-number">3200+</div>
-        <div class="trust-stat-label">Vehicles Detailed</div>
+<!-- VISUAL STRIP -->
+<section class="visual-strip">
+  <div class="visual-strip-grid">
+    <div class="visual-strip-panel">
+      <img src="https://yourwebsiteexample.com/shared/stock-exterior.jpg" alt="Exterior hand wash with foam mitt" loading="lazy">
+      <div class="visual-strip-caption">
+        <div class="visual-strip-label">EXTERIOR</div>
+        <div class="visual-strip-title">Hand Wash &amp; Polish</div>
       </div>
-      <div class="fade-in">
-        <div class="trust-stat-number">10+</div>
-        <div class="trust-stat-label">Years in Business</div>
+    </div>
+    <div class="visual-strip-panel">
+      <img src="https://yourwebsiteexample.com/shared/stock-interior-steam.jpg" alt="Interior steam cleaning detail" loading="lazy">
+      <div class="visual-strip-caption">
+        <div class="visual-strip-label">INTERIOR</div>
+        <div class="visual-strip-title">Steam Deep Clean</div>
       </div>
-      <div class="fade-in">
-        <div class="trust-stat-number">200+</div>
-        <div class="trust-stat-label">Five-Star Reviews</div>
-      </div>
-      <div class="fade-in">
-        <div class="trust-stat-number">Same-Week</div>
-        <div class="trust-stat-label">Availability</div>
+    </div>
+    <div class="visual-strip-panel">
+      <img src="https://yourwebsiteexample.com/shared/stock-interior-vacuum.jpg" alt="Interior vacuum and upholstery detail" loading="lazy">
+      <div class="visual-strip-caption">
+        <div class="visual-strip-label">INTERIOR</div>
+        <div class="visual-strip-title">Vacuum &amp; Upholstery</div>
       </div>
     </div>
   </div>
@@ -786,116 +855,61 @@ footer {
 <section class="services" id="services">
   <div class="container">
     <div class="section-header fade-in">
-      <span class="section-badge">What We Do</span>
-      <h2>Detailing Services</h2>
-      <p>From a quick wash to full paint protection, every service is performed by hand with premium products.</p>
+      <span class="section-badge">Our Services</span>
+      <h2>Everything Your Vehicle Needs</h2>
+      <p>From mobile convenience to paint correction, we handle it all with professional-grade care.</p>
     </div>
     <div class="services-grid">
+
       <div class="service-card fade-in">
-        <h3>Essential Wash &amp; Vacuum</h3>
-        <div class="price">$75</div>
-        <p>Full hand wash, wheel clean, vacuum, windows.</p>
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+        <h3>Full Detail</h3>
+        <p>Complete interior and exterior detail. Every surface cleaned, conditioned, and protected.</p>
       </div>
       <div class="service-card fade-in">
-        <h3>Full Interior Detail</h3>
-        <div class="price">$175</div>
-        <p>Deep clean, steam, leather conditioning, odor elimination.</p>
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12c0-2.2 1.8-4 4-4s4 1.8 4 4-1.8 4-4 4"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2"/></svg></div>
+        <h3>Exterior Wash &amp; Polish</h3>
+        <p>Hand wash, clay bar, polish, and wax. Your paint restored to a deep, mirror-like shine.</p>
       </div>
       <div class="service-card fade-in">
-        <h3>Full Exterior Detail</h3>
-        <div class="price">$195</div>
-        <p>Clay bar, iron decon, hand polish, paint sealant.</p>
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="18" rx="2"/><path d="M8 7v10M16 7v10M2 12h20"/></svg></div>
+        <h3>Interior Deep Clean</h3>
+        <p>Steam cleaning, shampooing, leather conditioning, and every crevice detailed by hand.</p>
       </div>
       <div class="service-card fade-in">
-        <h3>Complete Detail Package</h3>
-        <div class="price">$325</div>
-        <p>Full interior and exterior. The Apex experience.</p>
-      </div>
-      <div class="service-card fade-in">
-        <h3>Paint Correction</h3>
-        <div class="price">From $450</div>
-        <p>Machine polish removes swirls, scratches, oxidation.</p>
-      </div>
-      <div class="service-card fade-in">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.5 0 10-4.5 10-10S17.5 2 12 2 2 6.5 2 12s4.5 10 10 10z"/><path d="M12 6v6l4 2"/></svg></div>
         <h3>Ceramic Coating</h3>
-        <div class="price">From $799</div>
-        <p>9H ceramic, 5 years hydrophobic protection.</p>
+        <p>Long-lasting polymer protection that keeps your vehicle looking showroom-new for years.</p>
       </div>
       <div class="service-card fade-in">
-        <h3>Paint Protection Film</h3>
-        <div class="price">From $1,200</div>
-        <p>Self-healing PPF, high-impact zones or full vehicle.</p>
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+        <h3>Paint Correction</h3>
+        <p>Remove swirls, scratches, and oxidation. Multi-stage polish for a flawless finish.</p>
       </div>
       <div class="service-card fade-in">
-        <h3>Fleet Detailing</h3>
-        <div class="price">Custom Pricing</div>
-        <p>Monthly contracts for dealerships and fleets.</p>
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 3v18"/></svg></div>
+        <h3>Window Tinting</h3>
+        <p>Professional-grade tint for UV protection, heat reduction, and a sleek look.</p>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section class="about" id="about">
-  <div class="container">
-    <div class="about-grid">
-      <div class="fade-in">
-        <span class="section-badge">Our Story</span>
-        <div class="about-text">
-          <h2>Scottsdale's Most Trusted Auto Detailing Studio</h2>
-          <p>For over a decade, Apex Auto Detailing has been the go-to studio for vehicle owners across Scottsdale and the greater Phoenix area who refuse to settle for anything less than perfect. We started with a simple belief: every vehicle deserves to look its absolute best, and every owner deserves a detailer they can trust completely.</p>
-          <p>From daily drivers to six-figure exotics, our team brings the same obsessive attention to detail on every single job. We use only professional-grade products, proven techniques, and the kind of patience that turns a good detail into an unforgettable one. That is why our clients keep coming back, year after year.</p>
-        </div>
+      <div class="service-card fade-in">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M8 6l-2-2M16 18l2 2M6 8l-2-2M18 16l2 2M4 12H2M22 12h-2M6 16l-2 2M18 8l2-2"/><circle cx="12" cy="12" r="4"/></svg></div>
+        <h3>Engine Bay Clean</h3>
+        <p>Detailed engine bay cleaning. Degreased, dressed, and looking factory-fresh.</p>
       </div>
-      <div class="fade-in">
-        <div class="about-stats">
-          <div class="about-stat-card">
-            <div class="stat-num">10+</div>
-            <div class="stat-label">Years of Excellence</div>
-          </div>
-          <div class="about-stat-card">
-            <div class="stat-num">3200+</div>
-            <div class="stat-label">Vehicles Detailed</div>
-          </div>
-          <div class="about-stat-card">
-            <div class="stat-num">200+</div>
-            <div class="stat-label">Five-Star Reviews</div>
-          </div>
-          <div class="about-stat-card">
-            <div class="stat-num">4.9</div>
-            <div class="stat-label">Average Rating</div>
-          </div>
-        </div>
+      <div class="service-card fade-in">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg></div>
+        <h3>Headlight Restoration</h3>
+        <p>Foggy, yellowed headlights restored to crystal clarity for better visibility and looks.</p>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- REVIEWS -->
-<section class="reviews" id="reviews">
-  <div class="container">
-    <div class="section-header fade-in">
-      <span class="section-badge">Client Reviews</span>
-      <h2>What Our Clients Say</h2>
-    </div>
-    <div class="reviews-grid">
-      <div class="review-card fade-in">
-        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <blockquote>"Brought my Model S in for paint correction and ceramic. Looks better than it did off the lot. Worth every dollar."</blockquote>
-        <div class="review-author">Marcus T.</div>
-        <div class="review-location">Scottsdale</div>
+      <div class="service-card fade-in">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2h8l4 10H4L8 2z"/><path d="M12 12v10"/><path d="M8 22h8"/></svg></div>
+        <h3>Odor Elimination</h3>
+        <p>Ozone treatment and deep extraction that removes odors at the source, not just masks them.</p>
       </div>
-      <div class="review-card fade-in">
-        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <blockquote>"I've tried four detailers in the Valley. Apex is the only one that delivers what they promise. Already booked again."</blockquote>
-        <div class="review-author">Jennifer R.</div>
-        <div class="review-location">Paradise Valley</div>
-      </div>
-      <div class="review-card fade-in">
-        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <blockquote>"Fleet of 8 vehicles. Apex handles monthly details on all of them. Consistent quality every single time."</blockquote>
-        <div class="review-author">David K.</div>
-        <div class="review-location">Chandler</div>
+      <div class="service-card fade-in">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 0 0-8 8c0 5 8 13 8 13s8-8 8-13a8 8 0 0 0-8-8z"/></svg></div>
+        <h3>Mobile Service</h3>
+        <p>We come to you. Full detail at your home, office, or wherever your vehicle is parked.</p>
       </div>
     </div>
   </div>
@@ -904,41 +918,33 @@ footer {
 <!-- CONTACT -->
 <section class="contact" id="contact">
   <div class="container">
-    <div class="contact-grid">
-      <div class="contact-info fade-in">
-        <span class="section-badge">Get in Touch</span>
-        <h2>Book Your Detail</h2>
-        <p>7355 E. Shoeman Lane Suite 12<br>Scottsdale, AZ 85251</p>
-        <p><a href="tel:4806093200">(480) 609-3200</a></p>
-        <p><a href="mailto:info@apexautodetail.com">info@apexautodetail.com</a></p>
-        <p style="margin-top:16px;color:rgba(248,250,252,0.4);font-size:0.88rem;">Mon-Sat: 8AM - 6PM<br>Sunday: By Appointment</p>
-      </div>
-      <div class="fade-in">
-        <form class="contact-form" action="#">
-          <input type="text" name="name" placeholder="Your Name" required>
-          <input type="tel" name="phone" placeholder="Phone Number" required>
-          <input type="email" name="email" placeholder="Email Address" required>
-          <textarea name="message" placeholder="Tell us about your vehicle and what you need" rows="5"></textarea>
-          <button type="submit" class="btn-primary btn-full">Send Message</button>
-        </form>
-      </div>
+    <div class="section-header fade-in">
+      <span class="section-badge">Get In Touch</span>
+      <h2>Contact Us</h2>
+      <p>Reach out to book your detail or ask any questions. We serve Mt Pleasant, MI and surrounding areas.</p>
     </div>
-  </div>
-</section>
-
-<!-- CTA SECTION -->
-<section id="cta-section">
-  <div class="container">
-    <div class="cta-card">
-      <img class="cta-photo" src="./elliot.png" alt="Elliot Farmer" loading="lazy">
-      <h2>Ready to grow your detailing business? Let's talk.</h2>
-      <div class="cta-subtitle">Elliot Farmer - Senior Business Advisor, ZING</div>
-      <div class="cta-tagline">Websites from $59/mo - 50 local landing pages - Full design included - No contract</div>
-      <div class="cta-buttons">
-        <a href="https://meetings.hubspot.com/elliot-farmer" target="_blank" class="btn-primary">Book a Free Call</a>
-        <a href="tel:7205340219" class="btn-ghost">(720) 534-0219</a>
+    <div class="contact-cards">
+      <div class="contact-card fade-in">
+        <div class="contact-card-icon">
+          <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1.02l-2.2 2.2z"/></svg>
+        </div>
+        <h3>Phone</h3>
+        <p><a href="tel:8108537664">(810) 853-7664</a></p>
       </div>
-      <div class="cta-email"><a href="mailto:elliot@zing-work.com">elliot@zing-work.com</a></div>
+      <div class="contact-card fade-in">
+        <div class="contact-card-icon">
+          <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        </div>
+        <h3>Email</h3>
+        <p><a href="mailto:info@apexautodetail.com">info@apexautodetail.com</a></p>
+      </div>
+      <div class="contact-card fade-in">
+        <div class="contact-card-icon">
+          <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+        </div>
+        <h3>Hours</h3>
+        <p>Monday to Saturday: 8:00 AM to 6:00 PM<br>Sunday: Closed</p>
+      </div>
     </div>
   </div>
 </section>
@@ -946,70 +952,182 @@ footer {
 <!-- FOOTER -->
 <footer>
   <div class="container">
-    <div class="footer-grid">
-      <div class="footer-col">
-        <div class="footer-logo">APEX <span>AUTO</span></div>
-        <p class="footer-tagline">Scottsdale's premier auto detailing studio. Paint correction, ceramic coatings, and complete details for vehicles that deserve the best.</p>
+    <div class="footer-inner">
+      <div class="footer-brand">Apex Auto Detail</div>
+      <p class="footer-tagline">Professional auto detailing in Mt Pleasant, MI</p>
+      <div class="footer-details">
+        3105 Saddle Ln<br>
+        <a href="tel:8108537664">(810) 853-7664</a> &middot; <a href="mailto:info@apexautodetail.com">info@apexautodetail.com</a>
       </div>
-      <div class="footer-col">
-        <h4>Services</h4>
-        <a href="#services">Essential Wash &amp; Vacuum</a>
-        <a href="#services">Interior &amp; Exterior Detail</a>
-        <a href="#services">Paint Correction</a>
-        <a href="#services">Ceramic Coating</a>
-        <a href="#services">Paint Protection Film</a>
-        <a href="#services">Fleet Detailing</a>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Apex Auto Detail. All rights reserved. Powered by <a href="https://zing.work" target="_blank">ZING</a>.</p>
       </div>
-      <div class="footer-col">
-        <h4>Contact</h4>
-        <p>7355 E. Shoeman Lane Suite 12</p>
-        <p>Scottsdale, AZ 85251</p>
-        <a href="tel:4806093200">(480) 609-3200</a>
-        <a href="mailto:info@apexautodetail.com">info@apexautodetail.com</a>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2026 Apex Auto Detailing. All rights reserved. Powered by ZING.</p>
     </div>
   </div>
 </footer>
 
-<!-- SEO SECTION -->
-<section class="seo-section" style="background:#05050a;padding:64px 48px;font-family:'Inter',sans-serif;border-top:2px solid rgba(59,130,246,0.15);">
-<div style="max-width:1100px;margin:0 auto;">
-<div style="font-size:0.65rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:#06b6d4;margin-bottom:10px;">SEO PERFORMANCE REPORT</div>
-<h2 style="font-size:clamp(1.4rem,2.8vw,2.2rem);color:white;margin-bottom:8px;font-weight:700;font-family:'Rajdhani',sans-serif;">~39,300 people search for car detailing services every month.</h2>
-<p style="color:rgba(248,250,252,0.45);font-size:0.85rem;margin-bottom:40px;">Here is how your current site ranks, and what a ZING site does differently.</p>
-<div id="kw-layout" style="display:grid;grid-template-columns:2fr 1fr;gap:32px;align-items:start;">
-<div><table style="width:100%;border-collapse:collapse;font-size:0.82rem;"><thead><tr style="border-bottom:1px solid rgba(255,255,255,0.08);"><th style="text-align:left;padding:10px 12px;color:rgba(248,250,252,0.45);font-weight:600;text-transform:uppercase;font-size:0.68rem;letter-spacing:0.08em;">Keyword</th><th style="text-align:right;padding:10px 12px;color:rgba(248,250,252,0.45);font-weight:600;text-transform:uppercase;font-size:0.68rem;letter-spacing:0.08em;">Monthly Searches</th><th style="text-align:right;padding:10px 12px;color:rgba(248,250,252,0.45);font-weight:600;text-transform:uppercase;font-size:0.68rem;letter-spacing:0.08em;">Est. Leads</th></tr></thead><tbody id="kw-rows"></tbody></table><p style="font-size:0.68rem;color:rgba(248,250,252,0.25);margin-top:12px;">* Search volumes est. Data sourced from DataForSEO.</p></div>
-<div style="border:1px solid rgba(249,115,22,0.3);background:rgba(249,115,22,0.06);border-radius:12px;padding:28px;"><div style="font-size:0.65rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#f97316;margin-bottom:16px;">How We Fix This</div><ul style="list-style:none;padding:0;margin:0 0 24px;display:flex;flex-direction:column;gap:12px;"><li style="font-size:0.84rem;color:rgba(248,250,252,0.75);display:flex;gap:10px;align-items:flex-start;"><span style="color:#f97316;flex-shrink:0;">&#10003;</span>Rank for "car detailing Scottsdale" and 49 more local searches</li><li style="font-size:0.84rem;color:rgba(248,250,252,0.75);display:flex;gap:10px;align-items:flex-start;"><span style="color:#f97316;flex-shrink:0;">&#10003;</span>Show up on Google, Gemini, and ChatGPT when customers search</li><li style="font-size:0.84rem;color:rgba(248,250,252,0.75);display:flex;gap:10px;align-items:flex-start;"><span style="color:#f97316;flex-shrink:0;">&#10003;</span>50 landing pages targeting every service and city combination</li><li style="font-size:0.84rem;color:rgba(248,250,252,0.75);display:flex;gap:10px;align-items:flex-start;"><span style="color:#f97316;flex-shrink:0;">&#10003;</span>Schema markup Google reads as a trusted local business</li></ul><a href="https://meetings.hubspot.com/elliot-farmer" target="_blank" style="display:block;background:#f97316;color:white;text-align:center;padding:13px 20px;border-radius:8px;font-size:0.85rem;font-weight:700;text-decoration:none;margin-bottom:12px;">Fix My Rankings &rarr;</a><p style="font-size:0.72rem;color:rgba(248,250,252,0.35);text-align:center;margin:0;">$59/mo &middot; No contract &middot; Full design included</p></div>
-</div></div></section>
+<!-- SEO REPORT SECTION -->
+<section id="seo-section" style="padding:48px 56px 96px; background:#0f1623;">
+  <div style="max-width:1100px; margin:0 auto;">
+
+    <!-- Header -->
+    <div id="seo-header" style="text-align:center; margin-bottom:64px;">
+      <div style="font-size:0.72rem; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#f97316; margin-bottom:24px; display:flex; align-items:center; justify-content:center; gap:14px;">
+        <span style="display:inline-block; width:40px; height:1px; background:#f97316;"></span>
+        Your Website Performance Report
+        <span style="display:inline-block; width:40px; height:1px; background:#f97316;"></span>
+      </div>
+      <h2 style="font-family:'Plus Jakarta Sans',sans-serif; font-size:clamp(2.4rem,4vw,3.8rem); font-weight:800; color:#ffffff; line-height:1.1; margin-bottom:28px; letter-spacing:-0.01em;">
+        Customers Are Searching.<br>They're Not Finding You.
+      </h2>
+      <p style="font-size:1.05rem; color:rgba(255,255,255,0.55); max-width:600px; margin:0 auto; line-height:1.85;">
+        We looked at the keywords Mt Pleasant drivers are searching right now. Here's what's being missed every single month.
+      </p>
+    </div>
+
+    <!-- Opportunity banner -->
+    <div id="seo-banner" style="background:linear-gradient(135deg, rgba(249,115,22,0.15) 0%, rgba(30,42,58,0.6) 100%); border:1px solid rgba(249,115,22,0.25); border-radius:12px; padding:40px 44px; margin-top:56px; margin-bottom:0; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:24px;">
+      <div>
+        <div style="font-size:0.7rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#f97316; margin-bottom:10px;">Estimated Monthly Opportunity</div>
+        <h3 style="font-family:'Plus Jakarta Sans',sans-serif; font-size:1.8rem; font-weight:800; color:white; margin-bottom:6px;">
+          ~21,350 potential customers search these terms every month in Mt Pleasant.
+        </h3>
+        <p style="font-size:0.88rem; color:rgba(255,255,255,0.55); line-height:1.6;">
+          Right now every one of them is finding your competitors. A properly built site changes that.
+        </p>
+      </div>
+    </div>
+
+    <!-- Keyword Table + Fix It Box -->
+    <div id="kw-layout" style="display:grid; grid-template-columns:1fr 300px; gap:24px; align-items:start; margin-top:24px; margin-bottom:48px;">
+
+      <!-- Keyword Table -->
+      <div style="border:1px solid rgba(255,255,255,0.08); border-radius:12px; overflow:hidden;">
+        <div id="kw-table-wrap" style="overflow-x:auto; -webkit-overflow-scrolling:touch;">
+          <div id="kw-header-desktop" class="kw-header" style="display:grid; grid-template-columns:1.8fr 90px 110px 90px; min-width:480px; padding:10px 16px; background:rgba(255,255,255,0.04); border-bottom:1px solid rgba(255,255,255,0.08);">
+            <div style="font-size:0.65rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.35);">Keyword</div>
+            <div style="font-size:0.65rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.35); text-align:center;">Searches/mo</div>
+            <div style="font-size:0.65rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.35); text-align:center;">Your Rank</div>
+            <div style="font-size:0.65rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.35); text-align:center;">Leads at #1</div>
+          </div>
+          <div id="kw-header-mobile" style="display:none; grid-template-columns:1fr 52px 72px; padding:10px 14px; background:rgba(255,255,255,0.04); border-bottom:1px solid rgba(255,255,255,0.08); gap:6px;">
+            <div style="font-size:0.6rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.35);">Keyword</div>
+            <div style="font-size:0.6rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.35); text-align:center;">Your Rank</div>
+            <div style="font-size:0.6rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.35); text-align:right;">Searches</div>
+          </div>
+          <div id="kw-rows"></div>
+        </div>
+      </div>
+
+      <!-- How We Fix This -->
+      <div style="border:1px solid rgba(249,115,22,0.3); border-radius:12px; background:rgba(249,115,22,0.06); padding:28px 24px; position:sticky; top:88px;">
+        <div style="font-size:0.65rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#f97316; margin-bottom:16px;">How We Fix This</div>
+        <div style="display:flex; flex-direction:column; gap:14px;">
+          <div style="display:flex; gap:12px; align-items:flex-start;">
+            <span style="color:#f97316; font-size:1rem; margin-top:1px; flex-shrink:0;">&#10003;</span>
+            <div>
+              <div style="font-size:0.88rem; font-weight:700; color:white; margin-bottom:2px;">50 Local Landing Pages</div>
+              <div style="font-size:0.76rem; color:rgba(255,255,255,0.45); line-height:1.5;">One page per keyword and service area, built to rank</div>
+            </div>
+          </div>
+          <div style="display:flex; gap:12px; align-items:flex-start;">
+            <span style="color:#f97316; font-size:1rem; margin-top:1px; flex-shrink:0;">&#10003;</span>
+            <div>
+              <div style="font-size:0.88rem; font-weight:700; color:white; margin-bottom:2px;">AI Chat</div>
+              <div style="font-size:0.76rem; color:rgba(255,255,255,0.45); line-height:1.5;">Converts visitors into booked jobs 24/7, even while you sleep</div>
+            </div>
+          </div>
+          <div style="display:flex; gap:12px; align-items:flex-start;">
+            <span style="color:#f97316; font-size:1rem; margin-top:1px; flex-shrink:0;">&#10003;</span>
+            <div>
+              <div style="font-size:0.88rem; font-weight:700; color:white; margin-bottom:2px;">SEO Keyword Strategy</div>
+              <div style="font-size:0.76rem; color:rgba(255,255,255,0.45); line-height:1.5;">Targeting the exact searches Mt Pleasant drivers are making</div>
+            </div>
+          </div>
+          <div style="display:flex; gap:12px; align-items:flex-start;">
+            <span style="color:#f97316; font-size:1rem; margin-top:1px; flex-shrink:0;">&#10003;</span>
+            <div>
+              <div style="font-size:0.88rem; font-weight:700; color:white; margin-bottom:2px;">All Done For You</div>
+              <div style="font-size:0.76rem; color:rgba(255,255,255,0.45); line-height:1.5;">You run your business. We handle everything else.</div>
+            </div>
+          </div>
+        </div>
+        <a href="https://meetings.hubspot.com/elliot-farmer" target="_blank" id="fix-rankings-btn" style="display:block; margin-top:24px; background:#f97316; color:white; padding:16px 20px; border-radius:6px; font-size:0.82rem; font-weight:700; letter-spacing:0.09em; text-transform:uppercase; text-decoration:none; text-align:center; width:100%; box-sizing:border-box;">Fix My Rankings</a>
+        <div style="text-align:center; margin-top:10px; font-size:0.72rem; color:rgba(255,255,255,0.35);">From <strong style="color:#f97316;">$59/mo</strong> &middot; No contract</div>
+      </div>
+
+    </div>
+
+    <!-- Salesperson CTA -->
+    <div id="elizabeth-cta" style="margin-top:56px; background:#ffffff; border-radius:16px; padding:36px 48px; display:flex; align-items:center; gap:28px; flex-wrap:wrap; row-gap:16px;">
+      <img id="eliz-photo" src="elliot.png" alt="Elliot Farmer" style="width:100px; height:100px; border-radius:50%; object-fit:cover; object-position:center top; flex-shrink:0; box-shadow:0 8px 32px rgba(0,0,0,0.15);">
+      <p id="eliz-headline" style="font-family:'Plus Jakarta Sans',sans-serif; font-size:1.55rem; font-weight:700; color:#0f1623; line-height:1.3; flex:1; min-width:220px;">
+        Ready to get more detailing customers in Mt Pleasant? Let's talk. Book a call with me today.
+      </p>
+      <a href="https://meetings.hubspot.com/elliot-farmer" target="_blank" id="eliz-btn" style="display:inline-block; background:#f97316; color:#ffffff; padding:22px 48px; border-radius:8px; font-size:0.88rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; text-decoration:none; white-space:nowrap; flex-shrink:0; box-shadow:0 8px 24px rgba(249,115,22,0.35); transition:transform 0.2s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">Book a Free Call</a>
+      <div id="eliz-contact" style="width:100%; font-size:0.88rem; color:#64748b;">
+        <div style="font-size:0.95rem; font-weight:700; color:#0f1623; margin-bottom:4px;">Elliot Farmer &nbsp;<span style="font-weight:400; color:#94a3b8;">&middot; Senior Business Advisor, ZING</span></div>
+        <a href="tel:7205340219" style="color:#64748b; text-decoration:none;">(720) 534-0219</a>
+        &nbsp;&middot;&nbsp;
+        <a href="mailto:elliot@zing-work.com" style="color:#64748b; text-decoration:none;">elliot@zing-work.com</a>
+        &nbsp;&middot;&nbsp;
+        <a href="https://zing.work" target="_blank" style="color:#64748b; text-decoration:none;">zing.work</a>
+      </div>
+      <div id="eliz-tagline" style="width:100%; text-align:center; font-size:0.75rem; color:#94a3b8; font-weight:500;">Websites from <strong style="color:#f97316;">$59/mo</strong> &middot; 50 local landing pages &middot; Full design included &middot; No contract</div>
+    </div>
+
+  </div>
+</section>
+
 <script>
-const keywords=[{kw:"car detailing near me",vol:12100,leads:151},{kw:"auto detailing near me",vol:8100,leads:101},{kw:"car detail near me",vol:4400,leads:55},{kw:"mobile car detailing near me",vol:3600,leads:45},{kw:"interior car detailing near me",vol:2900,leads:36},{kw:"ceramic coating near me",vol:2400,leads:30},{kw:"paint correction near me",vol:1900,leads:24},{kw:"car detailing scottsdale az",vol:1600,leads:20},{kw:"best car detailers scottsdale",vol:1300,leads:16},{kw:"auto detail scottsdale",vol:1000,leads:13}];
-const tbody=document.getElementById('kw-rows');
-keywords.forEach(k=>{const tr=document.createElement('tr');tr.style.cssText='border-bottom:1px solid rgba(255,255,255,0.05);';tr.innerHTML=`<td style="padding:11px 12px;color:rgba(248,250,252,0.8);">${k.kw}</td><td style="padding:11px 12px;text-align:right;color:#3b82f6;font-weight:600;">${k.vol.toLocaleString()}</td><td style="padding:11px 12px;text-align:right;color:rgba(248,250,252,0.5);">${k.leads}</td>`;tbody.appendChild(tr);});
+// Keyword data
+const keywords = [{"keyword":"car detailing Mt Pleasant MI","volume":880,"est":true},{"keyword":"auto detailing near me","volume":18100,"est":true},{"keyword":"mobile detailing Mt Pleasant","volume":590,"est":true},{"keyword":"ceramic coating Mt Pleasant","volume":480,"est":true},{"keyword":"car wash Mt Pleasant MI","volume":1300,"est":true}];
 
-// Nav scroll
-const nav = document.querySelector('nav');
-window.addEventListener('scroll', () => {
-  nav.classList.toggle('scrolled', window.scrollY > 10);
-});
+const container = document.getElementById('kw-rows');
+function renderKeywords() {
+  if (!container) return;
+  container.innerHTML = '';
+  const isMobile = window.innerWidth <= 960;
 
-// Fade-in on scroll (skip #cta-section)
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
+  keywords.forEach((item, i) => {
+    const row = document.createElement('div');
+    const n = String(i+1).padStart(2,'0');
+    const leads = Math.max(1, Math.round(item.volume * 0.012));
+    if (isMobile) {
+      row.style.cssText = 'display:grid; grid-template-columns:1fr 52px 72px; padding:12px 14px; border-bottom:1px solid rgba(255,255,255,0.06); align-items:center; gap:6px;';
+      row.innerHTML = '<div style="display:flex;align-items:center;gap:8px;"><span style="font-size:0.62rem;color:rgba(255,255,255,0.2);font-weight:700;min-width:16px;flex-shrink:0;">'+n+'</span><span style="font-size:0.78rem;color:rgba(255,255,255,0.85);font-weight:500;line-height:1.3;">'+item.keyword+'</span></div><div style="text-align:center;"><span style="font-size:1rem;font-weight:800;color:#f87171;">0</span></div><div style="text-align:right;font-size:0.8rem;font-weight:700;color:white;">'+item.volume.toLocaleString()+'<span style="font-size:0.6rem;color:rgba(255,255,255,0.35);margin-left:2px;">'+(item.est?' (est.)':'')+'</span></div>';
+    } else {
+      row.style.cssText = 'display:grid; grid-template-columns:1.8fr 90px 110px 90px; padding:14px 16px; border-bottom:1px solid rgba(255,255,255,0.05); align-items:center; transition:background 0.2s; min-width:480px;';
+      row.onmouseenter = function(){this.style.background='rgba(255,255,255,0.03)';};
+      row.onmouseleave = function(){this.style.background='transparent';};
+      row.innerHTML = '<div style="display:flex;align-items:center;gap:10px;"><span style="font-size:0.68rem;color:rgba(255,255,255,0.2);font-weight:600;min-width:20px;flex-shrink:0;">'+n+'</span><span style="font-size:0.85rem;color:rgba(255,255,255,0.85);font-weight:500;">'+item.keyword+'</span></div><div style="text-align:center;font-size:0.9rem;font-weight:700;color:white;">'+item.volume.toLocaleString()+' <span style="font-size:0.62rem;color:rgba(255,255,255,0.35);">'+(item.est?'(est.)':'')+'</span></div><div style="text-align:center;"><span style="background:rgba(239,68,68,0.12);color:#f87171;padding:4px 10px;border-radius:20px;font-size:0.72rem;font-weight:600;">Not ranking</span></div><div style="text-align:center;font-size:0.82rem;font-weight:700;color:rgba(255,255,255,0.5);">'+leads+'</div>';
     }
+    container.appendChild(row);
   });
-}, { threshold: 0.1 });
-
-document.querySelectorAll('.fade-in').forEach(el => {
-  if (!el.closest('#cta-section')) {
-    observer.observe(el);
-  }
-});
+}
+renderKeywords();
+window.addEventListener('resize', renderKeywords);
 </script>
 
+<script>
+// Nav shadow on scroll
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', function() {
+  nav.classList.toggle('scrolled', window.scrollY > 10);
+}, { passive: true });
+
+// Fade-in on scroll (desktop only)
+if (window.innerWidth > 960) {
+  const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  document.querySelectorAll('.fade-in').forEach(function(el) { observer.observe(el); });
+}
+</script>
 </body>
 </html>
