@@ -3,24 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fresh Car Mobile Detailing | Garland, TX</title>
-<meta name="description" content="Fresh Car Mobile Detailing in Garland, TX. Professional mobile car detailing with professional-grade products. We come to you. 53 five-star reviews. (214) 518-2694.">
+<title>Freshcar | Auto Detailing in North Bend, OR</title>
+<meta name="description" content="Freshcar in North Bend, OR. Professional auto detailing services. (541) 900-0280.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root {
-  --navy: #0d1f5c;
-  --blue: #1e3a8a;
-  --red: #dc2626;
-  --red-hover: #b91c1c;
+  --primary: #1e3a8a;
+  --primary-hover: #11204b;
+  --primary-rgb: 30,58,138;
+  --accent: #e03e3e;
   --dark: #040d1f;
   --card: #0a1528;
   --white: #ffffff;
   --text: #f0f4ff;
   --muted: rgba(240,244,255,0.55);
-  --border: rgba(30,58,138,0.4);
-  --card-border: rgba(30,58,138,0.3);
+  --border: rgba(var(--primary-rgb),0.4);
+  --card-border: rgba(var(--primary-rgb),0.3);
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -55,8 +55,13 @@ nav {
   left: 0;
   right: 0;
   background: #040d1f;
-  border-bottom: 1px solid rgba(30,58,138,0.3);
+  border-bottom: 1px solid rgba(var(--primary-rgb),0.3);
   z-index: 1000;
+  transition: box-shadow 0.3s ease;
+}
+
+nav.scrolled {
+  box-shadow: 0 2px 20px rgba(0,0,0,0.3);
 }
 
 .nav-inner {
@@ -68,75 +73,29 @@ nav {
   justify-content: space-between;
 }
 
-.nav-logo-wrap {
-  background: white;
-  border-radius: 50%;
-  padding: 4px;
+.nav-logo {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.nav-phone {
+  font-weight: 600;
+  color: var(--accent);
+  font-size: 0.95rem;
   display: flex;
   align-items: center;
-  justify-content: center;
+  gap: 8px;
 }
 
-.nav-logo-wrap img {
-  height: 48px;
-  width: auto;
-  display: block;
+.nav-phone svg {
+  width: 18px;
+  height: 18px;
+  fill: var(--accent);
 }
-
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 32px;
-}
-
-.nav-links a {
-  font-size: 0.88rem;
-  font-weight: 500;
-  color: rgba(240,244,255,0.7);
-  transition: color 0.3s;
-}
-
-.nav-links a:hover {
-  color: var(--red);
-}
-
-.hamburger {
-  display: none;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 4px;
-}
-
-.hamburger svg {
-  width: 28px;
-  height: 28px;
-  stroke: var(--text);
-}
-
-.mobile-menu {
-  display: none;
-  position: fixed;
-  top: 76px;
-  left: 0;
-  right: 0;
-  background: #040d1f;
-  border-bottom: 1px solid var(--card-border);
-  padding: 20px 24px;
-  z-index: 999;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.mobile-menu.open {
-  display: flex;
-}
-
-.mobile-menu a {
-  font-size: 1rem;
-  font-weight: 500;
-  color: rgba(240,244,255,0.7);
-  padding: 8px 0;
+@media (max-width: 768px) {
+  .nav-phone-text { display: none; }
 }
 
 /* HERO */
@@ -152,12 +111,7 @@ nav {
 .hero-bg {
   position: absolute;
   inset: 0;
-}
-
-.hero-bg img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  background: url('https://yourwebsiteexample.com/shared/hero.jpg') center/cover no-repeat;
   animation: slowZoom 20s ease-in-out infinite alternate;
 }
 
@@ -182,7 +136,7 @@ nav {
 
 .hero-eyebrow {
   display: inline-block;
-  background: var(--red);
+  background: var(--accent);
   color: var(--white);
   font-size: 0.7rem;
   font-weight: 700;
@@ -215,12 +169,11 @@ nav {
   gap: 16px;
   justify-content: center;
   flex-wrap: wrap;
-  margin-bottom: 40px;
 }
 
 .btn-primary {
   display: inline-block;
-  background: var(--red);
+  background: var(--accent);
   color: var(--white);
   padding: 16px 36px;
   border-radius: 8px;
@@ -232,7 +185,7 @@ nav {
 }
 
 .btn-primary:hover {
-  background: var(--red-hover);
+  background: var(--primary-hover);
   transform: translateY(-2px);
 }
 
@@ -245,39 +198,11 @@ nav {
   font-size: 1rem;
   border: 1px solid rgba(240,244,255,0.3);
   transition: border-color 0.3s ease, transform 0.3s ease;
-  cursor: pointer;
 }
 
 .btn-ghost:hover {
   border-color: var(--white);
   transform: translateY(-2px);
-}
-
-.hero-stats {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 24px;
-  flex-wrap: wrap;
-  font-size: 0.85rem;
-  color: rgba(240,244,255,0.6);
-}
-
-.hero-stats span {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.hero-stats .stars {
-  color: #fbbf24;
-}
-
-.stat-divider {
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  background: rgba(240,244,255,0.25);
 }
 
 /* ABOUT */
@@ -306,7 +231,7 @@ nav {
   font-weight: 700;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--red);
+  color: var(--accent);
   margin-bottom: 12px;
 }
 
@@ -323,9 +248,7 @@ nav {
   margin-bottom: 16px;
 }
 
-.about-card p:last-child {
-  margin-bottom: 0;
-}
+.about-card p:last-child { margin-bottom: 0; }
 
 .value-badges {
   display: flex;
@@ -339,7 +262,7 @@ nav {
   gap: 16px;
   background: var(--card);
   border: 1px solid var(--card-border);
-  border-left: 3px solid var(--red);
+  border-left: 3px solid var(--accent);
   border-radius: 12px;
   padding: 24px 20px;
 }
@@ -348,7 +271,8 @@ nav {
   width: 48px;
   height: 48px;
   border-radius: 10px;
-  background: rgba(30,58,138,0.3);
+  background: rgba(var(--primary-rgb),0.25);
+  border: 1px solid rgba(var(--primary-rgb),0.4);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -358,7 +282,7 @@ nav {
 .value-badge-icon svg {
   width: 24px;
   height: 24px;
-  stroke: var(--red);
+  stroke: var(--accent);
   fill: none;
   stroke-width: 1.8;
   stroke-linecap: round;
@@ -369,6 +293,63 @@ nav {
   font-size: 1rem;
   font-weight: 600;
   color: var(--text);
+}
+
+/* VISUAL STRIP */
+.visual-strip {
+  background: var(--dark);
+  padding: 0;
+}
+
+.visual-strip-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0;
+  height: 340px;
+  overflow: hidden;
+}
+
+.visual-strip-panel {
+  overflow: hidden;
+  position: relative;
+}
+
+.visual-strip-panel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.6s ease;
+}
+
+.visual-strip-panel:hover img {
+  transform: scale(1.05);
+}
+
+.visual-strip-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(4,13,31,0.85));
+  padding: 20px 20px 18px;
+  pointer-events: none;
+}
+
+.visual-strip-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 4px;
+}
+
+.visual-strip-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text);
+  font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
 /* SERVICES */
@@ -404,7 +385,7 @@ nav {
 .service-card {
   background: rgba(4,13,31,0.6);
   border: 1px solid var(--card-border);
-  border-top: 3px solid var(--blue);
+  border-top: 3px solid var(--primary);
   border-radius: 12px;
   padding: 32px 28px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -412,16 +393,16 @@ nav {
 
 .service-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 12px 40px rgba(30,58,138,0.2);
+  box-shadow: 0 12px 40px rgba(var(--primary-rgb),0.2);
 }
 
 .service-icon {
-  color: var(--red);
+  color: var(--accent);
   margin-bottom: 18px;
   width: 44px;
   height: 44px;
-  background: rgba(30,58,138,0.25);
-  border: 1px solid rgba(30,58,138,0.4);
+  background: rgba(var(--primary-rgb),0.25);
+  border: 1px solid rgba(var(--primary-rgb),0.4);
   border-radius: 10px;
   display: flex;
   align-items: center;
@@ -446,10 +427,56 @@ nav {
   color: var(--muted);
 }
 
+/* REVIEWS */
+.reviews {
+  padding: 80px 0;
+  background: var(--dark);
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.review-card {
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 32px 28px;
+}
+
+.review-stars {
+  color: #fbbf24;
+  font-size: 1.1rem;
+  margin-bottom: 16px;
+}
+
+.review-text {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: rgba(240,244,255,0.7);
+  margin-bottom: 16px;
+  font-style: italic;
+}
+
+.review-author {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+/* DIAGONAL DIVIDERS */
+.about { padding: 80px 0; }
+.services { padding: 80px 0; }
+
 /* CONTACT */
 .contact {
   padding: 100px 0;
-  background: var(--dark);
+  position: relative;
+  background:
+    linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.72)),
+    url('https://yourwebsiteexample.com/shared/contact-bg.jpg') center/cover no-repeat;
 }
 
 .contact-cards {
@@ -472,7 +499,7 @@ nav {
   width: 52px;
   height: 52px;
   border-radius: 12px;
-  background: rgba(30,58,138,0.25);
+  background: rgba(var(--primary-rgb),0.25);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -482,7 +509,7 @@ nav {
 .contact-card-icon svg {
   width: 24px;
   height: 24px;
-  fill: var(--red);
+  fill: var(--accent);
 }
 
 .contact-card h3 {
@@ -498,84 +525,11 @@ nav {
 }
 
 .contact-card a {
-  color: var(--red);
+  color: var(--accent);
   transition: color 0.3s;
 }
 
-.contact-card a:hover {
-  color: var(--red-hover);
-}
-
-/* FAQ */
-.faq {
-  padding: 80px 0;
-  background: #f0f4ff;
-}
-
-.faq .section-header h2 {
-  color: var(--navy);
-}
-
-.faq .section-badge {
-  color: var(--red);
-}
-
-.faq-list {
-  max-width: 780px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.faq-item {
-  background: white;
-  border: 1px solid rgba(13,31,92,0.1);
-  border-radius: 12px;
-  overflow: hidden;
-}
-
-.faq-question {
-  width: 100%;
-  background: none;
-  border: none;
-  padding: 20px 24px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  cursor: pointer;
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  color: var(--navy);
-  text-align: left;
-}
-
-.faq-question svg {
-  width: 20px;
-  height: 20px;
-  flex-shrink: 0;
-  stroke: var(--red);
-  transition: transform 0.3s;
-}
-
-.faq-item.open .faq-question svg {
-  transform: rotate(45deg);
-}
-
-.faq-answer {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease;
-}
-
-.faq-answer-inner {
-  padding: 0 24px 20px;
-  font-size: 0.95rem;
-  line-height: 1.7;
-  color: rgba(13,31,92,0.65);
-}
+.contact-card a:hover { color: var(--primary-hover); }
 
 /* FOOTER */
 footer {
@@ -584,9 +538,7 @@ footer {
   border-top: 1px solid var(--card-border);
 }
 
-.footer-inner {
-  text-align: center;
-}
+.footer-inner { text-align: center; }
 
 .footer-brand {
   font-family: 'Plus Jakarta Sans', sans-serif;
@@ -614,9 +566,7 @@ footer {
   transition: color 0.3s;
 }
 
-.footer-details a:hover {
-  color: var(--red);
-}
+.footer-details a:hover { color: var(--accent); }
 
 .footer-bottom {
   border-top: 1px solid rgba(240,244,255,0.06);
@@ -626,7 +576,7 @@ footer {
 }
 
 .footer-bottom a {
-  color: var(--red);
+  color: var(--accent);
   font-weight: 600;
 }
 
@@ -651,7 +601,7 @@ footer {
   height: 110px;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid var(--red);
+  border: 3px solid var(--accent);
   margin: 0 auto 24px;
 }
 
@@ -681,9 +631,7 @@ footer {
   margin-bottom: 16px;
 }
 
-.cta-buttons .btn-primary {
-  padding: 14px 32px;
-}
+.cta-buttons .btn-primary { padding: 14px 32px; }
 
 .btn-outline {
   display: inline-block;
@@ -696,9 +644,7 @@ footer {
   transition: border-color 0.3s ease;
 }
 
-.btn-outline:hover {
-  border-color: var(--white);
-}
+.btn-outline:hover { border-color: var(--white); }
 
 .cta-email {
   font-size: 0.82rem;
@@ -710,15 +656,38 @@ footer {
   transition: color 0.3s;
 }
 
-.cta-email a:hover {
-  color: var(--red);
+.cta-email a:hover { color: var(--accent); }
+
+/* FADE ANIMATIONS */
+.fade-in {
+  opacity: 1;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* RESPONSIVE */
 @media (max-width: 960px) {
-  .nav-links { display: none; }
-  .hamburger { display: block; }
   .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .reviews-grid { grid-template-columns: 1fr; }
+  .visual-strip-grid { grid-template-columns: 1fr; height: auto; }
+  .visual-strip-panel { height: 220px; }
+  #kw-layout { grid-template-columns: 1fr !important; }
+  #kw-layout > div:last-child { position: static !important; }
+  #kw-layout > div:last-child a { width: 100% !important; box-sizing: border-box; }
+  #kw-header-desktop { display: none !important; }
+  #kw-header-mobile { display: grid !important; }
+  .fade-in { opacity: 1 !important; transform: translateY(0) !important; }
+  #elizabeth-cta { padding: 36px 28px; gap: 20px; flex-direction: column; align-items: center; text-align: center; overflow: hidden; }
+  #eliz-photo { order: 1; margin: 0 auto !important; flex-shrink: 0; display: block !important; }
+  #eliz-headline { order: 2; text-align: center !important; font-size: 1.35rem !important; flex: none !important; width: 100% !important; min-width: 0 !important; }
+  #eliz-btn { order: 3; display: block !important; width: 100% !important; max-width: 100% !important; text-align: center !important; box-sizing: border-box !important; white-space: normal !important; padding: 16px 20px !important; }
+  #eliz-contact { order: 4; text-align: center !important; width: 100%; min-width: 0; }
+  #eliz-tagline { order: 5; text-align: center; width: 100%; }
 }
 
 @media (max-width: 768px) {
@@ -726,7 +695,6 @@ footer {
   .contact-cards { grid-template-columns: 1fr; }
   .cta-card { padding: 36px 24px; }
   .cta-buttons { flex-direction: column; align-items: center; }
-  #kw-layout { grid-template-columns: 1fr !important; }
 }
 
 @media (max-width: 480px) {
@@ -740,356 +708,242 @@ footer {
   .nav-inner { padding: 12px 16px; }
 }
 </style>
-<meta property="og:title" content="Fresh Car Mobile Detailing | Garland, TX">
-<meta property="og:description" content="Professional mobile car detailing in Garland, TX. We come to you. 53 five-star reviews.">
+<meta property="og:title" content="Freshcar | North Bend, OR">
+<meta property="og:description" content="Freshcar in North Bend, OR. Professional auto detailing services. (541) 900-0280.">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://yourwebsiteexample.com/freshcar/">
+<link rel="alternate" type="text/plain" href="/llms.txt">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "LocalBusiness",
-      "@id": "#business",
-      "name": "Fresh Car Mobile Detailing LLC",
-      "description": "Full-service mobile auto detailing in Garland, TX. Professional-grade products, state-of-the-art equipment, and complete customer satisfaction guaranteed.",
-      "telephone": "(214) 518-2694",
-      "email": "info@freshcarmobile.com",
+      "@id": "https://yourwebsiteexample.com/freshcar/#business",
+      "name": "Freshcar",
+      "description": "Professional auto detailing in North Bend, OR. Your car deserves the shine and protection that Freshcar delivers to every vehicle in our community.",
+      "telephone": "(541) 900-0280",
+      "email": "info@freshcar.com",
       "address": {
         "@type": "PostalAddress",
-        "addressLocality": "Garland",
-        "addressRegion": "TX",
+        "addressLocality": "North Bend",
+        "addressRegion": "OR",
         "addressCountry": "US"
       },
-      "areaServed": ["Garland", "Dallas", "Mesquite", "Richardson", "Rowlett", "Sachse"],
-      "openingHours": "Mo-Sa 07:30-17:00",
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5",
-        "reviewCount": "53"
-      },
+      "areaServed": "North Bend, OR",
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "Services",
         "itemListElement": [
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Mobile Detailing" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Full Interior & Exterior Detail" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Buffing, Waxing & Shampooing" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Clay Bar Treatment" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Minor Scratch Removal" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pressure Washing" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Luxury Vehicle Services" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Commercial Vehicle Services" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Semi-Truck & Tow Truck Services" } }
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Full Detail"}},
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Exterior Wash & Polish"}},
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Interior Deep Clean"}},
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Ceramic Coating"}},
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Paint Correction"}},
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Window Tinting"}},
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Engine Bay Clean"}},
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Headlight Restoration"}},
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Odor Elimination"}},
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Mobile Service"}}
         ]
       }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://yourwebsiteexample.com/freshcar/#faq",
+      "mainEntity": [
+        {"@type":"Question","name":"How long does a full detail take?","acceptedAnswer":{"@type":"Answer","text":"Most full details take 3 to 5 hours depending on vehicle size and condition."}},
+        {"@type":"Question","name":"Do you offer mobile detailing?","acceptedAnswer":{"@type":"Answer","text":"Yes. We come to your home or office in North Bend and surrounding areas."}},
+        {"@type":"Question","name":"What is ceramic coating?","acceptedAnswer":{"@type":"Answer","text":"Ceramic coating is a liquid polymer applied to your vehicle's exterior that provides long-lasting protection and a deep gloss finish."}}
+      ]
     }
   ]
 }
 </script>
+<link rel="preload" as="image" href="https://yourwebsiteexample.com/shared/hero.jpg" fetchpriority="high">
 </head>
 <body>
 
 <!-- NAV -->
-<nav>
+<nav id="nav">
   <div class="nav-inner">
-    <a href="#">
-      <div class="nav-logo-wrap">
-        <img src="./logo.png" alt="Fresh Car Mobile Detailing" style="height:48px;width:auto;">
-      </div>
+    <span class="nav-logo">Freshcar</span>
+    <a href="tel:5419000280" class="nav-phone">
+      <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.36 11.36 0 003.58.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.36 11.36 0 00.57 3.58 1 1 0 01-.24 1.01l-2.2 2.2z"/></svg>
+      <span class="nav-phone-text">(541) 900-0280</span>
     </a>
-    <div class="nav-links">
-      <a href="#services">Services</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </div>
-    <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.mobile-menu').classList.toggle('open')">
-      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-    </button>
   </div>
 </nav>
-<div class="mobile-menu">
-  <a href="#services" onclick="this.parentElement.classList.remove('open')">Services</a>
-  <a href="#about" onclick="this.parentElement.classList.remove('open')">About</a>
-  <a href="#contact" onclick="this.parentElement.classList.remove('open')">Contact</a>
-</div>
 
 <!-- HERO -->
 <section class="hero" id="home">
-  <div class="hero-bg">
-    <img src="./hero.jpg" alt="Professional mobile car detailing in Garland TX" loading="eager" fetchpriority="high">
-  </div>
+  <div class="hero-bg"></div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <span class="hero-eyebrow">GARLAND, TX &middot; 53 FIVE-STAR REVIEWS</span>
-    <h1>Garland's Mobile Detailing Experts</h1>
-    <p class="hero-sub">Professional-grade products. State-of-the-art equipment. We come to you, and we make it look brand new.</p>
+    <span class="hero-eyebrow">North Bend, OR &middot; AUTO DETAILING</span>
+    <h1>North Bend's Premier Auto Detailing</h1>
+    <p class="hero-sub">Your car deserves the shine and protection that Freshcar delivers to every vehicle in our community.</p>
     <div class="hero-buttons">
       <a href="#contact" class="btn-primary">Book Your Detail &rarr;</a>
-      <a href="tel:2145182694" class="btn-ghost">(214) 518-2694</a>
-    </div>
-    <div class="hero-stats">
-      <span>Mobile Service</span>
-      <span class="stat-divider"></span>
-      <span><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>&nbsp;53 Reviews</span>
-      <span class="stat-divider"></span>
-      <span>Garland, TX</span>
+      <a href="tel:5419000280" class="btn-ghost">(541) 900-0280</a>
     </div>
   </div>
 </section>
 
 <!-- ABOUT -->
-<section class="about" id="about">
+<section class="about fade-in" id="about">
   <div class="container">
     <div class="about-grid">
       <div class="about-card">
         <span class="section-badge">About Us</span>
-        <h2>Full-Service Detailing. We Come to You.</h2>
-        <p>Fresh Car Mobile Detailing is a full-service auto detailing company in Garland, TX, and the surrounding areas. We strive to deliver complete customer satisfaction for every vehicle, with our services guaranteed to be of excellent quality and available at affordable prices.</p>
-        <p>We only use professional-grade products and state-of-the-art equipment. Our professional staff will not only make your vehicle look brand new, but we will also make sure that it is returned to you promptly.</p>
+        <h2>We Make Cars Look New Again</h2>
+        <p>Freshcar brings professional-grade detailing to North Bend without the big-city prices. We handle everything from deep exterior cleaning to interior restoration, giving your vehicle the care it actually deserves.</p>
+        <p>Quality matters because your car is an investment. We use proven techniques and premium products to protect your paint, restore your interior, and keep your vehicle looking showroom fresh for years.</p>
       </div>
       <div class="value-badges">
-        <div class="value-badge">
+        <div class="value-badge fade-in">
           <div class="value-badge-icon">
             <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
           </div>
-          <span class="value-badge-text">Professional-Grade Products</span>
+          <span class="value-badge-text">Expert Local Service</span>
         </div>
-        <div class="value-badge">
+        <div class="value-badge fade-in">
           <div class="value-badge-icon">
             <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
           </div>
-          <span class="value-badge-text">State-of-the-Art Equipment</span>
+          <span class="value-badge-text">Paint Protection Included</span>
         </div>
-        <div class="value-badge">
+        <div class="value-badge fade-in">
           <div class="value-badge-icon">
             <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
           </div>
-          <span class="value-badge-text">Prompt, Guaranteed Results</span>
+          <span class="value-badge-text">Fast Turnaround Times</span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- VISUAL BREAK -->
-<section style="background:#040d1f;padding:0 0 0;">
-  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;height:340px;overflow:hidden;">
-    <div style="overflow:hidden;position:relative;">
-      <img src="./stock-exterior.jpg" alt="Exterior hand wash with foam mitt" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center;transition:transform 0.6s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-      <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(4,13,31,0.85));padding:20px 20px 18px;pointer-events:none;">
-        <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#dc2626;margin-bottom:4px;">EXTERIOR</div>
-        <div style="font-size:0.95rem;font-weight:700;color:#f0f4ff;font-family:'Plus Jakarta Sans',sans-serif;">Hand Wash &amp; Polish</div>
+<!-- VISUAL STRIP -->
+<section class="visual-strip">
+  <div class="visual-strip-grid">
+    <div class="visual-strip-panel">
+      <img src="https://yourwebsiteexample.com/shared/stock-exterior.jpg" alt="Exterior hand wash with foam mitt" loading="lazy">
+      <div class="visual-strip-caption">
+        <div class="visual-strip-label">EXTERIOR</div>
+        <div class="visual-strip-title">Hand Wash &amp; Polish</div>
       </div>
     </div>
-    <div style="overflow:hidden;position:relative;">
-      <img src="./stock-interior-steam.jpg" alt="Interior steam cleaning detail" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center;transition:transform 0.6s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-      <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(4,13,31,0.85));padding:20px 20px 18px;pointer-events:none;">
-        <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#dc2626;margin-bottom:4px;">INTERIOR</div>
-        <div style="font-size:0.95rem;font-weight:700;color:#f0f4ff;font-family:'Plus Jakarta Sans',sans-serif;">Steam Deep Clean</div>
+    <div class="visual-strip-panel">
+      <img src="https://yourwebsiteexample.com/shared/stock-interior-steam.jpg" alt="Interior steam cleaning detail" loading="lazy">
+      <div class="visual-strip-caption">
+        <div class="visual-strip-label">INTERIOR</div>
+        <div class="visual-strip-title">Steam Deep Clean</div>
       </div>
     </div>
-    <div style="overflow:hidden;position:relative;">
-      <img src="./stock-interior-vacuum.jpg" alt="Interior vacuum and upholstery detail" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center;transition:transform 0.6s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-      <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(4,13,31,0.85));padding:20px 20px 18px;pointer-events:none;">
-        <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#dc2626;margin-bottom:4px;">INTERIOR</div>
-        <div style="font-size:0.95rem;font-weight:700;color:#f0f4ff;font-family:'Plus Jakarta Sans',sans-serif;">Vacuum &amp; Upholstery</div>
+    <div class="visual-strip-panel">
+      <img src="https://yourwebsiteexample.com/shared/stock-interior-vacuum.jpg" alt="Interior vacuum and upholstery detail" loading="lazy">
+      <div class="visual-strip-caption">
+        <div class="visual-strip-label">INTERIOR</div>
+        <div class="visual-strip-title">Vacuum &amp; Upholstery</div>
       </div>
     </div>
   </div>
 </section>
-
-<style>
-@media(max-width:640px){
-  .fc-visual-strip { grid-template-columns:1fr !important; height:auto !important; }
-  .fc-visual-strip > div { height:220px; }
-}
-</style>
 
 <!-- SERVICES -->
 <section class="services" id="services">
   <div class="container">
-    <div class="section-header">
+    <div class="section-header fade-in">
       <span class="section-badge">Our Services</span>
       <h2>Everything Your Vehicle Needs</h2>
-      <p>From mobile convenience to heavy-duty commercial work, we handle it all with professional-grade care.</p>
+      <p>From mobile convenience to paint correction, we handle it all with professional-grade care.</p>
     </div>
     <div class="services-grid">
-      <div class="service-card">
+
+      <div class="service-card fade-in">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+        <h3>Full Detail</h3>
+        <p>Complete interior and exterior detail. Every surface cleaned, conditioned, and protected.</p>
+      </div>
+      <div class="service-card fade-in">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12c0-2.2 1.8-4 4-4s4 1.8 4 4-1.8 4-4 4"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2"/></svg></div>
+        <h3>Exterior Wash &amp; Polish</h3>
+        <p>Hand wash, clay bar, polish, and wax. Your paint restored to a deep, mirror-like shine.</p>
+      </div>
+      <div class="service-card fade-in">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="18" rx="2"/><path d="M8 7v10M16 7v10M2 12h20"/></svg></div>
+        <h3>Interior Deep Clean</h3>
+        <p>Steam cleaning, shampooing, leather conditioning, and every crevice detailed by hand.</p>
+      </div>
+      <div class="service-card fade-in">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.5 0 10-4.5 10-10S17.5 2 12 2 2 6.5 2 12s4.5 10 10 10z"/><path d="M12 6v6l4 2"/></svg></div>
+        <h3>Ceramic Coating</h3>
+        <p>Long-lasting polymer protection that keeps your vehicle looking showroom-new for years.</p>
+      </div>
+      <div class="service-card fade-in">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+        <h3>Paint Correction</h3>
+        <p>Remove swirls, scratches, and oxidation. Multi-stage polish for a flawless finish.</p>
+      </div>
+      <div class="service-card fade-in">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 3v18"/></svg></div>
+        <h3>Window Tinting</h3>
+        <p>Professional-grade tint for UV protection, heat reduction, and a sleek look.</p>
+      </div>
+      <div class="service-card fade-in">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M8 6l-2-2M16 18l2 2M6 8l-2-2M18 16l2 2M4 12H2M22 12h-2M6 16l-2 2M18 8l2-2"/><circle cx="12" cy="12" r="4"/></svg></div>
+        <h3>Engine Bay Clean</h3>
+        <p>Detailed engine bay cleaning. Degreased, dressed, and looking factory-fresh.</p>
+      </div>
+      <div class="service-card fade-in">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg></div>
+        <h3>Headlight Restoration</h3>
+        <p>Foggy, yellowed headlights restored to crystal clarity for better visibility and looks.</p>
+      </div>
+      <div class="service-card fade-in">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2h8l4 10H4L8 2z"/><path d="M12 12v10"/><path d="M8 22h8"/></svg></div>
+        <h3>Odor Elimination</h3>
+        <p>Ozone treatment and deep extraction that removes odors at the source, not just masks them.</p>
+      </div>
+      <div class="service-card fade-in">
         <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 0 0-8 8c0 5 8 13 8 13s8-8 8-13a8 8 0 0 0-8-8z"/></svg></div>
-        <h3>Mobile Detailing</h3>
+        <h3>Mobile Service</h3>
         <p>We come to you. Full detail at your home, office, or wherever your vehicle is parked.</p>
       </div>
-      <div class="service-card">
-        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.5 4.5H18l-3.75 2.7 1.5 4.5L12 12l-3.75 2.7 1.5-4.5L6 7.5h4.5L12 3z"/><path d="M5 17l-1 4M19 17l1 4M8 17h8"/></svg></div>
-        <h3>Full Interior &amp; Exterior Detail</h3>
-        <p>Complete top-to-bottom detail. Every surface cleaned, conditioned, and protected.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12c0-2.2 1.8-4 4-4s4 1.8 4 4-1.8 4-4 4"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2"/></svg></div>
-        <h3>Buffing, Waxing &amp; Shampooing</h3>
-        <p>Remove swirls, restore shine, deep-clean fabrics. Your car looks new again.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="8" width="20" height="8" rx="2"/><path d="M6 8V6a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2"/><line x1="12" y1="12" x2="12" y2="12.01"/></svg></div>
-        <h3>Clay Bar Treatment</h3>
-        <p>Removes embedded contaminants for a glass-smooth finish before waxing or coating.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
-        <h3>Minor Scratch Removal</h3>
-        <p>Surface scratches buffed out without a trip to the body shop.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M8 6l-2-2M16 18l2 2M6 8l-2-2M18 16l2 2M4 12H2M22 12h-2M6 16l-2 2M18 8l2-2"/><circle cx="12" cy="12" r="4"/></svg></div>
-        <h3>Pressure Washing</h3>
-        <p>Deep exterior clean for vehicles, driveways, and equipment.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
-        <h3>Luxury Vehicle Services</h3>
-        <p>Specialized care for high-end, luxury, and exotic vehicles with premium products.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
-        <h3>Commercial Vehicle Services</h3>
-        <p>Fleet vehicles, company trucks, and work vans detailed on your schedule.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17H3a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v3"/><rect x="9" y="11" width="14" height="10" rx="1"/><circle cx="12" cy="21" r="1"/><circle cx="20" cy="21" r="1"/></svg></div>
-        <h3>Semi-Truck &amp; Tow Truck Services</h3>
-        <p>Full-service detail for semi-trucks, tow trucks, and heavy equipment.</p>
-      </div>
     </div>
   </div>
 </section>
-
-<!-- OUR WORK -->
-<section style="background:#040d1f; padding:80px 0 0;">
-  <div style="max-width:1100px;margin:0 auto;padding:0 32px 40px;">
-    <div style="text-align:center;margin-bottom:40px;">
-      <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#dc2626;margin-bottom:10px;">OUR WORK</div>
-      <h2 style="font-size:clamp(1.6rem,3vw,2.2rem);font-weight:800;color:#f0f4ff;font-family:'Plus Jakarta Sans',sans-serif;">Every Vehicle We Touch Leaves Looking Its Best</h2>
-    </div>
-  </div>
-  <div style="max-width:900px;margin:0 auto;position:relative;overflow:hidden;border-radius:12px;">
-    <div id="fc-track" style="display:flex;transition:transform 0.6s cubic-bezier(0.4,0,0.2,1);will-change:transform;">
-      <div class="fc-slide"><img src="./gallery-1.jpg" alt="Fresh Car Mobile Detailing branded van" loading="lazy"></div>
-      <div class="fc-slide"><img src="./gallery-2.jpg" alt="Auto detailing work in Garland TX" loading="lazy"></div>
-      <div class="fc-slide"><img src="./gallery-3.jpg" alt="Tesla mobile detail at customer home" loading="lazy"></div>
-      <div class="fc-slide"><img src="./gallery-4.jpg" alt="Vehicle detailing service" loading="lazy"></div>
-      <div class="fc-slide"><img src="./gallery-5.jpg" alt="Car detailing Garland TX" loading="lazy"></div>
-      <div class="fc-slide"><img src="./gallery-6.jpg" alt="Mobile auto detail" loading="lazy"></div>
-      <div class="fc-slide"><img src="./gallery-7.jpg" alt="Professional car detailing" loading="lazy"></div>
-      <div class="fc-slide"><img src="./gallery-8.jpg" alt="Fresh Car Mobile Detailing work" loading="lazy"></div>
-    </div>
-    <button id="fc-prev" onclick="fcSlider(-1)" aria-label="Previous" style="position:absolute;left:20px;top:50%;transform:translateY(-50%);background:rgba(220,38,38,0.7);border:none;color:white;width:48px;height:48px;border-radius:50%;font-size:1.4rem;cursor:pointer;transition:background 0.2s;z-index:2;" onmouseover="this.style.background='rgba(220,38,38,1)'" onmouseout="this.style.background='rgba(220,38,38,0.7)'">&#8592;</button>
-    <button id="fc-next" onclick="fcSlider(1)" aria-label="Next" style="position:absolute;right:20px;top:50%;transform:translateY(-50%);background:rgba(220,38,38,0.7);border:none;color:white;width:48px;height:48px;border-radius:50%;font-size:1.4rem;cursor:pointer;transition:background 0.2s;z-index:2;" onmouseover="this.style.background='rgba(220,38,38,1)'" onmouseout="this.style.background='rgba(220,38,38,0.7)'">&#8594;</button>
-  </div>
-  <div id="fc-dots" style="display:flex;justify-content:center;gap:8px;padding:20px 0 40px;"></div>
-</section>
-
-<style>
-.fc-slide { flex:0 0 100%; width:100%; max-width:100%; aspect-ratio:4/3; overflow:hidden; }
-.fc-slide img { width:100%; height:100%; object-fit:cover; object-position:center 40%; display:block; }
-@media(max-width:768px) {
-  #fc-prev, #fc-next { display:none; }
-}
-</style>
-
-<script>
-(function(){
-  var track=document.getElementById('fc-track');
-  var dotsEl=document.getElementById('fc-dots');
-  var total=8; var current=0; var timer;
-  for(var i=0;i<total;i++){
-    var d=document.createElement('button');
-    d.style.cssText='width:8px;height:8px;border-radius:50%;border:none;cursor:pointer;transition:all 0.3s;padding:0;background:'+(i===0?'#dc2626':'rgba(255,255,255,0.25)');
-    d.setAttribute('data-i',i);
-    d.onclick=(function(n){return function(){goTo(n);resetTimer();};})(i);
-    dotsEl.appendChild(d);
-  }
-  function goTo(n){
-    current=(n+total)%total;
-    track.style.transform='translateX(-'+current*100+'%)';
-    Array.from(dotsEl.children).forEach(function(d,i){
-      d.style.background=i===current?'#dc2626':'rgba(255,255,255,0.25)';
-      d.style.width=i===current?'24px':'8px';
-      d.style.borderRadius='4px';
-    });
-  }
-  window.fcSlider=function(dir){goTo(current+dir);resetTimer();};
-  function resetTimer(){clearInterval(timer);timer=setInterval(function(){goTo(current+1);},5000);}
-  resetTimer();
-  var touchX=0;
-  track.parentElement.addEventListener('touchstart',function(e){touchX=e.changedTouches[0].clientX;},{passive:true});
-  track.parentElement.addEventListener('touchend',function(e){
-    var dx=e.changedTouches[0].clientX-touchX;
-    if(Math.abs(dx)>40){goTo(dx<0?current+1:current-1);resetTimer();}
-  },{passive:true});
-})();
-</script>
 
 <!-- CONTACT -->
 <section class="contact" id="contact">
   <div class="container">
-    <div class="section-header">
+    <div class="section-header fade-in">
       <span class="section-badge">Get In Touch</span>
       <h2>Contact Us</h2>
-      <p>Reach out to book your detail or ask any questions. We serve Garland, TX and surrounding areas.</p>
+      <p>Reach out to book your detail or ask any questions. We serve North Bend, OR and surrounding areas.</p>
     </div>
     <div class="contact-cards">
-      <div class="contact-card">
+      <div class="contact-card fade-in">
         <div class="contact-card-icon">
           <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1.02l-2.2 2.2z"/></svg>
         </div>
         <h3>Phone</h3>
-        <p><a href="tel:2145182694">(214) 518-2694</a></p>
+        <p><a href="tel:5419000280">(541) 900-0280</a></p>
       </div>
-      <div class="contact-card">
+      <div class="contact-card fade-in">
         <div class="contact-card-icon">
           <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
         </div>
         <h3>Email</h3>
-        <p><a href="mailto:info@freshcarmobile.com">info@freshcarmobile.com</a></p>
+        <p><a href="mailto:info@freshcar.com">info@freshcar.com</a></p>
       </div>
-      <div class="contact-card">
+      <div class="contact-card fade-in">
         <div class="contact-card-icon">
           <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
         </div>
         <h3>Hours</h3>
-        <p>Monday to Saturday 7:30AM to 5:00PM<br>Sunday Closed</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FAQ -->
-<section class="faq">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-badge">FAQ</span>
-      <h2>Frequently Asked Questions</h2>
-    </div>
-    <div class="faq-list">
-      <div class="faq-item">
-        <button class="faq-question">Do you come to my location?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
-        <div class="faq-answer"><div class="faq-answer-inner">Yes. Fresh Car Mobile Detailing serves Garland, TX and surrounding areas. We come to your home, office, or wherever your vehicle is. No need to drop off or wait.</div></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question">What products do you use?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
-        <div class="faq-answer"><div class="faq-answer-inner">We use professional-grade detailing products and state-of-the-art equipment on every vehicle. The same products used by dealerships and high-end detailers.</div></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question">How long does a full detail take?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
-        <div class="faq-answer"><div class="faq-answer-inner">Most full details take 3 to 5 hours depending on vehicle size and condition. We work efficiently and will give you a time estimate when you book.</div></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question">Do you detail trucks and SUVs?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
-        <div class="faq-answer"><div class="faq-answer-inner">Yes. We detail vehicles of all sizes including trucks, SUVs, vans, and luxury vehicles. Pricing and time may vary for larger vehicles.</div></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question">How do I book?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
-        <div class="faq-answer"><div class="faq-answer-inner">Call or text (214) 518-2694, or send an email to info@freshcarmobile.com. We will confirm your booking and come to you at the scheduled time.</div></div>
+        <p>Monday to Saturday: 8:00 AM to 6:00 PM<br>Sunday: Closed</p>
       </div>
     </div>
   </div>
@@ -1099,136 +953,181 @@ footer {
 <footer>
   <div class="container">
     <div class="footer-inner">
-      <div class="footer-brand">Fresh Car Mobile Detailing</div>
-      <p class="footer-tagline">Professional mobile auto detailing in Garland, TX</p>
+      <div class="footer-brand">Freshcar</div>
+      <p class="footer-tagline">Professional auto detailing in North Bend, OR</p>
       <div class="footer-details">
-        Garland, TX and surrounding areas<br>
-        <a href="tel:2145182694">(214) 518-2694</a> &middot; <a href="mailto:info@freshcarmobile.com">info@freshcarmobile.com</a><br>
-        Monday to Saturday 7:30AM to 5:00PM &middot; Sunday Closed
+        North Bend<br>
+        <a href="tel:5419000280">(541) 900-0280</a> &middot; <a href="mailto:info@freshcar.com">info@freshcar.com</a>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2026 Fresh Car Mobile Detailing LLC. All rights reserved. Powered by <a href="https://zing-work.com" target="_blank">ZING</a>.</p>
+        <p>&copy; 2026 Freshcar. All rights reserved. Powered by <a href="https://zing.work" target="_blank">ZING</a>.</p>
       </div>
     </div>
   </div>
 </footer>
 
-<!-- SEO SECTION -->
-<section style="background:#0f1623;padding:80px 0;color:rgba(255,255,255,0.7);font-family:'Inter',sans-serif;">
-  <div style="max-width:1100px;margin:0 auto;padding:0 32px;">
-    <h2 style="color:white;font-size:clamp(1.8rem,3vw,2.4rem);text-align:center;margin-bottom:12px;font-family:inherit;">Your Local Competition is Already Online.</h2>
-    <p style="text-align:center;font-size:1.05rem;margin-bottom:40px;max-width:650px;margin-left:auto;margin-right:auto;color:rgba(255,255,255,0.6);">We looked at what Garland drivers search every month. Here's what you're missing.</p>
-    <div style="background:rgba(232,96,10,0.12);border:1px solid rgba(232,96,10,0.3);border-radius:10px;padding:20px 28px;text-align:center;margin-bottom:48px;font-size:1.05rem;color:#e8600a;font-weight:600;">~28,600 potential customers search for mobile car detailing services every month.</div>
-    <div id="kw-layout" style="display:grid;grid-template-columns:2fr 1fr;gap:40px;margin-bottom:60px;align-items:start;">
-      <div>
-        <div class="kw-dh" style="display:grid;grid-template-columns:1fr 90px 110px 100px;padding:10px 16px;background:rgba(255,255,255,0.04);border-bottom:1px solid rgba(255,255,255,0.08);gap:8px;">
-          <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.35);">Keyword</div>
-          <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.35);text-align:center;">Your Rank</div>
-          <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.35);text-align:center;">Competition</div>
-          <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.35);text-align:right;">Searches/mo</div>
-        </div>
-        <div class="kw-mh" style="display:none;grid-template-columns:1fr 60px 80px;padding:10px 14px;background:rgba(255,255,255,0.04);border-bottom:1px solid rgba(255,255,255,0.08);gap:6px;">
-          <div style="font-size:0.6rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.35);">Keyword</div>
-          <div style="font-size:0.6rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.35);text-align:center;">Rank</div>
-          <div style="font-size:0.6rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.35);text-align:right;">Searches</div>
-        </div>
-        <div id="kw-rows"></div>
-        <p style="font-size:0.68rem;color:rgba(255,255,255,0.25);margin-top:12px;">* Search volumes est. Data sourced from DataForSEO.</p>
-      </div>
-      <div style="border:1px solid rgba(232,96,10,0.3);border-radius:12px;background:rgba(232,96,10,0.06);padding:28px 24px;position:sticky;top:88px;">
-        <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#e8600a;margin-bottom:16px;">How We Fix This</div>
-        <div style="display:flex;flex-direction:column;gap:14px;">
-          <div style="display:flex;gap:12px;align-items:flex-start;"><span style="color:#e8600a;font-size:1rem;margin-top:1px;flex-shrink:0;">&#10003;</span><div><div style="font-size:0.88rem;font-weight:700;color:white;margin-bottom:2px;">50 Local Landing Pages</div><div style="font-size:0.76rem;color:rgba(255,255,255,0.45);line-height:1.5;">One page per keyword and service area, built to rank</div></div></div>
-          <div style="display:flex;gap:12px;align-items:flex-start;"><span style="color:#e8600a;font-size:1rem;margin-top:1px;flex-shrink:0;">&#10003;</span><div><div style="font-size:0.88rem;font-weight:700;color:white;margin-bottom:2px;">AI Chat</div><div style="font-size:0.76rem;color:rgba(255,255,255,0.45);line-height:1.5;">Converts visitors into booked jobs 24/7, even while you sleep</div></div></div>
-          <div style="display:flex;gap:12px;align-items:flex-start;"><span style="color:#e8600a;font-size:1rem;margin-top:1px;flex-shrink:0;">&#10003;</span><div><div style="font-size:0.88rem;font-weight:700;color:white;margin-bottom:2px;">SEO Keyword Strategy</div><div style="font-size:0.76rem;color:rgba(255,255,255,0.45);line-height:1.5;">Targeting the exact searches Garland drivers are making</div></div></div>
-          <div style="display:flex;gap:12px;align-items:flex-start;"><span style="color:#e8600a;font-size:1rem;margin-top:1px;flex-shrink:0;">&#10003;</span><div><div style="font-size:0.88rem;font-weight:700;color:white;margin-bottom:2px;">All Done For You</div><div style="font-size:0.76rem;color:rgba(255,255,255,0.45);line-height:1.5;">You run your business. We handle everything else.</div></div></div>
-        </div>
-        <a href="https://meetings.hubspot.com/elliot-farmer" target="_blank" style="display:block;margin-top:24px;background:#e8600a;color:white;padding:16px 20px;border-radius:6px;font-size:0.82rem;font-weight:700;letter-spacing:0.09em;text-transform:uppercase;text-decoration:none;text-align:center;width:100%;box-sizing:border-box;">Fix My Rankings</a>
-        <div style="text-align:center;margin-top:10px;font-size:0.72rem;color:rgba(255,255,255,0.35);">From <strong style="color:#e8600a;">$59/mo</strong> &middot; No contract</div>
-      </div>
-    </div>
-  </div>
-</section>
-<style>
-@media(max-width:960px){
-  #kw-layout{grid-template-columns:1fr!important;}
-  .kw-dh{display:none!important;}
-  .kw-mh{display:grid!important;}
-}
-@media(max-width:768px){
-  #kw-layout{gap:24px!important;}
-}
-</style>
+<!-- SEO REPORT SECTION -->
+<section id="seo-section" style="padding:48px 56px 96px; background:#0f1623;">
+  <div style="max-width:1100px; margin:0 auto;">
 
-<!-- CTA SECTION -->
-<section id="cta-section">
-  <div class="container">
-    <div class="cta-card">
-      <img class="cta-photo" src="./elliot.png" alt="Elliot Farmer, ZING Senior Business Advisor" loading="lazy">
-      <h2>Ready to get more detailing customers in Garland? Let's talk.</h2>
-      <p class="cta-subtitle">Elliot Farmer &middot; Senior Business Advisor, ZING</p>
-      <p class="cta-tagline">Websites from $59/mo &middot; 50 local landing pages &middot; Full design included &middot; No contract</p>
-      <div class="cta-buttons">
-        <a href="https://meetings.hubspot.com/elliot-farmer" target="_blank" class="btn-primary">Book a Free Call &rarr;</a>
-        <a href="tel:7205340219" class="btn-outline">(720) 534-0219</a>
+    <!-- Header -->
+    <div id="seo-header" style="text-align:center; margin-bottom:64px;">
+      <div style="font-size:0.72rem; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#f97316; margin-bottom:24px; display:flex; align-items:center; justify-content:center; gap:14px;">
+        <span style="display:inline-block; width:40px; height:1px; background:#f97316;"></span>
+        Your Website Performance Report
+        <span style="display:inline-block; width:40px; height:1px; background:#f97316;"></span>
       </div>
-      <div class="cta-email"><a href="mailto:elliot@zing-work.com">elliot@zing-work.com</a></div>
+      <h2 style="font-family:'Plus Jakarta Sans',sans-serif; font-size:clamp(2.4rem,4vw,3.8rem); font-weight:800; color:#ffffff; line-height:1.1; margin-bottom:28px; letter-spacing:-0.01em;">
+        Customers Are Searching.<br>They're Not Finding You.
+      </h2>
+      <p style="font-size:1.05rem; color:rgba(255,255,255,0.55); max-width:600px; margin:0 auto; line-height:1.85;">
+        We looked at the keywords North Bend drivers are searching right now. Here's what's being missed every single month.
+      </p>
     </div>
+
+    <!-- Opportunity banner -->
+    <div id="seo-banner" style="background:linear-gradient(135deg, rgba(249,115,22,0.15) 0%, rgba(30,42,58,0.6) 100%); border:1px solid rgba(249,115,22,0.25); border-radius:12px; padding:40px 44px; margin-top:56px; margin-bottom:0; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:24px;">
+      <div>
+        <div style="font-size:0.7rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#f97316; margin-bottom:10px;">Estimated Monthly Opportunity</div>
+        <h3 style="font-family:'Plus Jakarta Sans',sans-serif; font-size:1.8rem; font-weight:800; color:white; margin-bottom:6px;">
+          ~21,350 potential customers search these terms every month in North Bend.
+        </h3>
+        <p style="font-size:0.88rem; color:rgba(255,255,255,0.55); line-height:1.6;">
+          Right now every one of them is finding your competitors. A properly built site changes that.
+        </p>
+      </div>
+    </div>
+
+    <!-- Keyword Table + Fix It Box -->
+    <div id="kw-layout" style="display:grid; grid-template-columns:1fr 300px; gap:24px; align-items:start; margin-top:24px; margin-bottom:48px;">
+
+      <!-- Keyword Table -->
+      <div style="border:1px solid rgba(255,255,255,0.08); border-radius:12px; overflow:hidden;">
+        <div id="kw-table-wrap" style="overflow-x:auto; -webkit-overflow-scrolling:touch;">
+          <div id="kw-header-desktop" class="kw-header" style="display:grid; grid-template-columns:1.8fr 90px 110px 90px; min-width:480px; padding:10px 16px; background:rgba(255,255,255,0.04); border-bottom:1px solid rgba(255,255,255,0.08);">
+            <div style="font-size:0.65rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.35);">Keyword</div>
+            <div style="font-size:0.65rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.35); text-align:center;">Searches/mo</div>
+            <div style="font-size:0.65rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.35); text-align:center;">Your Rank</div>
+            <div style="font-size:0.65rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.35); text-align:center;">Leads at #1</div>
+          </div>
+          <div id="kw-header-mobile" style="display:none; grid-template-columns:1fr 52px 72px; padding:10px 14px; background:rgba(255,255,255,0.04); border-bottom:1px solid rgba(255,255,255,0.08); gap:6px;">
+            <div style="font-size:0.6rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.35);">Keyword</div>
+            <div style="font-size:0.6rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.35); text-align:center;">Your Rank</div>
+            <div style="font-size:0.6rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.35); text-align:right;">Searches</div>
+          </div>
+          <div id="kw-rows"></div>
+        </div>
+      </div>
+
+      <!-- How We Fix This -->
+      <div style="border:1px solid rgba(249,115,22,0.3); border-radius:12px; background:rgba(249,115,22,0.06); padding:28px 24px; position:sticky; top:88px;">
+        <div style="font-size:0.65rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#f97316; margin-bottom:16px;">How We Fix This</div>
+        <div style="display:flex; flex-direction:column; gap:14px;">
+          <div style="display:flex; gap:12px; align-items:flex-start;">
+            <span style="color:#f97316; font-size:1rem; margin-top:1px; flex-shrink:0;">&#10003;</span>
+            <div>
+              <div style="font-size:0.88rem; font-weight:700; color:white; margin-bottom:2px;">50 Local Landing Pages</div>
+              <div style="font-size:0.76rem; color:rgba(255,255,255,0.45); line-height:1.5;">One page per keyword and service area, built to rank</div>
+            </div>
+          </div>
+          <div style="display:flex; gap:12px; align-items:flex-start;">
+            <span style="color:#f97316; font-size:1rem; margin-top:1px; flex-shrink:0;">&#10003;</span>
+            <div>
+              <div style="font-size:0.88rem; font-weight:700; color:white; margin-bottom:2px;">AI Chat</div>
+              <div style="font-size:0.76rem; color:rgba(255,255,255,0.45); line-height:1.5;">Converts visitors into booked jobs 24/7, even while you sleep</div>
+            </div>
+          </div>
+          <div style="display:flex; gap:12px; align-items:flex-start;">
+            <span style="color:#f97316; font-size:1rem; margin-top:1px; flex-shrink:0;">&#10003;</span>
+            <div>
+              <div style="font-size:0.88rem; font-weight:700; color:white; margin-bottom:2px;">SEO Keyword Strategy</div>
+              <div style="font-size:0.76rem; color:rgba(255,255,255,0.45); line-height:1.5;">Targeting the exact searches North Bend drivers are making</div>
+            </div>
+          </div>
+          <div style="display:flex; gap:12px; align-items:flex-start;">
+            <span style="color:#f97316; font-size:1rem; margin-top:1px; flex-shrink:0;">&#10003;</span>
+            <div>
+              <div style="font-size:0.88rem; font-weight:700; color:white; margin-bottom:2px;">All Done For You</div>
+              <div style="font-size:0.76rem; color:rgba(255,255,255,0.45); line-height:1.5;">You run your business. We handle everything else.</div>
+            </div>
+          </div>
+        </div>
+        <a href="https://meetings.hubspot.com/elliot-farmer" target="_blank" id="fix-rankings-btn" style="display:block; margin-top:24px; background:#f97316; color:white; padding:16px 20px; border-radius:6px; font-size:0.82rem; font-weight:700; letter-spacing:0.09em; text-transform:uppercase; text-decoration:none; text-align:center; width:100%; box-sizing:border-box;">Fix My Rankings</a>
+        <div style="text-align:center; margin-top:10px; font-size:0.72rem; color:rgba(255,255,255,0.35);">From <strong style="color:#f97316;">$59/mo</strong> &middot; No contract</div>
+      </div>
+
+    </div>
+
+    <!-- Salesperson CTA -->
+    <div id="elizabeth-cta" style="margin-top:56px; background:#ffffff; border-radius:16px; padding:36px 48px; display:flex; align-items:center; gap:28px; flex-wrap:wrap; row-gap:16px;">
+      <img id="eliz-photo" src="elliot.png" alt="Elliot Farmer" style="width:100px; height:100px; border-radius:50%; object-fit:cover; object-position:center top; flex-shrink:0; box-shadow:0 8px 32px rgba(0,0,0,0.15);">
+      <p id="eliz-headline" style="font-family:'Plus Jakarta Sans',sans-serif; font-size:1.55rem; font-weight:700; color:#0f1623; line-height:1.3; flex:1; min-width:220px;">
+        Ready to get more detailing customers in North Bend? Let's talk. Book a call with me today.
+      </p>
+      <a href="https://meetings.hubspot.com/elliot-farmer" target="_blank" id="eliz-btn" style="display:inline-block; background:#f97316; color:#ffffff; padding:22px 48px; border-radius:8px; font-size:0.88rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; text-decoration:none; white-space:nowrap; flex-shrink:0; box-shadow:0 8px 24px rgba(249,115,22,0.35); transition:transform 0.2s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">Book a Free Call</a>
+      <div id="eliz-contact" style="width:100%; font-size:0.88rem; color:#64748b;">
+        <div style="font-size:0.95rem; font-weight:700; color:#0f1623; margin-bottom:4px;">Elliot Farmer &nbsp;<span style="font-weight:400; color:#94a3b8;">&middot; Senior Business Advisor, ZING</span></div>
+        <a href="tel:7205340219" style="color:#64748b; text-decoration:none;">(720) 534-0219</a>
+        &nbsp;&middot;&nbsp;
+        <a href="mailto:elliot@zing-work.com" style="color:#64748b; text-decoration:none;">elliot@zing-work.com</a>
+        &nbsp;&middot;&nbsp;
+        <a href="https://zing.work" target="_blank" style="color:#64748b; text-decoration:none;">zing.work</a>
+      </div>
+      <div id="eliz-tagline" style="width:100%; text-align:center; font-size:0.75rem; color:#94a3b8; font-weight:500;">Websites from <strong style="color:#f97316;">$59/mo</strong> &middot; 50 local landing pages &middot; Full design included &middot; No contract</div>
+    </div>
+
   </div>
 </section>
 
 <script>
-(function(){
-  /* FAQ accordion */
-  document.querySelectorAll('.faq-question').forEach(function(btn){
-    btn.addEventListener('click', function(){
-      var item = this.parentElement;
-      var answer = item.querySelector('.faq-answer');
-      var isOpen = item.classList.contains('open');
-      document.querySelectorAll('.faq-item.open').forEach(function(el){
-        el.classList.remove('open');
-        el.querySelector('.faq-answer').style.maxHeight = '0';
-      });
-      if(!isOpen){
-        item.classList.add('open');
-        answer.style.maxHeight = answer.scrollHeight + 'px';
-      }
-    });
-  });
+// Keyword data
+const keywords = [{"keyword":"car detailing North Bend OR","volume":880,"est":true},{"keyword":"auto detailing near me","volume":18100,"est":true},{"keyword":"mobile detailing North Bend","volume":590,"est":true},{"keyword":"ceramic coating North Bend","volume":480,"est":true},{"keyword":"car wash North Bend OR","volume":1300,"est":true}];
 
-  /* Mobile menu close on resize */
-  window.addEventListener('resize', function(){
-    if(window.innerWidth > 960){
-      var mm = document.querySelector('.mobile-menu');
-      if(mm) mm.classList.remove('open');
+const container = document.getElementById('kw-rows');
+function renderKeywords() {
+  if (!container) return;
+  container.innerHTML = '';
+  const isMobile = window.innerWidth <= 960;
+
+  keywords.forEach((item, i) => {
+    const row = document.createElement('div');
+    const n = String(i+1).padStart(2,'0');
+    const leads = Math.max(1, Math.round(item.volume * 0.012));
+    if (isMobile) {
+      row.style.cssText = 'display:grid; grid-template-columns:1fr 52px 72px; padding:12px 14px; border-bottom:1px solid rgba(255,255,255,0.06); align-items:center; gap:6px;';
+      row.innerHTML = '<div style="display:flex;align-items:center;gap:8px;"><span style="font-size:0.62rem;color:rgba(255,255,255,0.2);font-weight:700;min-width:16px;flex-shrink:0;">'+n+'</span><span style="font-size:0.78rem;color:rgba(255,255,255,0.85);font-weight:500;line-height:1.3;">'+item.keyword+'</span></div><div style="text-align:center;"><span style="font-size:1rem;font-weight:800;color:#f87171;">0</span></div><div style="text-align:right;font-size:0.8rem;font-weight:700;color:white;">'+item.volume.toLocaleString()+'<span style="font-size:0.6rem;color:rgba(255,255,255,0.35);margin-left:2px;">'+(item.est?' (est.)':'')+'</span></div>';
+    } else {
+      row.style.cssText = 'display:grid; grid-template-columns:1.8fr 90px 110px 90px; padding:14px 16px; border-bottom:1px solid rgba(255,255,255,0.05); align-items:center; transition:background 0.2s; min-width:480px;';
+      row.onmouseenter = function(){this.style.background='rgba(255,255,255,0.03)';};
+      row.onmouseleave = function(){this.style.background='transparent';};
+      row.innerHTML = '<div style="display:flex;align-items:center;gap:10px;"><span style="font-size:0.68rem;color:rgba(255,255,255,0.2);font-weight:600;min-width:20px;flex-shrink:0;">'+n+'</span><span style="font-size:0.85rem;color:rgba(255,255,255,0.85);font-weight:500;">'+item.keyword+'</span></div><div style="text-align:center;font-size:0.9rem;font-weight:700;color:white;">'+item.volume.toLocaleString()+' <span style="font-size:0.62rem;color:rgba(255,255,255,0.35);">'+(item.est?'(est.)':'')+'</span></div><div style="text-align:center;"><span style="background:rgba(239,68,68,0.12);color:#f87171;padding:4px 10px;border-radius:20px;font-size:0.72rem;font-weight:600;">Not ranking</span></div><div style="text-align:center;font-size:0.82rem;font-weight:700;color:rgba(255,255,255,0.5);">'+leads+'</div>';
     }
+    container.appendChild(row);
   });
+}
+renderKeywords();
+window.addEventListener('resize', renderKeywords);
+</script>
 
-  /* SEO keyword table */
-  var kws=[{kw:"mobile car detailing near me",vol:8100,leads:101},{kw:"auto detailing near me",vol:4400,leads:55},{kw:"car detailing near me",vol:12100,leads:151},{kw:"mobile detailing garland tx",vol:880,leads:11},{kw:"car detailing garland tx",vol:720,leads:9},{kw:"mobile car wash near me",vol:1600,leads:20},{kw:"auto detailing garland tx",vol:590,leads:7},{kw:"ceramic coating garland tx",vol:480,leads:6},{kw:"paint correction garland tx",vol:320,leads:4},{kw:"full detail car near me",vol:410,leads:5}];
-  var c=document.getElementById("kw-rows");
-  if(!c)return;
-  function render(){
-    c.innerHTML="";
-    var m=window.innerWidth<=960;
-    kws.forEach(function(item,i){
-      var row=document.createElement("div");
-      var n=String(i+1).padStart(2,"0");
-      if(m){
-        row.style.cssText="display:grid;grid-template-columns:1fr 60px 80px;padding:12px 14px;border-bottom:1px solid rgba(255,255,255,0.06);align-items:center;gap:6px;";
-        row.innerHTML='<div style="display:flex;align-items:center;gap:8px;"><span style="font-size:0.62rem;color:rgba(255,255,255,0.2);font-weight:700;flex-shrink:0;">'+n+'</span><span style="font-size:0.78rem;color:rgba(255,255,255,0.85);font-weight:500;line-height:1.3;">'+item.kw+'</span></div><div style="text-align:center;"><span style="font-size:0.9rem;font-weight:800;color:#f87171;">0</span></div><div style="text-align:right;font-size:0.8rem;font-weight:700;color:white;">'+item.vol.toLocaleString()+'<span style="font-size:0.6rem;color:rgba(255,255,255,0.35);margin-left:2px;">est.</span></div>';
-      }else{
-        row.style.cssText="display:grid;grid-template-columns:1fr 90px 110px 100px;padding:14px 16px;border-bottom:1px solid rgba(255,255,255,0.05);align-items:center;transition:background 0.2s;cursor:default;";
-        row.onmouseenter=function(){this.style.background="rgba(255,255,255,0.03)"};
-        row.onmouseleave=function(){this.style.background="transparent"};
-        row.innerHTML='<div style="display:flex;align-items:center;gap:10px;"><span style="font-size:0.68rem;color:rgba(255,255,255,0.2);font-weight:600;min-width:20px;flex-shrink:0;">'+n+'</span><span style="font-size:0.85rem;color:rgba(255,255,255,0.85);font-weight:500;">'+item.kw+'</span></div><div style="text-align:center;font-size:0.9rem;font-weight:700;color:white;">'+item.vol.toLocaleString()+' <span style="font-size:0.62rem;color:rgba(255,255,255,0.35);">est.</span></div><div style="text-align:center;"><span style="background:rgba(239,68,68,0.12);color:#f87171;padding:4px 10px;border-radius:20px;font-size:0.72rem;font-weight:600;">Not ranking</span></div><div style="text-align:center;font-size:0.82rem;font-weight:700;color:rgba(255,255,255,0.5);">'+item.leads+'</div>';
+<script>
+// Nav shadow on scroll
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', function() {
+  nav.classList.toggle('scrolled', window.scrollY > 10);
+}, { passive: true });
+
+// Fade-in on scroll (desktop only)
+if (window.innerWidth > 960) {
+  const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
       }
-      c.appendChild(row);
     });
-  }
-  render();
-  window.addEventListener("resize",render);
-})();
+  }, { threshold: 0.15 });
+  document.querySelectorAll('.fade-in').forEach(function(el) { observer.observe(el); });
+}
 </script>
 </body>
 </html>
