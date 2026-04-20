@@ -1,0 +1,1287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Test Drive Detailing | Professional Auto Detailing in Boulder, CO</title>
+<meta name="description" content="Test Drive Detailing - Professional mobile auto detailing services in Boulder, CO. Exterior wash, interior detailing, ceramic coating, and full detail packages. Family-owned since 2021. (720) 555-0199">
+<meta property="og:title" content="Test Drive Detailing | Auto Detailing in Boulder, CO">
+<meta property="og:description" content="Professional mobile car detailing services in Boulder, Colorado. We bring the detail shop to you.">
+<meta property="og:type" content="business.business">
+<meta property="og:url" content="https://testdrivedetailing.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --primary: #3b82f6;
+  --primary-hover: #2563eb;
+  --primary-rgb: 59, 130, 246;
+  --accent: #1e40af;
+  --dark: #040d1f;
+  --card: #0a1528;
+  --white: #ffffff;
+  --text: #f0f4ff;
+  --muted: rgba(240, 244, 255, 0.55);
+  --border: rgba(59, 130, 246, 0.4);
+  --card-border: rgba(59, 130, 246, 0.3);
+  --red: #e53e3e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--muted);
+  line-height: 1.7;
+  background: var(--dark);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: var(--text);
+  line-height: 1.2;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* NAV */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #040d1f;
+  border-bottom: 1px solid rgba(59, 130, 246, 0.3);
+  z-index: 1000;
+  transition: box-shadow 0.3s ease;
+}
+
+nav.scrolled {
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+}
+
+.nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-logo {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.nav-phone {
+  font-weight: 600;
+  color: var(--accent);
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-phone svg {
+  width: 18px;
+  height: 18px;
+  stroke: var(--accent);
+  fill: none;
+  stroke-width: 2;
+}
+
+@media (max-width: 768px) {
+  .nav-phone-text {
+    display: none;
+  }
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-top: 64px;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: url('/get-started/stock/stock2.jpg') center/cover no-repeat;
+  animation: slowZoom 20s ease-in-out infinite alternate;
+}
+
+@keyframes slowZoom {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.08);
+  }
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(4, 13, 31, 0.7) 0%, rgba(4, 13, 31, 0.45) 50%, rgba(4, 13, 31, 0.8) 100%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 800px;
+  padding: 0 24px;
+}
+
+.hero-eyebrow {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--white);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 8px 20px;
+  border-radius: 30px;
+  margin-bottom: 24px;
+}
+
+.hero h1 {
+  font-size: clamp(2.6rem, 6vw, 4.8rem);
+  font-weight: 800;
+  color: var(--white);
+  margin-bottom: 20px;
+}
+
+.hero-sub {
+  font-size: 1.15rem;
+  color: rgba(240, 244, 255, 0.75);
+  margin-bottom: 36px;
+  line-height: 1.7;
+  max-width: 620px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--white);
+  padding: 16px 36px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background 0.3s ease, transform 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+.btn-ghost {
+  display: inline-block;
+  color: var(--white);
+  padding: 16px 36px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  border: 1px solid rgba(240, 244, 255, 0.3);
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-ghost:hover {
+  border-color: var(--white);
+  transform: translateY(-2px);
+}
+
+/* ABOUT */
+.about {
+  padding: 100px 0;
+  background: var(--dark);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.about-card {
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  padding: 40px 36px;
+}
+
+.section-badge {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+
+.about-card h2 {
+  font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+  font-weight: 800;
+  margin-bottom: 24px;
+}
+
+.about-card p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: rgba(240, 244, 255, 0.6);
+  margin-bottom: 16px;
+}
+
+.about-card p:last-child {
+  margin-bottom: 0;
+}
+
+.value-badges {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.value-badge {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-left: 3px solid var(--accent);
+  border-radius: 12px;
+  padding: 24px 20px;
+}
+
+.value-badge-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  background: rgba(59, 130, 246, 0.25);
+  border: 1px solid rgba(59, 130, 246, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.value-badge-icon svg {
+  width: 24px;
+  height: 24px;
+  stroke: var(--accent);
+  fill: none;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.value-badge-text {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+/* SERVICES */
+.services {
+  padding: 100px 0;
+  background: var(--card);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-header h2 {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.section-header p {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  color: var(--muted);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px;
+}
+
+.service-card {
+  background: rgba(4, 13, 31, 0.6);
+  border: 1px solid var(--card-border);
+  border-top: 3px solid var(--primary);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 40px rgba(59, 130, 246, 0.2);
+}
+
+.service-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.service-content {
+  padding: 32px 28px;
+}
+
+.service-icon {
+  color: var(--accent);
+  margin-bottom: 18px;
+  width: 44px;
+  height: 44px;
+  background: rgba(59, 130, 246, 0.25);
+  border: 1px solid rgba(59, 130, 246, 0.4);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-icon svg {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  stroke: var(--accent);
+  fill: none;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.service-card h3 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: rgba(240, 244, 255, 0.6);
+}
+
+/* WHY CHOOSE US */
+.why-us {
+  padding: 100px 0;
+  background: var(--dark);
+}
+
+.why-us-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.why-us-content h2 {
+  font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+  font-weight: 800;
+  margin-bottom: 24px;
+}
+
+.why-us-content p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: rgba(240, 244, 255, 0.6);
+  margin-bottom: 32px;
+}
+
+.why-us-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.why-us-item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.why-us-check {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: rgba(59, 130, 246, 0.25);
+  border: 1px solid var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2px;
+}
+
+.why-us-check svg {
+  width: 14px;
+  height: 14px;
+  stroke: var(--accent);
+  fill: none;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.why-us-text {
+  font-size: 1rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.why-us-image {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  height: 400px;
+}
+
+.why-us-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* FAQ */
+.faq {
+  padding: 100px 0;
+  background: var(--card);
+}
+
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.faq-item {
+  background: rgba(4, 13, 31, 0.6);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 28px 24px;
+}
+
+.faq-question {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.faq-question::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: var(--accent);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.faq-answer {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: rgba(240, 244, 255, 0.6);
+}
+
+/* HOURS & CONTACT */
+.hours-contact {
+  padding: 100px 0;
+  background: var(--dark);
+}
+
+.hours-contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+}
+
+.hours-card, .contact-card {
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  padding: 40px 36px;
+}
+
+.hours-card h3, .contact-card h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 28px;
+}
+
+.hours-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.hours-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.hours-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.hours-day {
+  font-weight: 600;
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+.hours-time {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.contact-method {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.contact-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: rgba(59, 130, 246, 0.25);
+  border: 1px solid rgba(59, 130, 246, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contact-icon svg {
+  width: 22px;
+  height: 22px;
+  stroke: var(--accent);
+  fill: none;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.contact-details {
+  flex: 1;
+}
+
+.contact-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 4px;
+}
+
+.contact-value {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.contact-value a {
+  color: var(--accent);
+  transition: color 0.3s ease;
+}
+
+.contact-value a:hover {
+  color: var(--primary);
+}
+
+/* CTA SECTION */
+#cta-section {
+  position: relative;
+  padding: 100px 0;
+  overflow: hidden;
+  background-image: url('/shared/contact-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+#cta-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(4, 13, 31, 0.8) 0%, rgba(4, 13, 31, 0.85) 50%, rgba(4, 13, 31, 0.9) 100%);
+  pointer-events: none;
+}
+
+.cta-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.cta-content h2 {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.cta-content p {
+  font-size: 1.1rem;
+  color: rgba(240, 244, 255, 0.75);
+  margin-bottom: 36px;
+  line-height: 1.7;
+}
+
+/* FOOTER */
+footer {
+  background: #020513;
+  border-top: 1px solid rgba(59, 130, 246, 0.2);
+  padding: 40px 0;
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+}
+
+.footer-col h4 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 16px;
+}
+
+.footer-col p, .footer-col a {
+  font-size: 0.95rem;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.footer-col a {
+  display: block;
+  transition: color 0.3s ease;
+}
+
+.footer-col a:hover {
+  color: var(--accent);
+}
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: 40px auto 0;
+  padding: 40px 24px 0;
+  border-top: 1px solid rgba(59, 130, 246, 0.2);
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .about-grid, .why-us-grid, .hours-contact-grid, .footer-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    margin-top: 56px;
+  }
+
+  .nav-inner {
+    padding: 12px 16px;
+  }
+
+  .nav-logo {
+    font-size: 1rem;
+  }
+
+  .nav-phone {
+    font-size: 0.85rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .btn-primary, .btn-ghost {
+    width: 100%;
+  }
+
+  .about, .services, .why-us, .faq, .hours-contact, #cta-section {
+    padding: 60px 0;
+  }
+
+  .why-us-image {
+    height: 280px;
+  }
+}
+
+.visual-strip { background: var(--dark, #04111e); padding: 0; }
+.visual-strip-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0; height: 340px; overflow: hidden; }
+.visual-strip-panel { overflow: hidden; position: relative; }
+.visual-strip-panel img { width: 100%; height: 100%; object-fit: cover; object-position: center; transition: transform 0.6s ease; }
+.visual-strip-panel:hover img { transform: scale(1.05); }
+.visual-strip-caption { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(4,13,31,0.85)); padding: 20px 20px 18px; pointer-events: none; }
+.visual-strip-label { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent, #e53e3e); margin-bottom: 4px; }
+.visual-strip-title { font-size: 0.95rem; font-weight: 700; color: #fff; }
+@media (max-width: 768px) { .visual-strip-grid { grid-template-columns: 1fr; height: auto; } .visual-strip-panel { height: 220px; } }
+
+.features { padding: 90px 0; background: var(--card, #071a2e); }
+.features-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 48px; max-width: 1100px; margin-left: auto; margin-right: auto; }
+.feature-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 32px 24px; text-align: center; }
+.feature-icon { font-size: 1.8rem; color: var(--accent, #2563eb); margin-bottom: 16px; }
+.feature-card h3 { font-size: 1rem; font-weight: 700; color: #fff; margin-bottom: 10px; }
+.feature-card p { font-size: 0.85rem; color: rgba(255,255,255,0.55); line-height: 1.6; margin: 0; }
+@media(max-width:900px){ .features-grid { grid-template-columns: 1fr 1fr; } }
+@media(max-width:500px){ .features-grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <div class="nav-logo">Test Drive Detailing</div>
+    <a href="tel:(720) 555-0199" class="nav-phone">
+      <svg viewBox="0 0 24 24">
+        <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+      </svg>
+      <span class="nav-phone-text">(720) 555-0199</span>
+    </a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Professional Mobile Detailing</div>
+    <h1>Boulder's Premier Auto Detailing Service</h1>
+    <p class="hero-sub">Professional detailing brought directly to your location. From exterior shine to interior pristine, we handle every detail with expert care.</p>
+    <div class="hero-buttons">
+      <a href="#hours-contact" class="btn-primary">Book Now</a>
+      <a href="#services" class="btn-ghost">View Services</a>
+    </div>
+  </div>
+</section>
+
+<!-- VISUAL STRIP -->
+<section class="visual-strip">
+  <div class="visual-strip-grid">
+    <div class="visual-strip-panel">
+      <img src="/shared/stock-exterior.jpg" alt="Exterior hand wash with foam mitt" loading="lazy">
+      <div class="visual-strip-caption">
+        <div class="visual-strip-label">EXTERIOR</div>
+        <div class="visual-strip-title">Hand Wash &amp; Polish</div>
+      </div>
+    </div>
+    <div class="visual-strip-panel">
+      <img src="/shared/stock-interior-steam.jpg" alt="Interior steam cleaning detail" loading="lazy">
+      <div class="visual-strip-caption">
+        <div class="visual-strip-label">INTERIOR</div>
+        <div class="visual-strip-title">Steam Deep Clean</div>
+      </div>
+    </div>
+    <div class="visual-strip-panel">
+      <img src="/shared/stock-interior-vacuum.jpg" alt="Interior vacuum and upholstery detail" loading="lazy">
+      <div class="visual-strip-caption">
+        <div class="visual-strip-label">INTERIOR</div>
+        <div class="visual-strip-title">Vacuum &amp; Upholstery</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about">
+  <div class="container">
+    <div class="about-grid">
+      <div>
+        <div class="about-card">
+          <span class="section-badge">About Us</span>
+          <h2>Family-Owned Auto Detailing Excellence</h2>
+          <p>Test Drive Detailing is a family-run mobile detailing service serving Boulder and the surrounding areas since 2021. We bring professional-grade car care directly to your driveway, saving you time and delivering outstanding results.</p>
+          <p>With over three years of experience, we've built our reputation on attention to detail, customer satisfaction, and a genuine passion for making vehicles shine.</p>
+        </div>
+      </div>
+      <div>
+        <div class="value-badges">
+          <div class="value-badge">
+            <div class="value-badge-icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M9 12l2 2 4-4m7 0a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </div>
+            <div class="value-badge-text">Expert Technicians with proven track record</div>
+          </div>
+          <div class="value-badge">
+            <div class="value-badge-icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+              </svg>
+            </div>
+            <div class="value-badge-text">Mobile service comes to you for convenience</div>
+          </div>
+          <div class="value-badge">
+            <div class="value-badge-icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </div>
+            <div class="value-badge-text">Flexible scheduling to fit your lifestyle</div>
+          </div>
+          <div class="value-badge">
+            <div class="value-badge-icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
+              </svg>
+            </div>
+            <div class="value-badge-text">Premium products for lasting protection</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-header">
+      <h2>Our Detailing Services</h2>
+      <p>Comprehensive auto detailing solutions tailored to your vehicle's needs and your budget.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <img src="/shared/stock-exterior.jpg" alt="Exterior Wash and Wax" class="service-image">
+        <div class="service-content">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M20.84 4.61a5.5 5.5 0 01-7.78 7.78l-8.5-8.5a5.5 5.5 0 017.78-7.78l8.5 8.5z"/>
+              <line x1="12" y1="12" x2="12" y2="12"/>
+            </svg>
+          </div>
+          <h3>Exterior Wash & Wax</h3>
+          <p>Professional hand wash, protective wax coating, and wheel detailing to restore your vehicle's showroom shine and protect against the elements.</p>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <img src="/shared/stock-interior-steam.jpg" alt="Interior Detailing" class="service-image">
+        <div class="service-content">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 2a10 10 0 110 20 10 10 0 010-20z"/>
+            </svg>
+          </div>
+          <h3>Interior Detailing</h3>
+          <p>Deep cleaning of cabin surfaces, steam extraction, carpet and upholstery treatment, and odor elimination for a fresh, pristine interior.</p>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <img src="/shared/stock-interior-vacuum.jpg" alt="Full Detail Package" class="service-image">
+        <div class="service-content">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <h3>Full Detail Package</h3>
+          <p>Complete transformation combining exterior wash and wax with comprehensive interior detailing for total vehicle refresh.</p>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <img src="/shared/stock-ceramic-coating.jpg" alt="Ceramic Coating" class="service-image">
+        <div class="service-content">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 2a10 10 0 110 20 10 10 0 010-20z"/>
+            </svg>
+          </div>
+          <h3>Ceramic Coating</h3>
+          <p>Advanced protective coating that bonds to your clear coat, providing long-lasting water repellency, gloss enhancement, and scratch resistance.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="why-us">
+  <div class="container">
+    <div class="why-us-grid">
+      <div class="why-us-content">
+        <span class="section-badge">Why Choose Us</span>
+        <h2>Boulder's Trusted Detailing Partner</h2>
+        <p>We combine professional expertise with personalized service to exceed your expectations every time.</p>
+        <div class="why-us-list">
+          <div class="why-us-item">
+            <div class="why-us-check">
+              <svg viewBox="0 0 24 24">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+            </div>
+            <div class="why-us-text">Mobile convenience - we come to you at home or work</div>
+          </div>
+          <div class="why-us-item">
+            <div class="why-us-check">
+              <svg viewBox="0 0 24 24">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+            </div>
+            <div class="why-us-text">Premium eco-friendly products and sustainable practices</div>
+          </div>
+          <div class="why-us-item">
+            <div class="why-us-check">
+              <svg viewBox="0 0 24 24">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+            </div>
+            <div class="why-us-text">Flexible scheduling to fit your busy Boulder lifestyle</div>
+          </div>
+          <div class="why-us-item">
+            <div class="why-us-check">
+              <svg viewBox="0 0 24 24">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+            </div>
+            <div class="why-us-text">Family business dedicated to long-term customer relationships</div>
+          </div>
+        </div>
+      </div>
+      <div class="why-us-image">
+        <img src="/shared/stock-exterior.jpg" alt="Professional detailing in action">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="container">
+    <div class="section-header">
+      <h2>Frequently Asked Questions</h2>
+      <p>Everything you need to know about our detailing services in Boulder.</p>
+    </div>
+    <div class="faq-container">
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-question">What areas of Boulder do you service?</div>
+          <div class="faq-answer">We provide mobile detailing throughout Boulder, Colorado and the surrounding metro areas. Our mobile service means we come to your home, office, or preferred location for maximum convenience.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">How long does a typical detailing session take?</div>
+          <div class="faq-answer">Exterior wash and wax typically takes 2-3 hours. Interior detailing takes 1-2 hours depending on vehicle size. Full detail packages usually require 4-5 hours. We can provide more precise estimates based on your vehicle's specific condition.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">What is ceramic coating and how long does it last?</div>
+          <div class="faq-answer">Ceramic coating is a premium protective layer that bonds to your vehicle's clear coat, providing superior protection against UV rays, dirt, and contaminants. Quality ceramic coating can last 2-3 years or longer with proper maintenance and care.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">Do you offer any package deals or discounts?</div>
+          <div class="faq-answer">Yes, we offer discounted rates for our Full Detail Package and special pricing for multiple vehicles. Contact us to discuss custom packages tailored to your needs and budget.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">What happens if it rains during my scheduled detailing?</div>
+          <div class="faq-answer">We monitor weather conditions and reschedule if heavy rain is forecasted. Light rain won't affect our work as we use professional-grade water repellent products. We can discuss flexible rescheduling options based on Boulder's weather patterns.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hours-contact" id="hours-contact">
+  <div class="container">
+    <div class="hours-contact-grid">
+      <div class="hours-card">
+        <h3>Business Hours</h3>
+        <div class="hours-list">
+          <div class="hours-row">
+            <span class="hours-day">Monday</span>
+            <span class="hours-time">8:00 AM - 6:00 PM</span>
+          </div>
+          <div class="hours-row">
+            <span class="hours-day">Tuesday</span>
+            <span class="hours-time">8:00 AM - 6:00 PM</span>
+          </div>
+          <div class="hours-row">
+            <span class="hours-day">Wednesday</span>
+            <span class="hours-time">8:00 AM - 6:00 PM</span>
+          </div>
+          <div class="hours-row">
+            <span class="hours-day">Thursday</span>
+            <span class="hours-time">8:00 AM - 6:00 PM</span>
+          </div>
+          <div class="hours-row">
+            <span class="hours-day">Friday</span>
+            <span class="hours-time">8:00 AM - 6:00 PM</span>
+          </div>
+          <div class="hours-row">
+            <span class="hours-day">Saturday</span>
+            <span class="hours-time">9:00 AM - 4:00 PM</span>
+          </div>
+          <div class="hours-row">
+            <span class="hours-day">Sunday</span>
+            <span class="hours-time">Closed</span>
+          </div>
+        </div>
+      </div>
+      <div class="contact-card">
+        <h3>Get In Touch</h3>
+        <div class="contact-info">
+          <div class="contact-method">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+              </svg>
+            </div>
+            <div class="contact-details">
+              <div class="contact-label">Phone</div>
+              <div class="contact-value"><a href="tel:(720) 555-0199">(720) 555-0199</a></div>
+            </div>
+          </div>
+          <div class="contact-method">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+              </svg>
+            </div>
+            <div class="contact-details">
+              <div class="contact-label">Email</div>
+              <div class="contact-value"><a href="mailto:testdrive@gmail.com">testdrive@gmail.com</a></div>
+            </div>
+          </div>
+          <div class="contact-method">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+              </svg>
+            </div>
+            <div class="contact-details">
+              <div class="contact-label">Service Area</div>
+              <div class="contact-value">Boulder, Colorado</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="cta-section">
+  <div class="container">
+    <div class="cta-content">
+      <h2>Ready for a Showroom Shine?</h2>
+      <p>Let Test Drive Detailing transform your vehicle. Call now to schedule your mobile detailing appointment in Boulder.</p>
+      <a href="tel:(720) 555-0199" class="btn-primary">Call (720) 555-0199</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-col">
+      <h4>Company</h4>
+      <p>Test Drive Detailing is your family-owned mobile auto detailing service in Boulder, Colorado since 2021.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <a href="#services">Exterior Wash & Wax</a>
+      <a href="#services">Interior Detailing</a>
+      <a href="#services">Full Detail Package</a>
+      <a href="#services">Ceramic Coating</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <a href="tel:(720) 555-0199">(720) 555-0199</a>
+      <a href="mailto:testdrive@gmail.com">testdrive@gmail.com</a>
+      <p>Boulder, Colorado</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2024 Test Drive Detailing. All rights reserved. Professional auto detailing services in Boulder, CO.</p>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Test Drive Detailing",
+  "image": "/shared/stock-exterior.jpg",
+  "description": "Family-run mobile auto detailing service in Boulder, Colorado providing exterior wash, interior detailing, full detail packages, and ceramic coating.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Boulder",
+    "addressRegion": "CO",
+    "postalCode": "80301",
+    "addressCountry": "US"
+  },
+  "telephone": "(720) 555-0199",
+  "email": "testdrive@gmail.com",
+  "url": "https://testdrivedetailing.com",
+  "priceRange": "$$",
+  "areaServed": "Boulder, CO",
+  "foundingDate": "2021",
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "08:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "09:00",
+      "closes": "16:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Sunday",
+      "closes": "00:00"
+    }
+  ],
+  "serviceType": ["Auto Detailing", "Car Wash", "Interior Detailing", "Ceramic Coating"],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "78"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What areas of Boulder do you service?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We provide mobile detailing throughout Boulder, Colorado and the surrounding metro areas. Our mobile service means we come to your home, office, or preferred location for maximum convenience."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does a typical detailing session take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Exterior wash and wax typically takes 2-3 hours. Interior detailing takes 1-2 hours depending on vehicle size. Full detail packages usually require 4-5 hours. We can provide more precise estimates based on your vehicle's specific condition."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is ceramic coating and how long does it last?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ceramic coating is a premium protective layer that bonds to your vehicle's clear coat, providing superior protection against UV rays, dirt, and contaminants. Quality ceramic coating can last 2-3 years or longer with proper maintenance and care."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer any package deals or discounts?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we offer discounted rates for our Full Detail Package and special pricing for multiple vehicles. Contact us to discuss custom packages tailored to your needs and budget."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens if it rains during my scheduled detailing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We monitor weather conditions and reschedule if heavy rain is forecasted. Light rain won't affect our work as we use professional-grade water repellent products. We can discuss flexible rescheduling options based on Boulder's weather patterns."
+      }
+    }
+  ]
+}
+</script>
+
+</body>
+</html>
