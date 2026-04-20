@@ -3,33 +3,34 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Precision Auto Spa | Palm Beach County, FL</title>
-<meta name="description" content="Precision Auto Spa PB, LLC offers ceramic coating, paint correction, window tinting and full detailing in Palm Beach County, FL. 25 years of excellence. Call (561) 628-9763.">
+<title>Precision Auto Spa | Auto Detailing in Ronkonkoma, NY</title>
+<meta name="description" content="Precision Auto Spa in Ronkonkoma, NY. Professional auto detailing services. (934) 212-1186.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root {
-  --red:    #cc1f1f;
-  --red-hover: #aa1515;
-  --bg:     #ffffff;
-  --card:   #f7f7f7;
-  --dark:   #111111;
-  --navy:   #111111;
-  --text:   #1a1a1a;
-  --muted:  rgba(26,26,26,0.55);
-  --border: rgba(204,31,31,0.2);
-  --card-border: rgba(204,31,31,0.15);
+  --primary: #1e3a8a;
+  --primary-hover: #11204b;
+  --primary-rgb: 30,58,138;
+  --accent: #e03e3e;
+  --dark: #040d1f;
+  --card: #0a1528;
+  --white: #ffffff;
+  --text: #f0f4ff;
+  --muted: rgba(240,244,255,0.55);
+  --border: rgba(var(--primary-rgb),0.4);
+  --card-border: rgba(var(--primary-rgb),0.3);
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 
-body { background:#ffffff; color:#1a1a1a;
+body {
   font-family: 'Inter', sans-serif;
   color: var(--muted);
   line-height: 1.7;
-  background: #ffffff;
+  background: var(--dark);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -53,9 +54,14 @@ nav {
   top: 0;
   left: 0;
   right: 0;
-  background: #000000;
-  border-bottom: 1px solid rgba(204,31,31,0.2);
+  background: #040d1f;
+  border-bottom: 1px solid rgba(var(--primary-rgb),0.3);
   z-index: 1000;
+  transition: box-shadow 0.3s ease;
+}
+
+nav.scrolled {
+  box-shadow: 0 2px 20px rgba(0,0,0,0.3);
 }
 
 .nav-inner {
@@ -67,71 +73,29 @@ nav {
   justify-content: space-between;
 }
 
-.nav-logo-wrap {
+.nav-logo {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.nav-phone {
+  font-weight: 600;
+  color: var(--accent);
+  font-size: 0.95rem;
   display: flex;
   align-items: center;
+  gap: 8px;
 }
 
-.nav-logo-wrap img {
-  height: 48px;
-  width: auto;
-  display: block;
+.nav-phone svg {
+  width: 18px;
+  height: 18px;
+  fill: var(--accent);
 }
-
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 32px;
-}
-
-.nav-links a {
-  font-size: 0.88rem;
-  font-weight: 500;
-  color: rgba(240,244,255,0.7);
-  transition: color 0.3s;
-}
-
-.nav-links a:hover {
-  color: var(--red);
-}
-
-.hamburger {
-  display: none;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 4px;
-}
-
-.hamburger svg {
-  width: 28px;
-  height: 28px;
-  stroke: var(--text);
-}
-
-.mobile-menu {
-  display: none;
-  position: fixed;
-  top: 76px;
-  left: 0;
-  right: 0;
-  background: #ffffff;
-  border-bottom: 1px solid var(--card-border);
-  padding: 20px 24px;
-  z-index: 999;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.mobile-menu.open {
-  display: flex;
-}
-
-.mobile-menu a {
-  font-size: 1rem;
-  font-weight: 500;
-  color: rgba(240,244,255,0.7);
-  padding: 8px 0;
+@media (max-width: 768px) {
+  .nav-phone-text { display: none; }
 }
 
 /* HERO */
@@ -147,12 +111,7 @@ nav {
 .hero-bg {
   position: absolute;
   inset: 0;
-}
-
-.hero-bg img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  background: url('https://yourwebsiteexample.com/shared/hero.jpg') center/cover no-repeat;
   animation: slowZoom 20s ease-in-out infinite alternate;
 }
 
@@ -177,7 +136,7 @@ nav {
 
 .hero-eyebrow {
   display: inline-block;
-  background: var(--red);
+  background: var(--accent);
   color: var(--white);
   font-size: 0.7rem;
   font-weight: 700;
@@ -197,7 +156,7 @@ nav {
 
 .hero-sub {
   font-size: 1.15rem;
-  color: rgba(26,26,26,0.7);
+  color: rgba(240,244,255,0.75);
   margin-bottom: 36px;
   line-height: 1.7;
   max-width: 620px;
@@ -210,12 +169,11 @@ nav {
   gap: 16px;
   justify-content: center;
   flex-wrap: wrap;
-  margin-bottom: 40px;
 }
 
 .btn-primary {
   display: inline-block;
-  background: var(--red);
+  background: var(--accent);
   color: var(--white);
   padding: 16px 36px;
   border-radius: 8px;
@@ -227,7 +185,7 @@ nav {
 }
 
 .btn-primary:hover {
-  background: var(--red-hover);
+  background: var(--primary-hover);
   transform: translateY(-2px);
 }
 
@@ -240,7 +198,6 @@ nav {
   font-size: 1rem;
   border: 1px solid rgba(240,244,255,0.3);
   transition: border-color 0.3s ease, transform 0.3s ease;
-  cursor: pointer;
 }
 
 .btn-ghost:hover {
@@ -248,37 +205,10 @@ nav {
   transform: translateY(-2px);
 }
 
-.hero-stats {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 24px;
-  flex-wrap: wrap;
-  font-size: 0.85rem;
-  color: rgba(26,26,26,0.6);
-}
-
-.hero-stats span {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.hero-stats .stars {
-  color: #fbbf24;
-}
-
-.stat-divider {
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  background: rgba(240,244,255,0.25);
-}
-
 /* ABOUT */
 .about {
   padding: 100px 0;
-  background: #ffffff;
+  background: var(--dark);
 }
 
 .about-grid {
@@ -289,7 +219,7 @@ nav {
 }
 
 .about-card {
-  background: #ffffff;
+  background: var(--card);
   border: 1px solid var(--card-border);
   border-radius: 16px;
   padding: 40px 36px;
@@ -301,7 +231,7 @@ nav {
   font-weight: 700;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--red);
+  color: var(--accent);
   margin-bottom: 12px;
 }
 
@@ -314,13 +244,11 @@ nav {
 .about-card p {
   font-size: 1rem;
   line-height: 1.8;
-  color: rgba(26,26,26,0.6);
+  color: rgba(240,244,255,0.6);
   margin-bottom: 16px;
 }
 
-.about-card p:last-child {
-  margin-bottom: 0;
-}
+.about-card p:last-child { margin-bottom: 0; }
 
 .value-badges {
   display: flex;
@@ -332,9 +260,9 @@ nav {
   display: flex;
   align-items: center;
   gap: 16px;
-  background: #ffffff;
+  background: var(--card);
   border: 1px solid var(--card-border);
-  border-left: 3px solid var(--red);
+  border-left: 3px solid var(--accent);
   border-radius: 12px;
   padding: 24px 20px;
 }
@@ -343,7 +271,8 @@ nav {
   width: 48px;
   height: 48px;
   border-radius: 10px;
-  background: rgba(30,58,138,0.3);
+  background: rgba(var(--primary-rgb),0.25);
+  border: 1px solid rgba(var(--primary-rgb),0.4);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -353,7 +282,7 @@ nav {
 .value-badge-icon svg {
   width: 24px;
   height: 24px;
-  stroke: var(--red);
+  stroke: var(--accent);
   fill: none;
   stroke-width: 1.8;
   stroke-linecap: round;
@@ -366,10 +295,67 @@ nav {
   color: var(--text);
 }
 
+/* VISUAL STRIP */
+.visual-strip {
+  background: var(--dark);
+  padding: 0;
+}
+
+.visual-strip-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0;
+  height: 340px;
+  overflow: hidden;
+}
+
+.visual-strip-panel {
+  overflow: hidden;
+  position: relative;
+}
+
+.visual-strip-panel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.6s ease;
+}
+
+.visual-strip-panel:hover img {
+  transform: scale(1.05);
+}
+
+.visual-strip-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(4,13,31,0.85));
+  padding: 20px 20px 18px;
+  pointer-events: none;
+}
+
+.visual-strip-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 4px;
+}
+
+.visual-strip-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
 /* SERVICES */
 .services {
   padding: 100px 0;
-  background: #ffffff;
+  background: var(--card);
 }
 
 .section-header {
@@ -399,7 +385,7 @@ nav {
 .service-card {
   background: rgba(4,13,31,0.6);
   border: 1px solid var(--card-border);
-  border-top: 3px solid var(--blue);
+  border-top: 3px solid var(--primary);
   border-radius: 12px;
   padding: 32px 28px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -407,16 +393,16 @@ nav {
 
 .service-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 12px 40px rgba(30,58,138,0.2);
+  box-shadow: 0 12px 40px rgba(var(--primary-rgb),0.2);
 }
 
 .service-icon {
-  color: var(--red);
+  color: var(--accent);
   margin-bottom: 18px;
   width: 44px;
   height: 44px;
-  background: rgba(30,58,138,0.25);
-  border: 1px solid rgba(30,58,138,0.4);
+  background: rgba(var(--primary-rgb),0.25);
+  border: 1px solid rgba(var(--primary-rgb),0.4);
   border-radius: 10px;
   display: flex;
   align-items: center;
@@ -441,10 +427,56 @@ nav {
   color: var(--muted);
 }
 
+/* REVIEWS */
+.reviews {
+  padding: 80px 0;
+  background: var(--dark);
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.review-card {
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 32px 28px;
+}
+
+.review-stars {
+  color: #fbbf24;
+  font-size: 1.1rem;
+  margin-bottom: 16px;
+}
+
+.review-text {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: rgba(240,244,255,0.7);
+  margin-bottom: 16px;
+  font-style: italic;
+}
+
+.review-author {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+/* DIAGONAL DIVIDERS */
+.about { padding: 80px 0; }
+.services { padding: 80px 0; }
+
 /* CONTACT */
 .contact {
   padding: 100px 0;
-  background: #ffffff;
+  position: relative;
+  background:
+    linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.72)),
+    url('https://yourwebsiteexample.com/shared/contact-bg.jpg') center/cover no-repeat;
 }
 
 .contact-cards {
@@ -456,7 +488,7 @@ nav {
 }
 
 .contact-card {
-  background: #ffffff;
+  background: var(--card);
   border: 1px solid var(--card-border);
   border-radius: 12px;
   padding: 32px 28px;
@@ -467,7 +499,7 @@ nav {
   width: 52px;
   height: 52px;
   border-radius: 12px;
-  background: rgba(30,58,138,0.25);
+  background: rgba(var(--primary-rgb),0.25);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -477,7 +509,7 @@ nav {
 .contact-card-icon svg {
   width: 24px;
   height: 24px;
-  fill: var(--red);
+  fill: var(--accent);
 }
 
 .contact-card h3 {
@@ -493,26 +525,20 @@ nav {
 }
 
 .contact-card a {
-  color: var(--red);
+  color: var(--accent);
   transition: color 0.3s;
 }
 
-.contact-card a:hover {
-  color: var(--red-hover);
-}
-
-
+.contact-card a:hover { color: var(--primary-hover); }
 
 /* FOOTER */
 footer {
-  background: #ffffff;
+  background: var(--dark);
   padding: 60px 0 40px;
   border-top: 1px solid var(--card-border);
 }
 
-.footer-inner {
-  text-align: center;
-}
+.footer-inner { text-align: center; }
 
 .footer-brand {
   font-family: 'Plus Jakarta Sans', sans-serif;
@@ -536,13 +562,11 @@ footer {
 }
 
 .footer-details a {
-  color: rgba(26,26,26,0.6);
+  color: rgba(240,244,255,0.6);
   transition: color 0.3s;
 }
 
-.footer-details a:hover {
-  color: var(--red);
-}
+.footer-details a:hover { color: var(--accent); }
 
 .footer-bottom {
   border-top: 1px solid rgba(240,244,255,0.06);
@@ -552,14 +576,14 @@ footer {
 }
 
 .footer-bottom a {
-  color: var(--red);
+  color: var(--accent);
   font-weight: 600;
 }
 
 /* CTA SECTION */
 #cta-section {
   padding: 80px 0;
-  background: #ffffff;
+  background: var(--dark);
 }
 
 .cta-card {
@@ -577,7 +601,7 @@ footer {
   height: 110px;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid var(--red);
+  border: 3px solid var(--accent);
   margin: 0 auto 24px;
 }
 
@@ -607,9 +631,7 @@ footer {
   margin-bottom: 16px;
 }
 
-.cta-buttons .btn-primary {
-  padding: 14px 32px;
-}
+.cta-buttons .btn-primary { padding: 14px 32px; }
 
 .btn-outline {
   display: inline-block;
@@ -622,9 +644,7 @@ footer {
   transition: border-color 0.3s ease;
 }
 
-.btn-outline:hover {
-  border-color: var(--white);
-}
+.btn-outline:hover { border-color: var(--white); }
 
 .cta-email {
   font-size: 0.82rem;
@@ -632,19 +652,42 @@ footer {
 }
 
 .cta-email a {
-  color: rgba(26,26,26,0.6);
+  color: rgba(240,244,255,0.6);
   transition: color 0.3s;
 }
 
-.cta-email a:hover {
-  color: var(--red);
+.cta-email a:hover { color: var(--accent); }
+
+/* FADE ANIMATIONS */
+.fade-in {
+  opacity: 1;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* RESPONSIVE */
 @media (max-width: 960px) {
-  .nav-links { display: none; }
-  .hamburger { display: block; }
   .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .reviews-grid { grid-template-columns: 1fr; }
+  .visual-strip-grid { grid-template-columns: 1fr; height: auto; }
+  .visual-strip-panel { height: 220px; }
+  #kw-layout { grid-template-columns: 1fr !important; }
+  #kw-layout > div:last-child { position: static !important; }
+  #kw-layout > div:last-child a { width: 100% !important; box-sizing: border-box; }
+  #kw-header-desktop { display: none !important; }
+  #kw-header-mobile { display: grid !important; }
+  .fade-in { opacity: 1 !important; transform: translateY(0) !important; }
+  #elizabeth-cta { padding: 36px 28px; gap: 20px; flex-direction: column; align-items: center; text-align: center; overflow: hidden; }
+  #eliz-photo { order: 1; margin: 0 auto !important; flex-shrink: 0; display: block !important; }
+  #eliz-headline { order: 2; text-align: center !important; font-size: 1.35rem !important; flex: none !important; width: 100% !important; min-width: 0 !important; }
+  #eliz-btn { order: 3; display: block !important; width: 100% !important; max-width: 100% !important; text-align: center !important; box-sizing: border-box !important; white-space: normal !important; padding: 16px 20px !important; }
+  #eliz-contact { order: 4; text-align: center !important; width: 100%; min-width: 0; }
+  #eliz-tagline { order: 5; text-align: center; width: 100%; }
 }
 
 @media (max-width: 768px) {
@@ -652,7 +695,6 @@ footer {
   .contact-cards { grid-template-columns: 1fr; }
   .cta-card { padding: 36px 24px; }
   .cta-buttons { flex-direction: column; align-items: center; }
-  #kw-layout { grid-template-columns: 1fr !important; }
 }
 
 @media (max-width: 480px) {
@@ -666,349 +708,454 @@ footer {
   .nav-inner { padding: 12px 16px; }
 }
 </style>
-<meta property="og:title" content="Precision Auto Spa | Palm Beach County, FL">
-<meta property="og:description" content="Professional mobile car detailing in Palm Beach County, FL. We come to you. 53 five-star reviews.">
+<meta property="og:title" content="Precision Auto Spa | Ronkonkoma, NY">
+<meta property="og:description" content="Precision Auto Spa in Ronkonkoma, NY. Professional auto detailing services. (934) 212-1186.">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://yourwebsiteexample.com/precisionautospa/">
+<link rel="alternate" type="text/plain" href="/llms.txt">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "LocalBusiness",
-      "@id": "#business",
-      "name": "Precision Auto Spa PB, LLC",
-      "description": "Full-service mobile auto detailing in Palm Beach County, FL. Professional-grade products, state-of-the-art equipment, and complete customer satisfaction guaranteed.",
-      "telephone": "(561) 628-9763",
-      "email": "info@precisionautospamobile.com",
+      "@id": "https://yourwebsiteexample.com/precisionautospa/#business",
+      "name": "Precision Auto Spa",
+      "description": "Professional auto detailing in Ronkonkoma, NY. Professional car detailing that protects your investment and keeps your ride looking showroom fresh.",
+      "telephone": "(934) 212-1186",
+      "email": "info@precisionautospa.com",
       "address": {
         "@type": "PostalAddress",
-        "addressLocality": "Palm Beach County",
-        "addressRegion": "TX",
+        "addressLocality": "Ronkonkoma",
+        "addressRegion": "NY",
         "addressCountry": "US"
       },
-      "areaServed": ["Palm Beach County", "Dallas", "Mesquite", "Richardson", "Rowlett", "Sachse"],
-      "openingHours": "Mo-Sa 07:30-17:00",
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5",
-        "reviewCount": "53"
-      },
+      "areaServed": "Ronkonkoma, NY",
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "Services",
         "itemListElement": [
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Mobile Detailing" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Full Interior & Exterior Detail" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Buffing, Waxing & Shampooing" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Clay Bar Treatment" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Minor Scratch Removal" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pressure Washing" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Luxury Vehicle Services" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Commercial Vehicle Services" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Semi-Truck & Tow Truck Services" } }
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Full Detail"}},
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Exterior Wash & Polish"}},
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Interior Deep Clean"}},
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Ceramic Coating"}},
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Paint Correction"}},
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Window Tinting"}},
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Engine Bay Clean"}},
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Headlight Restoration"}},
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Odor Elimination"}},
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Mobile Service"}}
         ]
       }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://yourwebsiteexample.com/precisionautospa/#faq",
+      "mainEntity": [
+        {"@type":"Question","name":"How long does a full detail take?","acceptedAnswer":{"@type":"Answer","text":"Most full details take 3 to 5 hours depending on vehicle size and condition."}},
+        {"@type":"Question","name":"Do you offer mobile detailing?","acceptedAnswer":{"@type":"Answer","text":"Yes. We come to your home or office in Ronkonkoma and surrounding areas."}},
+        {"@type":"Question","name":"What is ceramic coating?","acceptedAnswer":{"@type":"Answer","text":"Ceramic coating is a liquid polymer applied to your vehicle's exterior that provides long-lasting protection and a deep gloss finish."}}
+      ]
     }
   ]
 }
 </script>
+<link rel="preload" as="image" href="https://yourwebsiteexample.com/shared/hero.jpg" fetchpriority="high">
 </head>
 <body>
 
 <!-- NAV -->
-<nav>
+<nav id="nav">
   <div class="nav-inner">
-    <a href="#">
-      <div class="nav-logo-wrap"><img src="./logo.jpg" alt="Precision Auto Spa" style="height:54px;width:auto;border-radius:4px;"></div>
+    <span class="nav-logo">Precision Auto Spa</span>
+    <a href="tel:9342121186" class="nav-phone">
+      <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.36 11.36 0 003.58.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.36 11.36 0 00.57 3.58 1 1 0 01-.24 1.01l-2.2 2.2z"/></svg>
+      <span class="nav-phone-text">(934) 212-1186</span>
     </a>
-    <div class="nav-links">
-      <a href="#services">Services</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </div>
-    <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.mobile-menu').classList.toggle('open')">
-      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-    </button>
   </div>
 </nav>
-<div class="mobile-menu">
-  <a href="#services" onclick="this.parentElement.classList.remove('open')">Services</a>
-  <a href="#about" onclick="this.parentElement.classList.remove('open')">About</a>
-  <a href="#contact" onclick="this.parentElement.classList.remove('open')">Contact</a>
-</div>
 
 <!-- HERO -->
 <section class="hero" id="home">
-  <div class="hero-bg">
-    <img src="./hero.jpg" alt="Professional mobile car detailing in Palm Beach County FL" loading="eager" fetchpriority="high">
-  </div>
+  <div class="hero-bg"></div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <span class="hero-eyebrow">GARLAND, TX &middot; 53 FIVE-STAR REVIEWS</span>
-    <h1>Palm Beach County's Premier Auto Spa</h1>
-    <p class="hero-sub">Professional-grade products. State-of-the-art equipment. Premium products, cutting-edge techniques, and 25 years of passion for excellence.</p>
+    <span class="hero-eyebrow">Ronkonkoma, NY &middot; AUTO DETAILING</span>
+    <h1>Ronkonkoma's Premier Auto Detailing</h1>
+    <p class="hero-sub">Professional car detailing that protects your investment and keeps your ride looking showroom fresh.</p>
     <div class="hero-buttons">
       <a href="#contact" class="btn-primary">Book Your Detail &rarr;</a>
-      <a href="tel:5616289763" class="btn-ghost">(561) 628-9763</a>
-    </div>
-    <div class="hero-stats">
-      <span>Ceramic Coating</span>
-      <span class="stat-divider"></span>
-      <span><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>&nbsp;53 Reviews</span>
-      <span class="stat-divider"></span>
-      <span>Palm Beach County, FL</span>
+      <a href="tel:9342121186" class="btn-ghost">(934) 212-1186</a>
     </div>
   </div>
 </section>
 
 <!-- ABOUT -->
-<section class="about" style="background:#f7f7f7" id="about">
+<section class="about fade-in" id="about">
   <div class="container">
     <div class="about-grid">
-      <div class="about-card" style="background:#fff;color:#1a1a1a;">
-        <span class="section-badge" style="color:#cc1f1f;">About Us</span>
-        <h2 style="color:#111111;font-size:clamp(1.8rem,3.5vw,2.4rem);font-weight:800;margin-bottom:20px;">25 Years of Precision. Zero Compromise.</h2>
-        <p style="color:#444444;font-size:1rem;line-height:1.8;margin-bottom:16px;">Precision Auto Spa PB, LLC has been serving Palm Beach County since 2000. With over 25 years of expert detailing and a passion for excellence, our team uses only premium products and cutting-edge techniques to deliver flawless results that protect and enhance your car's value.</p>
-        <p style="color:#444444;font-size:1rem;line-height:1.8;">Whether you need a full detail, swirl-free paint correction, or a ceramic coating, we offer flexible packages to fit your lifestyle and vehicle needs. Schedule your free consultation today.</p>
+      <div class="about-card">
+        <span class="section-badge">About Us</span>
+        <h2>Precision Meets Local Service</h2>
+        <p>Precision Auto Spa brings professional-grade detailing to Ronkonkoma. We handle every vehicle like it's our own, using proven techniques and quality products that deliver real results.</p>
+        <p>Your car deserves better than a quick wash. We're committed to protecting your paint, preserving your interior, and keeping your vehicle looking pristine year-round.</p>
       </div>
       <div class="value-badges">
-        <div class="value-badge">
+        <div class="value-badge fade-in">
           <div class="value-badge-icon">
             <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
           </div>
-          <span class="value-badge-text">Ceramic Coating Experts</span>
+          <span class="value-badge-text">Expert Paint Protection</span>
         </div>
-        <div class="value-badge">
+        <div class="value-badge fade-in">
           <div class="value-badge-icon">
             <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
           </div>
-          <span class="value-badge-text">Premium Products Only</span>
+          <span class="value-badge-text">Deep Interior Cleaning</span>
         </div>
-        <div class="value-badge">
+        <div class="value-badge fade-in">
           <div class="value-badge-icon">
             <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
           </div>
-          <span class="value-badge-text">Serving PBC Since 2000</span>
+          <span class="value-badge-text">Local Ronkonkoma Service</span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- VISUAL BREAK -->
-<section style="background:#ffffff;padding:0 0 0;">
-  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;height:340px;overflow:hidden;">
-    <div style="overflow:hidden;position:relative;">
-      <img src="./stock-exterior.jpg" alt="Exterior hand wash with foam mitt" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center;transition:transform 0.6s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-      <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(4,13,31,0.85));padding:20px 20px 18px;pointer-events:none;">
-        <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#cc1f1f;margin-bottom:4px;">EXTERIOR</div>
-        <div style="font-size:0.95rem;font-weight:700;color:#1a1a1a;font-family:'Plus Jakarta Sans',sans-serif;">Hand Wash &amp; Polish</div>
+<!-- VISUAL STRIP -->
+<section class="visual-strip">
+  <div class="visual-strip-grid">
+    <div class="visual-strip-panel">
+      <img src="https://yourwebsiteexample.com/shared/stock-exterior.jpg" alt="Exterior hand wash with foam mitt" loading="lazy">
+      <div class="visual-strip-caption">
+        <div class="visual-strip-label">EXTERIOR</div>
+        <div class="visual-strip-title">Hand Wash &amp; Polish</div>
       </div>
     </div>
-    <div style="overflow:hidden;position:relative;">
-      <img src="./stock-interior-steam.jpg" alt="Interior steam cleaning detail" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center;transition:transform 0.6s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-      <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(4,13,31,0.85));padding:20px 20px 18px;pointer-events:none;">
-        <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#cc1f1f;margin-bottom:4px;">INTERIOR</div>
-        <div style="font-size:0.95rem;font-weight:700;color:#1a1a1a;font-family:'Plus Jakarta Sans',sans-serif;">Steam Deep Clean</div>
+    <div class="visual-strip-panel">
+      <img src="https://yourwebsiteexample.com/shared/stock-interior-steam.jpg" alt="Interior steam cleaning detail" loading="lazy">
+      <div class="visual-strip-caption">
+        <div class="visual-strip-label">INTERIOR</div>
+        <div class="visual-strip-title">Steam Deep Clean</div>
       </div>
     </div>
-    <div style="overflow:hidden;position:relative;">
-      <img src="./stock-interior-vacuum.jpg" alt="Interior vacuum and upholstery detail" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center;transition:transform 0.6s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-      <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(4,13,31,0.85));padding:20px 20px 18px;pointer-events:none;">
-        <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#cc1f1f;margin-bottom:4px;">INTERIOR</div>
-        <div style="font-size:0.95rem;font-weight:700;color:#1a1a1a;font-family:'Plus Jakarta Sans',sans-serif;">Vacuum &amp; Upholstery</div>
+    <div class="visual-strip-panel">
+      <img src="https://yourwebsiteexample.com/shared/stock-interior-vacuum.jpg" alt="Interior vacuum and upholstery detail" loading="lazy">
+      <div class="visual-strip-caption">
+        <div class="visual-strip-label">INTERIOR</div>
+        <div class="visual-strip-title">Vacuum &amp; Upholstery</div>
       </div>
     </div>
   </div>
 </section>
 
-<style>
-@media(max-width:640px){
-  .fc-visual-strip { grid-template-columns:1fr !important; height:auto !important; }
-  .fc-visual-strip > div { height:220px; }
-}
-</style>
-
 <!-- SERVICES -->
-<section class="services" id="services" style="background:#ffffff;">
+<section class="services" id="services">
   <div class="container">
-    <div style="text-align:center;margin-bottom:48px;">
-      <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#cc1f1f;margin-bottom:10px;">WHAT WE OFFER</div>
-      <h2 style="font-size:clamp(1.8rem,3.5vw,2.4rem);font-weight:800;color:#111111;font-family:'Plus Jakarta Sans',sans-serif;">Everything Your Vehicle Deserves</h2>
+    <div class="section-header fade-in">
+      <span class="section-badge">Our Services</span>
+      <h2>Everything Your Vehicle Needs</h2>
+      <p>From mobile convenience to paint correction, we handle it all with professional-grade care.</p>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;">
-      <div style="background:#fff;border:1px solid #e8e8e8;border-radius:12px;padding:28px;box-shadow:0 2px 12px rgba(0,0,0,0.06);"><div style="color:#cc1f1f;margin-bottom:14px;"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg></div><h3 style="color:#111111;font-size:1rem;font-weight:700;margin-bottom:8px;">Paint Correction</h3><p style="color:rgba(26,26,26,0.65);font-size:0.88rem;line-height:1.6;">Swirl-free multi-stage paint correction restoring your vehicle to a flawless mirror-like shine.</p></div>
-      <div style="background:#fff;border:1px solid #e8e8e8;border-radius:12px;padding:28px;box-shadow:0 2px 12px rgba(0,0,0,0.06);"><div style="color:#cc1f1f;margin-bottom:14px;"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3 style="color:#111111;font-size:1rem;font-weight:700;margin-bottom:8px;">Ceramic Coating</h3><p style="color:rgba(26,26,26,0.65);font-size:0.88rem;line-height:1.6;">Long-lasting nano-ceramic protection that repels water, dirt, and UV damage for years of shine.</p></div>
-      <div style="background:#fff;border:1px solid #e8e8e8;border-radius:12px;padding:28px;box-shadow:0 2px 12px rgba(0,0,0,0.06);"><div style="color:#cc1f1f;margin-bottom:14px;"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div><h3 style="color:#111111;font-size:1rem;font-weight:700;margin-bottom:8px;">Window Tinting</h3><p style="color:rgba(26,26,26,0.65);font-size:0.88rem;line-height:1.6;">Professional window tinting for UV protection, heat reduction, and a clean finished look.</p></div>
-      <div style="background:#fff;border:1px solid #e8e8e8;border-radius:12px;padding:28px;box-shadow:0 2px 12px rgba(0,0,0,0.06);"><div style="color:#cc1f1f;margin-bottom:14px;"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div><h3 style="color:#111111;font-size:1rem;font-weight:700;margin-bottom:8px;">Paint Protection Film</h3><p style="color:rgba(26,26,26,0.65);font-size:0.88rem;line-height:1.6;">Virtually invisible PPF shields your vehicle from rock chips, scratches, and road debris.</p></div>
-      <div style="background:#fff;border:1px solid #e8e8e8;border-radius:12px;padding:28px;box-shadow:0 2px 12px rgba(0,0,0,0.06);"><div style="color:#cc1f1f;margin-bottom:14px;"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 10c-.83 0-1.5-.67-1.5-1.5v-5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5z"/><path d="M20.5 10H19V8.5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg></div><h3 style="color:#111111;font-size:1rem;font-weight:700;margin-bottom:8px;">Surface Decontamination</h3><p style="color:rgba(26,26,26,0.65);font-size:0.88rem;line-height:1.6;">Deep chemical and mechanical decontamination removing embedded contaminants and iron fallout.</p></div>
-      <div style="background:#fff;border:1px solid #e8e8e8;border-radius:12px;padding:28px;box-shadow:0 2px 12px rgba(0,0,0,0.06);"><div style="color:#cc1f1f;margin-bottom:14px;"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="6" width="22" height="13" rx="2"/><path d="M1 10h22"/></svg></div><h3 style="color:#111111;font-size:1rem;font-weight:700;margin-bottom:8px;">Full Interior &amp; Exterior Detail</h3><p style="color:rgba(26,26,26,0.65);font-size:0.88rem;line-height:1.6;">Complete top-to-bottom detail. Every surface cleaned, conditioned, and protected inside and out.</p></div>
-      <div style="background:#fff;border:1px solid #e8e8e8;border-radius:12px;padding:28px;box-shadow:0 2px 12px rgba(0,0,0,0.06);"><div style="color:#cc1f1f;margin-bottom:14px;"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div><h3 style="color:#111111;font-size:1rem;font-weight:700;margin-bottom:8px;">Paint Touch Ups</h3><p style="color:rgba(26,26,26,0.65);font-size:0.88rem;line-height:1.6;">Precise touch-up work addressing chips, scratches, and minor blemishes before they become bigger problems.</p></div>
-      <div style="background:#fff;border:1px solid #e8e8e8;border-radius:12px;padding:28px;box-shadow:0 2px 12px rgba(0,0,0,0.06);"><div style="color:#cc1f1f;margin-bottom:14px;"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/></svg></div><h3 style="color:#111111;font-size:1rem;font-weight:700;margin-bottom:8px;">Wheel Repairs</h3><p style="color:rgba(26,26,26,0.65);font-size:0.88rem;line-height:1.6;">Restore scuffed, curbed, or damaged wheels to their original finish. All wheel types and finishes.</p></div>
-      <div style="background:#fff;border:1px solid #e8e8e8;border-radius:12px;padding:28px;box-shadow:0 2px 12px rgba(0,0,0,0.06);"><div style="color:#cc1f1f;margin-bottom:14px;"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div><h3 style="color:#111111;font-size:1rem;font-weight:700;margin-bottom:8px;">Member Storage</h3><p style="color:rgba(26,26,26,0.65);font-size:0.88rem;line-height:1.6;">New indoor storage available for your vehicle. Safe, secure, and climate-controlled. Ask about membership packages.</p></div>
+    <div class="services-grid">
+
+      <div class="service-card fade-in">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+        <h3>Full Detail</h3>
+        <p>Complete interior and exterior detail. Every surface cleaned, conditioned, and protected.</p>
+      </div>
+      <div class="service-card fade-in">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12c0-2.2 1.8-4 4-4s4 1.8 4 4-1.8 4-4 4"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2"/></svg></div>
+        <h3>Exterior Wash &amp; Polish</h3>
+        <p>Hand wash, clay bar, polish, and wax. Your paint restored to a deep, mirror-like shine.</p>
+      </div>
+      <div class="service-card fade-in">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="18" rx="2"/><path d="M8 7v10M16 7v10M2 12h20"/></svg></div>
+        <h3>Interior Deep Clean</h3>
+        <p>Steam cleaning, shampooing, leather conditioning, and every crevice detailed by hand.</p>
+      </div>
+      <div class="service-card fade-in">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.5 0 10-4.5 10-10S17.5 2 12 2 2 6.5 2 12s4.5 10 10 10z"/><path d="M12 6v6l4 2"/></svg></div>
+        <h3>Ceramic Coating</h3>
+        <p>Long-lasting polymer protection that keeps your vehicle looking showroom-new for years.</p>
+      </div>
+      <div class="service-card fade-in">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+        <h3>Paint Correction</h3>
+        <p>Remove swirls, scratches, and oxidation. Multi-stage polish for a flawless finish.</p>
+      </div>
+      <div class="service-card fade-in">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 3v18"/></svg></div>
+        <h3>Window Tinting</h3>
+        <p>Professional-grade tint for UV protection, heat reduction, and a sleek look.</p>
+      </div>
+      <div class="service-card fade-in">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M8 6l-2-2M16 18l2 2M6 8l-2-2M18 16l2 2M4 12H2M22 12h-2M6 16l-2 2M18 8l2-2"/><circle cx="12" cy="12" r="4"/></svg></div>
+        <h3>Engine Bay Clean</h3>
+        <p>Detailed engine bay cleaning. Degreased, dressed, and looking factory-fresh.</p>
+      </div>
+      <div class="service-card fade-in">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg></div>
+        <h3>Headlight Restoration</h3>
+        <p>Foggy, yellowed headlights restored to crystal clarity for better visibility and looks.</p>
+      </div>
+      <div class="service-card fade-in">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2h8l4 10H4L8 2z"/><path d="M12 12v10"/><path d="M8 22h8"/></svg></div>
+        <h3>Odor Elimination</h3>
+        <p>Ozone treatment and deep extraction that removes odors at the source, not just masks them.</p>
+      </div>
+      <div class="service-card fade-in">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 0 0-8 8c0 5 8 13 8 13s8-8 8-13a8 8 0 0 0-8-8z"/></svg></div>
+        <h3>Mobile Service</h3>
+        <p>We come to you. Full detail at your home, office, or wherever your vehicle is parked.</p>
+      </div>
     </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews fade-in" id="reviews">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-badge">Testimonials</span>
+      <h2>What Our Customers Say</h2>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>"Highly recommend! My car interior was filthy and i didn’t even think it was possible to make it look new again. Thank you precision auto spa!"</blockquote>
+        <div class="reviewer">Rachel Silva</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>"My car hasn't looked so good since it was brand new. I couldn't have been happier with the attention to detail. There is not a missed spot inside or out. Will…"</blockquote>
+        <div class="reviewer">Bryan L</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>"Very happy with the job Dan did! My car looks great!!! I definitely would recommend Precision Auto Spa… Excellent 👍🏼"</blockquote>
+        <div class="reviewer">Annmarie Ellison</div>
+      </div>
+    </div>
+    <div class="reviews-footer">Rated 5.0 &#9733; on Google</div>
   </div>
 </section>
 
 <!-- CONTACT -->
-<section class="contact" style="background:#f7f7f7" id="contact">
+<section class="contact" id="contact">
   <div class="container">
-    <div class="section-header">
+    <div class="section-header fade-in">
       <span class="section-badge">Get In Touch</span>
       <h2>Contact Us</h2>
-      <p>Reach out to book your detail or ask any questions. We serve Palm Beach County, FL and surrounding areas.</p>
+      <p>Reach out to book your detail or ask any questions. We serve Ronkonkoma, NY and surrounding areas.</p>
     </div>
     <div class="contact-cards">
-      <div class="contact-card">
+      <div class="contact-card fade-in">
         <div class="contact-card-icon">
           <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1.02l-2.2 2.2z"/></svg>
         </div>
         <h3>Phone</h3>
-        <p><a href="tel:5616289763">(561) 628-9763</a></p>
+        <p><a href="tel:9342121186">(934) 212-1186</a></p>
       </div>
-      <div class="contact-card">
+      <div class="contact-card fade-in">
         <div class="contact-card-icon">
           <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
         </div>
         <h3>Email</h3>
-        <p><a href="mailto:info@precisionautospamobile.com">info@precisionautospamobile.com</a></p>
+        <p><a href="mailto:info@precisionautospa.com">info@precisionautospa.com</a></p>
       </div>
-      <div class="contact-card">
+      <div class="contact-card fade-in">
         <div class="contact-card-icon">
           <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
         </div>
         <h3>Hours</h3>
-        <p>Monday to Saturday 7:30AM to 5:00PM<br>Sunday Closed</p>
+        <p>Monday to Saturday: 8:00 AM to 6:00 PM<br>Sunday: Closed</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- FOOTER -->
-<footer style="background:#111111;color:#ffffff">
+<footer>
   <div class="container">
     <div class="footer-inner">
       <div class="footer-brand">Precision Auto Spa</div>
-      <p class="footer-tagline">Professional mobile auto detailing in Palm Beach County, FL</p>
+      <p class="footer-tagline">Professional auto detailing in Ronkonkoma, NY</p>
       <div class="footer-details">
-        Palm Beach County, FL and surrounding areas<br>
-        <a href="tel:5616289763">(561) 628-9763</a> &middot; <a href="mailto:info@precisionautospamobile.com">info@precisionautospamobile.com</a><br>
-        Monday to Saturday 7:30AM to 5:00PM &middot; Sunday Closed
+        2255 Louis Kossuth Ave<br>
+        <a href="tel:9342121186">(934) 212-1186</a> &middot; <a href="mailto:info@precisionautospa.com">info@precisionautospa.com</a>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2026 Precision Auto Spa PB, LLC. All rights reserved. Powered by <a href="https://zing-work.com" target="_blank">ZING</a>.</p>
+        <p>&copy; 2026 Precision Auto Spa. All rights reserved. Powered by <a href="https://zing.work" target="_blank">ZING</a>.</p>
       </div>
     </div>
   </div>
 </footer>
 
-<!-- SEO SECTION -->
-<section style="background:#0f1623;padding:80px 0;color:rgba(255,255,255,0.7);font-family:'Inter',sans-serif;">
-  <div style="max-width:1100px;margin:0 auto;padding:0 32px;">
-    <h2 style="color:white;font-size:clamp(1.8rem,3vw,2.4rem);text-align:center;margin-bottom:12px;font-family:inherit;">Your Local Competition is Already Online.</h2>
-    <p style="text-align:center;font-size:1.05rem;margin-bottom:40px;max-width:650px;margin-left:auto;margin-right:auto;color:rgba(255,255,255,0.6);">We looked at what Palm Beach County drivers search every month. Here's what you're missing.</p>
-    <div style="background:rgba(232,96,10,0.12);border:1px solid rgba(232,96,10,0.3);border-radius:10px;padding:20px 28px;text-align:center;margin-bottom:48px;font-size:1.05rem;color:#e8600a;font-weight:600;">~28,600 potential customers search for mobile car detailing services every month.</div>
-    <div id="kw-layout" style="display:grid;grid-template-columns:2fr 1fr;gap:40px;margin-bottom:60px;align-items:start;">
-      <div>
-        <div class="kw-dh" style="display:grid;grid-template-columns:1fr 90px 110px 100px;padding:10px 16px;background:rgba(255,255,255,0.04);border-bottom:1px solid rgba(255,255,255,0.08);gap:8px;">
-          <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.35);">Keyword</div>
-          <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.35);text-align:center;">Your Rank</div>
-          <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.35);text-align:center;">Competition</div>
-          <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.35);text-align:right;">Searches/mo</div>
-        </div>
-        <div class="kw-mh" style="display:none;grid-template-columns:1fr 60px 80px;padding:10px 14px;background:rgba(255,255,255,0.04);border-bottom:1px solid rgba(255,255,255,0.08);gap:6px;">
-          <div style="font-size:0.6rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.35);">Keyword</div>
-          <div style="font-size:0.6rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.35);text-align:center;">Rank</div>
-          <div style="font-size:0.6rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.35);text-align:right;">Searches</div>
-        </div>
-        <div id="kw-rows"></div>
-        <p style="font-size:0.68rem;color:rgba(255,255,255,0.25);margin-top:12px;">* Search volumes est. Data sourced from DataForSEO.</p>
-      </div>
-      <div style="border:1px solid rgba(232,96,10,0.3);border-radius:12px;background:rgba(232,96,10,0.06);padding:28px 24px;position:sticky;top:88px;">
-        <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#e8600a;margin-bottom:16px;">How We Fix This</div>
-        <div style="display:flex;flex-direction:column;gap:14px;">
-          <div style="display:flex;gap:12px;align-items:flex-start;"><span style="color:#e8600a;font-size:1rem;margin-top:1px;flex-shrink:0;">&#10003;</span><div><div style="font-size:0.88rem;font-weight:700;color:white;margin-bottom:2px;">50 Local Landing Pages</div><div style="font-size:0.76rem;color:rgba(255,255,255,0.45);line-height:1.5;">One page per keyword and service area, built to rank</div></div></div>
-          <div style="display:flex;gap:12px;align-items:flex-start;"><span style="color:#e8600a;font-size:1rem;margin-top:1px;flex-shrink:0;">&#10003;</span><div><div style="font-size:0.88rem;font-weight:700;color:white;margin-bottom:2px;">AI Chat</div><div style="font-size:0.76rem;color:rgba(255,255,255,0.45);line-height:1.5;">Converts visitors into booked jobs 24/7, even while you sleep</div></div></div>
-          <div style="display:flex;gap:12px;align-items:flex-start;"><span style="color:#e8600a;font-size:1rem;margin-top:1px;flex-shrink:0;">&#10003;</span><div><div style="font-size:0.88rem;font-weight:700;color:white;margin-bottom:2px;">SEO Keyword Strategy</div><div style="font-size:0.76rem;color:rgba(255,255,255,0.45);line-height:1.5;">Targeting the exact searches Palm Beach County drivers are making</div></div></div>
-          <div style="display:flex;gap:12px;align-items:flex-start;"><span style="color:#e8600a;font-size:1rem;margin-top:1px;flex-shrink:0;">&#10003;</span><div><div style="font-size:0.88rem;font-weight:700;color:white;margin-bottom:2px;">All Done For You</div><div style="font-size:0.76rem;color:rgba(255,255,255,0.45);line-height:1.5;">You run your business. We handle everything else.</div></div></div>
-        </div>
-        <a href="https://meetings.hubspot.com/elliot-farmer" target="_blank" style="display:block;margin-top:24px;background:#e8600a;color:white;padding:16px 20px;border-radius:6px;font-size:0.82rem;font-weight:700;letter-spacing:0.09em;text-transform:uppercase;text-decoration:none;text-align:center;width:100%;box-sizing:border-box;">Fix My Rankings</a>
-        <div style="text-align:center;margin-top:10px;font-size:0.72rem;color:rgba(255,255,255,0.35);">From <strong style="color:#e8600a;">$59/mo</strong> &middot; No contract</div>
-      </div>
-    </div>
-  </div>
-</section>
-<style>
-@media(max-width:960px){
-  #kw-layout{grid-template-columns:1fr!important;}
-  .kw-dh{display:none!important;}
-  .kw-mh{display:grid!important;}
-}
-@media(max-width:768px){
-  #kw-layout{gap:24px!important;}
-}
-</style>
+<!-- SEO REPORT SECTION -->
+<section id="seo-section" style="padding:48px 56px 96px; background:#0f1623;">
+  <div style="max-width:1100px; margin:0 auto;">
 
-<!-- CTA SECTION -->
-<section id="cta-section">
-  <div class="container">
-    <div class="cta-card">
-      <img class="cta-photo" src="./elliot.png" alt="Elliot Farmer, ZING Senior Business Advisor" loading="lazy">
-      <h2>Ready to get more auto spa customers in Palm Beach County? Let's talk.</h2>
-      <p class="cta-subtitle">Elliot Farmer &middot; Senior Business Advisor, ZING</p>
-      <p class="cta-tagline">Websites from $59/mo &middot; 50 local landing pages &middot; Full design included &middot; No contract</p>
-      <div class="cta-buttons">
-        <a href="https://meetings.hubspot.com/elliot-farmer" target="_blank" class="btn-primary">Book a Free Call &rarr;</a>
-        <a href="tel:7205340219" class="btn-outline">(720) 534-0219</a>
+    <!-- Header -->
+    <div id="seo-header" style="text-align:center; margin-bottom:64px;">
+      <div style="font-size:0.72rem; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#f97316; margin-bottom:24px; display:flex; align-items:center; justify-content:center; gap:14px;">
+        <span style="display:inline-block; width:40px; height:1px; background:#f97316;"></span>
+        Your Website Performance Report
+        <span style="display:inline-block; width:40px; height:1px; background:#f97316;"></span>
       </div>
-      <div class="cta-email"><a href="mailto:elliot@zing-work.com">elliot@zing-work.com</a></div>
+      <h2 style="font-family:'Plus Jakarta Sans',sans-serif; font-size:clamp(2.4rem,4vw,3.8rem); font-weight:800; color:#ffffff; line-height:1.1; margin-bottom:28px; letter-spacing:-0.01em;">
+        Customers Are Searching.<br>They're Not Finding You.
+      </h2>
+      <p style="font-size:1.05rem; color:rgba(255,255,255,0.55); max-width:600px; margin:0 auto; line-height:1.85;">
+        We looked at the keywords Ronkonkoma drivers are searching right now. Here's what's being missed every single month.
+      </p>
     </div>
+
+    <!-- Opportunity banner -->
+    <div id="seo-banner" style="background:linear-gradient(135deg, rgba(249,115,22,0.15) 0%, rgba(30,42,58,0.6) 100%); border:1px solid rgba(249,115,22,0.25); border-radius:12px; padding:40px 44px; margin-top:56px; margin-bottom:0; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:24px;">
+      <div>
+        <div style="font-size:0.7rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#f97316; margin-bottom:10px;">Estimated Monthly Opportunity</div>
+        <h3 style="font-family:'Plus Jakarta Sans',sans-serif; font-size:1.8rem; font-weight:800; color:white; margin-bottom:6px;">
+          ~21,350 potential customers search these terms every month in Ronkonkoma.
+        </h3>
+        <p style="font-size:0.88rem; color:rgba(255,255,255,0.55); line-height:1.6;">
+          Right now every one of them is finding your competitors. A properly built site changes that.
+        </p>
+      </div>
+    </div>
+
+    <!-- Keyword Table + Fix It Box -->
+    <div id="kw-layout" style="display:grid; grid-template-columns:1fr 300px; gap:24px; align-items:start; margin-top:24px; margin-bottom:48px;">
+
+      <!-- Keyword Table -->
+      <div style="border:1px solid rgba(255,255,255,0.08); border-radius:12px; overflow:hidden;">
+        <div id="kw-table-wrap" style="overflow-x:auto; -webkit-overflow-scrolling:touch;">
+          <div id="kw-header-desktop" class="kw-header" style="display:grid; grid-template-columns:1.8fr 90px 110px 90px; min-width:480px; padding:10px 16px; background:rgba(255,255,255,0.04); border-bottom:1px solid rgba(255,255,255,0.08);">
+            <div style="font-size:0.65rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.35);">Keyword</div>
+            <div style="font-size:0.65rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.35); text-align:center;">Searches/mo</div>
+            <div style="font-size:0.65rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.35); text-align:center;">Your Rank</div>
+            <div style="font-size:0.65rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.35); text-align:center;">Leads at #1</div>
+          </div>
+          <div id="kw-header-mobile" style="display:none; grid-template-columns:1fr 52px 72px; padding:10px 14px; background:rgba(255,255,255,0.04); border-bottom:1px solid rgba(255,255,255,0.08); gap:6px;">
+            <div style="font-size:0.6rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.35);">Keyword</div>
+            <div style="font-size:0.6rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.35); text-align:center;">Your Rank</div>
+            <div style="font-size:0.6rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.35); text-align:right;">Searches</div>
+          </div>
+          <div id="kw-rows"></div>
+        </div>
+      </div>
+
+      <!-- How We Fix This -->
+      <div style="border:1px solid rgba(249,115,22,0.3); border-radius:12px; background:rgba(249,115,22,0.06); padding:28px 24px; position:sticky; top:88px;">
+        <div style="font-size:0.65rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#f97316; margin-bottom:16px;">How We Fix This</div>
+        <div style="display:flex; flex-direction:column; gap:14px;">
+          <div style="display:flex; gap:12px; align-items:flex-start;">
+            <span style="color:#f97316; font-size:1rem; margin-top:1px; flex-shrink:0;">&#10003;</span>
+            <div>
+              <div style="font-size:0.88rem; font-weight:700; color:white; margin-bottom:2px;">50 Local Landing Pages</div>
+              <div style="font-size:0.76rem; color:rgba(255,255,255,0.45); line-height:1.5;">One page per keyword and service area, built to rank</div>
+            </div>
+          </div>
+          <div style="display:flex; gap:12px; align-items:flex-start;">
+            <span style="color:#f97316; font-size:1rem; margin-top:1px; flex-shrink:0;">&#10003;</span>
+            <div>
+              <div style="font-size:0.88rem; font-weight:700; color:white; margin-bottom:2px;">AI Chat</div>
+              <div style="font-size:0.76rem; color:rgba(255,255,255,0.45); line-height:1.5;">Converts visitors into booked jobs 24/7, even while you sleep</div>
+            </div>
+          </div>
+          <div style="display:flex; gap:12px; align-items:flex-start;">
+            <span style="color:#f97316; font-size:1rem; margin-top:1px; flex-shrink:0;">&#10003;</span>
+            <div>
+              <div style="font-size:0.88rem; font-weight:700; color:white; margin-bottom:2px;">SEO Keyword Strategy</div>
+              <div style="font-size:0.76rem; color:rgba(255,255,255,0.45); line-height:1.5;">Targeting the exact searches Ronkonkoma drivers are making</div>
+            </div>
+          </div>
+          <div style="display:flex; gap:12px; align-items:flex-start;">
+            <span style="color:#f97316; font-size:1rem; margin-top:1px; flex-shrink:0;">&#10003;</span>
+            <div>
+              <div style="font-size:0.88rem; font-weight:700; color:white; margin-bottom:2px;">All Done For You</div>
+              <div style="font-size:0.76rem; color:rgba(255,255,255,0.45); line-height:1.5;">You run your business. We handle everything else.</div>
+            </div>
+          </div>
+        </div>
+        <a href="https://meetings.hubspot.com/elliot-farmer" target="_blank" id="fix-rankings-btn" style="display:block; margin-top:24px; background:#f97316; color:white; padding:16px 20px; border-radius:6px; font-size:0.82rem; font-weight:700; letter-spacing:0.09em; text-transform:uppercase; text-decoration:none; text-align:center; width:100%; box-sizing:border-box;">Fix My Rankings</a>
+        <div style="text-align:center; margin-top:10px; font-size:0.72rem; color:rgba(255,255,255,0.35);">From <strong style="color:#f97316;">$59/mo</strong> &middot; No contract</div>
+      </div>
+
+    </div>
+
+    <!-- Salesperson CTA -->
+    <div id="elizabeth-cta" style="margin-top:56px; background:#ffffff; border-radius:16px; padding:36px 48px; display:flex; align-items:center; gap:28px; flex-wrap:wrap; row-gap:16px;">
+      <img id="eliz-photo" src="elliot.png" alt="Elliot Farmer" style="width:100px; height:100px; border-radius:50%; object-fit:cover; object-position:center top; flex-shrink:0; box-shadow:0 8px 32px rgba(0,0,0,0.15);">
+      <p id="eliz-headline" style="font-family:'Plus Jakarta Sans',sans-serif; font-size:1.55rem; font-weight:700; color:#0f1623; line-height:1.3; flex:1; min-width:220px;">
+        Ready to get more detailing customers in Ronkonkoma? Let's talk. Book a call with me today.
+      </p>
+      <a href="https://meetings.hubspot.com/elliot-farmer" target="_blank" id="eliz-btn" style="display:inline-block; background:#f97316; color:#ffffff; padding:22px 48px; border-radius:8px; font-size:0.88rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; text-decoration:none; white-space:nowrap; flex-shrink:0; box-shadow:0 8px 24px rgba(249,115,22,0.35); transition:transform 0.2s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">Book a Free Call</a>
+      <div id="eliz-contact" style="width:100%; font-size:0.88rem; color:#64748b;">
+        <div style="font-size:0.95rem; font-weight:700; color:#0f1623; margin-bottom:4px;">Elliot Farmer &nbsp;<span style="font-weight:400; color:#94a3b8;">&middot; Senior Business Advisor, ZING</span></div>
+        <a href="tel:7205340219" style="color:#64748b; text-decoration:none;">(720) 534-0219</a>
+        &nbsp;&middot;&nbsp;
+        <a href="mailto:elliot@zing-work.com" style="color:#64748b; text-decoration:none;">elliot@zing-work.com</a>
+        &nbsp;&middot;&nbsp;
+        <a href="https://zing.work" target="_blank" style="color:#64748b; text-decoration:none;">zing.work</a>
+      </div>
+      <div id="eliz-tagline" style="width:100%; text-align:center; font-size:0.75rem; color:#94a3b8; font-weight:500;">Websites from <strong style="color:#f97316;">$59/mo</strong> &middot; 50 local landing pages &middot; Full design included &middot; No contract</div>
+    </div>
+
   </div>
 </section>
 
 <script>
-(function(){
-  
-      if(!isOpen){
-        item.classList.add('open');
-        answer.style.maxHeight = answer.scrollHeight + 'px';
-      }
-    });
-  });
+// Keyword data
+const keywords = [{"keyword":"car detailing Ronkonkoma NY","volume":880,"est":true},{"keyword":"auto detailing near me","volume":18100,"est":true},{"keyword":"mobile detailing Ronkonkoma","volume":590,"est":true},{"keyword":"ceramic coating Ronkonkoma","volume":480,"est":true},{"keyword":"car wash Ronkonkoma NY","volume":1300,"est":true}];
 
-  /* Mobile menu close on resize */
-  window.addEventListener('resize', function(){
-    if(window.innerWidth > 960){
-      var mm = document.querySelector('.mobile-menu');
-      if(mm) mm.classList.remove('open');
+const container = document.getElementById('kw-rows');
+function renderKeywords() {
+  if (!container) return;
+  container.innerHTML = '';
+  const isMobile = window.innerWidth <= 960;
+
+  keywords.forEach((item, i) => {
+    const row = document.createElement('div');
+    const n = String(i+1).padStart(2,'0');
+    const leads = Math.max(1, Math.round(item.volume * 0.012));
+    if (isMobile) {
+      row.style.cssText = 'display:grid; grid-template-columns:1fr 52px 72px; padding:12px 14px; border-bottom:1px solid rgba(255,255,255,0.06); align-items:center; gap:6px;';
+      row.innerHTML = '<div style="display:flex;align-items:center;gap:8px;"><span style="font-size:0.62rem;color:rgba(255,255,255,0.2);font-weight:700;min-width:16px;flex-shrink:0;">'+n+'</span><span style="font-size:0.78rem;color:rgba(255,255,255,0.85);font-weight:500;line-height:1.3;">'+item.keyword+'</span></div><div style="text-align:center;"><span style="font-size:1rem;font-weight:800;color:#f87171;">0</span></div><div style="text-align:right;font-size:0.8rem;font-weight:700;color:white;">'+item.volume.toLocaleString()+'<span style="font-size:0.6rem;color:rgba(255,255,255,0.35);margin-left:2px;">'+(item.est?' (est.)':'')+'</span></div>';
+    } else {
+      row.style.cssText = 'display:grid; grid-template-columns:1.8fr 90px 110px 90px; padding:14px 16px; border-bottom:1px solid rgba(255,255,255,0.05); align-items:center; transition:background 0.2s; min-width:480px;';
+      row.onmouseenter = function(){this.style.background='rgba(255,255,255,0.03)';};
+      row.onmouseleave = function(){this.style.background='transparent';};
+      row.innerHTML = '<div style="display:flex;align-items:center;gap:10px;"><span style="font-size:0.68rem;color:rgba(255,255,255,0.2);font-weight:600;min-width:20px;flex-shrink:0;">'+n+'</span><span style="font-size:0.85rem;color:rgba(255,255,255,0.85);font-weight:500;">'+item.keyword+'</span></div><div style="text-align:center;font-size:0.9rem;font-weight:700;color:white;">'+item.volume.toLocaleString()+' <span style="font-size:0.62rem;color:rgba(255,255,255,0.35);">'+(item.est?'(est.)':'')+'</span></div><div style="text-align:center;"><span style="background:rgba(239,68,68,0.12);color:#f87171;padding:4px 10px;border-radius:20px;font-size:0.72rem;font-weight:600;">Not ranking</span></div><div style="text-align:center;font-size:0.82rem;font-weight:700;color:rgba(255,255,255,0.5);">'+leads+'</div>';
     }
+    container.appendChild(row);
   });
+}
+renderKeywords();
+window.addEventListener('resize', renderKeywords);
+</script>
 
-  /* SEO keyword table */
-  var kws=[{kw:"mobile car detailing near me",vol:8100,leads:101},{kw:"auto detailing near me",vol:4400,leads:55},{kw:"car detailing near me",vol:12100,leads:151},{kw:"mobile detailing garland tx",vol:880,leads:11},{kw:"car detailing garland tx",vol:720,leads:9},{kw:"mobile car wash near me",vol:1600,leads:20},{kw:"auto detailing garland tx",vol:590,leads:7},{kw:"ceramic coating garland tx",vol:480,leads:6},{kw:"paint correction garland tx",vol:320,leads:4},{kw:"full detail car near me",vol:410,leads:5}];
-  var c=document.getElementById("kw-rows");
-  if(!c)return;
-  function render(){
-    c.innerHTML="";
-    var m=window.innerWidth<=960;
-    kws.forEach(function(item,i){
-      var row=document.createElement("div");
-      var n=String(i+1).padStart(2,"0");
-      if(m){
-        row.style.cssText="display:grid;grid-template-columns:1fr 60px 80px;padding:12px 14px;border-bottom:1px solid rgba(255,255,255,0.06);align-items:center;gap:6px;";
-        row.innerHTML='<div style="display:flex;align-items:center;gap:8px;"><span style="font-size:0.62rem;color:rgba(255,255,255,0.2);font-weight:700;flex-shrink:0;">'+n+'</span><span style="font-size:0.78rem;color:rgba(255,255,255,0.85);font-weight:500;line-height:1.3;">'+item.kw+'</span></div><div style="text-align:center;"><span style="font-size:0.9rem;font-weight:800;color:#f87171;">0</span></div><div style="text-align:right;font-size:0.8rem;font-weight:700;color:white;">'+item.vol.toLocaleString()+'<span style="font-size:0.6rem;color:rgba(255,255,255,0.35);margin-left:2px;">est.</span></div>';
-      }else{
-        row.style.cssText="display:grid;grid-template-columns:1fr 90px 110px 100px;padding:14px 16px;border-bottom:1px solid rgba(255,255,255,0.05);align-items:center;transition:background 0.2s;cursor:default;";
-        row.onmouseenter=function(){this.style.background="rgba(255,255,255,0.03)"};
-        row.onmouseleave=function(){this.style.background="transparent"};
-        row.innerHTML='<div style="display:flex;align-items:center;gap:10px;"><span style="font-size:0.68rem;color:rgba(255,255,255,0.2);font-weight:600;min-width:20px;flex-shrink:0;">'+n+'</span><span style="font-size:0.85rem;color:rgba(255,255,255,0.85);font-weight:500;">'+item.kw+'</span></div><div style="text-align:center;font-size:0.9rem;font-weight:700;color:white;">'+item.vol.toLocaleString()+' <span style="font-size:0.62rem;color:rgba(255,255,255,0.35);">est.</span></div><div style="text-align:center;"><span style="background:rgba(239,68,68,0.12);color:#f87171;padding:4px 10px;border-radius:20px;font-size:0.72rem;font-weight:600;">Not ranking</span></div><div style="text-align:center;font-size:0.82rem;font-weight:700;color:rgba(255,255,255,0.5);">'+item.leads+'</div>';
+<script>
+// Nav shadow on scroll
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', function() {
+  nav.classList.toggle('scrolled', window.scrollY > 10);
+}, { passive: true });
+
+// Fade-in on scroll (desktop only)
+if (window.innerWidth > 960) {
+  const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
       }
-      c.appendChild(row);
     });
-  }
-  render();
-  window.addEventListener("resize",render);
-})();
+  }, { threshold: 0.15 });
+  document.querySelectorAll('.fade-in').forEach(function(el) { observer.observe(el); });
+}
 </script>
 </body>
 </html>
