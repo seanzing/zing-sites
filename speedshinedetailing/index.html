@@ -1,0 +1,1169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Speed Shine Detailing | Professional Auto Detailing in Your City, US</title>
+<meta name="description" content="Speed Shine Detailing in Your City, US. Professional mobile and shop auto detailing services. Family-owned for 5 years. Call (720) 555-0199.">
+<meta property="og:title" content="Speed Shine Detailing | Professional Auto Detailing">
+<meta property="og:description" content="Professional mobile and shop auto detailing services in Your City. We bring the shine to your door.">
+<meta property="og:type" content="business.business">
+<meta property="og:image" content="/shared/hero.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+:root {
+  --primary: #0ea5e9;
+  --primary-hover: #0284c7;
+  --primary-rgb: 14, 165, 233;
+  --accent: #f97316;
+  --dark: #040d1f;
+  --card: #0a1528;
+  --white: #ffffff;
+  --red: #e53e3e;
+  --text: #f0f4ff;
+  --muted: rgba(240, 244, 255, 0.55);
+  --border: rgba(14, 165, 233, 0.4);
+  --card-border: rgba(14, 165, 233, 0.3);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--muted);
+  line-height: 1.7;
+  background: var(--dark);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: var(--text);
+  line-height: 1.2;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* NAVIGATION */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #040d1f;
+  border-bottom: 1px solid rgba(14, 165, 233, 0.3);
+  z-index: 1000;
+  transition: box-shadow 0.3s ease;
+}
+
+nav.scrolled {
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+}
+
+.nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-logo {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.nav-phone {
+  font-weight: 600;
+  color: var(--accent);
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-phone svg {
+  width: 18px;
+  height: 18px;
+  fill: var(--accent);
+}
+
+@media (max-width: 768px) {
+  .nav-phone-text {
+    display: none;
+  }
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-top: 60px;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: url('/get-started/stock/stock1.jpg') center/cover no-repeat;
+  animation: slowZoom 20s ease-in-out infinite alternate;
+}
+
+@keyframes slowZoom {
+  from { transform: scale(1); }
+  to { transform: scale(1.08); }
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(4, 13, 31, 0.7) 0%, rgba(4, 13, 31, 0.45) 50%, rgba(4, 13, 31, 0.8) 100%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 800px;
+  padding: 0 24px;
+}
+
+.hero-eyebrow {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--white);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 8px 20px;
+  border-radius: 30px;
+  margin-bottom: 24px;
+}
+
+.hero h1 {
+  font-size: clamp(2.6rem, 6vw, 4.8rem);
+  font-weight: 800;
+  color: var(--white);
+  margin-bottom: 20px;
+}
+
+.hero-sub {
+  font-size: 1.15rem;
+  color: rgba(240, 244, 255, 0.75);
+  margin-bottom: 36px;
+  line-height: 1.7;
+  max-width: 620px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--white);
+  padding: 16px 36px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background 0.3s ease, transform 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+.btn-ghost {
+  display: inline-block;
+  color: var(--white);
+  padding: 16px 36px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  border: 1px solid rgba(240, 244, 255, 0.3);
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-ghost:hover {
+  border-color: var(--white);
+  transform: translateY(-2px);
+}
+
+/* ABOUT */
+.about {
+  padding: 100px 0;
+  background: var(--dark);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.about-card {
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  padding: 40px 36px;
+}
+
+.section-badge {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+
+.about-card h2 {
+  font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+  font-weight: 800;
+  margin-bottom: 24px;
+}
+
+.about-card p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: rgba(240, 244, 255, 0.6);
+  margin-bottom: 16px;
+}
+
+.about-card p:last-child {
+  margin-bottom: 0;
+}
+
+.value-badges {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.value-badge {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-left: 3px solid var(--accent);
+  border-radius: 12px;
+  padding: 24px 20px;
+}
+
+.value-badge-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  background: rgba(14, 165, 233, 0.25);
+  border: 1px solid rgba(14, 165, 233, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.value-badge-icon svg {
+  width: 24px;
+  height: 24px;
+  stroke: var(--accent);
+  fill: none;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.value-badge-text {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+/* SERVICES */
+.services {
+  padding: 100px 0;
+  background: var(--card);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-header h2 {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.section-header p {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  color: var(--muted);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 28px;
+}
+
+.service-card {
+  background: rgba(4, 13, 31, 0.6);
+  border: 1px solid var(--card-border);
+  border-top: 3px solid var(--primary);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 40px rgba(14, 165, 233, 0.2);
+}
+
+.service-card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.service-card-content {
+  padding: 32px 28px;
+}
+
+.service-icon {
+  color: var(--accent);
+  margin-bottom: 18px;
+  width: 44px;
+  height: 44px;
+  background: rgba(14, 165, 233, 0.25);
+  border: 1px solid rgba(14, 165, 233, 0.4);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-icon i {
+  font-size: 22px;
+}
+
+.service-card h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--text);
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+/* WHY CHOOSE US */
+.why-choose {
+  padding: 100px 0;
+  background: var(--dark);
+}
+
+.why-choose-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.why-choose-content h2 {
+  font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+  font-weight: 800;
+  margin-bottom: 24px;
+}
+
+.why-choose-content p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: rgba(240, 244, 255, 0.6);
+  margin-bottom: 32px;
+}
+
+.trust-items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.trust-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.trust-item-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: rgba(249, 115, 22, 0.2);
+  border: 1px solid rgba(249, 115, 22, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+.trust-item-icon i {
+  color: var(--accent);
+  font-size: 18px;
+}
+
+.trust-item-text h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: var(--text);
+}
+
+.trust-item-text p {
+  font-size: 0.95rem;
+  color: var(--muted);
+  margin-bottom: 0;
+}
+
+/* HOURS */
+.hours {
+  padding: 100px 0;
+  background: var(--card);
+}
+
+.hours-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.hours-content h2 {
+  font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+  font-weight: 800;
+  margin-bottom: 24px;
+}
+
+.hours-content p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: rgba(240, 244, 255, 0.6);
+  margin-bottom: 32px;
+}
+
+.hours-table {
+  width: 100%;
+  background: rgba(4, 13, 31, 0.6);
+  border: 1px solid rgba(14, 165, 233, 0.3);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.hours-table-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 1px solid rgba(14, 165, 233, 0.2);
+}
+
+.hours-table-row:last-child {
+  border-bottom: none;
+}
+
+.hours-day {
+  padding: 16px 20px;
+  font-weight: 600;
+  color: var(--text);
+  border-right: 1px solid rgba(14, 165, 233, 0.2);
+}
+
+.hours-time {
+  padding: 16px 20px;
+  color: var(--muted);
+}
+
+.hours-closed {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .hours-table-row {
+    grid-template-columns: 1fr;
+  }
+
+  .hours-day {
+    border-right: none;
+    border-bottom: 1px solid rgba(14, 165, 233, 0.2);
+    margin-bottom: 0;
+  }
+
+  .hours-time {
+    padding: 12px 20px;
+  }
+}
+
+/* CTA SECTION */
+#cta-section {
+  padding: 100px 0;
+  background-image: url('/shared/contact-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+}
+
+#cta-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(4, 13, 31, 0.75);
+  z-index: 1;
+}
+
+.cta-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.cta-content h2 {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 800;
+  color: var(--white);
+  margin-bottom: 20px;
+}
+
+.cta-content p {
+  font-size: 1.1rem;
+  color: rgba(240, 244, 255, 0.75);
+  margin-bottom: 36px;
+  line-height: 1.7;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* FOOTER */
+footer {
+  background: rgba(4, 13, 31, 0.9);
+  border-top: 1px solid rgba(14, 165, 233, 0.3);
+  padding: 48px 0 24px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footer-col h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: var(--text);
+}
+
+.footer-col p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+
+.footer-col a {
+  display: block;
+  font-size: 0.95rem;
+  color: var(--muted);
+  margin-bottom: 12px;
+  transition: color 0.3s ease;
+}
+
+.footer-col a:hover {
+  color: var(--accent);
+}
+
+.footer-phone {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(14, 165, 233, 0.2);
+  padding-top: 24px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .why-choose-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .hours-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .section-header {
+    text-align: center;
+  }
+
+  .section-header h2 {
+    text-align: center;
+  }
+
+  .section-header p {
+    text-align: center;
+  }
+
+  .about-card {
+    text-align: center;
+  }
+
+  .about-card h2 {
+    text-align: center;
+  }
+
+  .value-badges {
+    width: 100%;
+  }
+
+  .value-badge {
+    text-align: center;
+    flex-direction: column;
+  }
+
+  .why-choose-content h2 {
+    text-align: center;
+  }
+
+  .why-choose-content p {
+    text-align: center;
+  }
+
+  .hours-content h2 {
+    text-align: center;
+  }
+
+  .hours-content p {
+    text-align: center;
+  }
+
+  .cta-content h2 {
+    text-align: center;
+  }
+
+  .cta-content p {
+    text-align: center;
+  }
+
+  .hero-buttons {
+    gap: 12px;
+  }
+
+  .btn-primary,
+  .btn-ghost {
+    padding: 14px 28px;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-logo {
+    font-size: 1rem;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .btn-primary,
+  .btn-ghost {
+    width: 100%;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+  }
+
+  .cta-buttons .btn-primary,
+  .cta-buttons .btn-ghost {
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <div class="nav-logo">Speed Shine</div>
+    <a href="tel:(720) 555-0199" class="nav-phone">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M3 4h18a2 2 0 012 2v12a2 2 0 01-2 2H3a2 2 0 01-2-2V6a2 2 0 012-2z"/></svg>
+      <span class="nav-phone-text">(720) 555-0199</span>
+    </a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Premium Auto Detailing</div>
+    <h1>Bring the Shine to Your Door</h1>
+    <p class="hero-sub">Professional mobile and shop detailing serving Your City and surrounding areas. We transform your vehicle with precision, care, and passion.</p>
+    <div class="hero-buttons">
+      <a href="#cta-section" class="btn-primary">Book Now</a>
+      <a href="#services" class="btn-ghost">View Services</a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-card">
+        <div class="section-badge">About Us</div>
+        <h2>Your City's Trusted Detailing Experts</h2>
+        <p>Speed Shine Detailing is a family-owned business dedicated to delivering exceptional auto detailing services to Your City and surrounding areas. For 5 years, we have been bringing professional-grade shine and protection to vehicles throughout the region.</p>
+        <p>We specialize in both mobile detailing, where we come to you, and shop detailing for comprehensive transformations. Our team combines modern techniques with meticulous attention to detail, ensuring every vehicle leaves our care looking showroom-ready.</p>
+      </div>
+      <div class="about-card">
+        <div class="section-badge">Why We're Different</div>
+        <h2>Excellence in Every Detail</h2>
+        <div class="value-badges">
+          <div class="value-badge">
+            <div class="value-badge-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="1"/><path d="M12 3v2m0 14v2M4.22 4.22l1.41 1.41m10.34 10.34l1.41 1.41M3 12h2m14 0h2M4.22 19.78l1.41-1.41m10.34-10.34l1.41-1.41"/></svg>
+            </div>
+            <div class="value-badge-text">5+ Years of Excellence</div>
+          </div>
+          <div class="value-badge">
+            <div class="value-badge-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2L15.09 8.26H22L17.82 12.44L20.91 18.71L12 14.53L3.09 18.71L6.18 12.44L2 8.26H8.91L12 2Z"/></svg>
+            </div>
+            <div class="value-badge-text">Premium Quality Standards</div>
+          </div>
+          <div class="value-badge">
+            <div class="value-badge-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+            </div>
+            <div class="value-badge-text">Convenience & Flexibility</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-header">
+      <h2>Our Services</h2>
+      <p>Comprehensive detailing solutions for every vehicle and need</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <img src="/shared/stock-exterior.jpg" alt="Exterior Wash and Wax" class="service-card-image" loading="lazy">
+        <div class="service-card-content">
+          <div class="service-icon">
+            <i class="fa-solid fa-soap"></i>
+          </div>
+          <h3>Exterior Wash & Wax</h3>
+          <p>Professional exterior cleaning with premium wax protection. We restore shine and protect your paint from the elements.</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="/shared/stock-interior-steam.jpg" alt="Interior Detailing" class="service-card-image" loading="lazy">
+        <div class="service-card-content">
+          <div class="service-icon">
+            <i class="fa-solid fa-couch"></i>
+          </div>
+          <h3>Interior Detailing</h3>
+          <p>Deep cleaning of seats, carpets, and trim. We eliminate odors and restore your interior to like-new condition.</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="/shared/stock-ceramic-coating.jpg" alt="Ceramic Coating" class="service-card-image" loading="lazy">
+        <div class="service-card-content">
+          <div class="service-icon">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+          <h3>Ceramic Coating</h3>
+          <p>Advanced protective coating for lasting shine and durability. Ceramic coating shields your paint for months or years.</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="/shared/stock-paint-correction.jpg" alt="Paint Correction" class="service-card-image" loading="lazy">
+        <div class="service-card-content">
+          <div class="service-icon">
+            <i class="fa-solid fa-palette"></i>
+          </div>
+          <h3>Paint Correction</h3>
+          <p>Remove swirls, scratches, and imperfections. Restore your paint's depth and clarity with professional correction techniques.</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="/shared/stock-mobile-service.jpg" alt="Mobile Service" class="service-card-image" loading="lazy">
+        <div class="service-card-content">
+          <div class="service-icon">
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
+          <h3>Mobile Service</h3>
+          <p>We come to you at home or work. Full detailing services right where your vehicle is, on your schedule.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="why-choose" id="why">
+  <div class="container">
+    <div class="why-choose-grid">
+      <div class="why-choose-content">
+        <div class="section-badge">Why Choose Us</div>
+        <h2>We're More Than Car Detailers</h2>
+        <p>Speed Shine Detailing represents a commitment to quality, reliability, and exceptional customer service. Whether you need mobile detailing or in-shop service, we bring professional results and genuine care for your vehicle.</p>
+        <div class="trust-items">
+          <div class="trust-item">
+            <div class="trust-item-icon">
+              <i class="fa-solid fa-check"></i>
+            </div>
+            <div class="trust-item-text">
+              <h3>Family-Owned & Local</h3>
+              <p>We're part of the Your City community with years of trusted service to local vehicle owners.</p>
+            </div>
+          </div>
+          <div class="trust-item">
+            <div class="trust-item-icon">
+              <i class="fa-solid fa-check"></i>
+            </div>
+            <div class="trust-item-text">
+              <h3>Flexible Service Options</h3>
+              <p>Mobile detailing or shop service, we work around your schedule and preferences.</p>
+            </div>
+          </div>
+          <div class="trust-item">
+            <div class="trust-item-icon">
+              <i class="fa-solid fa-check"></i>
+            </div>
+            <div class="trust-item-text">
+              <h3>Premium Products & Techniques</h3>
+              <p>We use professional-grade detailing products and proven methods for superior results.</p>
+            </div>
+          </div>
+          <div class="trust-item">
+            <div class="trust-item-icon">
+              <i class="fa-solid fa-check"></i>
+            </div>
+            <div class="trust-item-text">
+              <h3>Customer Satisfaction First</h3>
+              <p>Your satisfaction is our priority. We ensure every vehicle meets our high standards.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="why-choose-content">
+        <div class="section-badge">Our Process</div>
+        <h2>Quality Through & Through</h2>
+        <p>Our approach combines industry expertise with meticulous attention to detail. We assess your vehicle's specific needs, apply appropriate techniques and products, and deliver results that exceed expectations.</p>
+        <div class="trust-items">
+          <div class="trust-item">
+            <div class="trust-item-icon">
+              <i class="fa-solid fa-circle-1"></i>
+            </div>
+            <div class="trust-item-text">
+              <h3>Assessment</h3>
+              <p>We evaluate your vehicle's current condition to determine the best detailing approach.</p>
+            </div>
+          </div>
+          <div class="trust-item">
+            <div class="trust-item-icon">
+              <i class="fa-solid fa-circle-2"></i>
+            </div>
+            <div class="trust-item-text">
+              <h3>Preparation</h3>
+              <p>Thorough cleaning and preparation ensure perfect results from our detailing services.</p>
+            </div>
+          </div>
+          <div class="trust-item">
+            <div class="trust-item-icon">
+              <i class="fa-solid fa-circle-3"></i>
+            </div>
+            <div class="trust-item-text">
+              <h3>Protection</h3>
+              <p>We apply premium protective treatments to keep your vehicle looking amazing longer.</p>
+            </div>
+          </div>
+          <div class="trust-item">
+            <div class="trust-item-icon">
+              <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <div class="trust-item-text">
+              <h3>Inspection</h3>
+              <p>Final quality check ensures every detail meets our high standards before completion.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOURS -->
+<section class="hours" id="hours">
+  <div class="container">
+    <div class="hours-grid">
+      <div class="hours-content">
+        <div class="section-badge">Hours</div>
+        <h2>When We're Available</h2>
+        <p>Speed Shine Detailing operates on a mobile-first schedule, bringing services to your location during business hours. For current availability and to book an appointment, please contact us directly. We work with your schedule to provide flexible service times.</p>
+      </div>
+      <div>
+        <div class="hours-table">
+          <div class="hours-table-row">
+            <div class="hours-day">Monday</div>
+            <div class="hours-time hours-closed">Closed</div>
+          </div>
+          <div class="hours-table-row">
+            <div class="hours-day">Tuesday</div>
+            <div class="hours-time hours-closed">Closed</div>
+          </div>
+          <div class="hours-table-row">
+            <div class="hours-day">Wednesday</div>
+            <div class="hours-time hours-closed">Closed</div>
+          </div>
+          <div class="hours-table-row">
+            <div class="hours-day">Thursday</div>
+            <div class="hours-time hours-closed">Closed</div>
+          </div>
+          <div class="hours-table-row">
+            <div class="hours-day">Friday</div>
+            <div class="hours-time hours-closed">Closed</div>
+          </div>
+          <div class="hours-table-row">
+            <div class="hours-day">Saturday</div>
+            <div class="hours-time hours-closed">Closed</div>
+          </div>
+          <div class="hours-table-row">
+            <div class="hours-day">Sunday</div>
+            <div class="hours-time hours-closed">Closed</div>
+          </div>
+        </div>
+        <p style="margin-top: 24px; font-size: 0.9rem; color: var(--muted);">Contact us for custom scheduling and mobile service availability in Your City.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA SECTION -->
+<section id="cta-section">
+  <div class="container">
+    <div class="cta-content">
+      <h2>Ready for a Showroom Shine?</h2>
+      <p>Contact Speed Shine Detailing today to schedule your appointment. We bring professional detailing directly to Your City.</p>
+      <div class="cta-buttons">
+        <a href="tel:(720) 555-0199" class="btn-primary">Call (720) 555-0199</a>
+        <a href="mailto:info@speedshine.com" class="btn-ghost">Email Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h3>Speed Shine Detailing</h3>
+        <p>Professional auto detailing services in Your City, US. Mobile and shop detailing for 5+ years.</p>
+        <p class="footer-phone">(720) 555-0199</p>
+      </div>
+      <div class="footer-col">
+        <h3>Services</h3>
+        <a href="#services">Exterior Wash & Wax</a>
+        <a href="#services">Interior Detailing</a>
+        <a href="#services">Ceramic Coating</a>
+        <a href="#services">Paint Correction</a>
+        <a href="#services">Mobile Service</a>
+      </div>
+      <div class="footer-col">
+        <h3>Contact</h3>
+        <a href="tel:(720) 555-0199">(720) 555-0199</a>
+        <a href="mailto:info@speedshine.com">info@speedshine.com</a>
+        <p style="margin-top: 16px; font-size: 0.9rem;">Your City, US</p>
+      </div>
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#why">Why Us</a>
+        <a href="#hours">Hours</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Speed Shine Detailing. All rights reserved. Family-owned professional auto detailing in Your City, US.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- SCHEMA -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Speed Shine Detailing",
+  "image": "/shared/hero.jpg",
+  "description": "Family-owned mobile and shop auto detailing serving Your City and surrounding areas for 5+ years.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Your City",
+    "addressRegion": "US",
+    "postalCode": ""
+  },
+  "telephone": "(720) 555-0199",
+  "email": "info@speedshine.com",
+  "priceRange": "$$",
+  "serviceArea": {
+    "@type": "City",
+    "name": "Your City"
+  },
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Your City"
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What areas do you serve?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Speed Shine Detailing serves Your City and surrounding areas. We offer both mobile detailing at your location and shop detailing services."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer mobile detailing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we specialize in mobile detailing. We bring our professional detailing services directly to your home or workplace in Your City."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long has Speed Shine been in business?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Speed Shine Detailing has been serving the Your City area for over 5 years as a family-owned business."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What services do you provide?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We offer exterior wash and wax, interior detailing, ceramic coating, paint correction, and mobile detailing services."
+      }
+    }
+  ]
+}
+</script>
+
+<script>
+document.addEventListener('scroll', function() {
+  const navbar = document.getElementById('navbar');
+  if (window.scrollY > 50) {
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
+});
+</script>
+
+</body>
+</html>
