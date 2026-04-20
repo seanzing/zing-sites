@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elliots Car Detailing | Professional Auto Detailing in Castle Rock, US</title>
+<meta name="description" content="Elliots Car Detailing in Castle Rock provides comprehensive exterior and interior detailing services. Professional mobile and shop detailing. Call (720) 871-9988.">
+<meta property="og:title" content="Elliots Car Detailing | Castle Rock Auto Detailing">
+<meta property="og:description" content="Professional car detailing services in Castle Rock. Exterior wash, ceramic coating, paint correction, and more.">
+<meta property="og:type" content="business.business">
+<meta property="og:image" content="https://yourwebsiteexample.com/shared/hero.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://yourwebsiteexample.com/shared/fa/css/all.min.css">
+<style>
+:root {
+  --primary: #4a6fa5;
+  --primary-hover: #3a5a8f;
+  --primary-rgb: 74, 111, 165;
+  --accent: #ff6b35;
+  --dark: #040d1f;
+  --card: #0a1528;
+  --white: #ffffff;
+  --red: #e53e3e;
+  --text: #f0f4ff;
+  --muted: rgba(240, 244, 255, 0.55);
+  --border: rgba(74, 111, 165, 0.4);
+  --card-border: rgba(74, 111, 165, 0.3);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--muted);
+  line-height: 1.7;
+  background: var(--dark);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: var(--text);
+  line-height: 1.2;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+a { text-decoration: none; color: inherit; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* NAV */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #040d1f;
+  border-bottom: 1px solid rgba(74, 111, 165, 0.3);
+  z-index: 1000;
+  transition: box-shadow 0.3s ease;
+}
+
+nav.scrolled {
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+}
+
+.nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-logo {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.nav-phone {
+  font-weight: 600;
+  color: var(--accent);
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-phone svg {
+  width: 18px;
+  height: 18px;
+  fill: var(--accent);
+}
+
+@media (max-width: 768px) {
+  .nav-phone-text { display: none; }
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-top: 60px;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: url('https://yourwebsiteexample.com/get-started/stock/stock2.jpg') center/cover no-repeat;
+  animation: slowZoom 20s ease-in-out infinite alternate;
+}
+
+@keyframes slowZoom {
+  from { transform: scale(1); }
+  to { transform: scale(1.08); }
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(4, 13, 31, 0.7) 0%, rgba(4, 13, 31, 0.45) 50%, rgba(4, 13, 31, 0.8) 100%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 800px;
+  padding: 0 24px;
+}
+
+.hero-eyebrow {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--white);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 8px 20px;
+  border-radius: 30px;
+  margin-bottom: 24px;
+}
+
+.hero h1 {
+  font-size: clamp(2.6rem, 6vw, 4.8rem);
+  font-weight: 800;
+  color: var(--white);
+  margin-bottom: 20px;
+}
+
+.hero-sub {
+  font-size: 1.15rem;
+  color: rgba(240, 244, 255, 0.75);
+  margin-bottom: 36px;
+  line-height: 1.7;
+  max-width: 620px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--white);
+  padding: 16px 36px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background 0.3s ease, transform 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+.btn-ghost {
+  display: inline-block;
+  color: var(--white);
+  padding: 16px 36px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  border: 1px solid rgba(240, 244, 255, 0.3);
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-ghost:hover {
+  border-color: var(--white);
+  transform: translateY(-2px);
+}
+
+/* SERVICES */
+.services {
+  padding: 100px 0;
+  background: var(--dark);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-header h2 {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.section-header p {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  color: var(--muted);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.service-card {
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 40px rgba(74, 111, 165, 0.2);
+}
+
+.service-card-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.service-card-content {
+  padding: 28px 24px;
+}
+
+.service-icon {
+  color: var(--accent);
+  margin-bottom: 16px;
+  width: 44px;
+  height: 44px;
+  background: rgba(74, 111, 165, 0.25);
+  border: 1px solid rgba(74, 111, 165, 0.4);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-icon i {
+  font-size: 22px;
+}
+
+.service-card h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+@media (max-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .section-header {
+    text-align: center;
+  }
+  
+  .section-header h2 {
+    text-align: center;
+  }
+}
+
+/* ABOUT */
+.about {
+  padding: 100px 0;
+  background: var(--dark);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.about-card {
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  padding: 40px 36px;
+}
+
+.section-badge {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+
+.about-card h2 {
+  font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+  font-weight: 800;
+  margin-bottom: 24px;
+}
+
+.about-card p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: rgba(240, 244, 255, 0.6);
+  margin-bottom: 16px;
+}
+
+.about-card p:last-child { margin-bottom: 0; }
+
+.value-badges {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.value-badge {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-left: 3px solid var(--accent);
+  border-radius: 12px;
+  padding: 24px 20px;
+}
+
+.value-badge-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  background: rgba(74, 111, 165, 0.25);
+  border: 1px solid rgba(74, 111, 165, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.value-badge-icon svg {
+  width: 24px;
+  height: 24px;
+  stroke: var(--accent);
+  fill: none;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.value-badge-text {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .about-card {
+    text-align: center;
+  }
+  
+  .about-card h2 {
+    text-align: center;
+  }
+  
+  .section-badge {
+    justify-content: center;
+    display: flex;
+  }
+}
+
+/* HOURS */
+.hours {
+  padding: 100px 0;
+  background: var(--card);
+}
+
+.hours-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.hours-card {
+  background: rgba(4, 13, 31, 0.6);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  padding: 40px 36px;
+}
+
+.hours-card h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 28px;
+}
+
+.hours-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.hours-table tr {
+  border-bottom: 1px solid rgba(74, 111, 165, 0.2);
+}
+
+.hours-table tr:last-child {
+  border-bottom: none;
+}
+
+.hours-table td {
+  padding: 16px 0;
+  font-size: 0.95rem;
+}
+
+.hours-table td:first-child {
+  color: var(--text);
+  font-weight: 600;
+  width: 40%;
+}
+
+.hours-table td:last-child {
+  text-align: right;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.contact-info {
+  background: rgba(4, 13, 31, 0.6);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  padding: 40px 36px;
+}
+
+.contact-info h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 28px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.contact-item:last-child {
+  margin-bottom: 0;
+}
+
+.contact-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  background: rgba(74, 111, 165, 0.25);
+  border: 1px solid rgba(74, 111, 165, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contact-icon i {
+  font-size: 20px;
+  color: var(--accent);
+}
+
+.contact-details h4 {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+
+.contact-details p {
+  font-size: 1.05rem;
+  color: var(--text);
+}
+
+.contact-details a {
+  color: var(--accent);
+  transition: color 0.3s ease;
+}
+
+.contact-details a:hover {
+  color: var(--primary-hover);
+}
+
+@media (max-width: 768px) {
+  .hours-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .hours-table td {
+    padding: 14px 0;
+  }
+  
+  .hours-table td:first-child {
+    width: auto;
+  }
+  
+  .hours-table td:last-child {
+    text-align: left;
+    padding-left: 16px;
+  }
+}
+
+/* CTA SECTION */
+#cta-section {
+  position: relative;
+  padding: 100px 0;
+  overflow: hidden;
+  background-image: url('https://yourwebsiteexample.com/shared/contact-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+#cta-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(4, 13, 31, 0.75);
+  z-index: 1;
+}
+
+.cta-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.cta-content h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: var(--white);
+}
+
+.cta-content p {
+  font-size: 1.1rem;
+  color: rgba(240, 244, 255, 0.75);
+  margin-bottom: 36px;
+}
+
+/* FOOTER */
+footer {
+  background: #030813;
+  border-top: 1px solid rgba(74, 111, 165, 0.3);
+  padding: 40px 0;
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.footer-brand h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.footer-brand p {
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.footer-links h4 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+
+.footer-links ul {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 8px;
+}
+
+.footer-links a {
+  font-size: 0.9rem;
+  color: var(--muted);
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: var(--accent);
+}
+
+.footer-legal {
+  font-size: 0.85rem;
+  color: var(--muted);
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid rgba(74, 111, 165, 0.2);
+  grid-column: 1 / -1;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .footer-inner {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+.features { padding: 90px 0; background: var(--card, #071a2e); }
+.features-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 48px; max-width: 1100px; margin-left: auto; margin-right: auto; }
+.feature-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 32px 24px; text-align: center; }
+.feature-icon { font-size: 1.8rem; color: var(--accent, #2563eb); margin-bottom: 16px; }
+.feature-card h3 { font-size: 1rem; font-weight: 700; color: #fff; margin-bottom: 10px; }
+.feature-card p { font-size: 0.85rem; color: rgba(255,255,255,0.55); line-height: 1.6; margin: 0; }
+@media(max-width:900px){ .features-grid { grid-template-columns: 1fr 1fr; } }
+@media(max-width:500px){ .features-grid { grid-template-columns: 1fr; } }
+@media(max-width:768px){ .features h2, .features .section-sub, .features .section-eyebrow { text-align: center; } .feature-card { text-align: center; } }
+</style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <div class="nav-logo">Elliots Car Detailing</div>
+    <a href="tel:+17208719988" class="nav-phone">
+      <svg viewBox="0 0 24 24"><path d="M3 9.5C5.5 13.5 9.5 17.5 13.5 20C14 20.5 14.5 20.5 15 20L20 15C20.5 14.5 21 14.5 21.5 15L22 16C22.5 17 22 18 21 19L19 21C18 22 16.5 22 15.5 21C10 16.5 5.5 12 3 9.5Z"/></svg>
+      <span class="nav-phone-text">(720) 871-9988</span>
+    </a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Professional Car Detailing</div>
+    <h1>Your Car Deserves Premium Care</h1>
+    <p class="hero-sub">Elliots Car Detailing brings showroom shine to every vehicle in Castle Rock. From ceramic coatings to paint correction, we deliver exceptional results.</p>
+    <div class="hero-buttons">
+      <a href="#cta-section" class="btn-primary">Book a Detailing</a>
+      <a href="#services" class="btn-ghost">View Services</a>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="features" id="why-us">
+  <div class="container">
+    <div class="section-eyebrow">WHY CHOOSE US</div>
+    <h2>The Elliots Car Detailing Difference</h2>
+    <p class="section-sub">What sets us apart from other castle rock detailers</p>
+    <div class="features-grid">
+    <div class="feature-card">
+      <div class="feature-icon"><i class="fa-solid fa-car-side"></i></div>
+      <h3>We Come to You</h3>
+      <p>We bring the full detail experience to your door - home, office, or wherever works for you.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon"><i class="fa-regular fa-clock"></i></div>
+      <h3>Flexible Hours</h3>
+      <p>We work around your schedule, including evenings and weekends, so detailing fits your life.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon"><i class="fa-solid fa-bolt"></i></div>
+      <h3>Fast Turnaround</h3>
+      <p>We work efficiently so you get your car back looking showroom-fresh without losing your whole day.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon"><i class="fa-solid fa-file-shield"></i></div>
+      <h3>Fully Insured</h3>
+      <p>Fully licensed and insured for your peace of mind - you are protected from start to finish.</p>
+    </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-header">
+      <h2>Our Detailing Services</h2>
+      <p>Comprehensive car care solutions tailored to restore and protect your vehicle's beauty.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <img src="https://yourwebsiteexample.com/shared/stock-exterior.jpg" alt="Exterior Wash and Wax" class="service-card-image" loading="lazy">
+        <div class="service-card-content">
+          <div class="service-icon">
+            <i class="fa-solid fa-soap"></i>
+          </div>
+          <h3>Exterior Wash & Wax</h3>
+          <p>Professional washing combined with premium wax protection to enhance shine and protect your vehicle's paint from the elements.</p>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <img src="https://yourwebsiteexample.com/shared/stock-interior-vacuum.jpg" alt="Full Detail Package" class="service-card-image" loading="lazy">
+        <div class="service-card-content">
+          <div class="service-icon">
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <h3>Full Detail Package</h3>
+          <p>Complete interior and exterior detailing including vacuuming, upholstery cleaning, leather conditioning, and comprehensive exterior care.</p>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <img src="https://yourwebsiteexample.com/shared/stock-ceramic-coating.jpg" alt="Ceramic Coating" class="service-card-image" loading="lazy">
+        <div class="service-card-content">
+          <div class="service-icon">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+          <h3>Ceramic Coating</h3>
+          <p>Advanced ceramic protection that bonds to your paint, providing long-lasting water beading, UV protection, and contamination resistance.</p>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <img src="https://yourwebsiteexample.com/shared/stock-paint-correction.jpg" alt="Paint Correction" class="service-card-image" loading="lazy">
+        <div class="service-card-content">
+          <div class="service-icon">
+            <i class="fa-solid fa-palette"></i>
+          </div>
+          <h3>Paint Correction</h3>
+          <p>Expert removal of swirl marks, scratches, and imperfections through multi-stage polishing to restore your vehicle's original finish.</p>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <img src="https://yourwebsiteexample.com/shared/stock-headlight-restoration.jpg" alt="Headlight Restoration" class="service-card-image" loading="lazy">
+        <div class="service-card-content">
+          <div class="service-icon">
+            <i class="fa-solid fa-lightbulb"></i>
+          </div>
+          <h3>Headlight Restoration</h3>
+          <p>Professional restoration of oxidized or cloudy headlights, improving visibility and restoring clarity for safer nighttime driving.</p>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <img src="https://yourwebsiteexample.com/shared/stock-engine-bay.jpg" alt="Engine Bay Cleaning" class="service-card-image" loading="lazy">
+        <div class="service-card-content">
+          <div class="service-icon">
+            <i class="fa-solid fa-gear"></i>
+          </div>
+          <h3>Engine Bay Cleaning</h3>
+          <p>Thorough cleaning and degreasing of your engine bay, improving appearance and helping you spot potential maintenance issues early.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-card">
+        <span class="section-badge">About Us</span>
+        <h2>Why Choose Elliots Car Detailing</h2>
+        <p>Elliots Car Detailing in Castle Rock provides comprehensive exterior and interior detailing services, from basic washing to advanced ceramic coating and paint correction. With over one year in business, we've built a reputation for exceptional attention to detail and customer satisfaction.</p>
+        <p>Whether you need mobile detailing at your home or office, or prefer our shop location, we bring professional-grade equipment and expert techniques to every vehicle. Our team is passionate about protecting your investment and keeping your car looking its absolute best.</p>
+      </div>
+
+      <div class="about-card">
+        <span class="section-badge">Why Us</span>
+        <h2>What Sets Us Apart</h2>
+        <div class="value-badges">
+          <div class="value-badge">
+            <div class="value-badge-icon">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/></svg>
+            </div>
+            <div class="value-badge-text">Mobile & Shop Services</div>
+          </div>
+          <div class="value-badge">
+            <div class="value-badge-icon">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="value-badge-text">Premium Products & Equipment</div>
+          </div>
+          <div class="value-badge">
+            <div class="value-badge-icon">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M12 2L15.09 8.26H21.77L16.85 12.61L17.97 18.87L12 14.5L6.03 18.87L7.15 12.61L2.23 8.26H8.91L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="value-badge-text">Expert Team with Proven Results</div>
+          </div>
+          <div class="value-badge">
+            <div class="value-badge-icon">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" stroke="currentColor" stroke-width="2"/></svg>
+            </div>
+            <div class="value-badge-text">Local Castle Rock Service</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOURS & CONTACT -->
+<section class="hours">
+  <div class="container">
+    <div class="hours-grid">
+      <div class="hours-card">
+        <h3>Business Hours</h3>
+        <table class="hours-table">
+          <tr>
+            <td>Monday</td>
+            <td>8:00 AM - 6:00 PM</td>
+          </tr>
+          <tr>
+            <td>Tuesday</td>
+            <td>8:00 AM - 6:00 PM</td>
+          </tr>
+          <tr>
+            <td>Wednesday</td>
+            <td>8:00 AM - 6:00 PM</td>
+          </tr>
+          <tr>
+            <td>Thursday</td>
+            <td>8:00 AM - 6:00 PM</td>
+          </tr>
+          <tr>
+            <td>Friday</td>
+            <td>8:00 AM - 6:00 PM</td>
+          </tr>
+          <tr>
+            <td>Saturday</td>
+            <td>9:00 AM - 4:00 PM</td>
+          </tr>
+          <tr>
+            <td>Sunday</td>
+            <td>Closed</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="contact-info">
+        <h3>Get In Touch</h3>
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fa-solid fa-phone"></i>
+          </div>
+          <div class="contact-details">
+            <h4>Phone</h4>
+            <p><a href="tel:+17208719988">(720) 871-9988</a></p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fa-solid fa-envelope"></i>
+          </div>
+          <div class="contact-details">
+            <h4>Email</h4>
+            <p><a href="mailto:amy@zing-work.com">amy@zing-work.com</a></p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
+          <div class="contact-details">
+            <h4>Service Area</h4>
+            <p>Castle Rock, US</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA SECTION -->
+<section id="cta-section">
+  <div class="container">
+    <div class="cta-content">
+      <h2>Ready for a Showroom Shine?</h2>
+      <p>Contact Elliots Car Detailing today to schedule your detailing appointment. Mobile and shop services available throughout Castle Rock.</p>
+      <a href="tel:+17208719988" class="btn-primary">Call Now: (720) 871-9988</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <h4>Elliots Car Detailing</h4>
+      <p>Professional car detailing services in Castle Rock, providing mobile and shop-based detailing for all vehicle types.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#services">View All Services</a></li>
+        <li><a href="tel:+17208719988">Book Detailing</a></li>
+        <li><a href="#cta-section">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:+17208719988">(720) 871-9988</a></li>
+        <li><a href="mailto:amy@zing-work.com">amy@zing-work.com</a></li>
+        <li>Castle Rock, US</li>
+      </ul>
+    </div>
+    <div class="footer-legal">
+      <p>&copy; 2024 Elliots Car Detailing. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Elliots Car Detailing",
+  "image": "https://yourwebsiteexample.com/shared/hero.jpg",
+  "description": "Professional car detailing services in Castle Rock providing comprehensive exterior and interior detailing services, from basic washing to advanced ceramic coating and paint correction.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Castle Rock",
+    "addressRegion": "US"
+  },
+  "telephone": "(720) 871-9988",
+  "email": "amy@zing-work.com",
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "08:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "09:00",
+      "closes": "16:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Sunday",
+      "opens": "00:00",
+      "closes": "00:00"
+    }
+  ],
+  "priceRange": "$$"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What services does Elliots Car Detailing offer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We offer comprehensive car detailing services including exterior wash and wax, full detail packages, ceramic coating, paint correction, headlight restoration, and engine bay cleaning."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Elliots Car Detailing offer mobile detailing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we provide both mobile detailing at your location and shop-based detailing services throughout Castle Rock."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the business hours for Elliots Car Detailing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Monday through Friday: 8:00 AM to 6:00 PM, Saturday: 9:00 AM to 4:00 PM, Closed on Sundays."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can I book a detailing appointment?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can call us at (720) 871-9988 or email amy@zing-work.com to schedule your appointment."
+      }
+    }
+  ]
+}
+</script>
+
+<script>
+window.addEventListener('scroll', function() {
+  var navbar = document.getElementById('navbar');
+  if (window.scrollY > 50) {
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
+});
+</script>
+
+</body>
+</html>
