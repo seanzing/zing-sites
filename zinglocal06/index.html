@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZING Local | Professional Car Detailing in Castle Rock, CO</title>
+<meta name="description" content="ZING Local provides professional car detailing services in Castle Rock, Colorado. Mobile and shop detailing including exterior wash, interior detailing, full details, and ceramic coating. Call (720) 871-9988.">
+<meta property="og:title" content="ZING Local | Car Detailing in Castle Rock, CO">
+<meta property="og:description" content="Professional car detailing services in Castle Rock. Exterior wash, interior detailing, full details, and ceramic coating.">
+<meta property="og:type" content="business.business">
+<meta property="og:url" content="https://zinglocal.com">
+<meta name="theme-color" content="#5b7eff">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://yourwebsiteexample.com/shared/fa/css/all.min.css">
+<style>
+:root {
+  --primary: #5b7eff;
+  --primary-hover: #4a67ff;
+  --primary-rgb: 91, 126, 255;
+  --accent: #ff6b54;
+  --dark: #040d1f;
+  --card: #0a1528;
+  --white: #ffffff;
+  --red: #e53e3e;
+  --text: #f0f4ff;
+  --muted: rgba(240,244,255,0.55);
+  --border: rgba(91, 126, 255, 0.4);
+  --card-border: rgba(91, 126, 255, 0.3);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--muted);
+  line-height: 1.7;
+  background: var(--dark);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: var(--text);
+  line-height: 1.2;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+a { text-decoration: none; color: inherit; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* NAV */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #040d1f;
+  border-bottom: 1px solid rgba(91, 126, 255, 0.3);
+  z-index: 1000;
+  transition: box-shadow 0.3s ease;
+}
+
+nav.scrolled {
+  box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+}
+
+.nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-logo {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.nav-phone {
+  font-weight: 600;
+  color: var(--accent);
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-phone svg {
+  width: 18px;
+  height: 18px;
+  fill: var(--accent);
+}
+
+@media (max-width: 768px) {
+  .nav-phone-text { display: none; }
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-top: 64px;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: url('https://yourwebsiteexample.com/get-started/stock/stock2.jpg') center/cover no-repeat;
+  animation: slowZoom 20s ease-in-out infinite alternate;
+}
+
+@keyframes slowZoom {
+  from { transform: scale(1); }
+  to { transform: scale(1.08); }
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(4,13,31,0.7) 0%, rgba(4,13,31,0.45) 50%, rgba(4,13,31,0.8) 100%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 800px;
+  padding: 0 24px;
+}
+
+.hero-eyebrow {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--white);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 8px 20px;
+  border-radius: 30px;
+  margin-bottom: 24px;
+}
+
+.hero h1 {
+  font-size: clamp(2.6rem, 6vw, 4.8rem);
+  font-weight: 800;
+  color: var(--white);
+  margin-bottom: 20px;
+}
+
+.hero-sub {
+  font-size: 1.15rem;
+  color: rgba(240,244,255,0.75);
+  margin-bottom: 36px;
+  line-height: 1.7;
+  max-width: 620px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--white);
+  padding: 16px 36px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background 0.3s ease, transform 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+.btn-ghost {
+  display: inline-block;
+  color: var(--white);
+  padding: 16px 36px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  border: 1px solid rgba(240,244,255,0.3);
+  transition: border-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+  background: transparent;
+}
+
+.btn-ghost:hover {
+  border-color: var(--white);
+  transform: translateY(-2px);
+}
+
+/* SERVICES */
+.services {
+  padding: 100px 0;
+  background: var(--card);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-header h2 {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.section-header p {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  color: var(--muted);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px;
+}
+
+.service-card {
+  background: rgba(4,13,31,0.6);
+  border: 1px solid var(--card-border);
+  border-top: 3px solid var(--primary);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 40px rgba(91, 126, 255, 0.2);
+}
+
+.service-card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.service-card-content {
+  padding: 32px 28px;
+}
+
+.service-icon {
+  color: var(--accent);
+  margin-bottom: 18px;
+  width: 44px;
+  height: 44px;
+  background: rgba(91, 126, 255, 0.25);
+  border: 1px solid rgba(91, 126, 255, 0.4);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-icon i {
+  font-size: 22px;
+}
+
+.service-card h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--text);
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+/* ABOUT */
+.about {
+  padding: 100px 0;
+  background: var(--dark);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.about-card {
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  padding: 40px 36px;
+}
+
+.section-badge {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+
+.about-card h2 {
+  font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+  font-weight: 800;
+  margin-bottom: 24px;
+}
+
+.about-card p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: rgba(240,244,255,0.6);
+  margin-bottom: 16px;
+}
+
+.about-card p:last-child { margin-bottom: 0; }
+
+.value-badges {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.value-badge {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-left: 3px solid var(--accent);
+  border-radius: 12px;
+  padding: 24px 20px;
+}
+
+.value-badge-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  background: rgba(91, 126, 255, 0.25);
+  border: 1px solid rgba(91, 126, 255, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.value-badge-icon i {
+  font-size: 24px;
+  color: var(--accent);
+}
+
+.value-badge-text {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+/* HOURS */
+.hours-section {
+  padding: 100px 0;
+  background: var(--card);
+}
+
+.hours-section h2 {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 800;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.hours-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.hours-card {
+  background: rgba(4,13,31,0.6);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 40px 36px;
+}
+
+.hours-card h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.hours-card i {
+  color: var(--accent);
+  font-size: 24px;
+}
+
+.hours-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.hours-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(91, 126, 255, 0.2);
+}
+
+.hours-item:last-child {
+  border-bottom: none;
+}
+
+.hours-day {
+  font-weight: 600;
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+.hours-time {
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.contact-card {
+  background: rgba(4,13,31,0.6);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 40px 36px;
+}
+
+.contact-card h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.contact-card i {
+  color: var(--accent);
+  font-size: 24px;
+}
+
+.contact-methods {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-method {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.contact-method-icon {
+  width: 44px;
+  height: 44px;
+  background: rgba(91, 126, 255, 0.25);
+  border: 1px solid rgba(91, 126, 255, 0.4);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contact-method-icon i {
+  font-size: 20px;
+  color: var(--accent);
+}
+
+.contact-method-info h4 {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+
+.contact-method-info a {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text);
+  transition: color 0.3s ease;
+}
+
+.contact-method-info a:hover {
+  color: var(--accent);
+}
+
+/* CTA SECTION */
+#cta-section {
+  position: relative;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-image: url('https://yourwebsiteexample.com/shared/contact-bg.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+#cta-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(4,13,31,0.85) 0%, rgba(4,13,31,0.7) 100%);
+  z-index: 1;
+}
+
+.cta-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 700px;
+  padding: 0 24px;
+}
+
+.cta-content h2 {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.cta-content p {
+  font-size: 1.1rem;
+  color: rgba(240,244,255,0.75);
+  margin-bottom: 36px;
+  line-height: 1.7;
+}
+
+/* FOOTER */
+footer {
+  background: rgba(4,13,31,0.8);
+  border-top: 1px solid var(--card-border);
+  padding: 60px 0 24px;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footer-section h4 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+  margin-bottom: 16px;
+}
+
+.footer-section p {
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
+
+.footer-section a {
+  color: var(--text);
+  transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+  color: var(--accent);
+}
+
+.footer-divider {
+  border-top: 1px solid var(--card-border);
+  padding-top: 24px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero {
+    margin-top: 60px;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hours-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .section-header {
+    text-align: center;
+  }
+
+  .section-header h2 {
+    text-align: center;
+  }
+
+  .section-header p {
+    text-align: center;
+  }
+
+  .about-card {
+    text-align: center;
+  }
+
+  .about-card h2 {
+    text-align: center;
+  }
+
+  .value-badges {
+    align-items: center;
+  }
+
+  .value-badge {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.features { padding: 90px 0; background: var(--card, #071a2e); }
+.features-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 48px; max-width: 1100px; margin-left: auto; margin-right: auto; }
+.feature-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 32px 24px; text-align: center; }
+.feature-icon { font-size: 1.8rem; color: var(--accent, #2563eb); margin-bottom: 16px; }
+.feature-card h3 { font-size: 1rem; font-weight: 700; color: #fff; margin-bottom: 10px; }
+.feature-card p { font-size: 0.85rem; color: rgba(255,255,255,0.55); line-height: 1.6; margin: 0; }
+@media(max-width:900px){ .features-grid { grid-template-columns: 1fr 1fr; } }
+@media(max-width:500px){ .features-grid { grid-template-columns: 1fr; } }
+@media(max-width:768px){ .features h2, .features .section-sub, .features .section-eyebrow { text-align: center; } .feature-card { text-align: center; } }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "ZING Local",
+  "image": "https://zinglocal.com/logo.png",
+  "description": "Professional car detailing services in Castle Rock, Colorado. Mobile and shop detailing including exterior wash, interior detailing, full details, and ceramic coating.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Castle Rock",
+    "addressRegion": "CO",
+    "addressCountry": "US"
+  },
+  "telephone": "(720) 871-9988",
+  "email": "amy@zing-work.com",
+  "priceRange": "$",
+  "areaServed": "Castle Rock, CO",
+  "foundingDate": "2024",
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "08:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "09:00",
+      "closes": "16:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Sunday",
+      "closes": "00:00"
+    }
+  ],
+  "sameAs": [
+    "https://www.facebook.com/zinglocal",
+    "https://www.instagram.com/zinglocal"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What services does ZING Local offer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ZING Local offers exterior wash and wax, interior detailing, full detail packages, and ceramic coating services. We provide both mobile and shop detailing in Castle Rock, Colorado."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer mobile detailing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, ZING Local provides both mobile detailing at your location and shop detailing services in Castle Rock."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are your business hours?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Monday through Friday: 8:00 AM to 6:00 PM. Saturday: 9:00 AM to 4:00 PM. Sunday: Closed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can I book a detailing appointment?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can call ZING Local at (720) 871-9988 or email amy@zing-work.com to schedule your car detailing appointment."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<nav id="navbar">
+  <div class="nav-inner">
+    <div class="nav-logo">ZING Local</div>
+    <a href="tel:+17208719988" class="nav-phone">
+      <i class="fas fa-phone"></i>
+      <span class="nav-phone-text">(720) 871-9988</span>
+    </a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Professional Car Detailing</div>
+    <h1>Your Car Deserves a Showroom Shine</h1>
+    <p class="hero-sub">ZING Local brings professional car detailing to Castle Rock with mobile and shop options. From exterior wash to ceramic coating, we transform your vehicle with precision and care.</p>
+    <div class="hero-buttons">
+      <a href="#contact-section" class="btn-primary">Book Now</a>
+      <a href="#services" class="btn-ghost">Learn More</a>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="features" id="why-us">
+  <div class="container">
+    <div class="section-eyebrow">WHY CHOOSE US</div>
+    <h2>The ZING Local Difference</h2>
+    <p class="section-sub">What sets us apart from other castle rock detailers</p>
+    <div class="features-grid">
+    <div class="feature-card">
+      <div class="feature-icon"><i class="fa-solid fa-car-side"></i></div>
+      <h3>We Come to You</h3>
+      <p>We bring the full detail experience to your door - home, office, or wherever works for you.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon"><i class="fa-regular fa-clock"></i></div>
+      <h3>Flexible Hours</h3>
+      <p>We work around your schedule, including evenings and weekends, so detailing fits your life.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon"><i class="fa-solid fa-layer-group"></i></div>
+      <h3>Premium Products</h3>
+      <p>Professional-grade products and tools only - the same used by the best detailing shops around.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon"><i class="fa-solid fa-house"></i></div>
+      <h3>Local &amp; Trusted</h3>
+      <p>Locally owned and operated. We're your neighbors and we take pride in serving our community.</p>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="services">
+  <div class="container">
+    <div class="section-header">
+      <h2>Our Services</h2>
+      <p>Premium car detailing solutions tailored to protect and enhance your vehicle</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <img src="https://yourwebsiteexample.com/shared/stock-exterior.jpg" alt="Exterior Wash and Wax" class="service-card-image" loading="lazy">
+        <div class="service-card-content">
+          <div class="service-icon">
+            <i class="fa-solid fa-soap"></i>
+          </div>
+          <h3>Exterior Wash & Wax</h3>
+          <p>Professional exterior cleaning with protective wax coating. We remove dirt, grime, and contaminants while applying premium wax to protect your paint and enhance shine.</p>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <img src="https://yourwebsiteexample.com/shared/stock-interior-steam.jpg" alt="Interior Detailing" class="service-card-image" loading="lazy">
+        <div class="service-card-content">
+          <div class="service-icon">
+            <i class="fa-solid fa-couch"></i>
+          </div>
+          <h3>Interior Detailing</h3>
+          <p>Deep cleaning of your vehicle's interior including carpets, seats, and trim. We use steam cleaning and specialized treatments to eliminate stains, odors, and allergens for a fresh cabin.</p>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <img src="https://yourwebsiteexample.com/shared/stock-interior-vacuum.jpg" alt="Full Detail Package" class="service-card-image" loading="lazy">
+        <div class="service-card-content">
+          <div class="service-icon">
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <h3>Full Detail Package</h3>
+          <p>Complete transformation inside and out. This comprehensive service combines exterior wash and wax with full interior detailing, window cleaning, and finishing touches for ultimate vehicle care.</p>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <img src="https://yourwebsiteexample.com/shared/stock-ceramic-coating.jpg" alt="Ceramic Coating" class="service-card-image" loading="lazy">
+        <div class="service-card-content">
+          <div class="service-icon">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+          <h3>Ceramic Coating</h3>
+          <p>Advanced protective coating that bonds to your paint, creating a durable shield against UV rays, water spots, and contaminants. Provides long-lasting gloss and easier maintenance.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-card">
+        <span class="section-badge">About Us</span>
+        <h2>ZING Local: Castle Rock's Premier Detailing Service</h2>
+        <p>ZING Local brings professional car detailing to Castle Rock, offering both mobile and shop-based services. We specialize in exterior washing, interior detailing, full details, and ceramic coating services that protect and enhance your vehicle.</p>
+        <p>With a commitment to quality and customer satisfaction, we use premium products and proven techniques to deliver showroom-quality results every time.</p>
+      </div>
+
+      <div class="about-card">
+        <span class="section-badge">Why Choose Us</span>
+        <h2>Professional Quality, Local Service</h2>
+        <div class="value-badges">
+          <div class="value-badge">
+            <div class="value-badge-icon">
+              <i class="fa-solid fa-check"></i>
+            </div>
+            <div class="value-badge-text">Mobile and shop detailing options for your convenience</div>
+          </div>
+          <div class="value-badge">
+            <div class="value-badge-icon">
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <div class="value-badge-text">Premium products and proven detailing techniques</div>
+          </div>
+          <div class="value-badge">
+            <div class="value-badge-icon">
+              <i class="fa-solid fa-shield-alt"></i>
+            </div>
+            <div class="value-badge-text">Ceramic coatings for long-lasting protection</div>
+          </div>
+          <div class="value-badge">
+            <div class="value-badge-icon">
+              <i class="fa-solid fa-handshake"></i>
+            </div>
+            <div class="value-badge-text">Exceptional customer service and attention to detail</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hours-section">
+  <div class="container">
+    <h2>Hours & Contact</h2>
+    <div class="hours-grid">
+      <div class="hours-card">
+        <h3><i class="fa-solid fa-clock"></i> Business Hours</h3>
+        <div class="hours-list">
+          <div class="hours-item">
+            <span class="hours-day">Monday</span>
+            <span class="hours-time">8:00 AM - 6:00 PM</span>
+          </div>
+          <div class="hours-item">
+            <span class="hours-day">Tuesday</span>
+            <span class="hours-time">8:00 AM - 6:00 PM</span>
+          </div>
+          <div class="hours-item">
+            <span class="hours-day">Wednesday</span>
+            <span class="hours-time">8:00 AM - 6:00 PM</span>
+          </div>
+          <div class="hours-item">
+            <span class="hours-day">Thursday</span>
+            <span class="hours-time">8:00 AM - 6:00 PM</span>
+          </div>
+          <div class="hours-item">
+            <span class="hours-day">Friday</span>
+            <span class="hours-time">8:00 AM - 6:00 PM</span>
+          </div>
+          <div class="hours-item">
+            <span class="hours-day">Saturday</span>
+            <span class="hours-time">9:00 AM - 4:00 PM</span>
+          </div>
+          <div class="hours-item">
+            <span class="hours-day">Sunday</span>
+            <span class="hours-time">Closed</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-card">
+        <h3><i class="fa-solid fa-phone"></i> Get In Touch</h3>
+        <div class="contact-methods">
+          <div class="contact-method">
+            <div class="contact-method-icon">
+              <i class="fa-solid fa-phone"></i>
+            </div>
+            <div class="contact-method-info">
+              <h4>Phone</h4>
+              <a href="tel:+17208719988">(720) 871-9988</a>
+            </div>
+          </div>
+          <div class="contact-method">
+            <div class="contact-method-icon">
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div class="contact-method-info">
+              <h4>Email</h4>
+              <a href="mailto:amy@zing-work.com">amy@zing-work.com</a>
+            </div>
+          </div>
+          <div class="contact-method">
+            <div class="contact-method-icon">
+              <i class="fa-solid fa-map-marker-alt"></i>
+            </div>
+            <div class="contact-method-info">
+              <h4>Service Area</h4>
+              <p>Castle Rock, Colorado</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="cta-section">
+  <div class="cta-content">
+    <h2>Ready for a Showroom Shine?</h2>
+    <p>Book your car detailing appointment with ZING Local today and experience professional quality. Call us or email to schedule your mobile or shop detailing service.</p>
+    <a href="tel:+17208719988" class="btn-primary">Call (720) 871-9988</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>ZING Local</h4>
+        <p>Professional car detailing services in Castle Rock, Colorado. Mobile and shop detailing for all vehicle types.</p>
+      </div>
+      <div class="footer-section">
+        <h4>Services</h4>
+        <p><a href="#services">Exterior Wash & Wax</a></p>
+        <p><a href="#services">Interior Detailing</a></p>
+        <p><a href="#services">Full Detail Package</a></p>
+        <p><a href="#services">Ceramic Coating</a></p>
+      </div>
+      <div class="footer-section">
+        <h4>Contact</h4>
+        <p><a href="tel:+17208719988">(720) 871-9988</a></p>
+        <p><a href="mailto:amy@zing-work.com">amy@zing-work.com</a></p>
+        <p>Castle Rock, Colorado</p>
+      </div>
+    </div>
+    <div class="footer-divider">
+      <p>&copy; 2024 ZING Local. All rights reserved. Professional car detailing in Castle Rock, CO.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+window.addEventListener('scroll', function() {
+  const navbar = document.getElementById('navbar');
+  if (window.scrollY > 50) {
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
+});
+</script>
+
+</body>
+</html>
