@@ -1,0 +1,1224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zach Car Detailing | Auto Detailing in Castle Rock, US</title>
+<meta name="description" content="Zach Car Detailing in Castle Rock, US. Professional auto detailing services including exterior wash, interior detailing, paint correction, and headlight restoration. (765) 888-9900.">
+<meta property="og:title" content="Zach Car Detailing | Professional Auto Detailing in Castle Rock">
+<meta property="og:description" content="Professional auto detailing services in Castle Rock. Exterior wash, interior detailing, paint correction, and headlight restoration.">
+<meta property="og:type" content="business.business">
+<meta property="og:image" content="https://yourwebsiteexample.com/shared/hero.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://yourwebsiteexample.com/shared/fa/css/all.min.css">
+<style>
+:root {
+  --primary: #3b82f6;
+  --primary-hover: #2563eb;
+  --primary-rgb: 59, 130, 246;
+  --accent: #10b981;
+  --dark: #040d1f;
+  --card: #0a1528;
+  --white: #ffffff;
+  --text: #f0f4ff;
+  --muted: rgba(240,244,255,0.55);
+  --border: rgba(59, 130, 246, 0.4);
+  --card-border: rgba(59, 130, 246, 0.3);
+  --red: #e53e3e;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--muted);
+  line-height: 1.7;
+  background: var(--dark);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: var(--text);
+  line-height: 1.2;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+a { text-decoration: none; color: inherit; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* NAV */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #040d1f;
+  border-bottom: 1px solid rgba(59, 130, 246, 0.3);
+  z-index: 1000;
+  transition: box-shadow 0.3s ease;
+}
+
+nav.scrolled {
+  box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+}
+
+.nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-logo {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.nav-phone {
+  font-weight: 600;
+  color: var(--accent);
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-phone svg {
+  width: 18px;
+  height: 18px;
+  fill: var(--accent);
+}
+
+@media (max-width: 768px) {
+  .nav-phone-text { display: none; }
+  .nav-logo { font-size: 1rem; }
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-top: 60px;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: url('https://yourwebsiteexample.com/get-started/stock/stock2.jpg') center/cover no-repeat;
+  animation: slowZoom 20s ease-in-out infinite alternate;
+}
+
+@keyframes slowZoom {
+  from { transform: scale(1); }
+  to { transform: scale(1.08); }
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(4,13,31,0.7) 0%, rgba(4,13,31,0.45) 50%, rgba(4,13,31,0.8) 100%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 800px;
+  padding: 0 24px;
+}
+
+.hero-eyebrow {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--white);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 8px 20px;
+  border-radius: 30px;
+  margin-bottom: 24px;
+}
+
+.hero h1 {
+  font-size: clamp(2.6rem, 6vw, 4.8rem);
+  font-weight: 800;
+  color: var(--white);
+  margin-bottom: 20px;
+}
+
+.hero-sub {
+  font-size: 1.15rem;
+  color: rgba(240,244,255,0.75);
+  margin-bottom: 36px;
+  line-height: 1.7;
+  max-width: 620px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--white);
+  padding: 16px 36px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background 0.3s ease, transform 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+.btn-ghost {
+  display: inline-block;
+  color: var(--white);
+  padding: 16px 36px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  border: 1px solid rgba(240,244,255,0.3);
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-ghost:hover {
+  border-color: var(--white);
+  transform: translateY(-2px);
+}
+
+/* SERVICES */
+.services {
+  padding: 100px 0;
+  background: var(--card);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-header h2 {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.section-header p {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  color: var(--muted);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+.service-card {
+  background: rgba(4,13,31,0.6);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 40px rgba(59, 130, 246, 0.2);
+}
+
+.service-card-image {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.service-card-content {
+  padding: 28px 24px;
+}
+
+.service-icon {
+  color: var(--accent);
+  margin-bottom: 16px;
+  width: 44px;
+  height: 44px;
+  background: rgba(59, 130, 246, 0.25);
+  border: 1px solid rgba(59, 130, 246, 0.4);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-icon i {
+  width: 22px;
+  height: 22px;
+}
+
+.service-card h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--text);
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  .section-header {
+    text-align: center;
+  }
+  .section-header h2 {
+    text-align: center;
+  }
+  .section-header p {
+    text-align: center;
+  }
+}
+
+/* ABOUT */
+.about {
+  padding: 100px 0;
+  background: var(--dark);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.about-card {
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  padding: 40px 36px;
+}
+
+.section-badge {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+
+.about-card h2 {
+  font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+  font-weight: 800;
+  margin-bottom: 24px;
+}
+
+.about-card p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: rgba(240,244,255,0.6);
+  margin-bottom: 16px;
+}
+
+.about-card p:last-child { margin-bottom: 0; }
+
+.value-badges {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.value-badge {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-left: 3px solid var(--accent);
+  border-radius: 12px;
+  padding: 20px 20px;
+}
+
+.value-badge-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: rgba(59, 130, 246, 0.25);
+  border: 1px solid rgba(59, 130, 246, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.value-badge-icon i {
+  width: 20px;
+  height: 20px;
+  color: var(--accent);
+}
+
+.value-badge-text {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .about-card {
+    text-align: center;
+  }
+  .about-card h2 {
+    text-align: center;
+  }
+  .about-card p {
+    text-align: center;
+  }
+  .value-badge {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+/* WHY CHOOSE US */
+.why-choose {
+  padding: 100px 0;
+  background: var(--card);
+}
+
+.why-choose-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.why-choose-text h2 {
+  font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+  font-weight: 800;
+  margin-bottom: 24px;
+}
+
+.why-choose-text p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: rgba(240,244,255,0.6);
+  margin-bottom: 24px;
+}
+
+.why-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.why-item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.why-icon {
+  width: 24px;
+  height: 24px;
+  background: var(--accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+.why-icon i {
+  width: 12px;
+  height: 12px;
+  color: var(--white);
+  font-size: 0.7rem;
+}
+
+.why-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+@media (max-width: 768px) {
+  .why-choose-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .why-choose-text {
+    text-align: center;
+  }
+  .why-choose-text h2 {
+    text-align: center;
+  }
+  .why-choose-text p {
+    text-align: center;
+  }
+  .why-list {
+    align-items: center;
+  }
+  .why-item {
+    justify-content: center;
+  }
+}
+
+/* HOURS & CONTACT */
+.hours-contact {
+  padding: 100px 0;
+  background: var(--dark);
+}
+
+.hours-contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+}
+
+.hours-section h2,
+.contact-section h2 {
+  font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+  font-weight: 800;
+  margin-bottom: 28px;
+}
+
+.hours-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.hours-table tr {
+  border-bottom: 1px solid var(--card-border);
+}
+
+.hours-table td {
+  padding: 16px 0;
+  font-size: 1rem;
+}
+
+.hours-table td:first-child {
+  font-weight: 600;
+  color: var(--text);
+  width: 40%;
+}
+
+.hours-table td:last-child {
+  color: var(--muted);
+  text-align: right;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.contact-icon {
+  width: 40px;
+  height: 40px;
+  background: rgba(59, 130, 246, 0.25);
+  border: 1px solid rgba(59, 130, 246, 0.4);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contact-icon i {
+  width: 20px;
+  height: 20px;
+  color: var(--accent);
+}
+
+.contact-text h3 {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  margin-bottom: 4px;
+}
+
+.contact-text p {
+  font-size: 1.05rem;
+  color: var(--text);
+}
+
+.contact-text p a {
+  color: var(--accent);
+  font-weight: 600;
+  transition: opacity 0.3s ease;
+}
+
+.contact-text p a:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .hours-contact-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .hours-contact {
+    text-align: center;
+  }
+  .hours-section h2,
+  .contact-section h2 {
+    text-align: center;
+  }
+  .hours-table td {
+    display: block;
+    padding: 12px 0;
+    width: 100%;
+    text-align: center;
+  }
+  .hours-table td:first-child {
+    width: 100%;
+    text-align: center;
+  }
+  .hours-table td:last-child {
+    text-align: center;
+  }
+  .hours-table tr {
+    display: block;
+    border-bottom: 1px solid var(--card-border);
+  }
+  .contact-item {
+    justify-content: center;
+  }
+  .contact-text h3 {
+    text-align: center;
+  }
+  .contact-text p {
+    text-align: center;
+  }
+}
+
+/* CTA SECTION */
+#cta-section {
+  position: relative;
+  padding: 100px 0;
+  background-image: url('https://yourwebsiteexample.com/shared/contact-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+
+#cta-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(4,13,31,0.75) 0%, rgba(4,13,31,0.85) 100%);
+  z-index: 1;
+}
+
+.cta-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+#cta-section h2 {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: var(--white);
+}
+
+#cta-section p {
+  font-size: 1.1rem;
+  color: rgba(240,244,255,0.8);
+  margin-bottom: 36px;
+  line-height: 1.7;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  #cta-section {
+    padding: 80px 0;
+  }
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  .btn-primary,
+  .btn-ghost {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+/* FOOTER */
+footer {
+  background: #020618;
+  border-top: 1px solid var(--card-border);
+  padding: 40px 0;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footer-section h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: var(--text);
+}
+
+.footer-section p,
+.footer-section a {
+  font-size: 0.95rem;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.footer-section a {
+  color: var(--accent);
+  font-weight: 500;
+  transition: opacity 0.3s ease;
+}
+
+.footer-section a:hover {
+  opacity: 0.8;
+}
+
+.footer-divider {
+  height: 1px;
+  background: var(--card-border);
+  margin-bottom: 24px;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .footer-section h3,
+  .footer-section p,
+  .footer-section a {
+    text-align: center;
+  }
+  .footer-bottom {
+    text-align: center;
+  }
+}
+
+.features { padding: 90px 0; background: var(--card, #071a2e); }
+.features-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 48px; max-width: 1100px; margin-left: auto; margin-right: auto; }
+.feature-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 32px 24px; text-align: center; }
+.feature-icon { font-size: 1.8rem; color: var(--accent, #2563eb); margin-bottom: 16px; }
+.feature-card h3 { font-size: 1rem; font-weight: 700; color: #fff; margin-bottom: 10px; }
+.feature-card p { font-size: 0.85rem; color: rgba(255,255,255,0.55); line-height: 1.6; margin: 0; }
+@media(max-width:900px){ .features-grid { grid-template-columns: 1fr 1fr; } }
+@media(max-width:500px){ .features-grid { grid-template-columns: 1fr; } }
+@media(max-width:768px){ .features h2, .features .section-sub, .features .section-eyebrow { text-align: center; } .feature-card { text-align: center; } }
+</style>
+</head>
+<body>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Zach Car Detailing",
+  "image": "https://yourwebsiteexample.com/shared/hero.jpg",
+  "description": "Zach Car Detailing offers comprehensive exterior washing, interior detailing, paint correction, and headlight restoration services to Castle Rock vehicle owners.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Castle Rock",
+    "addressCountry": "US"
+  },
+  "telephone": "(765) 888-9900",
+  "email": "amy@zing-work.com",
+  "priceRange": "$$",
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Monday",
+      "opens": "08:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Tuesday",
+      "opens": "08:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Wednesday",
+      "opens": "08:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Thursday",
+      "opens": "08:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Friday",
+      "opens": "08:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "09:00",
+      "closes": "16:00"
+    }
+  ],
+  "areaServed": {
+    "@type": "City",
+    "name": "Castle Rock"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What services does Zach Car Detailing offer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Zach Car Detailing offers exterior wash and wax, interior detailing, paint correction, and headlight restoration services for vehicles in Castle Rock."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer mobile detailing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we provide both mobile and shop detailing services throughout Castle Rock."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are your business hours?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Monday through Friday: 8:00 AM to 6:00 PM. Saturday: 9:00 AM to 4:00 PM. Sunday: Closed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can I book a detailing service?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can reach us at (765) 888-9900 or email us at amy@zing-work.com to schedule your appointment."
+      }
+    }
+  ]
+}
+</script>
+
+<!-- NAVIGATION -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <div class="nav-logo">Zach Car Detailing</div>
+    <a href="tel:(765)888-9900" class="nav-phone">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+      </svg>
+      <span class="nav-phone-text">(765) 888-9900</span>
+    </a>
+  </div>
+</nav>
+
+<!-- HERO SECTION -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Professional Car Detailing</div>
+    <h1>Your Castle Rock Detailing Experts</h1>
+    <p class="hero-sub">Transform your vehicle with premium detailing services. From exterior perfection to interior freshness, we handle every detail.</p>
+    <div class="hero-buttons">
+      <a href="#cta-section" class="btn-primary">Book Now</a>
+      <a href="#services" class="btn-ghost">View Services</a>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="features" id="why-us">
+  <div class="container">
+    <div class="section-eyebrow">WHY CHOOSE US</div>
+    <h2>The Zach Car Detailing Business Difference</h2>
+    <p class="section-sub">What sets us apart from other castle rock detailers</p>
+    <div class="features-grid">
+    <div class="feature-card">
+      <div class="feature-icon"><i class="fa-solid fa-car-side"></i></div>
+      <h3>We Come to You</h3>
+      <p>We bring the full detail experience to your door - home, office, or wherever works for you.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon"><i class="fa-regular fa-clock"></i></div>
+      <h3>Flexible Hours</h3>
+      <p>We work around your schedule, including evenings and weekends, so detailing fits your life.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon"><i class="fa-solid fa-shield-halved"></i></div>
+      <h3>Satisfaction Guaranteed</h3>
+      <p>We don't leave until you're 100% satisfied. Your happiness is our top priority, every time.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon"><i class="fa-solid fa-file-shield"></i></div>
+      <h3>Fully Insured</h3>
+      <p>Fully licensed and insured for your peace of mind - you are protected from start to finish.</p>
+    </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES SECTION -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-header">
+      <h2>Our Services</h2>
+      <p>Comprehensive detailing solutions tailored to keep your vehicle looking showroom-ready.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <img src="https://yourwebsiteexample.com/shared/stock-exterior.jpg" alt="Exterior Wash and Wax" class="service-card-image" loading="lazy">
+        <div class="service-card-content">
+          <div class="service-icon">
+            <i class="fa-solid fa-soap"></i>
+          </div>
+          <h3>Exterior Wash & Wax</h3>
+          <p>Deep cleaning and protective waxing to restore your vehicle's shine and shield the paint from the elements.</p>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <img src="https://yourwebsiteexample.com/shared/stock-interior-steam.jpg" alt="Interior Detailing" class="service-card-image" loading="lazy">
+        <div class="service-card-content">
+          <div class="service-icon">
+            <i class="fa-solid fa-couch"></i>
+          </div>
+          <h3>Interior Detailing</h3>
+          <p>Steam cleaning, vacuuming, and conditioning of all interior surfaces for a fresh, clean cabin experience.</p>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <img src="https://yourwebsiteexample.com/shared/stock-paint-correction.jpg" alt="Paint Correction" class="service-card-image" loading="lazy">
+        <div class="service-card-content">
+          <div class="service-icon">
+            <i class="fa-solid fa-palette"></i>
+          </div>
+          <h3>Paint Correction</h3>
+          <p>Professional correction to eliminate swirls, scratches, and oxidation, restoring your paint's original luster.</p>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <img src="https://yourwebsiteexample.com/shared/stock-headlight-restoration.jpg" alt="Headlight Restoration" class="service-card-image" loading="lazy">
+        <div class="service-card-content">
+          <div class="service-icon">
+            <i class="fa-solid fa-lightbulb"></i>
+          </div>
+          <h3>Headlight Restoration</h3>
+          <p>Restore cloudy or yellowed headlights to crystal-clear clarity, improving safety and vehicle appearance.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT SECTION -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-card">
+        <div class="section-badge">About Us</div>
+        <h2>Trusted Detailing for Castle Rock</h2>
+        <p>Zach Car Detailing offers comprehensive exterior washing, interior detailing, paint correction, and headlight restoration services to Castle Rock vehicle owners.</p>
+        <p>With over 3-5 years of experience in the detailing industry, our team is dedicated to bringing your vehicle back to its showroom condition. Whether you choose our mobile service that comes to you or our professional shop location, expect meticulous attention to every detail.</p>
+      </div>
+
+      <div class="value-badges">
+        <div class="value-badge">
+          <div class="value-badge-icon">
+            <i class="fa-solid fa-check"></i>
+          </div>
+          <div class="value-badge-text">Mobile and Shop Services Available</div>
+        </div>
+        <div class="value-badge">
+          <div class="value-badge-icon">
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <div class="value-badge-text">Premium Products and Techniques</div>
+        </div>
+        <div class="value-badge">
+          <div class="value-badge-icon">
+            <i class="fa-solid fa-handshake"></i>
+          </div>
+          <div class="value-badge-text">Customer Satisfaction Guaranteed</div>
+        </div>
+        <div class="value-badge">
+          <div class="value-badge-icon">
+            <i class="fa-solid fa-clock"></i>
+          </div>
+          <div class="value-badge-text">Flexible Scheduling to Fit Your Life</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US SECTION -->
+<section class="why-choose">
+  <div class="container">
+    <div class="why-choose-content">
+      <div class="why-choose-text">
+        <h2>Why Choose Zach Car Detailing</h2>
+        <p>We're not just washing cars. We're passionate about preserving and enhancing your vehicle's appearance. Our skilled technicians use only quality products and proven techniques to deliver results that exceed expectations.</p>
+        <div class="why-list">
+          <div class="why-item">
+            <div class="why-icon">
+              <i class="fa-solid fa-check"></i>
+            </div>
+            <div class="why-text">Expert detailers with years of experience serving the Castle Rock community</div>
+          </div>
+          <div class="why-item">
+            <div class="why-icon">
+              <i class="fa-solid fa-check"></i>
+            </div>
+            <div class="why-text">Convenient mobile service that comes to your home or office</div>
+          </div>
+          <div class="why-item">
+            <div class="why-icon">
+              <i class="fa-solid fa-check"></i>
+            </div>
+            <div class="why-text">Premium detailing products that protect and enhance your paint</div>
+          </div>
+          <div class="why-item">
+            <div class="why-icon">
+              <i class="fa-solid fa-check"></i>
+            </div>
+            <div class="why-text">Competitive pricing with transparent, upfront quotes</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="why-choose-text">
+        <h2>Serving Castle Rock with Pride</h2>
+        <p>Every vehicle that rolls into our shop or that we service at your location receives the same level of dedication and care. We understand that your vehicle is an investment, and we treat it with the respect it deserves.</p>
+        <p>From luxury vehicles to daily drivers, sedans to SUVs, our comprehensive suite of services is designed to keep every vehicle looking its absolute best. When you choose Zach Car Detailing, you're choosing a partner committed to excellence and your satisfaction.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOURS & CONTACT SECTION -->
+<section class="hours-contact">
+  <div class="container">
+    <div class="hours-contact-grid">
+      <div class="hours-section">
+        <h2>Hours of Operation</h2>
+        <table class="hours-table">
+          <tr>
+            <td>Monday</td>
+            <td>8:00 AM - 6:00 PM</td>
+          </tr>
+          <tr>
+            <td>Tuesday</td>
+            <td>8:00 AM - 6:00 PM</td>
+          </tr>
+          <tr>
+            <td>Wednesday</td>
+            <td>8:00 AM - 6:00 PM</td>
+          </tr>
+          <tr>
+            <td>Thursday</td>
+            <td>8:00 AM - 6:00 PM</td>
+          </tr>
+          <tr>
+            <td>Friday</td>
+            <td>8:00 AM - 6:00 PM</td>
+          </tr>
+          <tr>
+            <td>Saturday</td>
+            <td>9:00 AM - 4:00 PM</td>
+          </tr>
+          <tr>
+            <td>Sunday</td>
+            <td>Closed</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="contact-section">
+        <h2>Get in Touch</h2>
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fa-solid fa-phone"></i>
+            </div>
+            <div class="contact-text">
+              <h3>Phone</h3>
+              <p><a href="tel:(765)888-9900">(765) 888-9900</a></p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div class="contact-text">
+              <h3>Email</h3>
+              <p><a href="mailto:amy@zing-work.com">amy@zing-work.com</a></p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fa-solid fa-map-marker-alt"></i>
+            </div>
+            <div class="contact-text">
+              <h3>Service Area</h3>
+              <p>Castle Rock, US</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA SECTION -->
+<section id="cta-section">
+  <div class="container">
+    <div class="cta-content">
+      <h2>Ready for a Showroom Shine?</h2>
+      <p>Transform your vehicle today with professional detailing from Castle Rock's trusted experts. Get in touch now to schedule your appointment.</p>
+      <div class="cta-buttons">
+        <a href="tel:(765)888-9900" class="btn-primary">Call (765) 888-9900</a>
+        <a href="mailto:amy@zing-work.com" class="btn-ghost">Email Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Zach Car Detailing</h3>
+        <p>Professional auto detailing services in Castle Rock. Exterior wash, interior detailing, paint correction, and headlight restoration.</p>
+      </div>
+
+      <div class="footer-section">
+        <h3>Services</h3>
+        <p><a href="#services">Exterior Wash & Wax</a></p>
+        <p><a href="#services">Interior Detailing</a></p>
+        <p><a href="#services">Paint Correction</a></p>
+        <p><a href="#services">Headlight Restoration</a></p>
+      </div>
+
+      <div class="footer-section">
+        <h3>Contact</h3>
+        <p><a href="tel:(765)888-9900">(765) 888-9900</a></p>
+        <p><a href="mailto:amy@zing-work.com">amy@zing-work.com</a></p>
+        <p>Castle Rock, US</p>
+      </div>
+    </div>
+
+    <div class="footer-divider"></div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2024 Zach Car Detailing. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+window.addEventListener('scroll', function() {
+  const navbar = document.getElementById('navbar');
+  if (window.scrollY > 20) {
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
+});
+</script>
+
+</body>
+</html>
