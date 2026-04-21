@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brooks Works Detailing | Auto Detailing in San Antonio, TX</title>
+<meta name="description" content="Brooks Works Detailing in San Antonio, TX. Professional auto detailing, headlight restoration, and engine bay cleaning services. (720) 380-4722.">
+<meta property="og:title" content="Brooks Works Detailing | Auto Detailing in San Antonio, TX">
+<meta property="og:description" content="Premium full detailing, headlight restoration, and engine bay services in San Antonio.">
+<meta property="og:type" content="business.business">
+<meta property="og:url" content="https://brooksworksdetailing.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://yourwebsiteexample.com/shared/fa/css/all.min.css">
+<style>
+:root {
+  --primary: #3b82f6;
+  --primary-hover: #2563eb;
+  --primary-rgb: 59, 130, 246;
+  --accent: #10b981;
+  --dark: #040d1f;
+  --card: #0a1528;
+  --white: #ffffff;
+  --red: #e53e3e;
+  --text: #f0f4ff;
+  --muted: rgba(240, 244, 255, 0.55);
+  --border: rgba(59, 130, 246, 0.4);
+  --card-border: rgba(59, 130, 246, 0.3);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--muted);
+  line-height: 1.7;
+  background: var(--dark);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: var(--text);
+  line-height: 1.2;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* NAV */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #040d1f;
+  border-bottom: 1px solid rgba(59, 130, 246, 0.3);
+  z-index: 1000;
+  transition: box-shadow 0.3s ease;
+}
+
+nav.scrolled {
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+}
+
+.nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-logo {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.nav-phone {
+  font-weight: 600;
+  color: var(--accent);
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-phone svg {
+  width: 18px;
+  height: 18px;
+  fill: var(--accent);
+}
+
+@media (max-width: 768px) {
+  .nav-phone-text {
+    display: none;
+  }
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-top: 60px;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: url('https://yourwebsiteexample.com/get-started/stock/stock1.jpg') center/cover no-repeat;
+  animation: slowZoom 20s ease-in-out infinite alternate;
+}
+
+@keyframes slowZoom {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.08);
+  }
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(4, 13, 31, 0.7) 0%, rgba(4, 13, 31, 0.45) 50%, rgba(4, 13, 31, 0.8) 100%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 800px;
+  padding: 0 24px;
+}
+
+.hero-eyebrow {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--white);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 8px 20px;
+  border-radius: 30px;
+  margin-bottom: 24px;
+}
+
+.hero h1 {
+  font-size: clamp(2.6rem, 6vw, 4.8rem);
+  font-weight: 800;
+  color: var(--white);
+  margin-bottom: 20px;
+}
+
+.hero-sub {
+  font-size: 1.15rem;
+  color: rgba(240, 244, 255, 0.75);
+  margin-bottom: 36px;
+  line-height: 1.7;
+  max-width: 620px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--white);
+  padding: 16px 36px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background 0.3s ease, transform 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background: #059669;
+  transform: translateY(-2px);
+}
+
+.btn-ghost {
+  display: inline-block;
+  color: var(--white);
+  padding: 16px 36px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  border: 1px solid rgba(240, 244, 255, 0.3);
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-ghost:hover {
+  border-color: var(--white);
+  transform: translateY(-2px);
+}
+
+/* ABOUT */
+.about {
+  padding: 100px 0;
+  background: var(--dark);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.about-card {
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  padding: 40px 36px;
+}
+
+.section-badge {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+
+.about-card h2 {
+  font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+  font-weight: 800;
+  margin-bottom: 24px;
+}
+
+.about-card p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: rgba(240, 244, 255, 0.6);
+  margin-bottom: 16px;
+}
+
+.about-card p:last-child {
+  margin-bottom: 0;
+}
+
+.value-badges {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.value-badge {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-left: 3px solid var(--accent);
+  border-radius: 12px;
+  padding: 24px 20px;
+}
+
+.value-badge-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  background: rgba(59, 130, 246, 0.25);
+  border: 1px solid rgba(59, 130, 246, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.value-badge-icon svg {
+  width: 24px;
+  height: 24px;
+  stroke: var(--accent);
+  fill: none;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.value-badge-text {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+/* SERVICES */
+.services {
+  padding: 100px 0;
+  background: var(--card);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-header h2 {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.section-header p {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  color: var(--muted);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.service-card {
+  background: rgba(4, 13, 31, 0.6);
+  border: 1px solid var(--card-border);
+  border-top: 3px solid var(--primary);
+  border-radius: 12px;
+  padding: 32px 28px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 40px rgba(59, 130, 246, 0.2);
+}
+
+.service-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.service-icon {
+  color: var(--accent);
+  margin-bottom: 18px;
+  width: 44px;
+  height: 44px;
+  background: rgba(59, 130, 246, 0.25);
+  border: 1px solid rgba(59, 130, 246, 0.4);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-icon i {
+  font-size: 1.3rem;
+}
+
+.service-card h3 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  color: rgba(240, 244, 255, 0.6);
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .section-header {
+    text-align: center;
+  }
+  
+  .section-header h2 {
+    text-align: center;
+  }
+  
+  .section-header p {
+    text-align: center;
+  }
+}
+
+/* HOURS */
+.hours {
+  padding: 100px 0;
+  background: var(--dark);
+}
+
+.hours-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.hours-intro h2 {
+  font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+  font-weight: 800;
+  margin-bottom: 24px;
+}
+
+.hours-intro p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: rgba(240, 244, 255, 0.6);
+  margin-bottom: 16px;
+}
+
+.hours-intro p:last-child {
+  margin-bottom: 0;
+}
+
+.hours-table {
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.hours-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.hours-row:last-child {
+  border-bottom: none;
+}
+
+.hours-day {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.hours-time {
+  color: var(--accent);
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .hours-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .hours-intro h2 {
+    text-align: center;
+  }
+  
+  .hours-intro p {
+    text-align: center;
+  }
+  
+  .hours-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .hours-day {
+    width: 100%;
+  }
+  
+  .hours-time {
+    width: 100%;
+  }
+}
+
+/* TRUST SECTION */
+.trust {
+  padding: 100px 0;
+  background: var(--card);
+}
+
+.trust-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.trust-header h2 {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.trust-header p {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  color: var(--muted);
+}
+
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.trust-card {
+  background: rgba(4, 13, 31, 0.6);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 32px 24px;
+  text-align: center;
+}
+
+.trust-icon {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 20px;
+  background: rgba(59, 130, 246, 0.25);
+  border: 1px solid rgba(59, 130, 246, 0.4);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.trust-icon i {
+  font-size: 1.5rem;
+  color: var(--accent);
+}
+
+.trust-card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.trust-card p {
+  font-size: 0.95rem;
+  color: rgba(240, 244, 255, 0.6);
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .trust-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .trust-header {
+    text-align: center;
+  }
+  
+  .trust-header h2 {
+    text-align: center;
+  }
+  
+  .trust-header p {
+    text-align: center;
+  }
+}
+
+/* CTA SECTION */
+#cta-section {
+  padding: 120px 0;
+  position: relative;
+  background-image: url('https://yourwebsiteexample.com/shared/contact-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+
+#cta-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(4, 13, 31, 0.75);
+  z-index: 1;
+}
+
+.cta-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.cta-content h2 {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 800;
+  margin-bottom: 16px;
+  color: var(--white);
+}
+
+.cta-content p {
+  font-size: 1.1rem;
+  color: rgba(240, 244, 255, 0.75);
+  margin-bottom: 32px;
+  line-height: 1.7;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* FOOTER */
+footer {
+  background: rgba(4, 13, 31, 0.8);
+  border-top: 1px solid rgba(59, 130, 246, 0.3);
+  padding: 40px 0;
+  text-align: center;
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footer-block h4 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--text);
+}
+
+.footer-block p {
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.footer-block a {
+  color: var(--accent);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.footer-block a:hover {
+  color: var(--white);
+}
+
+.footer-divider {
+  border-top: 1px solid rgba(59, 130, 246, 0.2);
+  padding-top: 24px;
+}
+
+.footer-credit {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .about-card h2 {
+    text-align: center;
+  }
+  
+  .about-card p {
+    text-align: center;
+  }
+}
+
+.features { padding: 90px 0; background: var(--card, #071a2e); }
+.features-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 48px; max-width: 1100px; margin-left: auto; margin-right: auto; }
+.feature-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 32px 24px; text-align: center; }
+.feature-icon { font-size: 1.8rem; color: var(--accent, #2563eb); margin-bottom: 16px; }
+.feature-card h3 { font-size: 1rem; font-weight: 700; color: #fff; margin-bottom: 10px; }
+.feature-card p { font-size: 0.85rem; color: rgba(255,255,255,0.55); line-height: 1.6; margin: 0; }
+@media(max-width:900px){ .features-grid { grid-template-columns: 1fr 1fr; } }
+@media(max-width:500px){ .features-grid { grid-template-columns: 1fr; } }
+@media(max-width:768px){ .features h2, .features .section-sub, .features .section-eyebrow { text-align: center; } .feature-card { text-align: center; } }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <div class="nav-logo">Brooks Works Detailing</div>
+    <a href="tel:+17203804722" class="nav-phone">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3 9.1c1.9-4.4 6.4-7.1 11-7.1 4.6 0 9.1 2.7 11 7.1.3.8.3 1.7 0 2.5-1.9 4.4-6.4 7.1-11 7.1-4.6 0-9.1-2.7-11-7.1-.3-.8-.3-1.7 0-2.5zm9-2.1c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
+      </svg>
+      <span class="nav-phone-text">(720) 380-4722</span>
+    </a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Premium Auto Detailing</div>
+    <h1>Your Vehicle Deserves the Best</h1>
+    <p class="hero-sub">Expert detailing services for San Antonio vehicles. From full detail packages to headlight restoration, we bring your car to showroom condition with precision and care.</p>
+    <div class="hero-buttons">
+      <a href="tel:+17203804722" class="btn-primary">Call Now</a>
+      <a href="#services" class="btn-ghost">View Services</a>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="features" id="why-us">
+  <div class="container">
+    <div class="section-eyebrow">WHY CHOOSE US</div>
+    <h2>The Brooks Works Detailing Difference</h2>
+    <p class="section-sub">What sets us apart from other San antonio detailers</p>
+    <div class="features-grid">
+    <div class="feature-card">
+      <div class="feature-icon"><i class="fa-solid fa-car-side"></i></div>
+      <h3>We Come to You</h3>
+      <p>We bring the full detail experience to your door - home, office, or wherever works for you.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon"><i class="fa-solid fa-house"></i></div>
+      <h3>Local &amp; Trusted</h3>
+      <p>Locally owned and operated. We're your neighbors and we take pride in serving our community.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon"><i class="fa-solid fa-leaf"></i></div>
+      <h3>Eco-Friendly</h3>
+      <p>Eco-responsible, low-waste products that are safe for your family, your pets, and the planet.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon"><i class="fa-solid fa-bolt"></i></div>
+      <h3>Fast Turnaround</h3>
+      <p>We work efficiently so you get your car back looking showroom-fresh without losing your whole day.</p>
+    </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-card">
+        <div class="section-badge">About Us</div>
+        <h2>Precision Detailing Since 2019</h2>
+        <p>Brooks Works Detailing provides premium full detailing, headlight restoration, and engine bay services to San Antonio vehicles with expert care. With over 3 to 5 years of dedicated service, we have earned the trust of car enthusiasts and everyday drivers alike.</p>
+        <p>We believe every vehicle tells a story and deserves meticulous attention. Our team uses only the best products and techniques to restore and protect your investment, ensuring results that exceed expectations every single time.</p>
+      </div>
+      <div class="about-card">
+        <div class="section-badge">Why Choose Us</div>
+        <h2>Trusted by San Antonio</h2>
+        <div class="value-badges">
+          <div class="value-badge">
+            <div class="value-badge-icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2L15.09 8.26H22L17.36 12.35L19.45 18.54L12 14.45L4.55 18.54L6.64 12.35L2 8.26H8.91L12 2Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="value-badge-text">Expert technicians with years of experience</div>
+          </div>
+          <div class="value-badge">
+            <div class="value-badge-icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="value-badge-text">Premium products and techniques</div>
+          </div>
+          <div class="value-badge">
+            <div class="value-badge-icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12 6V12L16 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="value-badge-text">Quick turnaround without compromising quality</div>
+          </div>
+          <div class="value-badge">
+            <div class="value-badge-icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2L14.5 8.5H21.5L16 12.5L18.5 19L12 14.5L5.5 19L8 12.5L2.5 8.5H9.5L12 2Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="value-badge-text">Satisfaction guarantee on all services</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="services">
+  <div class="container">
+    <div class="section-header">
+      <h2>Our Services</h2>
+      <p>Comprehensive detailing solutions tailored to keep your vehicle looking pristine and protected</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <img src="https://yourwebsiteexample.com/shared/stock-interior-vacuum.jpg" alt="Full Detail Package" class="service-image" loading="lazy">
+        <div class="service-icon">
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <h3>Full Detail Package</h3>
+        <p>Complete exterior and interior detailing including washing, waxing, vacuuming, and interior protection. We handle every detail to restore your vehicle to like-new condition.</p>
+      </div>
+      <div class="service-card">
+        <img src="https://yourwebsiteexample.com/shared/stock-headlight-restoration.jpg" alt="Headlight Restoration" class="service-image" loading="lazy">
+        <div class="service-icon">
+          <i class="fa-solid fa-lightbulb"></i>
+        </div>
+        <h3>Headlight Restoration</h3>
+        <p>Professional headlight restoration that removes oxidation and yellowing. Improve visibility and restore your vehicle's appearance with our specialized headlight services.</p>
+      </div>
+      <div class="service-card">
+        <img src="https://yourwebsiteexample.com/shared/stock-engine-bay.jpg" alt="Engine Bay Cleaning" class="service-image" loading="lazy">
+        <div class="service-icon">
+          <i class="fa-solid fa-gear"></i>
+        </div>
+        <h3>Engine Bay Cleaning</h3>
+        <p>Deep cleaning of your engine bay to remove dirt, grime, and buildup. Keep your engine bay looking clean and well-maintained with our expert detailing service.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST SECTION -->
+<section class="trust">
+  <div class="container">
+    <div class="trust-header">
+      <h2>Why San Antonio Trusts Us</h2>
+      <p>We deliver exceptional results backed by expertise, quality products, and customer-first service</p>
+    </div>
+    <div class="trust-grid">
+      <div class="trust-card">
+        <div class="trust-icon">
+          <i class="fa-solid fa-award"></i>
+        </div>
+        <h3>Proven Excellence</h3>
+        <p>3 to 5 years of consistent, high-quality detailing work in San Antonio</p>
+      </div>
+      <div class="trust-card">
+        <div class="trust-icon">
+          <i class="fa-solid fa-shield"></i>
+        </div>
+        <h3>Premium Protection</h3>
+        <p>Using only the finest products to protect and enhance your vehicle's finish</p>
+      </div>
+      <div class="trust-card">
+        <div class="trust-icon">
+          <i class="fa-solid fa-headset"></i>
+        </div>
+        <h3>Expert Support</h3>
+        <p>Responsive team ready to answer questions and provide personalized service</p>
+      </div>
+      <div class="trust-card">
+        <div class="trust-icon">
+          <i class="fa-solid fa-check-circle"></i>
+        </div>
+        <h3>Quality Guaranteed</h3>
+        <p>Every service backed by our commitment to excellence and customer satisfaction</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOURS -->
+<section class="hours">
+  <div class="container">
+    <div class="hours-content">
+      <div class="hours-intro">
+        <div class="section-badge">Hours of Operation</div>
+        <h2>We're Here When You Need Us</h2>
+        <p>Visit our shop in San Antonio for convenient, professional detailing services. We keep extended hours to accommodate your schedule.</p>
+      </div>
+      <div class="hours-table">
+        <div class="hours-row">
+          <div class="hours-day">Monday</div>
+          <div class="hours-time">8:00 AM - 6:00 PM</div>
+        </div>
+        <div class="hours-row">
+          <div class="hours-day">Tuesday</div>
+          <div class="hours-time">8:00 AM - 6:00 PM</div>
+        </div>
+        <div class="hours-row">
+          <div class="hours-day">Wednesday</div>
+          <div class="hours-time">8:00 AM - 6:00 PM</div>
+        </div>
+        <div class="hours-row">
+          <div class="hours-day">Thursday</div>
+          <div class="hours-time">8:00 AM - 6:00 PM</div>
+        </div>
+        <div class="hours-row">
+          <div class="hours-day">Friday</div>
+          <div class="hours-time">8:00 AM - 6:00 PM</div>
+        </div>
+        <div class="hours-row">
+          <div class="hours-day">Saturday</div>
+          <div class="hours-time">9:00 AM - 4:00 PM</div>
+        </div>
+        <div class="hours-row">
+          <div class="hours-day">Sunday</div>
+          <div class="hours-time">Closed</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA SECTION -->
+<section id="cta-section">
+  <div class="container">
+    <div class="cta-content">
+      <h2>Ready for a Showroom Shine?</h2>
+      <p>Let Brooks Works Detailing transform your vehicle. Contact us today to schedule your appointment and experience the difference professional detailing makes.</p>
+      <div class="cta-buttons">
+        <a href="tel:+17203804722" class="btn-primary">Call (720) 380-4722</a>
+        <a href="mailto:elliot@zing-work.com" class="btn-ghost">Email Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-content">
+      <div class="footer-block">
+        <h4>Brooks Works Detailing</h4>
+        <p>Premium auto detailing services in San Antonio, Texas. Expert care for your vehicle.</p>
+      </div>
+      <div class="footer-block">
+        <h4>Contact</h4>
+        <p><a href="tel:+17203804722">(720) 380-4722</a></p>
+        <p><a href="mailto:elliot@zing-work.com">elliot@zing-work.com</a></p>
+        <p>San Antonio, TX</p>
+      </div>
+      <div class="footer-block">
+        <h4>Services</h4>
+        <p><a href="#services">Full Detail Package</a></p>
+        <p><a href="#services">Headlight Restoration</a></p>
+        <p><a href="#services">Engine Bay Cleaning</a></p>
+      </div>
+    </div>
+    <div class="footer-divider">
+      <p class="footer-credit">&copy; 2024 Brooks Works Detailing. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- JSON-LD SCHEMA -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Brooks Works Detailing",
+  "image": "https://yourwebsiteexample.com/shared/hero.jpg",
+  "description": "Brooks Works Detailing provides premium full detailing, headlight restoration, and engine bay services to San Antonio vehicles with expert care.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "San Antonio",
+    "addressLocality": "San Antonio",
+    "addressRegion": "TX",
+    "addressCountry": "US"
+  },
+  "telephone": "(720) 380-4722",
+  "email": "elliot@zing-work.com",
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "08:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "09:00",
+      "closes": "16:00"
+    }
+  ],
+  "priceRange": "$$"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": []
+}
+</script>
+
+<script>
+window.addEventListener('scroll', function() {
+  const navbar = document.getElementById('navbar');
+  if (window.scrollY > 50) {
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
+});
+</script>
+
+</body>
+</html>
