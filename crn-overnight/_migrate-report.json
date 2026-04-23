@@ -1,11 +1,11 @@
 {
   "slug": "crn-overnight",
   "sourceUrl": "https://www.castlerocknutrition.com/",
-  "crawledAt": "2026-04-23T23:16:17.808Z",
+  "crawledAt": "2026-04-23T23:20:19.670Z",
   "approach": "playwright-duda-v2",
   "pagesWritten": 21,
   "assetsDownloaded": 172,
   "assetsMapped": 411,
-  "durationMs": 90792,
+  "durationMs": 89848,
   "errors": []
 }
