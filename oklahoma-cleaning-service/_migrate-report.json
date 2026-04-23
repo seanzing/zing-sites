@@ -1,0 +1,11 @@
+{
+  "slug": "oklahoma-cleaning-service",
+  "sourceUrl": "https://www.oklahomacleaningservice.net/",
+  "crawledAt": "2026-04-23T22:02:18.012Z",
+  "approach": "playwright-duda-v2",
+  "pagesWritten": 2,
+  "assetsDownloaded": 39,
+  "assetsMapped": 283,
+  "durationMs": 14264,
+  "errors": []
+}
