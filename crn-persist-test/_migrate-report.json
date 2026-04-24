@@ -1,0 +1,11 @@
+{
+  "slug": "crn-persist-test",
+  "sourceUrl": "https://www.castlerocknutrition.com/",
+  "crawledAt": "2026-04-24T17:50:33.491Z",
+  "approach": "playwright-duda-v2",
+  "pagesWritten": 21,
+  "assetsDownloaded": 168,
+  "assetsMapped": 407,
+  "durationMs": 92682,
+  "errors": []
+}
