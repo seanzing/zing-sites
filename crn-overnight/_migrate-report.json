@@ -7,5 +7,15 @@
   "assetsDownloaded": 172,
   "assetsMapped": 411,
   "durationMs": 89848,
-  "errors": []
+  "errors": [],
+  "navSlugs": [
+    "",
+    "about",
+    "menu",
+    "reviews",
+    "gallery",
+    "5-day-challenge",
+    "faq",
+    "blog"
+  ]
 }
