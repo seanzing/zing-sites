@@ -15,11 +15,9 @@ jobs:
         id: changed
         run: |
           if git rev-parse HEAD~1 >/dev/null 2>&1; then
-            changed=$(git diff --name-only HEAD~1 HEAD | grep '/' | cut -d'/' -f1 | grep -v '^\.github$' | sort -u | tr '
-' ' ')
+            changed=$(git diff --name-only HEAD~1 HEAD | grep '/' | cut -d'/' -f1 | grep -v '^\.github$' | sort -u | tr '\n' ' ')
           else
-            changed=$(git ls-files | grep '/' | cut -d'/' -f1 | grep -v '^\.github$' | sort -u | tr '
-' ' ')
+            changed=$(git ls-files | grep '/' | cut -d'/' -f1 | grep -v '^\.github$' | sort -u | tr '\n' ' ')
           fi
           echo "sites=$changed" >> $GITHUB_OUTPUT
           echo "Changed sites: $changed"
@@ -36,12 +34,21 @@ jobs:
         run: |
           for site in ${{ steps.changed.outputs.sites }}; do
             if [ -d "$site" ]; then
-              echo "Deploying $site to production..."
+              echo "Deploying $site..."
               curl -s -X POST "https://api.cloudflare.com/client/v4/accounts/$CLOUDFLARE_ACCOUNT_ID/pages/projects" \
                 -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" \
                 -H "Content-Type: application/json" \
                 --data "{\"name\":\"$site\",\"production_branch\":\"main\"}" > /dev/null 2>&1 || true
-              npx wrangler pages deploy "$site" --project-name "$site" --branch main --commit-dirty=true
-              echo "✅ Deployed $site"
+              deployed=false
+              for attempt in 1 2 3; do
+                echo "  Wrangler attempt $attempt/3..."
+                if npx wrangler pages deploy "$site" --project-name "$site" --branch main --commit-dirty=true; then
+                  echo "✅ Deployed $site"
+                  deployed=true
+                  break
+                fi
+                [ $attempt -lt 3 ] && sleep 10
+              done
+              $deployed || echo "⚠️ Failed to deploy $site after 3 attempts"
             fi
           done
