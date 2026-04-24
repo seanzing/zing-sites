@@ -1,12 +1,12 @@
 {
   "slug": "jenkinselectric",
   "sourceUrl": "https://www.jenkinselectric.net/",
-  "crawledAt": "2026-04-24T22:25:29.973Z",
+  "crawledAt": "2026-04-24T22:57:01.999Z",
   "approach": "playwright-duda-v2",
   "pagesWritten": 2,
-  "assetsDownloaded": 63,
+  "assetsDownloaded": 64,
   "assetsMapped": 327,
-  "durationMs": 13801,
+  "durationMs": 11974,
   "errors": [],
   "navSlugs": [
     "jenkinselectric",
