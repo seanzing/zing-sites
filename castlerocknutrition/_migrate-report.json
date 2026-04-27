@@ -1,0 +1,19 @@
+{
+  "slug": "castlerocknutrition",
+  "sourceUrl": "https://www.castlerocknutrition.com/",
+  "crawledAt": "2026-04-27T20:43:55.473Z",
+  "approach": "playwright-duda-v2",
+  "pagesWritten": 23,
+  "assetsDownloaded": 174,
+  "assetsMapped": 412,
+  "durationMs": 39261,
+  "errors": [],
+  "navSlugs": [
+    "castlerocknutrition",
+    "castlerocknutrition/about",
+    "castlerocknutrition/menu",
+    "castlerocknutrition/5-day-challenge",
+    "castlerocknutrition/faq",
+    "castlerocknutrition/blog"
+  ]
+}

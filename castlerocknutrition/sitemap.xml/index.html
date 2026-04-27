@@ -1,0 +1,382 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head><style id="xml-viewer-style">/* Copyright 2014 The Chromium Authors
+ * Use of this source code is governed by a BSD-style license that can be
+ * found in the LICENSE file.
+ */
+
+:root {
+  color-scheme: light dark;
+}
+
+div.header {
+    border-bottom: 2px solid black;
+    padding-bottom: 5px;
+    margin: 10px;
+}
+
+@media (prefers-color-scheme: dark) {
+  div.header {
+    border-bottom: 2px solid white;
+  }
+}
+
+div.folder &gt; div.hidden {
+    display:none;
+}
+
+div.folder &gt; span.hidden {
+    display:none;
+}
+
+.pretty-print {
+    margin-top: 1em;
+    margin-left: 20px;
+    font-family: monospace;
+    font-size: 13px;
+}
+
+#webkit-xml-viewer-source-xml {
+    display: none;
+}
+
+.opened {
+    margin-left: 1em;
+}
+
+.comment {
+    white-space: pre;
+}
+
+.folder-button {
+    user-select: none;
+    cursor: pointer;
+    display: inline-block;
+    margin-left: -10px;
+    width: 10px;
+    background-repeat: no-repeat;
+    background-position: left top;
+    vertical-align: bottom;
+}
+
+.fold {
+    background: url("data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' fill='%23909090' width='10' height='10'&gt;&lt;path d='M0 0 L8 0 L4 7 Z'/&gt;&lt;/svg&gt;");
+    height: 10px;
+}
+
+.open {
+    background: url("data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' fill='%23909090' width='10' height='10'&gt;&lt;path d='M0 0 L0 8 L7 4 Z'/&gt;&lt;/svg&gt;");
+    height: 10px;
+}
+</style><style id="px-duda-patch">
+/* Fix: Duda sets overflow:hidden on body, preventing scroll */
+body { overflow: auto !important; overflow-x: hidden !important; }
+/* Fix: Duda sets body background to #eee; make transparent so page bg shows */
+body { background-color: transparent !important; }
+#dm DIV.dmOuter DIV.dmInner { background-color: rgba(255,255,255,1) !important; }
+/* Fix: Duda gallery holder hidden until JS adds .photo-gallery-done — 
+   Playwright adds it but just in case: */
+.dmPhotoGalleryHolder { display: block !important; }
+/* Fix: skrollr desktop class adds position:fixed to things — strip it */
+html.skrollr { height: auto !important; overflow: auto !important; }
+/* Fix: min-width:960px on dmInner clips narrow viewports */
+.dmInner { min-width: 0 !important; }
+/* Fix: Duda sometimes hides entire dmBody sections via JS classes */
+.dmRespRow[style*="display:none"] { display: block !important; }
+/* Rebuilt nav: remove any residual Duda nav spacing that conflicts */
+.dmHeader .main-navigation, .dmHeader .unifiednav { display: none !important; }
+/* Remove Duda popup overlays (position:fixed grey panels, require JS to dismiss) */
+.dmPopup, .dmPopupMask, .dmPopupWrap { display: none !important; visibility: hidden !important; }
+/* Rebuilt footer: reset Duda footer JS-dependent display */
+.dmFooterContainer { display: block !important; }
+.dmFooter { display: block !important; }
+</style></head><body><nav class="pxnav" role="navigation">
+<style>
+/* ── Pixel rebuilt nav ── */
+.pxnav{background:rgba(255,255,255,1);display:flex;align-items:center;justify-content:space-between;padding:0 20px;width:100%;box-shadow:0 1px 4px rgba(0,0,0,.1);position:relative;z-index:9999;box-sizing:border-box;}
+.pxnav__logo-link{display:flex;align-items:center;flex-shrink:0;text-decoration:none;padding:12px 0;}
+.pxnav__logo-img{height:55px;width:auto;display:block;}
+.pxnav__logo-text{font-size:1.2rem;font-weight:700;color:rgba(102,102,102,1);}
+.pxnav__menu{list-style:none;margin:0;padding:0;display:flex;align-items:stretch;}
+.pxnav__menu--left{justify-content:flex-end;flex:1;}
+.pxnav__menu--right{justify-content:flex-start;flex:1;}
+.pxnav__item{position:relative;display:flex;align-items:stretch;}
+.pxnav__item>a{display:flex;align-items:center;padding:0 15px;color:rgba(102,102,102,1);text-decoration:none;font-family:monospace;font-size:15px;font-weight:400;letter-spacing:.03em;text-transform:uppercase;white-space:nowrap;border-bottom:3px solid transparent;transition:border-color .2s,color .2s;}
+.pxnav__item>a:hover{border-bottom-color:rgba(126,166,125,1);color:rgba(102,102,102,1);}
+.pxnav__caret{font-size:.7em;margin-left:4px;display:inline-block;}
+.pxnav__dropdown{display:none;position:absolute;top:100%;left:0;min-width:180px;background:rgba(255,255,255,1);list-style:none;margin:0;padding:4px 0;box-shadow:0 4px 16px rgba(0,0,0,.15);z-index:1000;border-top:2px solid rgba(30,30,30,1);}
+.pxnav__item--has-sub:hover>.pxnav__dropdown{display:block;}
+.pxnav__sub-item>a{display:block;padding:10px 20px;color:rgba(102,102,102,1);text-decoration:none;font-size:14px;white-space:nowrap;transition:color .15s;}
+.pxnav__sub-item>a:hover{color:rgba(30,30,30,1);}
+/* Mobile */
+.pxnav__toggle{display:none;position:absolute;}
+.pxnav__burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;border:none;background:none;}
+.pxnav__burger span{display:block;width:24px;height:2px;background:rgba(102,102,102,1);transition:all .2s;}
+.pxnav__mobile-menu{display:none;flex-direction:column;background:rgba(255,255,255,1);border-top:1px solid rgba(0,0,0,.1);list-style:none;margin:0;padding:8px 0;position:absolute;top:100%;left:0;right:0;box-shadow:0 4px 12px rgba(0,0,0,.15);z-index:9998;}
+.pxnav__toggle:checked~.pxnav__mobile-menu{display:flex;}
+.pxnav__mobile-menu li{display:block;}
+.pxnav__mobile-menu a{display:block;padding:12px 24px;color:rgba(102,102,102,1);text-decoration:none;font-size:14px;text-transform:uppercase;letter-spacing:.04em;border-bottom:1px solid rgba(0,0,0,.05);}
+.pxnav__mobile-menu a:hover{color:rgba(30,30,30,1);}
+@media(max-width:768px){
+  .pxnav{flex-wrap:wrap;}
+  .pxnav__menu{display:none;}
+  .pxnav__burger{display:flex;margin-left:auto;}
+}
+</style>
+<input class="pxnav__toggle" type="checkbox" id="pxnav-mob-toggle">
+<a href="/castlerocknutrition/" class="pxnav__logo-link pxnav__logo-text">Home</a><ul class="pxnav__menu"></ul>
+<label class="pxnav__burger" for="pxnav-mob-toggle" aria-label="Menu"><span></span><span></span><span></span></label>
+<ul class="pxnav__mobile-menu"></ul>
+</nav><div id="webkit-xml-viewer-source-xml"><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <url>
+        <loc>https://www.castlerocknutrition.com/faq</loc>
+        <priority>1.0</priority>
+        <changefreq>monthly</changefreq>
+        <lastmod>2026-02-11</lastmod>
+    </url>
+    <url>
+        <loc>https://www.castlerocknutrition.com/blog</loc>
+        <priority>1.0</priority>
+        <changefreq>monthly</changefreq>
+        <lastmod>2025-06-03</lastmod>
+    </url>
+    <url>
+        <loc>https://www.castlerocknutrition.com</loc>
+        <priority>1.0</priority>
+        <changefreq>monthly</changefreq>
+        <lastmod>2026-02-11</lastmod>
+    </url>
+    <url>
+        <loc>https://www.castlerocknutrition.com/april-haack</loc>
+        <priority>1.0</priority>
+        <changefreq>monthly</changefreq>
+        <lastmod>2025-06-09</lastmod>
+    </url>
+    <url>
+        <loc>https://www.castlerocknutrition.com/reviews</loc>
+        <priority>1.0</priority>
+        <changefreq>monthly</changefreq>
+        <lastmod>2025-12-01</lastmod>
+    </url>
+    <url>
+        <loc>https://www.castlerocknutrition.com/gallery</loc>
+        <priority>1.0</priority>
+        <changefreq>monthly</changefreq>
+        <lastmod>2026-02-11</lastmod>
+    </url>
+    <url>
+        <loc>https://www.castlerocknutrition.com/contact</loc>
+        <priority>1.0</priority>
+        <changefreq>monthly</changefreq>
+        <lastmod>2026-02-02</lastmod>
+    </url>
+    <url>
+        <loc>https://www.castlerocknutrition.com/menu</loc>
+        <priority>1.0</priority>
+        <changefreq>monthly</changefreq>
+        <lastmod>2026-01-30</lastmod>
+    </url>
+    <url>
+        <loc>https://www.castlerocknutrition.com/data-privacy-policy</loc>
+        <priority>1.0</priority>
+        <changefreq>monthly</changefreq>
+        <lastmod>2024-03-07</lastmod>
+    </url>
+    <url>
+        <loc>https://www.castlerocknutrition.com/challenge</loc>
+        <priority>1.0</priority>
+        <changefreq>monthly</changefreq>
+        <lastmod>2025-01-06</lastmod>
+    </url>
+    <url>
+        <loc>https://www.castlerocknutrition.com/html-sitemap</loc>
+        <priority>1.0</priority>
+        <changefreq>monthly</changefreq>
+        <lastmod>2025-12-30</lastmod>
+    </url>
+    <url>
+        <loc>https://www.castlerocknutrition.com/alex-haack</loc>
+        <priority>1.0</priority>
+        <changefreq>monthly</changefreq>
+        <lastmod>2025-06-09</lastmod>
+    </url>
+    <url>
+        <loc>https://www.castlerocknutrition.com/amanda-haack</loc>
+        <priority>1.0</priority>
+        <changefreq>monthly</changefreq>
+        <lastmod>2025-06-09</lastmod>
+    </url>
+    <url>
+        <loc>https://www.castlerocknutrition.com/jeffy-haack</loc>
+        <priority>1.0</priority>
+        <changefreq>monthly</changefreq>
+        <lastmod>2025-06-09</lastmod>
+    </url>
+    <url>
+        <loc>https://www.castlerocknutrition.com/about</loc>
+        <priority>1.0</priority>
+        <changefreq>monthly</changefreq>
+        <lastmod>2025-06-09</lastmod>
+    </url>
+    <url>
+        <loc>https://www.castlerocknutrition.com/5-day-challenge</loc>
+        <priority>1.0</priority>
+        <changefreq>monthly</changefreq>
+        <lastmod>2026-02-05</lastmod>
+    </url>
+    <url>
+        <loc>https://www.castlerocknutrition.com/resource-sitemap</loc>
+        <priority>1.0</priority>
+        <changefreq>monthly</changefreq>
+        <lastmod>2025-12-01</lastmod>
+    </url>
+    <url>
+        <loc>https://www.castlerocknutrition.com/the-holidays-with-crn</loc>
+        <priority>0.8</priority>
+        <changefreq>monthly</changefreq>
+        <lastmod>2025-12-30</lastmod>
+    </url>
+    <url>
+        <loc>https://www.castlerocknutrition.com/diet-shakes-weight-loss-shakes-find-your-perfect-fit-at-castle-rock-nutrition</loc>
+        <priority>0.8</priority>
+        <changefreq>monthly</changefreq>
+        <lastmod>2025-12-01</lastmod>
+    </url>
+    <url>
+        <loc>https://www.castlerocknutrition.com/what-is-a-meal-replacement-shake</loc>
+        <priority>0.8</priority>
+        <changefreq>monthly</changefreq>
+        <lastmod>2025-12-01</lastmod>
+    </url>
+    <url>
+        <loc>https://www.castlerocknutrition.com/the-3-part-meal-system-explained</loc>
+        <priority>0.8</priority>
+        <changefreq>monthly</changefreq>
+        <lastmod>2025-12-01</lastmod>
+    </url>
+</urlset></div><div class="header"><span>This XML file does not appear to have any style information associated with it. The document tree is shown below.</span><br></div><div class="pretty-print"><div class="folder" id="folder0"><div class="line"><span class="folder-button fold"></span><span class="html-tag">&lt;urlset<span class="html-attribute"> <span class="html-attribute-name">xmlns</span>="<span class="html-attribute-value">http://www.sitemaps.org/schemas/sitemap/0.9</span>"</span><span class="html-attribute"> <span class="html-attribute-name">xmlns:xhtml</span>="<span class="html-attribute-value">http://www.w3.org/1999/xhtml</span>"</span>&gt;</span></div><div class="opened"><span>
+    </span><div class="folder" id="folder1"><div class="line"><span class="folder-button fold"></span><span class="html-tag">&lt;url&gt;</span></div><div class="opened"><span>
+        </span><div class="line"><span class="html-tag">&lt;loc&gt;</span><span>https://www.castlerocknutrition.com/faq</span><span class="html-tag">&lt;/loc&gt;</span></div><span>
+        </span><div class="line"><span class="html-tag">&lt;priority&gt;</span><span>1.0</span><span class="html-tag">&lt;/priority&gt;</span></div><span>
+        </span><div class="line"><span class="html-tag">&lt;changefreq&gt;</span><span>monthly</span><span class="html-tag">&lt;/changefreq&gt;</span></div><span>
+        </span><div class="line"><span class="html-tag">&lt;lastmod&gt;</span><span>2026-02-11</span><span class="html-tag">&lt;/lastmod&gt;</span></div><span>
+    </span></div><span class="folded hidden">...</span><div class="line"><span class="html-tag">&lt;/url&gt;</span></div></div><span>
+    </span><div class="folder" id="folder2"><div class="line"><span class="folder-button fold"></span><span class="html-tag">&lt;url&gt;</span></div><div class="opened"><span>
+        </span><div class="line"><span class="html-tag">&lt;loc&gt;</span><span>https://www.castlerocknutrition.com/blog</span><span class="html-tag">&lt;/loc&gt;</span></div><span>
+        </span><div class="line"><span class="html-tag">&lt;priority&gt;</span><span>1.0</span><span class="html-tag">&lt;/priority&gt;</span></div><span>
+        </span><div class="line"><span class="html-tag">&lt;changefreq&gt;</span><span>monthly</span><span class="html-tag">&lt;/changefreq&gt;</span></div><span>
+        </span><div class="line"><span class="html-tag">&lt;lastmod&gt;</span><span>2025-06-03</span><span class="html-tag">&lt;/lastmod&gt;</span></div><span>
+    </span></div><span class="folded hidden">...</span><div class="line"><span class="html-tag">&lt;/url&gt;</span></div></div><span>
+    </span><div class="folder" id="folder3"><div class="line"><span class="folder-button fold"></span><span class="html-tag">&lt;url&gt;</span></div><div class="opened"><span>
+        </span><div class="line"><span class="html-tag">&lt;loc&gt;</span><span>https://www.castlerocknutrition.com</span><span class="html-tag">&lt;/loc&gt;</span></div><span>
+        </span><div class="line"><span class="html-tag">&lt;priority&gt;</span><span>1.0</span><span class="html-tag">&lt;/priority&gt;</span></div><span>
+        </span><div class="line"><span class="html-tag">&lt;changefreq&gt;</span><span>monthly</span><span class="html-tag">&lt;/changefreq&gt;</span></div><span>
+        </span><div class="line"><span class="html-tag">&lt;lastmod&gt;</span><span>2026-02-11</span><span class="html-tag">&lt;/lastmod&gt;</span></div><span>
+    </span></div><span class="folded hidden">...</span><div class="line"><span class="html-tag">&lt;/url&gt;</span></div></div><span>
+    </span><div class="folder" id="folder4"><div class="line"><span class="folder-button fold"></span><span class="html-tag">&lt;url&gt;</span></div><div class="opened"><span>
+        </span><div class="line"><span class="html-tag">&lt;loc&gt;</span><span>https://www.castlerocknutrition.com/april-haack</span><span class="html-tag">&lt;/loc&gt;</span></div><span>
+        </span><div class="line"><span class="html-tag">&lt;priority&gt;</span><span>1.0</span><span class="html-tag">&lt;/priority&gt;</span></div><span>
+        </span><div class="line"><span class="html-tag">&lt;changefreq&gt;</span><span>monthly</span><span class="html-tag">&lt;/changefreq&gt;</span></div><span>
+        </span><div class="line"><span class="html-tag">&lt;lastmod&gt;</span><span>2025-06-09</span><span class="html-tag">&lt;/lastmod&gt;</span></div><span>
+    </span></div><span class="folded hidden">...</span><div class="line"><span class="html-tag">&lt;/url&gt;</span></div></div><span>
+    </span><div class="folder" id="folder5"><div class="line"><span class="folder-button fold"></span><span class="html-tag">&lt;url&gt;</span></div><div class="opened"><span>
+        </span><div class="line"><span class="html-tag">&lt;loc&gt;</span><span>https://www.castlerocknutrition.com/reviews</span><span class="html-tag">&lt;/loc&gt;</span></div><span>
+        </span><div class="line"><span class="html-tag">&lt;priority&gt;</span><span>1.0</span><span class="html-tag">&lt;/priority&gt;</span></div><span>
+        </span><div class="line"><span class="html-tag">&lt;changefreq&gt;</span><span>monthly</span><span class="html-tag">&lt;/changefreq&gt;</span></div><span>
+        </span><div class="line"><span class="html-tag">&lt;lastmod&gt;</span><span>2025-12-01</span><span class="html-tag">&lt;/lastmod&gt;</span></div><span>
+    </span></div><span class="folded hidden">...</span><div class="line"><span class="html-tag">&lt;/url&gt;</span></div></div><span>
+    </span><div class="folder" id="folder6"><div class="line"><span class="folder-button fold"></span><span class="html-tag">&lt;url&gt;</span></div><div class="opened"><span>
+        </span><div class="line"><span class="html-tag">&lt;loc&gt;</span><span>https://www.castlerocknutrition.com/gallery</span><span class="html-tag">&lt;/loc&gt;</span></div><span>
+        </span><div class="line"><span class="html-tag">&lt;priority&gt;</span><span>1.0</span><span class="html-tag">&lt;/priority&gt;</span></div><span>
+        </span><div class="line"><span class="html-tag">&lt;changefreq&gt;</span><span>monthly</span><span class="html-tag">&lt;/changefreq&gt;</span></div><span>
+        </span><div class="line"><span class="html-tag">&lt;lastmod&gt;</span><span>2026-02-11</span><span class="html-tag">&lt;/lastmod&gt;</span></div><span>
+    </span></div><span class="folded hidden">...</span><div class="line"><span class="html-tag">&lt;/url&gt;</span></div></div><span>
+    </span><div class="folder" id="folder7"><div class="line"><span class="folder-button fold"></span><span class="html-tag">&lt;url&gt;</span></div><div class="opened"><span>
+        </span><div class="line"><span class="html-tag">&lt;loc&gt;</span><span>https://www.castlerocknutrition.com/contact</span><span class="html-tag">&lt;/loc&gt;</span></div><span>
+        </span><div class="line"><span class="html-tag">&lt;priority&gt;</span><span>1.0</span><span class="html-tag">&lt;/priority&gt;</span></div><span>
+        </span><div class="line"><span class="html-tag">&lt;changefreq&gt;</span><span>monthly</span><span class="html-tag">&lt;/changefreq&gt;</span></div><span>
+        </span><div class="line"><span class="html-tag">&lt;lastmod&gt;</span><span>2026-02-02</span><span class="html-tag">&lt;/lastmod&gt;</span></div><span>
+    </span></div><span class="folded hidden">...</span><div class="line"><span class="html-tag">&lt;/url&gt;</span></div></div><span>
+    </span><div class="folder" id="folder8"><div class="line"><span class="folder-button fold"></span><span class="html-tag">&lt;url&gt;</span></div><div class="opened"><span>
+        </span><div class="line"><span class="html-tag">&lt;loc&gt;</span><span>https://www.castlerocknutrition.com/menu</span><span class="html-tag">&lt;/loc&gt;</span></div><span>
+        </span><div class="line"><span class="html-tag">&lt;priority&gt;</span><span>1.0</span><span class="html-tag">&lt;/priority&gt;</span></div><span>
+        </span><div class="line"><span class="html-tag">&lt;changefreq&gt;</span><span>monthly</span><span class="html-tag">&lt;/changefreq&gt;</span></div><span>
+        </span><div class="line"><span class="html-tag">&lt;lastmod&gt;</span><span>2026-01-30</span><span class="html-tag">&lt;/lastmod&gt;</span></div><span>
+    </span></div><span class="folded hidden">...</span><div class="line"><span class="html-tag">&lt;/url&gt;</span></div></div><span>
+    </span><div class="folder" id="folder9"><div class="line"><span class="folder-button fold"></span><span class="html-tag">&lt;url&gt;</span></div><div class="opened"><span>
+        </span><div class="line"><span class="html-tag">&lt;loc&gt;</span><span>https://www.castlerocknutrition.com/data-privacy-policy</span><span class="html-tag">&lt;/loc&gt;</span></div><span>
+        </span><div class="line"><span class="html-tag">&lt;priority&gt;</span><span>1.0</span><span class="html-tag">&lt;/priority&gt;</span></div><span>
+        </span><div class="line"><span class="html-tag">&lt;changefreq&gt;</span><span>monthly</span><span class="html-tag">&lt;/changefreq&gt;</span></div><span>
+        </span><div class="line"><span class="html-tag">&lt;lastmod&gt;</span><span>2024-03-07</span><span class="html-tag">&lt;/lastmod&gt;</span></div><span>
+    </span></div><span class="folded hidden">...</span><div class="line"><span class="html-tag">&lt;/url&gt;</span></div></div><span>
+    </span><div class="folder" id="folder10"><div class="line"><span class="folder-button fold"></span><span class="html-tag">&lt;url&gt;</span></div><div class="opened"><span>
+        </span><div class="line"><span class="html-tag">&lt;loc&gt;</span><span>https://www.castlerocknutrition.com/challenge</span><span class="html-tag">&lt;/loc&gt;</span></div><span>
+        </span><div class="line"><span class="html-tag">&lt;priority&gt;</span><span>1.0</span><span class="html-tag">&lt;/priority&gt;</span></div><span>
+        </span><div class="line"><span class="html-tag">&lt;changefreq&gt;</span><span>monthly</span><span class="html-tag">&lt;/changefreq&gt;</span></div><span>
+        </span><div class="line"><span class="html-tag">&lt;lastmod&gt;</span><span>2025-01-06</span><span class="html-tag">&lt;/lastmod&gt;</span></div><span>
+    </span></div><span class="folded hidden">...</span><div class="line"><span class="html-tag">&lt;/url&gt;</span></div></div><span>
+    </span><div class="folder" id="folder11"><div class="line"><span class="folder-button fold"></span><span class="html-tag">&lt;url&gt;</span></div><div class="opened"><span>
+        </span><div class="line"><span class="html-tag">&lt;loc&gt;</span><span>https://www.castlerocknutrition.com/html-sitemap</span><span class="html-tag">&lt;/loc&gt;</span></div><span>
+        </span><div class="line"><span class="html-tag">&lt;priority&gt;</span><span>1.0</span><span class="html-tag">&lt;/priority&gt;</span></div><span>
+        </span><div class="line"><span class="html-tag">&lt;changefreq&gt;</span><span>monthly</span><span class="html-tag">&lt;/changefreq&gt;</span></div><span>
+        </span><div class="line"><span class="html-tag">&lt;lastmod&gt;</span><span>2025-12-30</span><span class="html-tag">&lt;/lastmod&gt;</span></div><span>
+    </span></div><span class="folded hidden">...</span><div class="line"><span class="html-tag">&lt;/url&gt;</span></div></div><span>
+    </span><div class="folder" id="folder12"><div class="line"><span class="folder-button fold"></span><span class="html-tag">&lt;url&gt;</span></div><div class="opened"><span>
+        </span><div class="line"><span class="html-tag">&lt;loc&gt;</span><span>https://www.castlerocknutrition.com/alex-haack</span><span class="html-tag">&lt;/loc&gt;</span></div><span>
+        </span><div class="line"><span class="html-tag">&lt;priority&gt;</span><span>1.0</span><span class="html-tag">&lt;/priority&gt;</span></div><span>
+        </span><div class="line"><span class="html-tag">&lt;changefreq&gt;</span><span>monthly</span><span class="html-tag">&lt;/changefreq&gt;</span></div><span>
+        </span><div class="line"><span class="html-tag">&lt;lastmod&gt;</span><span>2025-06-09</span><span class="html-tag">&lt;/lastmod&gt;</span></div><span>
+    </span></div><span class="folded hidden">...</span><div class="line"><span class="html-tag">&lt;/url&gt;</span></div></div><span>
+    </span><div class="folder" id="folder13"><div class="line"><span class="folder-button fold"></span><span class="html-tag">&lt;url&gt;</span></div><div class="opened"><span>
+        </span><div class="line"><span class="html-tag">&lt;loc&gt;</span><span>https://www.castlerocknutrition.com/amanda-haack</span><span class="html-tag">&lt;/loc&gt;</span></div><span>
+        </span><div class="line"><span class="html-tag">&lt;priority&gt;</span><span>1.0</span><span class="html-tag">&lt;/priority&gt;</span></div><span>
+        </span><div class="line"><span class="html-tag">&lt;changefreq&gt;</span><span>monthly</span><span class="html-tag">&lt;/changefreq&gt;</span></div><span>
+        </span><div class="line"><span class="html-tag">&lt;lastmod&gt;</span><span>2025-06-09</span><span class="html-tag">&lt;/lastmod&gt;</span></div><span>
+    </span></div><span class="folded hidden">...</span><div class="line"><span class="html-tag">&lt;/url&gt;</span></div></div><span>
+    </span><div class="folder" id="folder14"><div class="line"><span class="folder-button fold"></span><span class="html-tag">&lt;url&gt;</span></div><div class="opened"><span>
+        </span><div class="line"><span class="html-tag">&lt;loc&gt;</span><span>https://www.castlerocknutrition.com/jeffy-haack</span><span class="html-tag">&lt;/loc&gt;</span></div><span>
+        </span><div class="line"><span class="html-tag">&lt;priority&gt;</span><span>1.0</span><span class="html-tag">&lt;/priority&gt;</span></div><span>
+        </span><div class="line"><span class="html-tag">&lt;changefreq&gt;</span><span>monthly</span><span class="html-tag">&lt;/changefreq&gt;</span></div><span>
+        </span><div class="line"><span class="html-tag">&lt;lastmod&gt;</span><span>2025-06-09</span><span class="html-tag">&lt;/lastmod&gt;</span></div><span>
+    </span></div><span class="folded hidden">...</span><div class="line"><span class="html-tag">&lt;/url&gt;</span></div></div><span>
+    </span><div class="folder" id="folder15"><div class="line"><span class="folder-button fold"></span><span class="html-tag">&lt;url&gt;</span></div><div class="opened"><span>
+        </span><div class="line"><span class="html-tag">&lt;loc&gt;</span><span>https://www.castlerocknutrition.com/about</span><span class="html-tag">&lt;/loc&gt;</span></div><span>
+        </span><div class="line"><span class="html-tag">&lt;priority&gt;</span><span>1.0</span><span class="html-tag">&lt;/priority&gt;</span></div><span>
+        </span><div class="line"><span class="html-tag">&lt;changefreq&gt;</span><span>monthly</span><span class="html-tag">&lt;/changefreq&gt;</span></div><span>
+        </span><div class="line"><span class="html-tag">&lt;lastmod&gt;</span><span>2025-06-09</span><span class="html-tag">&lt;/lastmod&gt;</span></div><span>
+    </span></div><span class="folded hidden">...</span><div class="line"><span class="html-tag">&lt;/url&gt;</span></div></div><span>
+    </span><div class="folder" id="folder16"><div class="line"><span class="folder-button fold"></span><span class="html-tag">&lt;url&gt;</span></div><div class="opened"><span>
+        </span><div class="line"><span class="html-tag">&lt;loc&gt;</span><span>https://www.castlerocknutrition.com/5-day-challenge</span><span class="html-tag">&lt;/loc&gt;</span></div><span>
+        </span><div class="line"><span class="html-tag">&lt;priority&gt;</span><span>1.0</span><span class="html-tag">&lt;/priority&gt;</span></div><span>
+        </span><div class="line"><span class="html-tag">&lt;changefreq&gt;</span><span>monthly</span><span class="html-tag">&lt;/changefreq&gt;</span></div><span>
+        </span><div class="line"><span class="html-tag">&lt;lastmod&gt;</span><span>2026-02-05</span><span class="html-tag">&lt;/lastmod&gt;</span></div><span>
+    </span></div><span class="folded hidden">...</span><div class="line"><span class="html-tag">&lt;/url&gt;</span></div></div><span>
+    </span><div class="folder" id="folder17"><div class="line"><span class="folder-button fold"></span><span class="html-tag">&lt;url&gt;</span></div><div class="opened"><span>
+        </span><div class="line"><span class="html-tag">&lt;loc&gt;</span><span>https://www.castlerocknutrition.com/resource-sitemap</span><span class="html-tag">&lt;/loc&gt;</span></div><span>
+        </span><div class="line"><span class="html-tag">&lt;priority&gt;</span><span>1.0</span><span class="html-tag">&lt;/priority&gt;</span></div><span>
+        </span><div class="line"><span class="html-tag">&lt;changefreq&gt;</span><span>monthly</span><span class="html-tag">&lt;/changefreq&gt;</span></div><span>
+        </span><div class="line"><span class="html-tag">&lt;lastmod&gt;</span><span>2025-12-01</span><span class="html-tag">&lt;/lastmod&gt;</span></div><span>
+    </span></div><span class="folded hidden">...</span><div class="line"><span class="html-tag">&lt;/url&gt;</span></div></div><span>
+    </span><div class="folder" id="folder18"><div class="line"><span class="folder-button fold"></span><span class="html-tag">&lt;url&gt;</span></div><div class="opened"><span>
+        </span><div class="line"><span class="html-tag">&lt;loc&gt;</span><span>https://www.castlerocknutrition.com/the-holidays-with-crn</span><span class="html-tag">&lt;/loc&gt;</span></div><span>
+        </span><div class="line"><span class="html-tag">&lt;priority&gt;</span><span>0.8</span><span class="html-tag">&lt;/priority&gt;</span></div><span>
+        </span><div class="line"><span class="html-tag">&lt;changefreq&gt;</span><span>monthly</span><span class="html-tag">&lt;/changefreq&gt;</span></div><span>
+        </span><div class="line"><span class="html-tag">&lt;lastmod&gt;</span><span>2025-12-30</span><span class="html-tag">&lt;/lastmod&gt;</span></div><span>
+    </span></div><span class="folded hidden">...</span><div class="line"><span class="html-tag">&lt;/url&gt;</span></div></div><span>
+    </span><div class="folder" id="folder19"><div class="line"><span class="folder-button fold"></span><span class="html-tag">&lt;url&gt;</span></div><div class="opened"><span>
+        </span><div class="line"><span class="html-tag">&lt;loc&gt;</span><span>https://www.castlerocknutrition.com/diet-shakes-weight-loss-shakes-find-your-perfect-fit-at-castle-rock-nutrition</span><span class="html-tag">&lt;/loc&gt;</span></div><span>
+        </span><div class="line"><span class="html-tag">&lt;priority&gt;</span><span>0.8</span><span class="html-tag">&lt;/priority&gt;</span></div><span>
+        </span><div class="line"><span class="html-tag">&lt;changefreq&gt;</span><span>monthly</span><span class="html-tag">&lt;/changefreq&gt;</span></div><span>
+        </span><div class="line"><span class="html-tag">&lt;lastmod&gt;</span><span>2025-12-01</span><span class="html-tag">&lt;/lastmod&gt;</span></div><span>
+    </span></div><span class="folded hidden">...</span><div class="line"><span class="html-tag">&lt;/url&gt;</span></div></div><span>
+    </span><div class="folder" id="folder20"><div class="line"><span class="folder-button fold"></span><span class="html-tag">&lt;url&gt;</span></div><div class="opened"><span>
+        </span><div class="line"><span class="html-tag">&lt;loc&gt;</span><span>https://www.castlerocknutrition.com/what-is-a-meal-replacement-shake</span><span class="html-tag">&lt;/loc&gt;</span></div><span>
+        </span><div class="line"><span class="html-tag">&lt;priority&gt;</span><span>0.8</span><span class="html-tag">&lt;/priority&gt;</span></div><span>
+        </span><div class="line"><span class="html-tag">&lt;changefreq&gt;</span><span>monthly</span><span class="html-tag">&lt;/changefreq&gt;</span></div><span>
+        </span><div class="line"><span class="html-tag">&lt;lastmod&gt;</span><span>2025-12-01</span><span class="html-tag">&lt;/lastmod&gt;</span></div><span>
+    </span></div><span class="folded hidden">...</span><div class="line"><span class="html-tag">&lt;/url&gt;</span></div></div><span>
+    </span><div class="folder" id="folder21"><div class="line"><span class="folder-button fold"></span><span class="html-tag">&lt;url&gt;</span></div><div class="opened"><span>
+        </span><div class="line"><span class="html-tag">&lt;loc&gt;</span><span>https://www.castlerocknutrition.com/the-3-part-meal-system-explained</span><span class="html-tag">&lt;/loc&gt;</span></div><span>
+        </span><div class="line"><span class="html-tag">&lt;priority&gt;</span><span>0.8</span><span class="html-tag">&lt;/priority&gt;</span></div><span>
+        </span><div class="line"><span class="html-tag">&lt;changefreq&gt;</span><span>monthly</span><span class="html-tag">&lt;/changefreq&gt;</span></div><span>
+        </span><div class="line"><span class="html-tag">&lt;lastmod&gt;</span><span>2025-12-01</span><span class="html-tag">&lt;/lastmod&gt;</span></div><span>
+    </span></div><span class="folded hidden">...</span><div class="line"><span class="html-tag">&lt;/url&gt;</span></div></div><span>
+</span></div><span class="folded hidden">...</span><div class="line"><span class="html-tag">&lt;/urlset&gt;</span></div></div></div></body></html>
