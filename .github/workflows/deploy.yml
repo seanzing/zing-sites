@@ -15,11 +15,9 @@ jobs:
         id: changed
         run: |
           if git rev-parse HEAD~1 >/dev/null 2>&1; then
-            changed=$(git diff --name-only HEAD~1 HEAD | grep '/' | cut -d'/' -f1 | grep -v '^\.github$' | sort -u | tr '
-' ' ')
+            changed=$(git diff --name-only HEAD~1 HEAD | grep '/' | cut -d'/' -f1 | grep -v '^\.github$' | sort -u | paste -sd ' ' -)
           else
-            changed=$(git ls-files | grep '/' | cut -d'/' -f1 | grep -v '^\.github$' | sort -u | tr '
-' ' ')
+            changed=$(git ls-files | grep '/' | cut -d'/' -f1 | grep -v '^\.github$' | sort -u | paste -sd ' ' -)
           fi
           echo "sites=$changed" >> $GITHUB_OUTPUT
           echo "Changed sites: $changed"
@@ -34,45 +32,44 @@ jobs:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
         run: |
-          set -e
           SITES="${{ steps.changed.outputs.sites }}"
           for site in $SITES; do
             if [ ! -d "$site" ]; then
-              echo "⏭ Skipping $site (no directory)"
+              echo "Skipping $site (no directory)"
               continue
             fi
-            echo "━━━ Deploying $site ━━━"
+            echo "=== Deploying $site ==="
 
-            # Ensure CF Pages project exists
+            # Ensure CF Pages project exists (idempotent)
             curl -sf -X POST "https://api.cloudflare.com/client/v4/accounts/${CLOUDFLARE_ACCOUNT_ID}/pages/projects" \
               -H "Authorization: Bearer ${CLOUDFLARE_API_TOKEN}" \
               -H "Content-Type: application/json" \
               --data "{\"name\":\"$site\",\"production_branch\":\"main\"}" > /dev/null 2>&1 || true
 
-            # Deploy to production (main branch) with retries
+            # Deploy to production branch with retries
             deploy_ok=0
             for attempt in 1 2 3; do
-              echo "  → Wrangler attempt $attempt/3"
+              echo "  Wrangler attempt $attempt/3..."
               if wrangler pages deploy "$site" --project-name "$site" --branch main --commit-dirty=true; then
                 deploy_ok=1
-                echo "  ✅ Deployed $site"
+                echo "  OK: Deployed $site"
                 break
               fi
               [ $attempt -lt 3 ] && sleep 15
             done
 
             if [ $deploy_ok -eq 0 ]; then
-              echo "  ❌ Failed to deploy $site after 3 attempts — continuing"
+              echo "  WARN: Failed to deploy $site after 3 attempts"
               continue
             fi
 
-            # Provision zingsite.com subdomain (idempotent — OK if already exists)
+            # Provision {site}.zingsite.com subdomain (idempotent)
             curl -sf -X POST "https://api.cloudflare.com/client/v4/accounts/${CLOUDFLARE_ACCOUNT_ID}/pages/projects/${site}/domains" \
               -H "Authorization: Bearer ${CLOUDFLARE_API_TOKEN}" \
               -H "Content-Type: application/json" \
               --data "{\"name\":\"${site}.zingsite.com\"}" > /dev/null 2>&1 || true
 
-            echo "  🌐 ${site}.zingsite.com provisioned"
+            echo "  OK: ${site}.zingsite.com provisioned"
           done
 
-          echo "━━━ All sites processed ━━━"
+          echo "=== All sites processed ==="
