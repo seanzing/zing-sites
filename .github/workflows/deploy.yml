@@ -15,16 +15,18 @@ jobs:
         id: changed
         run: |
           if git rev-parse HEAD~1 >/dev/null 2>&1; then
-            changed=$(git diff --name-only HEAD~1 HEAD | grep '/' | cut -d'/' -f1 | grep -v '^\.github$' | sort -u | tr '\n' ' ')
+            changed=$(git diff --name-only HEAD~1 HEAD | grep '/' | cut -d'/' -f1 | grep -v '^\.github$' | sort -u | tr '
+' ' ')
           else
-            changed=$(git ls-files | grep '/' | cut -d'/' -f1 | grep -v '^\.github$' | sort -u | tr '\n' ' ')
+            changed=$(git ls-files | grep '/' | cut -d'/' -f1 | grep -v '^\.github$' | sort -u | tr '
+' ' ')
           fi
           echo "sites=$changed" >> $GITHUB_OUTPUT
           echo "Changed sites: $changed"
 
       - name: Install Wrangler
         if: steps.changed.outputs.sites != ''
-        run: npm install -g wrangler
+        run: npm install -g wrangler@4.81.1
 
       - name: Deploy changed sites
         if: steps.changed.outputs.sites != ''
@@ -32,23 +34,45 @@ jobs:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
         run: |
-          for site in ${{ steps.changed.outputs.sites }}; do
-            if [ -d "$site" ]; then
-              echo "Deploying $site..."
-              curl -s -X POST "https://api.cloudflare.com/client/v4/accounts/$CLOUDFLARE_ACCOUNT_ID/pages/projects" \
-                -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" \
-                -H "Content-Type: application/json" \
-                --data "{\"name\":\"$site\",\"production_branch\":\"main\"}" > /dev/null 2>&1 || true
-              deployed=false
-              for attempt in 1 2 3; do
-                echo "  Wrangler attempt $attempt/3..."
-                if npx wrangler pages deploy "$site" --project-name "$site" --branch main --commit-dirty=true; then
-                  echo "✅ Deployed $site"
-                  deployed=true
-                  break
-                fi
-                [ $attempt -lt 3 ] && sleep 10
-              done
-              $deployed || echo "⚠️ Failed to deploy $site after 3 attempts"
+          set -e
+          SITES="${{ steps.changed.outputs.sites }}"
+          for site in $SITES; do
+            if [ ! -d "$site" ]; then
+              echo "⏭ Skipping $site (no directory)"
+              continue
             fi
+            echo "━━━ Deploying $site ━━━"
+
+            # Ensure CF Pages project exists
+            curl -sf -X POST "https://api.cloudflare.com/client/v4/accounts/${CLOUDFLARE_ACCOUNT_ID}/pages/projects" \
+              -H "Authorization: Bearer ${CLOUDFLARE_API_TOKEN}" \
+              -H "Content-Type: application/json" \
+              --data "{\"name\":\"$site\",\"production_branch\":\"main\"}" > /dev/null 2>&1 || true
+
+            # Deploy to production (main branch) with retries
+            deploy_ok=0
+            for attempt in 1 2 3; do
+              echo "  → Wrangler attempt $attempt/3"
+              if wrangler pages deploy "$site" --project-name "$site" --branch main --commit-dirty=true; then
+                deploy_ok=1
+                echo "  ✅ Deployed $site"
+                break
+              fi
+              [ $attempt -lt 3 ] && sleep 15
+            done
+
+            if [ $deploy_ok -eq 0 ]; then
+              echo "  ❌ Failed to deploy $site after 3 attempts — continuing"
+              continue
+            fi
+
+            # Provision zingsite.com subdomain (idempotent — OK if already exists)
+            curl -sf -X POST "https://api.cloudflare.com/client/v4/accounts/${CLOUDFLARE_ACCOUNT_ID}/pages/projects/${site}/domains" \
+              -H "Authorization: Bearer ${CLOUDFLARE_API_TOKEN}" \
+              -H "Content-Type: application/json" \
+              --data "{\"name\":\"${site}.zingsite.com\"}" > /dev/null 2>&1 || true
+
+            echo "  🌐 ${site}.zingsite.com provisioned"
           done
+
+          echo "━━━ All sites processed ━━━"
