@@ -303,15 +303,18 @@ html.skrollr { height: auto !important; overflow: auto !important; }
          <div dmwrapped="true" id="1901957768" class="dm-home-page" themewaschanged="true" desktop-global-classes="header-over-content" tablet-global-classes="header-over-content"> <div dmtemplateid="StandardLayoutMultiD" class="standardHeaderLayout dm-bfs dm-layout-home hasAnimations rows-1200 inMiniHeaderMode hasStickyHeader hamburger-reverse header-over-content dmPageBody d-page-1716942098 inputs-css-clean dmFreeHeader runtime-module-container" id="dm-outer-wrapper" data-page-class="1716942098" data-soch="true" data-background-parallax-selector=".dmHomeSection1, .dmSectionParallex"> <div id="dmStyle_outerContainer" class="dmOuter"> <div id="dmStyle_innerContainer" class="dmInner"> <div class="dmLayoutWrapper standard-var dmStandardDesktop"> <div> <div id="iscrollBody"> <div id="site_content"> <div class="dmHeaderContainer fHeader d-header-wrapper"> <div id="hcontainer" class="u_hcontainer dmHeader p_hfcontainer" freeheader="true" headerlayout="b58ba5b5703b4cd7b5f5f7951565dc87===horizontal-layout-5" layout="78f5c343822e4eb3aac27f4ad5d13812===header" data-scrollable-target="body" data-scrollable-target-threshold="1" data-scroll-responder-id="1" logo-size-target="91%"> <div dm:templateorder="85" class="dmHeaderResp dmHeaderStack noSwitch" id="1709005236"> <div class="u_1861705244 dmRespRow dmDefaultListContentRow mini-header-show-row" style="text-align:center" id="1861705244"> <nav class="pxnav" role="navigation">
 <style>
 /* ── Pixel rebuilt nav ── */
-.pxnav{background:rgba(0,0,0,0);display:flex;align-items:center;justify-content:space-between;padding:0 20px;width:100%;box-shadow:0 1px 4px rgba(0,0,0,.1);position:relative;z-index:9999;box-sizing:border-box;}
+.pxnav{background:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 20px;width:100%;box-shadow:0 1px 4px rgba(0,0,0,.1);position:relative;z-index:9999;box-sizing:border-box;transition:background .3s,box-shadow .3s;}
+.pxnav.scrolled{background:rgba(0,0,0,0);box-shadow:none;}
 .pxnav__logo-link{display:flex;align-items:center;flex-shrink:0;text-decoration:none;padding:12px 0;}
 .pxnav__logo-img{height:55px;width:auto;display:block;}
-.pxnav__logo-text{font-size:1.2rem;font-weight:700;color:inherit;}
+.pxnav__logo-text{font-size:1.2rem;font-weight:700;color:#333;transition:color .3s;}
+.pxnav.scrolled .pxnav__logo-text{color:#fff;}
 .pxnav__menu{list-style:none;margin:0;padding:0;display:flex;align-items:stretch;}
 .pxnav__menu--left{justify-content:flex-end;flex:1;}
 .pxnav__menu--right{justify-content:flex-start;flex:1;}
 .pxnav__item{position:relative;display:flex;align-items:stretch;}
-.pxnav__item>a{display:flex;align-items:center;padding:0 15px;color:inherit;text-decoration:none;font-family:FontAwesome;font-size:15px;font-weight:400;letter-spacing:.03em;text-transform:uppercase;white-space:nowrap;border-bottom:3px solid transparent;transition:border-color .2s,color .2s;}
+.pxnav__item>a{display:flex;align-items:center;padding:0 15px;color:#333;text-decoration:none;font-family:FontAwesome;font-size:15px;font-weight:400;letter-spacing:.03em;text-transform:uppercase;white-space:nowrap;border-bottom:3px solid transparent;transition:border-color .2s,color .2s;}
+.pxnav.scrolled .pxnav__item>a{color:#fff;}
 .pxnav__item>a:hover{border-bottom-color:currentColor;color:inherit;}
 .pxnav__caret{font-size:.7em;margin-left:4px;display:inline-block;}
 .pxnav__dropdown{display:none;position:absolute;top:100%;left:0;min-width:180px;background:rgba(0,0,0,0);list-style:none;margin:0;padding:4px 0;box-shadow:0 4px 16px rgba(0,0,0,.15);z-index:1000;border-top:2px solid var(--color_3);}
@@ -334,10 +337,16 @@ html.skrollr { height: auto !important; overflow: auto !important; }
 }
 </style>
 <input class="pxnav__toggle" type="checkbox" id="pxnav-mob-toggle">
-<a href="/oklahomacleaningservice/" class="pxnav__logo-link pxnav__logo-text">Home</a><ul class="pxnav__menu"><li class="pxnav__item"><a href="/oklahomacleaningservice/">Home</a></li><li class="pxnav__item"><a href="/oklahomacleaningservice/">About</a></li><li class="pxnav__item"><a href="/oklahomacleaningservice/">Services</a></li><li class="pxnav__item"><a href="/oklahomacleaningservice/">Reviews</a></li><li class="pxnav__item"><a href="/oklahomacleaningservice/">Contact</a></li></ul>
+<a href="/oklahomacleaningservice/" class="pxnav__logo-link"><img src="assets/9493296a39ae61e2.png" alt="Oklahoma Cleaning Service" class="pxnav__logo-img"></a><ul class="pxnav__menu"><li class="pxnav__item"><a href="/oklahomacleaningservice/">Home</a></li><li class="pxnav__item"><a href="/oklahomacleaningservice/">About</a></li><li class="pxnav__item"><a href="/oklahomacleaningservice/">Services</a></li><li class="pxnav__item"><a href="/oklahomacleaningservice/">Reviews</a></li><li class="pxnav__item"><a href="/oklahomacleaningservice/">Contact</a></li></ul>
 <label class="pxnav__burger" for="pxnav-mob-toggle" aria-label="Menu"><span></span><span></span><span></span></label>
 <ul class="pxnav__mobile-menu"><li class="pxnav__item"><a href="/oklahomacleaningservice/">Home</a></li><li class="pxnav__item"><a href="/oklahomacleaningservice/">About</a></li><li class="pxnav__item"><a href="/oklahomacleaningservice/">Services</a></li><li class="pxnav__item"><a href="/oklahomacleaningservice/">Reviews</a></li><li class="pxnav__item"><a href="/oklahomacleaningservice/">Contact</a></li></ul>
-</nav> 
+</nav>
+<script>
+window.addEventListener('scroll',function(){
+var nav=document.querySelector('.pxnav');
+if(window.scrollY>50){nav.classList.add('scrolled');}else{nav.classList.remove('scrolled');}
+});
+</script> 
 </div> 
 </div> 
 </div> 
@@ -701,7 +710,13 @@ html.skrollr { height: auto !important; overflow: auto !important; }
 </a> 
 </li> 
 </ul> 
-</nav> 
+</nav>
+<script>
+window.addEventListener('scroll',function(){
+var nav=document.querySelector('.pxnav');
+if(window.scrollY>50){nav.classList.add('scrolled');}else{nav.classList.remove('scrolled');}
+});
+</script> 
 </div> 
  <div class="u_1198607377 dmRespCol small-12 medium-4 large-4" id="1198607377"> <div class="u_1006410575 dmNewParagraph" data-element-type="paragraph" data-version="5" id="1006410575" style="transition: opacity 1s ease-in-out;"><p class="size-18 m-size-18"><strong style="display: unset; color: rgb(255, 255, 255); font-weight: bold; text-transform: uppercase;" class="font-size-18 m-font-size-18" m-font-size-set="true">Contact Information</strong></p></div> 
  <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1000508388" style="transition: opacity 1s ease-in-out;" new-inline-bind-applied="true" data-diy-text=""><p><a href="https://maps.app.goo.gl/4EM11U8k3dLD5Qxy7" runtime_url="https://maps.app.goo.gl/4EM11U8k3dLD5Qxy7" type="url" style="display: initial; color: var(--color_1);" target="_blank" rel="nofollow"><span class="inline-data-binding" data-encoded-value="Q291bnR5IFJvYWQgMTU0MCwgQWRhLCBPa2xhaG9tYSA3NDgyMCwgVW5pdGVkIFN0YXRlcw==" data-inline-binding="content_library.global">Ada, Oklahoma 74820, United States</span></a></p></div> 
