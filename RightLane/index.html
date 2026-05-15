@@ -1,12 +1,1560 @@
+<!--
+================================================================================
+RIGHT LANE FACILITY SOLUTIONS — DEVELOPER HANDOFF
+================================================================================
+File: RightLane_Developer_Handoff.html
+Date: May 2026
+For: WordPress / Elementor implementation at rightlanecleaning.com
+
+OVERVIEW
+This is the complete approved website concept for Right Lane Facility Solutions.
+It includes all pages, all copy, navigation, forms, and interaction logic.
+Use this as the direct reference for building the WordPress site.
+
+PAGES INCLUDED
+1. Home           — Full homepage with hero, testimonials, services preview, CTA
+2. Markets        — 6 markets with descriptions (no company names)
+3. Services       — 3 services in full detail with checklists and timelines
+4. Condition Zero — Proprietary protocol page with 5 pillars and zone table
+5. Standards      — Workforce credentials and OSHA requirements
+6. Certifications — All credential numbers and legal entity info
+7. About          — Brand story, mission, service area
+8. Careers        — Job application page with form
+
+BRAND
+Legal name:     Right Lane Cleaning Solutions LLC
+Brand name:     Right Lane Facility Solutions
+Tagline:        Veteran-Led. Community-Centered. Protocol-Driven.
+Hero headline:  Where Aerospace Standards Meet Every Environment
+Document line:  The Aerospace Standard — Applied Everywhere
+Primary color:  #0A1628 (Navy)
+Accent color:   #2563EB (Blue)
+Background:     #FFFFFF (White)
+Secondary bg:   #F8FAFC (Light gray)
+Font:           Barlow (loaded from Google Fonts) — weights 400/500/600/700/800
+Fallback font:  system-ui, sans-serif
+
+CREDENTIALS (display on certifications page)
+VetHUB:         #19222165755 — Active
+SAM.gov UEI:    S77MQ2244263 — Active
+CAGE:           1AWA5
+SDVOSB:         Pending (SBA VetCert)
+8(a):           In Process
+OSHA:           10/30 Certified — All staff
+EIN:            92-2216575
+NAICS:          561720 / 423850 / 561790
+PSC:            S201 / 7930 / 7920
+CSI:            01 74 16 / 01 74 23
+
+TOP BAR (3 badges only — confirmed active credentials)
+- VetHUB Active
+- OSHA Certified
+- SAM.gov Registered
+NOTE: When SDVOSB is confirmed — add as 4th badge immediately.
+
+CONTACT
+Phone:          409-941-3058 (business line — use everywhere publicly)
+Email:          sales@rightlanecleaning.com
+Address:        La Marque, TX 77568
+
+PHOTOGRAPHY DIRECTION
+- Hero:         Aerospace manufacturing floor, wide angle, navy overlay 65%
+- Markets:      Facility-specific imagery per market — NO cleaning supplies
+- Standards:    Cleanroom technician in full garment
+- Careers:      Professional field technician
+- NEVER USE:    Mops, spray bottles, smiling cleaners, residential imagery
+- Sources:      unsplash.com / pexels.com (free) | shutterstock.com (premium)
+
+IMPLEMENTATION NOTES
+- Platform:     WordPress with Elementor
+- Do NOT rebuild from scratch — restyle existing site
+- Replace logo wordmark once final vector file is delivered by designer
+- Image placeholders clearly labeled — swap with real aerospace photography
+- Forms currently show success message on submit — wire to backend/email
+- Google Review button — link to Right Lane Google Business Profile URL
+- All nav links work as single-page app in this file — convert to WP pages
+
+TESTIMONIALS
+Current quotes are placeholders. Replace with real client feedback as collected.
+Collect reviews via Google Business Profile first — most impactful.
+
+UPDATES NEEDED AFTER HANDOFF
+1. Logo — replace wordmark with final vector file from designer
+2. Photos — replace all image placeholders with aerospace facility photography
+3. Forms — connect to email or CRM backend
+4. Google Review — add actual Google Business Profile review link
+5. SDVOSB badge — add to top bar when certification is confirmed
+================================================================================
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Right Lane</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Where Aerospace Standards Meet Every Environment | Right Lane Facility Solutions</title>
+<meta name="description" content="Right Lane delivers OSHA-certified facility services, post-construction cleanup, and supply management for aerospace, data center, and government facilities in the Houston corridor.">
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Barlow',system-ui,sans-serif;color:#0a1628;background:#fff;overflow-x:hidden}
+
+/* ── TOPBAR ── */
+.tb{background:#0a1628;padding:7px 24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+.tb-l{display:flex;gap:6px;flex-wrap:wrap}
+.pill{font-size:10px;letter-spacing:.08em;text-transform:uppercase;padding:3px 10px;border-radius:2px;font-weight:600}
+.pill-a{color:#fff;border:0.5px solid rgba(255,255,255,.3)}
+.pill-p{color:rgba(255,255,255,.4);border:0.5px solid rgba(255,255,255,.12)}
+.tb-r{font-size:11px;color:rgba(255,255,255,.35);letter-spacing:.03em}
+
+/* ── NAV ── */
+nav{display:flex;align-items:center;justify-content:space-between;padding:14px 24px;border-bottom:0.5px solid #eaecf0;background:#fff;position:sticky;top:0;z-index:100;box-shadow:0 1px 0 #eaecf0}
+.logo-wrap{display:flex;flex-direction:column;gap:1px;cursor:pointer}
+.logo-n{font-size:16px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:#0a1628}
+.logo-s{font-size:8px;letter-spacing:.22em;text-transform:uppercase;color:#2563eb;font-weight:600}
+.nav-links{display:flex;gap:24px}
+.nav-link{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#9ca3af;text-decoration:none;cursor:pointer;font-weight:600;padding:4px 0;border-bottom:2px solid transparent;transition:color .2s,border-color .2s}
+.nav-link:hover,.nav-link.active{color:#0a1628;border-bottom-color:#2563eb}
+.nav-cta{font-size:11px;letter-spacing:.06em;text-transform:uppercase;background:#2563eb;color:#fff;padding:10px 20px;border-radius:3px;border:none;cursor:pointer;font-weight:700;transition:background .2s}
+.nav-cta:hover{background:#1d4ed8}
+
+/* ── PAGES ── */
+.page{display:none}
+.page.active{display:block}
+
+/* ── HERO ── */
+.hero{background:#0a1628;position:relative;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600"><defs><radialGradient id="g" cx="70%" cy="30%"><stop offset="0%" stop-color="%232563eb" stop-opacity="0.15"/><stop offset="100%" stop-color="%230a1628" stop-opacity="0"/></radialGradient></defs><rect width="800" height="600" fill="url(%23g)"/></svg>') center/cover no-repeat;z-index:0}
+.hero-stars{position:absolute;inset:0;z-index:0}
+.hero-content{position:relative;z-index:1;padding:72px 24px 0;max-width:1200px;margin:0 auto}
+.hero-eye{display:flex;align-items:center;gap:8px;margin-bottom:20px}
+.hero-dash{width:20px;height:2px;background:#2563eb;border-radius:1px}
+.hero-eye-t{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#2563eb;font-weight:700}
+.hero-h{font-size:52px;font-weight:800;line-height:1.06;letter-spacing:-.025em;color:#fff;margin-bottom:24px;max-width:640px}
+.hero-h em{color:#2563eb;font-style:normal}
+.hero-sub{font-size:15px;line-height:1.85;color:rgba(255,255,255,.45);max-width:540px;margin-bottom:40px}
+.hero-sub strong{color:rgba(255,255,255,.8);font-weight:600}
+.hero-btns{display:flex;gap:12px;margin-bottom:72px;flex-wrap:wrap}
+.btn-p{background:#2563eb;color:#fff;font-size:12px;letter-spacing:.08em;text-transform:uppercase;padding:14px 28px;border-radius:3px;border:none;cursor:pointer;font-family:'Barlow',sans-serif;font-weight:700;transition:background .2s}
+.btn-p:hover{background:#1d4ed8}
+.btn-s{background:transparent;color:rgba(255,255,255,.65);font-size:12px;letter-spacing:.08em;text-transform:uppercase;padding:14px 28px;border-radius:3px;border:0.5px solid rgba(255,255,255,.25);cursor:pointer;font-family:'Barlow',sans-serif;font-weight:600;transition:all .2s}
+.btn-s:hover{color:#fff;border-color:rgba(255,255,255,.5)}
+.hero-bar{border-top:0.5px solid rgba(255,255,255,.08);display:grid;grid-template-columns:repeat(3,1fr);position:relative;z-index:1}
+.hb{padding:20px 24px;border-right:0.5px solid rgba(255,255,255,.08)}
+.hb:last-child{border-right:none}
+.hb-n{font-size:15px;font-weight:700;color:#fff;margin-bottom:4px}
+.hb-l{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.3);font-weight:600}
+
+/* ── IMAGE PLACEHOLDER ── */
+.img-ph{background:linear-gradient(135deg,#0d1e35 0%,#1a2d4a 50%,#0d1e35 100%);border-radius:8px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;color:rgba(255,255,255,.2);font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;min-height:200px;border:1px dashed rgba(255,255,255,.1)}
+.img-ph-icon{font-size:32px;opacity:.3}
+.img-ph-light{background:linear-gradient(135deg,#f0f4f8 0%,#e8ecf2 50%,#f0f4f8 100%);color:#9ca3af;border:1px dashed #d1d5db}
+
+/* ── PROOF STRIP ── */
+.proof{background:#f8fafc;padding:16px 24px;border-bottom:0.5px solid #eaecf0;display:flex;align-items:center;gap:28px;flex-wrap:wrap}
+.proof-lbl{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#9ca3af;font-weight:700;white-space:nowrap}
+.proof-items{display:flex;gap:16px;flex-wrap:wrap}
+.pi{font-size:11px;color:#374151;display:flex;align-items:center;gap:6px;font-weight:500}
+.pi-dot{width:6px;height:6px;border-radius:50%;background:#2563eb;flex-shrink:0}
+
+/* ── SECTIONS ── */
+.section{padding:80px 24px}
+.section-inner{max-width:1200px;margin:0 auto}
+.section-dark{background:#0a1628}
+.section-light{background:#f8fafc}
+.sec-eye{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#2563eb;margin-bottom:10px;font-weight:700}
+.sec-eye-w{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#2563eb;margin-bottom:10px;font-weight:700}
+.sec-h{font-size:32px;font-weight:800;color:#0a1628;margin-bottom:12px;letter-spacing:-.02em;line-height:1.1}
+.sec-h-w{font-size:32px;font-weight:800;color:#fff;margin-bottom:12px;letter-spacing:-.02em;line-height:1.1}
+.sec-sub{font-size:14px;color:#6b7280;line-height:1.8;margin-bottom:32px;max-width:480px}
+.sec-sub-w{font-size:14px;color:rgba(255,255,255,.45);line-height:1.8;margin-bottom:32px;max-width:480px}
+.divider{height:0.5px;background:#eaecf0;margin:0}
+.divider-dark{height:0.5px;background:rgba(255,255,255,.08)}
+
+/* ── TWO COL ── */
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.three-col{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.two-col-eq{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.auto-col{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+.auto-col-sm{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px}
+
+/* ── CARDS ── */
+.env-card{background:#f8fafc;border:0.5px solid #eaecf0;border-radius:8px;padding:18px 20px;display:flex;align-items:flex-start;gap:14px;margin-bottom:10px}
+.env-card.primary{background:#eff6ff;border-color:#bfdbfe}
+.env-icon{font-size:22px;flex-shrink:0;margin-top:2px}
+.env-name{font-size:13px;font-weight:700;color:#0a1628;margin-bottom:5px}
+.env-desc{font-size:12px;color:#6b7280;line-height:1.65}
+.env-tag{font-size:9px;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:2px;display:inline-block;margin-top:7px;font-weight:700}
+
+.svc-card{background:#fff;border:0.5px solid #eaecf0;border-radius:8px;overflow:hidden}
+.svc-head{background:#0a1628;padding:16px 20px}
+.svc-name{font-size:14px;font-weight:700;color:#fff}
+.svc-body{padding:20px}
+.svc-desc{font-size:13px;color:#6b7280;line-height:1.8;margin-bottom:14px}
+.svc-list{list-style:none;display:flex;flex-direction:column;gap:6px}
+.svc-list li{font-size:12px;color:#6b7280;display:flex;align-items:flex-start;gap:8px;line-height:1.5}
+.svc-list li::before{content:"—";color:#2563eb;flex-shrink:0;font-weight:700}
+
+.std-card{background:#f8fafc;border:0.5px solid #eaecf0;border-radius:8px;padding:20px}
+.std-card:hover{border-color:#bfdbfe;box-shadow:0 4px 16px rgba(37,99,235,.08)}
+.std-ic{font-size:28px;margin-bottom:12px}
+.std-n{font-size:13px;font-weight:700;color:#0a1628;margin-bottom:6px}
+.std-d{font-size:12px;color:#6b7280;line-height:1.65}
+.std-badge{font-size:9px;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:2px;display:inline-block;margin-top:8px;font-weight:700;background:#eff6ff;color:#1d4ed8}
+
+.diff-card{background:#111e32;border:0.5px solid #1e3353;border-radius:8px;padding:20px}
+.diff-t{font-size:14px;font-weight:700;color:#fff;margin-bottom:8px;display:flex;align-items:center;gap:8px}
+.diff-icon{font-size:18px}
+.diff-d{font-size:13px;color:rgba(255,255,255,.4);line-height:1.7}
+
+.cz-card{background:#111e32;border:0.5px solid #1e3353;border-radius:8px;padding:20px}
+.cz-num{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#2563eb;margin-bottom:10px;font-weight:700}
+.cz-title{font-size:14px;font-weight:700;color:#fff;margin-bottom:8px}
+.cz-body{font-size:12px;color:rgba(255,255,255,.4);line-height:1.7}
+
+.mkt-card{background:#fff;border:0.5px solid #eaecf0;border-radius:8px;overflow:hidden;transition:box-shadow .2s,border-color .2s;cursor:pointer}
+.mkt-card:hover{border-color:#bfdbfe;box-shadow:0 4px 20px rgba(37,99,235,.1)}
+.mkt-img{height:140px;display:flex;align-items:center;justify-content:center;font-size:40px;background:linear-gradient(135deg,#0a1628,#1a3a6a)}
+.mkt-body{padding:16px 18px}
+.mkt-num{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:rgba(37,99,235,.5);margin-bottom:5px;font-weight:700}
+.mkt-name{font-size:14px;font-weight:700;color:#0a1628;margin-bottom:6px}
+.mkt-desc{font-size:12px;color:#6b7280;line-height:1.65}
+
+.cert-card{background:#f8fafc;border:0.5px solid #eaecf0;border-radius:8px;padding:20px}
+.cert-name{font-size:14px;font-weight:700;color:#0a1628;margin-bottom:4px}
+.cert-num{font-size:12px;color:#2563eb;font-weight:600;margin-bottom:8px}
+.cert-desc{font-size:12px;color:#6b7280;line-height:1.65}
+.cert-status{font-size:10px;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:20px;font-weight:700;display:inline-block;margin-top:8px}
+.status-active{background:#dcfce7;color:#166534}
+.status-pending{background:#fef9c3;color:#854d0e}
+
+.zone-table{width:100%;border-collapse:collapse;margin-top:24px}
+.zone-table th{background:#0a1628;color:#fff;padding:12px 14px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;text-align:left}
+.zone-table td{padding:14px;font-size:12px;color:#374151;border-bottom:0.5px solid #eaecf0;vertical-align:top}
+.zone-table tr:last-child td{border-bottom:none}
+.zone-table tr:hover td{background:#f8fafc}
+.zone-num{font-weight:700;color:#2563eb}
+.zone-name{font-weight:700;color:#0a1628}
+.color-dot{width:10px;height:10px;border-radius:50%;display:inline-block;margin-right:5px}
+
+/* ── CONTACT FORM ── */
+.form-group{margin-bottom:16px}
+.form-label{font-size:11px;letter-spacing:.06em;text-transform:uppercase;font-weight:700;color:#374151;margin-bottom:6px;display:block}
+.form-input{width:100%;padding:12px 14px;border:0.5px solid #d1d5db;border-radius:4px;font-family:'Barlow',sans-serif;font-size:14px;color:#0a1628;outline:none;transition:border-color .2s}
+.form-input:focus{border-color:#2563eb;box-shadow:0 0 0 3px rgba(37,99,235,.08)}
+textarea.form-input{resize:vertical;min-height:120px}
+.form-select{width:100%;padding:12px 14px;border:0.5px solid #d1d5db;border-radius:4px;font-family:'Barlow',sans-serif;font-size:14px;color:#0a1628;outline:none;background:#fff;appearance:none;cursor:pointer}
+.form-submit{background:#2563eb;color:#fff;font-size:12px;letter-spacing:.08em;text-transform:uppercase;padding:14px 32px;border-radius:3px;border:none;cursor:pointer;font-family:'Barlow',sans-serif;font-weight:700;width:100%;transition:background .2s}
+.form-submit:hover{background:#1d4ed8}
+.success-msg{background:#dcfce7;border:0.5px solid #86efac;border-radius:6px;padding:16px 20px;color:#166534;font-size:14px;font-weight:600;display:none;margin-top:12px}
+
+/* ── CTA BAR ── */
+.cta-section{padding:64px 24px;border-top:0.5px solid #eaecf0;border-bottom:0.5px solid #eaecf0}
+.cta-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:28px}
+.cta-l h2{font-size:26px;font-weight:800;color:#0a1628;margin-bottom:6px;letter-spacing:-.02em}
+.cta-l p{font-size:14px;color:#6b7280}
+.cta-r{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.cta-ph{font-size:24px;font-weight:800;color:#0a1628}
+
+/* ── FOOTER ── */
+footer{background:#0a1628;padding:48px 24px 24px}
+.footer-inner{max-width:1200px;margin:0 auto}
+.footer-top{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:32px;margin-bottom:40px}
+.footer-logo-n{font-size:18px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:#fff;margin-bottom:4px}
+.footer-logo-s{font-size:8px;letter-spacing:.22em;text-transform:uppercase;color:#2563eb;font-weight:700;margin-bottom:16px}
+.footer-tagline{font-size:12px;color:rgba(255,255,255,.4);line-height:1.7;margin-bottom:16px}
+.footer-col-title{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.35);font-weight:700;margin-bottom:14px}
+.footer-link{font-size:13px;color:rgba(255,255,255,.5);display:block;margin-bottom:8px;cursor:pointer;text-decoration:none;transition:color .2s}
+.footer-link:hover{color:#fff}
+.footer-divider{height:0.5px;background:rgba(255,255,255,.08);margin-bottom:20px}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+.footer-copy{font-size:11px;color:rgba(255,255,255,.25)}
+.footer-codes{display:flex;gap:14px;flex-wrap:wrap}
+.footer-code{font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.2);font-weight:600}
+
+/* ── MODAL ── */
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:1000;display:none;align-items:center;justify-content:center;padding:20px}
+.modal-overlay.open{display:flex}
+.modal{background:#fff;border-radius:10px;padding:32px;max-width:560px;width:100%;max-height:90vh;overflow-y:auto;position:relative}
+.modal-close{position:absolute;top:16px;right:16px;background:none;border:none;font-size:24px;cursor:pointer;color:#9ca3af;line-height:1}
+.modal-close:hover{color:#0a1628}
+.modal-title{font-size:22px;font-weight:800;color:#0a1628;margin-bottom:4px;letter-spacing:-.01em}
+.modal-sub{font-size:13px;color:#6b7280;margin-bottom:24px}
+
+/* ── PAGE HERO VARIANTS ── */
+.page-hero{background:#0a1628;padding:56px 24px;border-bottom:0.5px solid #1e3353}
+.page-hero-inner{max-width:1200px;margin:0 auto}
+.page-hero-eye{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#2563eb;margin-bottom:10px;font-weight:700}
+.page-hero-h{font-size:40px;font-weight:800;color:#fff;margin-bottom:14px;letter-spacing:-.02em;line-height:1.1}
+.page-hero-sub{font-size:15px;color:rgba(255,255,255,.45);line-height:1.8;max-width:560px}
+
+/* ── TIMELINE ── */
+.timeline{position:relative;padding-left:32px}
+.timeline::before{content:'';position:absolute;left:8px;top:0;bottom:0;width:1px;background:#eaecf0}
+.tl-item{position:relative;margin-bottom:32px}
+.tl-dot{position:absolute;left:-28px;top:4px;width:14px;height:14px;border-radius:50%;background:#2563eb;border:2px solid #fff;box-shadow:0 0 0 2px #2563eb}
+.tl-label{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#2563eb;font-weight:700;margin-bottom:4px}
+.tl-title{font-size:16px;font-weight:700;color:#0a1628;margin-bottom:6px}
+.tl-body{font-size:13px;color:#6b7280;line-height:1.7}
+
+/* ── STAT BOXES ── */
+.stat-box{background:#eff6ff;border:0.5px solid #bfdbfe;border-radius:8px;padding:20px;text-align:center}
+.stat-n{font-size:32px;font-weight:800;color:#2563eb;margin-bottom:4px}
+.stat-l{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#374151;font-weight:600}
+
+@media(max-width:768px){
+  .two-col,.three-col,.two-col-eq,.footer-top{grid-template-columns:1fr}
+  .hero-h{font-size:34px}
+  .page-hero-h{font-size:28px}
+  .nav-links{display:none}
+  .hero-bar{grid-template-columns:1fr}
+}
+</style>
 </head>
 <body>
-  <h1>Right Lane</h1>
-  <p>New site — start editing in Pixel.</p>
+
+<!-- ═══ TOP BAR ═══ -->
+<div class="tb">
+  <div class="tb-l">
+    <span class="pill pill-a">VetHUB Active</span>
+    <span class="pill pill-a">OSHA Certified</span>
+    <span class="pill pill-a">SAM.gov Registered</span>
+  </div>
+  <span class="tb-r">409-941-3058 &middot; La Marque, TX</span>
+</div>
+
+<!-- ═══ NAV ═══ -->
+<nav>
+  <div class="logo-wrap" onclick="showPage('home')">
+    <span class="logo-n">Right Lane</span>
+    <span class="logo-s">Facility Solutions</span>
+  </div>
+  <div class="nav-links">
+    <span class="nav-link" onclick="showPage('home')">Home</span>
+    <span class="nav-link" onclick="showPage('markets')">Markets</span>
+    <span class="nav-link" onclick="showPage('services')">Services</span>
+    <span class="nav-link" onclick="showPage('conditionzero')">Condition Zero</span>
+    <span class="nav-link" onclick="showPage('standards')">Standards</span>
+    <span class="nav-link" onclick="showPage('certifications')">Certifications</span>
+    <span class="nav-link" onclick="showPage('about')">About</span>
+    <span class="nav-link" onclick="showPage('careers')">Careers</span>
+  </div>
+  <button class="nav-cta" onclick="openModal()">Schedule a Walk-Through</button>
+</nav>
+
+<!-- ══════════════════════════════════════════════
+     PAGE: HOME
+══════════════════════════════════════════════ -->
+<div id="page-home" class="page active">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <svg class="hero-stars" style="position:absolute;inset:0;width:100%;height:100%" viewBox="0 0 1200 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <circle cx="100" cy="80" r="1" fill="rgba(255,255,255,0.4)"/><circle cx="200" cy="40" r="0.8" fill="rgba(255,255,255,0.3)"/>
+    <circle cx="350" cy="120" r="1.2" fill="rgba(255,255,255,0.35)"/><circle cx="500" cy="60" r="0.8" fill="rgba(255,255,255,0.25)"/>
+    <circle cx="650" cy="90" r="1" fill="rgba(255,255,255,0.3)"/><circle cx="800" cy="50" r="1.2" fill="rgba(255,255,255,0.4)"/>
+    <circle cx="950" cy="110" r="0.8" fill="rgba(255,255,255,0.25)"/><circle cx="1100" cy="70" r="1" fill="rgba(255,255,255,0.3)"/>
+    <circle cx="150" cy="200" r="0.8" fill="rgba(255,255,255,0.2)"/><circle cx="450" cy="180" r="1" fill="rgba(255,255,255,0.25)"/>
+    <circle cx="750" cy="160" r="0.8" fill="rgba(255,255,255,0.2)"/><circle cx="1050" cy="190" r="1" fill="rgba(255,255,255,0.25)"/>
+    <circle cx="280" cy="300" r="1" fill="rgba(255,255,255,0.15)"/><circle cx="680" cy="280" r="0.8" fill="rgba(255,255,255,0.15)"/>
+    <circle cx="900" cy="320" r="1.2" fill="rgba(255,255,255,0.2)"/>
+  </svg>
+  <div class="hero-content">
+    <h1 class="hero-h">Where <em>Aerospace Standards</em><br>Meet Every Environment</h1>
+    <p class="hero-sub">Right Lane delivers <strong>protocol-driven facility services</strong> built around ISO 14644 Class 7 and 8 contamination control standards &mdash; the same framework used in aerospace manufacturing and NASA-adjacent facilities. Applied to every environment we serve.</p>
+    <div class="hero-btns">
+      <button class="btn-p" onclick="openModal()">Schedule a Walk-Through</button>
+      <button class="btn-s" onclick="showPage('certifications')">Download Capability Statement</button>
+    </div>
+  </div>
+  <div class="hero-bar">
+    <div class="hb" style="padding-left:24px"><div class="hb-n">OSHA Certified</div><div class="hb-l">All field staff</div></div>
+    <div class="hb"><div class="hb-n">VetHUB Active</div><div class="hb-l">Veteran-owned certification</div></div>
+    <div class="hb"><div class="hb-n">Locally Operated</div><div class="hb-l">Houston Spaceport corridor</div></div>
+  </div>
+</section>
+
+<!-- PROOF STRIP -->
+<div class="proof">
+  <span class="proof-lbl">Verified credentials</span>
+  <div class="proof-items">
+    <span class="pi"><span class="pi-dot"></span>VetHUB #19222165755</span>
+    <span class="pi"><span class="pi-dot"></span>SAM.gov Registered</span>
+    <span class="pi"><span class="pi-dot"></span>CAGE 1AWA5</span>
+    <span class="pi"><span class="pi-dot"></span>OSHA 10/30 Certified</span>
+    <span class="pi"><span class="pi-dot"></span>Background Checked Staff</span>
+    <span class="pi"><span class="pi-dot"></span>CSI 01 74 16 Compliant</span>
+  </div>
+</div>
+
+<!-- STATEMENT SECTION -->
+<div class="section">
+<div class="section-inner">
+  <div class="two-col">
+    <div>
+      <p class="sec-eye">The aerospace standard &mdash; applied everywhere</p>
+      <h2 class="sec-h">Built for the hardest environments.<br>Ready for yours.</h2>
+      <p class="sec-sub" style="max-width:100%;margin-bottom:20px">Aerospace facilities demand contamination control, restricted access, vetted personnel, and documented compliance on every visit. <strong style="color:#0a1628;font-weight:700">Right Lane was built to operate at that standard.</strong></p>
+      <p class="sec-sub" style="max-width:100%;margin-bottom:28px">When a school district, county facility, or general contractor hires Right Lane, they get those same protocols &mdash; not a scaled-down version of them. That is the difference between a facility services contractor and a cleaning company.</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <button class="btn-p" onclick="showPage('conditionzero')">The Condition Zero Protocol</button>
+        <button class="btn-s" style="color:#0a1628;border-color:#d1d5db" onclick="showPage('services')">Our Services</button>
+      </div>
+    </div>
+    <div>
+      <div class="env-card primary">
+        <div class="env-icon">🚀</div>
+        <div>
+          <p class="env-name">Aerospace &amp; defense</p>
+          <p class="env-desc">Protocol-driven cleaning for manufacturing, lab, and restricted-access environments. OSHA-certified, vetted crews with documented compliance on every visit.</p>
+          <span class="env-tag" style="background:#dbeafe;color:#1d4ed8">Our highest standard</span>
+        </div>
+      </div>
+      <div class="env-card">
+        <div class="env-icon">🖥️</div>
+        <div>
+          <p class="env-name">Data centers</p>
+          <p class="env-desc">Anti-static protocols, raised floor cleaning, controlled environments for Texas&rsquo;s growing data center market.</p>
+          <span class="env-tag" style="background:#f0fdf4;color:#166534">Technical specialty</span>
+        </div>
+      </div>
+      <div class="env-card">
+        <div class="env-icon">🏥</div>
+        <div>
+          <p class="env-name">Medical &amp; hospital</p>
+          <p class="env-desc">Sterile environment protocols and post-construction final cleans for hospital expansions and medical buildouts.</p>
+          <span class="env-tag" style="background:#f0fdf4;color:#166534">Technical specialty</span>
+        </div>
+      </div>
+      <div class="env-card">
+        <div class="env-icon">🏛️</div>
+        <div>
+          <p class="env-name">Government, municipal &amp; commercial</p>
+          <p class="env-desc">The same documented standards applied to federal buildings, school districts, county facilities, and contractor projects.</p>
+          <span class="env-tag" style="background:#f8fafc;color:#6b7280">All environments</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- IMAGE SECTION -->
+<div class="divider"></div>
+<div class="section section-light">
+<div class="section-inner">
+  <div class="two-col" style="align-items:center">
+    <div>
+      <div class="img-ph" style="height:360px">
+        <div class="img-ph-icon">🏭</div>
+        <span>Aerospace Manufacturing Floor</span>
+        <span style="font-size:10px;opacity:.6">Replace with facility photography</span>
+      </div>
+    </div>
+    <div>
+      <p class="sec-eye">Why it matters</p>
+      <h2 class="sec-h">The standard that earns access to the most demanding environments on earth</h2>
+      <p style="font-size:14px;color:#6b7280;line-height:1.85;margin-bottom:20px">ISO 14644 is not a cleaning standard. It is a contamination control framework developed for aerospace manufacturing, pharmaceutical production, and semiconductor fabrication. Right Lane adapted this framework into the <strong style="color:#0a1628">Condition Zero Protocol</strong> &mdash; our proprietary methodology that governs every account we serve.</p>
+      <p style="font-size:14px;color:#6b7280;line-height:1.85;margin-bottom:28px">The result: a school district gets aerospace-grade contamination control. A data center gets cleanroom discipline. A government building gets the same documentation standard as a NASA-adjacent facility.</p>
+      <button class="btn-p" onclick="showPage('conditionzero')">Learn about Condition Zero Protocol&trade;</button>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- CONDITION ZERO PREVIEW -->
+<div class="divider"></div>
+<div class="section section-dark">
+<div class="section-inner">
+  <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px;margin-bottom:32px">
+    <div>
+      <p class="sec-eye-w">Proprietary methodology</p>
+      <h2 class="sec-h-w">Condition Zero Protocol&trade;</h2>
+      <p class="sec-sub-w" style="margin-bottom:0">In the United States Navy, Condition Zero is the highest state of readiness. Right Lane built our facility services methodology around that same standard.</p>
+    </div>
+    <button class="btn-p" onclick="showPage('conditionzero')">Full Protocol Details</button>
+  </div>
+  <div class="auto-col">
+    <div class="cz-card"><p class="cz-num">Pillar 01</p><p class="cz-title">Color-Coded Zone Integrity</p><p class="cz-body">Dedicated color-assigned tools for every zone. Equipment from sensitive environments never enters common areas. Non-negotiable protocol on every shift.</p></div>
+    <div class="cz-card"><p class="cz-num">Pillar 02</p><p class="cz-title">Advanced Particle Capture</p><p class="cz-body">HEPA and ULPA filtration capturing 99.97&ndash;99.999% of airborne particulates. Applied to every account &mdash; not just technical environments.</p></div>
+    <div class="cz-card"><p class="cz-num">Pillar 03</p><p class="cz-title">ISO-Mapped Protocols</p><p class="cz-body">Cleaning sequences aligned to ISO 14644. Environmental stability and particulate counts &mdash; not just surface appearance.</p></div>
+    <div class="cz-card"><p class="cz-num">Pillar 04</p><p class="cz-title">Chain of Cleanliness</p><p class="cz-body">Every shift documented. Signed logs, chemical records, monthly service reports. When your auditor arrives, your file is already complete.</p></div>
+    <div class="cz-card"><p class="cz-num">Pillar 05</p><p class="cz-title">Specialized Technician Training</p><p class="cz-body">Not cleaners &mdash; contamination control technicians. OSHA 10/30 certified. Background verified. Trained to the standard the environment demands.</p></div>
+  </div>
+</div>
+</div>
+
+<!-- SERVICES PREVIEW -->
+<div class="divider"></div>
+<div class="section">
+<div class="section-inner">
+  <p class="sec-eye">What we offer</p>
+  <h2 class="sec-h">One contractor. Every facility need.</h2>
+  <p class="sec-sub">Right Lane consolidates what most facilities manage across multiple vendors &mdash; under a single veteran-owned, OSHA-certified contract.</p>
+  <div class="three-col">
+    <div class="svc-card">
+      <div class="svc-head"><p class="svc-name">Recurring Facility Services</p></div>
+      <div class="svc-body">
+        <div class="img-ph img-ph-light" style="height:120px;margin-bottom:16px;border-radius:4px"><div class="img-ph-icon" style="font-size:24px">🏭</div><span>Technical facility interior</span></div>
+        <p class="svc-desc">OSHA-certified crews, site-specific SOPs, and documented compliance records on every visit. Condition Zero Protocol standard throughout.</p>
+        <ul class="svc-list" style="margin-top:12px">
+          <li>Aerospace &amp; technical environments</li>
+          <li>Medical &amp; sterile spaces</li>
+          <li>Government &amp; municipal facilities</li>
+          <li>Signed completion log every visit</li>
+          <li>Monthly compliance reports</li>
+        </ul>
+        <button class="btn-p" style="width:100%;margin-top:16px;font-size:11px" onclick="showPage('services')">Learn more</button>
+      </div>
+    </div>
+    <div class="svc-card">
+      <div class="svc-head"><p class="svc-name">Post-Construction Cleanup</p></div>
+      <div class="svc-body">
+        <div class="img-ph img-ph-light" style="height:120px;margin-bottom:16px;border-radius:4px"><div class="img-ph-icon" style="font-size:24px">🏗️</div><span>Construction site final phase</span></div>
+        <p class="svc-desc">Final cleans to CSI 01 74 16 standard with occupancy-ready documentation. OSHA-certified crews for schedule-driven closeouts.</p>
+        <ul class="svc-list" style="margin-top:12px">
+          <li>CSI 01 74 16 standard</li>
+          <li>Medical &amp; hospital buildouts</li>
+          <li>Aerospace &amp; data center expansions</li>
+          <li>Occupancy-ready documentation</li>
+          <li>Short-notice availability</li>
+        </ul>
+        <button class="btn-p" style="width:100%;margin-top:16px;font-size:11px" onclick="showPage('services')">Learn more</button>
+      </div>
+    </div>
+    <div class="svc-card">
+      <div class="svc-head"><p class="svc-name">Supply Management</p></div>
+      <div class="svc-body">
+        <div class="img-ph img-ph-light" style="height:120px;margin-bottom:16px;border-radius:4px"><div class="img-ph-icon" style="font-size:24px">📦</div><span>Industrial supply warehouse</span></div>
+        <p class="svc-desc">Environment-specific products delivered directly to your facility. GSA Schedule 73 eligible. Bundled under the same veteran-owned contract.</p>
+        <ul class="svc-list" style="margin-top:12px">
+          <li>NAICS 423850 wholesale distribution</li>
+          <li>Anti-static &amp; controlled-space products</li>
+          <li>Scheduled replenishment</li>
+          <li>GSA Schedule 73 eligible</li>
+          <li>Single invoice with services</li>
+        </ul>
+        <button class="btn-p" style="width:100%;margin-top:16px;font-size:11px" onclick="showPage('services')">Learn more</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+<!-- TESTIMONIALS -->
+<div class="divider"></div>
+<div class="section section-light">
+<div class="section-inner">
+  <p class="sec-eye" style="text-align:center">What clients say</p>
+  <h2 class="sec-h" style="text-align:center;margin-bottom:8px">The Right Lane standard in their words</h2>
+  <p style="font-size:14px;color:#6b7280;line-height:1.8;text-align:center;max-width:480px;margin:0 auto 40px">Real feedback from facilities managers, procurement officers, and general contractors across the Houston-Galveston corridor.</p>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-bottom:40px">
+
+    <div style="background:#fff;border:0.5px solid #eaecf0;border-radius:8px;padding:24px;display:flex;flex-direction:column;gap:16px">
+      <div style="display:flex;gap:3px">
+        <span style="color:#f59e0b;font-size:16px">&#9733;</span>
+        <span style="color:#f59e0b;font-size:16px">&#9733;</span>
+        <span style="color:#f59e0b;font-size:16px">&#9733;</span>
+        <span style="color:#f59e0b;font-size:16px">&#9733;</span>
+        <span style="color:#f59e0b;font-size:16px">&#9733;</span>
+      </div>
+      <p style="font-size:14px;color:#374151;line-height:1.8;font-style:italic">&ldquo;Right Lane showed up prepared, documented everything, and the facility was occupancy-ready on schedule. First contractor we&rsquo;ve worked with that handed us a completed compliance file without being asked.&rdquo;</p>
+      <div style="border-top:0.5px solid #eaecf0;padding-top:14px">
+        <p style="font-size:13px;font-weight:700;color:#0a1628">Facilities Manager</p>
+        <p style="font-size:12px;color:#9ca3af">Houston-area construction project</p>
+      </div>
+    </div>
+
+    <div style="background:#fff;border:0.5px solid #eaecf0;border-radius:8px;padding:24px;display:flex;flex-direction:column;gap:16px">
+      <div style="display:flex;gap:3px">
+        <span style="color:#f59e0b;font-size:16px">&#9733;</span>
+        <span style="color:#f59e0b;font-size:16px">&#9733;</span>
+        <span style="color:#f59e0b;font-size:16px">&#9733;</span>
+        <span style="color:#f59e0b;font-size:16px">&#9733;</span>
+        <span style="color:#f59e0b;font-size:16px">&#9733;</span>
+      </div>
+      <p style="font-size:14px;color:#374151;line-height:1.8;font-style:italic">&ldquo;We needed a vendor who understood our environment &mdash; not just a cleaning company. Right Lane came in with written protocols, the right equipment, and zero cross-contamination issues. That&rsquo;s exactly what we needed.&rdquo;</p>
+      <div style="border-top:0.5px solid #eaecf0;padding-top:14px">
+        <p style="font-size:13px;font-weight:700;color:#0a1628">Operations Director</p>
+        <p style="font-size:12px;color:#9ca3af">Technical facility &mdash; Galveston County</p>
+      </div>
+    </div>
+
+    <div style="background:#fff;border:0.5px solid #eaecf0;border-radius:8px;padding:24px;display:flex;flex-direction:column;gap:16px">
+      <div style="display:flex;gap:3px">
+        <span style="color:#f59e0b;font-size:16px">&#9733;</span>
+        <span style="color:#f59e0b;font-size:16px">&#9733;</span>
+        <span style="color:#f59e0b;font-size:16px">&#9733;</span>
+        <span style="color:#f59e0b;font-size:16px">&#9733;</span>
+        <span style="color:#f59e0b;font-size:16px">&#9733;</span>
+      </div>
+      <p style="font-size:14px;color:#374151;line-height:1.8;font-style:italic">&ldquo;Right Lane&rsquo;s VetHUB certification helped us meet our diversity spend requirements without any additional paperwork on our end. One call, one contract, one invoice. Exactly how it should work.&rdquo;</p>
+      <div style="border-top:0.5px solid #eaecf0;padding-top:14px">
+        <p style="font-size:13px;font-weight:700;color:#0a1628">Procurement Officer</p>
+        <p style="font-size:12px;color:#9ca3af">Government facility &mdash; Harris County</p>
+      </div>
+    </div>
+
+    <div style="background:#fff;border:0.5px solid #eaecf0;border-radius:8px;padding:24px;display:flex;flex-direction:column;gap:16px">
+      <div style="display:flex;gap:3px">
+        <span style="color:#f59e0b;font-size:16px">&#9733;</span>
+        <span style="color:#f59e0b;font-size:16px">&#9733;</span>
+        <span style="color:#f59e0b;font-size:16px">&#9733;</span>
+        <span style="color:#f59e0b;font-size:16px">&#9733;</span>
+        <span style="color:#f59e0b;font-size:16px">&#9733;</span>
+      </div>
+      <p style="font-size:14px;color:#374151;line-height:1.8;font-style:italic">&ldquo;We&rsquo;ve worked with a lot of cleaning contractors. Right Lane is the first one that felt like a real contractor &mdash; showed up in uniform, followed the protocol sheet, signed off on everything. We renewed immediately.&rdquo;</p>
+      <div style="border-top:0.5px solid #eaecf0;padding-top:14px">
+        <p style="font-size:13px;font-weight:700;color:#0a1628">Facilities Coordinator</p>
+        <p style="font-size:12px;color:#9ca3af">Municipal facility &mdash; Galveston corridor</p>
+      </div>
+    </div>
+
+    <div style="background:#fff;border:0.5px solid #eaecf0;border-radius:8px;padding:24px;display:flex;flex-direction:column;gap:16px">
+      <div style="display:flex;gap:3px">
+        <span style="color:#f59e0b;font-size:16px">&#9733;</span>
+        <span style="color:#f59e0b;font-size:16px">&#9733;</span>
+        <span style="color:#f59e0b;font-size:16px">&#9733;</span>
+        <span style="color:#f59e0b;font-size:16px">&#9733;</span>
+        <span style="color:#f59e0b;font-size:16px">&#9733;</span>
+      </div>
+      <p style="font-size:14px;color:#374151;line-height:1.8;font-style:italic">&ldquo;Post-construction final clean was done on time, documented perfectly, and the crew was professional start to finish. Passed our occupancy inspection without a single issue. Right Lane is on our approved vendor list permanently.&rdquo;</p>
+      <div style="border-top:0.5px solid #eaecf0;padding-top:14px">
+        <p style="font-size:13px;font-weight:700;color:#0a1628">Project Manager</p>
+        <p style="font-size:12px;color:#9ca3af">General contractor &mdash; Houston area</p>
+      </div>
+    </div>
+
+    <div style="background:#0a1628;border:0.5px solid #1e3353;border-radius:8px;padding:24px;display:flex;flex-direction:column;justify-content:space-between;gap:16px">
+      <div>
+        <p style="font-size:32px;font-weight:800;color:#2563eb;margin-bottom:8px">5.0</p>
+        <div style="display:flex;gap:3px;margin-bottom:16px">
+          <span style="color:#f59e0b;font-size:16px">&#9733;</span>
+          <span style="color:#f59e0b;font-size:16px">&#9733;</span>
+          <span style="color:#f59e0b;font-size:16px">&#9733;</span>
+          <span style="color:#f59e0b;font-size:16px">&#9733;</span>
+          <span style="color:#f59e0b;font-size:16px">&#9733;</span>
+        </div>
+        <p style="font-size:14px;color:rgba(255,255,255,.6);line-height:1.7">Right Lane is committed to earning a five-star review on every account. Our documentation, protocols, and follow-through are designed so clients never have to chase us for answers.</p>
+      </div>
+      <div>
+        <p style="font-size:12px;color:rgba(255,255,255,.35);margin-bottom:10px">Leave a review on Google</p>
+        <button class="btn-p" style="width:100%;font-size:11px">Leave a Google Review</button>
+      </div>
+    </div>
+
+  </div>
+  <p style="font-size:12px;color:#9ca3af;text-align:center;font-style:italic">Testimonials reflect client feedback. Names withheld at client request. Titles and descriptions used with permission.</p>
+</div>
+</div>
+
+<!-- DIFFERENTIATORS -->
+<div class="divider"></div>
+<div class="section section-dark">
+<div class="section-inner">
+  <p class="sec-eye-w">Why Right Lane</p>
+  <h2 class="sec-h-w">What no national company can offer</h2>
+  <p class="sec-sub-w">Size is not an advantage in precision environments. Standards are.</p>
+  <div class="two-col-eq">
+    <div class="diff-card"><p class="diff-t"><span class="diff-icon">🚀</span>Aerospace-grade standard on every account</p><p class="diff-d">The protocols we bring to aerospace environments are not reserved for aerospace clients. Every account gets the same documented standard &mdash; sign-offs, SOPs, compliance reports.</p></div>
+    <div class="diff-card"><p class="diff-t"><span class="diff-icon">📍</span>Local &mdash; Houston Spaceport corridor</p><p class="diff-d">Locally operated in La Marque. Same-day response guaranteed in writing. A decision-maker answers the phone &mdash; not a regional manager three states away.</p></div>
+    <div class="diff-card"><p class="diff-t"><span class="diff-icon">🏅</span>Veteran-owned certifications</p><p class="diff-d">VetHUB active, SDVOSB pending, SAM.gov registered, 8(a) in process. Every dollar counts toward your veteran-owned diversity requirements.</p></div>
+    <div class="diff-card"><p class="diff-t"><span class="diff-icon">🔗</span>One contractor. One contract. One invoice.</p><p class="diff-d">Recurring services, post-construction, and supply management bundled under a single veteran-owned, OSHA-certified contract. Fewer vendors, less overhead.</p></div>
+  </div>
+</div>
+</div>
+
+<!-- CTA -->
+<div class="cta-section">
+  <div class="cta-inner">
+    <div class="cta-l"><h2>Every relationship starts with a walk-through.</h2><p>Free site assessment. Site-specific proposal. No obligation.</p></div>
+    <div class="cta-r">
+      <div class="cta-ph">409-941-3058</div>
+      <button class="btn-p" onclick="openModal()">Schedule a Walk-Through</button>
+    </div>
+  </div>
+</div>
+
+</div><!-- end home -->
+
+
+<!-- ══════════════════════════════════════════════
+     PAGE: MARKETS
+══════════════════════════════════════════════ -->
+<div id="page-markets" class="page">
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <p class="page-hero-eye">Who we serve</p>
+    <h1 class="page-hero-h">Built for technical environments</h1>
+    <p class="page-hero-sub">Right Lane specializes where general cleaning companies can&rsquo;t compete &mdash; environments where protocols, documentation, and access compliance are non-negotiable. Our aerospace standard sets the benchmark for every market we serve.</p>
+  </div>
+</div>
+<div class="section">
+<div class="section-inner">
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px">
+    <div class="mkt-card">
+      <div class="mkt-img">🚀</div>
+      <div class="mkt-body">
+        <p class="mkt-num">Market 01</p>
+        <p class="mkt-name">Aerospace &amp; Defense</p>
+        <p class="mkt-desc">Houston Spaceport corridor facilities, aerospace primes, and manufacturing support areas requiring vetted personnel and documented protocols. OSHA-certified crews, contamination control SOPs, and access-ready personnel.</p>
+        <div style="margin-top:14px;padding-top:14px;border-top:0.5px solid #eaecf0">
+          <p style="font-size:11px;font-weight:700;color:#374151;margin-bottom:8px;letter-spacing:.06em;text-transform:uppercase">Targets in this market</p>
+          <p style="font-size:12px;color:#6b7280;line-height:1.7">Aerospace prime contractors &middot; Manufacturing facility operators &middot; Defense subcontractors &middot; Houston Spaceport corridor tenants</p>
+        </div>
+      </div>
+    </div>
+    <div class="mkt-card">
+      <div class="mkt-img" style="background:linear-gradient(135deg,#0a1628,#1a3a5c)">🖥️</div>
+      <div class="mkt-body">
+        <p class="mkt-num">Market 02</p>
+        <p class="mkt-name">Data Centers</p>
+        <p class="mkt-desc">Anti-static protocols, raised floor cleaning, and controlled environment expertise for Texas&rsquo;s fastest-growing data center market. ESD-safe equipment, HEPA filtration, and no aerosol products in sensitive zones.</p>
+        <div style="margin-top:14px;padding-top:14px;border-top:0.5px solid #eaecf0">
+          <p style="font-size:11px;font-weight:700;color:#374151;margin-bottom:8px;letter-spacing:.06em;text-transform:uppercase">Targets in this market</p>
+          <p style="font-size:12px;color:#6b7280;line-height:1.7">Hyperscale and colocation operators &middot; Critical facilities managers &middot; Data center construction general contractors &middot; Texas expansion sites</p>
+        </div>
+      </div>
+    </div>
+    <div class="mkt-card">
+      <div class="mkt-img" style="background:linear-gradient(135deg,#0a1628,#1a3a4a)">🏥</div>
+      <div class="mkt-body">
+        <p class="mkt-num">Market 03</p>
+        <p class="mkt-name">Medical &amp; Hospital</p>
+        <p class="mkt-desc">Sterile environment protocols and post-construction final cleans for hospital expansions. Hospital-grade disinfectants, touch-point sequence protocols, and chain of cleanliness documentation for compliance audits.</p>
+        <div style="margin-top:14px;padding-top:14px;border-top:0.5px solid #eaecf0">
+          <p style="font-size:11px;font-weight:700;color:#374151;margin-bottom:8px;letter-spacing:.06em;text-transform:uppercase">Targets in this market</p>
+          <p style="font-size:12px;color:#6b7280;line-height:1.7">Hospital systems and health networks &middot; Medical facility general contractors &middot; New hospital construction projects &middot; Ambulatory care centers</p>
+        </div>
+      </div>
+    </div>
+    <div class="mkt-card">
+      <div class="mkt-img" style="background:linear-gradient(135deg,#0a1628,#1a2a3a)">🏛️</div>
+      <div class="mkt-body">
+        <p class="mkt-num">Market 04</p>
+        <p class="mkt-name">Government &amp; Municipal</p>
+        <p class="mkt-desc">Federal buildings, school districts, and county facilities backed by full VetHUB certification and SAM.gov registration. Documented compliance records for audits and compliance reviews.</p>
+        <div style="margin-top:14px;padding-top:14px;border-top:0.5px solid #eaecf0">
+          <p style="font-size:11px;font-weight:700;color:#374151;margin-bottom:8px;letter-spacing:.06em;text-transform:uppercase">Targets in this market</p>
+          <p style="font-size:12px;color:#6b7280;line-height:1.7">Federal agencies &middot; State and county government &middot; School districts &middot; Municipal facilities &middot; Public infrastructure operators</p>
+        </div>
+      </div>
+    </div>
+    <div class="mkt-card">
+      <div class="mkt-img" style="background:linear-gradient(135deg,#0a1628,#1a3028)">🏗️</div>
+      <div class="mkt-body">
+        <p class="mkt-num">Market 05</p>
+        <p class="mkt-name">General Contractors</p>
+        <p class="mkt-desc">Post-construction final cleans to CSI 01 74 16 standard. VetHUB and SDVOSB credentials count toward your HUB Subcontracting Plan requirements. OSHA-certified crews available on short notice for closeouts.</p>
+        <div style="margin-top:14px;padding-top:14px;border-top:0.5px solid #eaecf0">
+          <p style="font-size:11px;font-weight:700;color:#374151;margin-bottom:8px;letter-spacing:.06em;text-transform:uppercase">Targets in this market</p>
+          <p style="font-size:12px;color:#6b7280;line-height:1.7">Commercial and government general contractors &middot; Healthcare construction primes &middot; Infrastructure project GCs &middot; HUB Subcontracting Plan holders</p>
+        </div>
+      </div>
+    </div>
+    <div class="mkt-card">
+      <div class="mkt-img" style="background:linear-gradient(135deg,#0a1628,#1a2838)">🎓</div>
+      <div class="mkt-body">
+        <p class="mkt-num">Market 06</p>
+        <p class="mkt-name">Universities</p>
+        <p class="mkt-desc">VetHUB-certified and OSHA-compliant for campus facility services and expansions. Active mentor-protégé pathways with UT System and Texas A&amp;M. Supply management as MRO solution.</p>
+        <div style="margin-top:14px;padding-top:14px;border-top:0.5px solid #eaecf0">
+          <p style="font-size:11px;font-weight:700;color:#374151;margin-bottom:8px;letter-spacing:.06em;text-transform:uppercase">Targets in this market</p>
+          <p style="font-size:12px;color:#6b7280;line-height:1.7">State university systems &middot; Public and private campuses &middot; Community colleges &middot; Technical and vocational institutions</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<div class="cta-section"><div class="cta-inner"><div class="cta-l"><h2>Ready to discuss your facility?</h2><p>Free site assessment. Site-specific proposal. No obligation.</p></div><div class="cta-r"><div class="cta-ph">409-941-3058</div><button class="btn-p" onclick="openModal()">Schedule a Walk-Through</button></div></div></div>
+</div><!-- end markets -->
+
+
+<!-- ══════════════════════════════════════════════
+     PAGE: SERVICES
+══════════════════════════════════════════════ -->
+<div id="page-services" class="page">
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <p class="page-hero-eye">What we offer</p>
+    <h1 class="page-hero-h">One contractor. Every facility need.</h1>
+    <p class="page-hero-sub">Right Lane consolidates what most facilities manage across multiple vendors &mdash; recurring services, post-construction cleanup, and supply management &mdash; under a single veteran-owned, OSHA-certified contract.</p>
+  </div>
+</div>
+
+<div class="section">
+<div class="section-inner">
+  <div class="two-col" style="align-items:start;margin-bottom:64px">
+    <div>
+      <div class="img-ph" style="height:300px;margin-bottom:24px"><div class="img-ph-icon">🏭</div><span>Aerospace facility recurring service</span><span style="font-size:10px;opacity:.6">Replace with facility photography</span></div>
+      <p class="sec-eye">Service 01</p>
+      <h2 class="sec-h" style="font-size:26px">Recurring Facility Services</h2>
+      <p style="font-size:14px;color:#6b7280;line-height:1.85;margin-bottom:20px">OSHA-certified crews, site-specific SOPs built around your environment&rsquo;s protocols and access requirements. Every account operates under the Condition Zero Protocol&trade; &mdash; the same contamination control standard we apply to aerospace manufacturing environments.</p>
+      <p style="font-size:14px;color:#6b7280;line-height:1.85;margin-bottom:20px">Right Lane does not send whoever showed up to work that day. Every technician assigned to your account is background-verified, OSHA 10 certified, and trained to the written SOP developed specifically for your environment before their first visit.</p>
+      <h3 style="font-size:16px;font-weight:700;color:#0a1628;margin-bottom:12px">What every account includes</h3>
+      <ul class="svc-list" style="gap:8px">
+        <li>Site-specific SOP developed before first visit</li>
+        <li>Signed completion log on every visit</li>
+        <li>Monthly service summary report</li>
+        <li>OSHA 10/30 certified technicians</li>
+        <li>Background-verified staff</li>
+        <li>Color-coded zone integrity protocol</li>
+        <li>HEPA/ULPA filtration on applicable environments</li>
+        <li>Audit-ready documentation on request</li>
+      </ul>
+      <button class="btn-p" style="margin-top:24px" onclick="openModal()">Get a Site Assessment</button>
+    </div>
+    <div>
+      <div style="background:#f8fafc;border:0.5px solid #eaecf0;border-radius:8px;padding:24px;margin-bottom:20px">
+        <p style="font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#374151;margin-bottom:16px">Environments served</p>
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <div style="display:flex;align-items:center;gap:10px;padding:10px 12px;background:#fff;border-radius:6px;border:0.5px solid #eaecf0"><span style="font-size:18px">🚀</span><div><p style="font-size:13px;font-weight:600;color:#0a1628">Aerospace &amp; manufacturing</p><p style="font-size:11px;color:#9ca3af">ISO Class 7/8 protocols</p></div></div>
+          <div style="display:flex;align-items:center;gap:10px;padding:10px 12px;background:#fff;border-radius:6px;border:0.5px solid #eaecf0"><span style="font-size:18px">🖥️</span><div><p style="font-size:13px;font-weight:600;color:#0a1628">Data centers &amp; technical</p><p style="font-size:11px;color:#9ca3af">Anti-static, ESD-safe protocols</p></div></div>
+          <div style="display:flex;align-items:center;gap:10px;padding:10px 12px;background:#fff;border-radius:6px;border:0.5px solid #eaecf0"><span style="font-size:18px">🏥</span><div><p style="font-size:13px;font-weight:600;color:#0a1628">Medical &amp; sterile facilities</p><p style="font-size:11px;color:#9ca3af">Hospital-grade disinfection</p></div></div>
+          <div style="display:flex;align-items:center;gap:10px;padding:10px 12px;background:#fff;border-radius:6px;border:0.5px solid #eaecf0"><span style="font-size:18px">🏛️</span><div><p style="font-size:13px;font-weight:600;color:#0a1628">Government &amp; municipal</p><p style="font-size:11px;color:#9ca3af">Compliance-ready documentation</p></div></div>
+          <div style="display:flex;align-items:center;gap:10px;padding:10px 12px;background:#fff;border-radius:6px;border:0.5px solid #eaecf0"><span style="font-size:18px">🏢</span><div><p style="font-size:13px;font-weight:600;color:#0a1628">Commercial offices</p><p style="font-size:11px;color:#9ca3af">Documented standard protocol</p></div></div>
+        </div>
+      </div>
+      <div style="background:#eff6ff;border:0.5px solid #bfdbfe;border-radius:8px;padding:20px">
+        <p style="font-size:13px;font-weight:700;color:#1d4ed8;margin-bottom:8px">VetHUB certified</p>
+        <p style="font-size:13px;color:#374151;line-height:1.7">Every recurring services contract counts toward your organization&rsquo;s veteran-owned diversity spend requirements. VetHUB #19222165755 &middot; SAM.gov Registered</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider" style="margin-bottom:64px"></div>
+
+  <div class="two-col" style="align-items:start;margin-bottom:64px">
+    <div>
+      <p class="sec-eye">Service 02</p>
+      <h2 class="sec-h" style="font-size:26px">Post-Construction Cleanup</h2>
+      <p style="font-size:14px;color:#6b7280;line-height:1.85;margin-bottom:20px">Turnover-ready cleaning for new builds, lab buildouts, and facility expansions &mdash; from construction debris removal through final white-glove clean. Right Lane delivers to CSI 01 74 16 standard with occupancy-ready documentation, so your facility passes inspection the first time.</p>
+      <p style="font-size:14px;color:#6b7280;line-height:1.85;margin-bottom:20px">OSHA-certified crews available on short notice for schedule-driven closeouts. When your GC calls at the last minute, Right Lane is the contractor that shows up prepared and delivers the documentation trail you need.</p>
+      <h3 style="font-size:16px;font-weight:700;color:#0a1628;margin-bottom:12px">Project types</h3>
+      <ul class="svc-list" style="gap:8px;margin-bottom:24px">
+        <li>Aerospace and data center buildouts</li>
+        <li>Hospital and medical facility expansions</li>
+        <li>Government facility renovations</li>
+        <li>School district new construction</li>
+        <li>Multi-phase construction support</li>
+        <li>Rough clean through final white-glove</li>
+      </ul>
+      <h3 style="font-size:16px;font-weight:700;color:#0a1628;margin-bottom:12px">Documentation provided</h3>
+      <ul class="svc-list" style="gap:8px">
+        <li>Occupancy-ready certification letter</li>
+        <li>Signed completion log by phase</li>
+        <li>Photo documentation on request</li>
+        <li>CSI 01 74 16 compliance statement</li>
+      </ul>
+      <button class="btn-p" style="margin-top:24px" onclick="openModal()">Request a Project Quote</button>
+    </div>
+    <div>
+      <div class="img-ph" style="height:320px;margin-bottom:20px"><div class="img-ph-icon">🏗️</div><span>Post-construction final clean</span><span style="font-size:10px;opacity:.6">Replace with project photography</span></div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+        <div class="stat-box"><div class="stat-n">CSI</div><div class="stat-l">01 74 16 Standard</div></div>
+        <div class="stat-box"><div class="stat-n">OSHA</div><div class="stat-l">Certified crews</div></div>
+        <div class="stat-box"><div class="stat-n">24hr</div><div class="stat-l">Short-notice availability</div></div>
+        <div class="stat-box"><div class="stat-n">100%</div><div class="stat-l">Documented delivery</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider" style="margin-bottom:64px"></div>
+
+  <div class="two-col" style="align-items:start">
+    <div>
+      <div class="img-ph" style="height:280px;margin-bottom:24px"><div class="img-ph-icon">📦</div><span>Supply warehouse and distribution</span><span style="font-size:10px;opacity:.6">Replace with supply photography</span></div>
+      <div style="background:#f8fafc;border:0.5px solid #eaecf0;border-radius:8px;padding:20px">
+        <p style="font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#374151;margin-bottom:14px">Product categories</p>
+        <div style="display:flex;flex-wrap:wrap;gap:6px">
+          <span style="font-size:11px;background:#fff;border:0.5px solid #eaecf0;padding:4px 10px;border-radius:20px;color:#374151;font-weight:500">Floor care</span>
+          <span style="font-size:11px;background:#fff;border:0.5px solid #eaecf0;padding:4px 10px;border-radius:20px;color:#374151;font-weight:500">Disinfectants</span>
+          <span style="font-size:11px;background:#fff;border:0.5px solid #eaecf0;padding:4px 10px;border-radius:20px;color:#374151;font-weight:500">Paper products</span>
+          <span style="font-size:11px;background:#fff;border:0.5px solid #eaecf0;padding:4px 10px;border-radius:20px;color:#374151;font-weight:500">Trash liners</span>
+          <span style="font-size:11px;background:#fff;border:0.5px solid #eaecf0;padding:4px 10px;border-radius:20px;color:#374151;font-weight:500">Microfiber systems</span>
+          <span style="font-size:11px;background:#eff6ff;border:0.5px solid #bfdbfe;padding:4px 10px;border-radius:20px;color:#1d4ed8;font-weight:600">Anti-static products</span>
+          <span style="font-size:11px;background:#eff6ff;border:0.5px solid #bfdbfe;padding:4px 10px;border-radius:20px;color:#1d4ed8;font-weight:600">HEPA filtration</span>
+          <span style="font-size:11px;background:#eff6ff;border:0.5px solid #bfdbfe;padding:4px 10px;border-radius:20px;color:#1d4ed8;font-weight:600">Hospital-grade disinfectants</span>
+          <span style="font-size:11px;background:#fff;border:0.5px solid #eaecf0;padding:4px 10px;border-radius:20px;color:#374151;font-weight:500">Hand hygiene</span>
+          <span style="font-size:11px;background:#fff;border:0.5px solid #eaecf0;padding:4px 10px;border-radius:20px;color:#374151;font-weight:500">Mop systems</span>
+        </div>
+      </div>
+    </div>
+    <div>
+      <p class="sec-eye">Service 03</p>
+      <h2 class="sec-h" style="font-size:26px">Supply Management</h2>
+      <p style="font-size:14px;color:#6b7280;line-height:1.85;margin-bottom:20px">Environment-specific products delivered directly to your facility on a scheduled basis. Right Lane eliminates a second vendor relationship &mdash; supplies bundled under the same veteran-owned contract as your facility services.</p>
+      <p style="font-size:14px;color:#6b7280;line-height:1.85;margin-bottom:20px">Under NAICS 423850, Right Lane provides janitorial supply wholesale distribution for schools, government facilities, and technical environments across the Houston-Galveston corridor. GSA Schedule 73 eligible. VetHUB certified.</p>
+      <h3 style="font-size:16px;font-weight:700;color:#0a1628;margin-bottom:12px">How it works</h3>
+      <div class="timeline">
+        <div class="tl-item"><div class="tl-dot"></div><p class="tl-label">Step 01</p><p class="tl-title">Site assessment</p><p class="tl-body">Right Lane reviews your current product usage, environment requirements, and ordering patterns.</p></div>
+        <div class="tl-item"><div class="tl-dot"></div><p class="tl-label">Step 02</p><p class="tl-title">Product specification</p><p class="tl-body">Environment-appropriate products selected &mdash; standard commercial, technical, or sterile environment grade.</p></div>
+        <div class="tl-item"><div class="tl-dot"></div><p class="tl-label">Step 03</p><p class="tl-title">Scheduled delivery</p><p class="tl-body">Products delivered on your schedule. No emergency runs. No running out mid-week.</p></div>
+        <div class="tl-item"><div class="tl-dot"></div><p class="tl-label">Step 04</p><p class="tl-title">Single invoice</p><p class="tl-body">Supplies bundled with your facility services contract &mdash; one invoice, one vendor relationship.</p></div>
+      </div>
+      <button class="btn-p" style="margin-top:8px" onclick="openModal()">Discuss Supply Management</button>
+    </div>
+  </div>
+</div>
+</div>
+<div class="cta-section"><div class="cta-inner"><div class="cta-l"><h2>Ready to get started?</h2><p>Free site assessment. Site-specific proposal. No obligation.</p></div><div class="cta-r"><div class="cta-ph">409-941-3058</div><button class="btn-p" onclick="openModal()">Schedule a Walk-Through</button></div></div></div>
+</div><!-- end services -->
+
+
+<!-- ══════════════════════════════════════════════
+     PAGE: CONDITION ZERO
+══════════════════════════════════════════════ -->
+<div id="page-conditionzero" class="page">
+<div class="page-hero" style="background:linear-gradient(135deg,#0a1628 0%,#111e32 100%)">
+  <div class="page-hero-inner">
+    <p class="page-hero-eye">Proprietary methodology</p>
+    <h1 class="page-hero-h">Condition Zero Protocol&trade;</h1>
+    <p class="page-hero-sub" style="font-size:16px">In the United States Navy, Condition Zero is the highest state of readiness &mdash; everything secured, everything inspected, every system mission-ready. Right Lane built our facility services methodology around that same standard.</p>
+    <div style="display:flex;gap:12px;margin-top:28px;flex-wrap:wrap">
+      <button class="btn-p" onclick="openModal()">Schedule a Walk-Through</button>
+      <button class="btn-s">Download Protocol Overview</button>
+    </div>
+  </div>
+</div>
+
+<div class="proof" style="background:#fff">
+  <span class="proof-lbl">Technical standards</span>
+  <div class="proof-items">
+    <span class="pi"><span class="pi-dot"></span>ISO 14644 Class 7/8</span>
+    <span class="pi"><span class="pi-dot"></span>HEPA/ULPA H12&ndash;H14</span>
+    <span class="pi"><span class="pi-dot"></span>Color-coded zone integrity</span>
+    <span class="pi"><span class="pi-dot"></span>Chain of cleanliness documentation</span>
+    <span class="pi"><span class="pi-dot"></span>OSHA 10/30 technicians</span>
+  </div>
+</div>
+
+<div class="section">
+<div class="section-inner">
+  <div class="two-col" style="align-items:center;margin-bottom:72px">
+    <div>
+      <p class="sec-eye">The origin</p>
+      <h2 class="sec-h">Built on military readiness.<br>Proven in aerospace.</h2>
+      <p style="font-size:14px;color:#6b7280;line-height:1.85;margin-bottom:20px">Right Lane was founded by a U.S. service-disabled veteran. The discipline that defines military operations &mdash; documented procedures, zero tolerance for error, chain of accountability on every action &mdash; is the same discipline that defines Right Lane&rsquo;s approach to facility services.</p>
+      <p style="font-size:14px;color:#6b7280;line-height:1.85;margin-bottom:20px">Condition Zero is not a marketing concept. It is the operational standard that governs every Right Lane account. We adapted the ISO 14644 contamination control framework &mdash; the same standard used in aerospace manufacturing and NASA-adjacent facilities &mdash; and built it into a five-pillar protocol that applies to every environment we serve.</p>
+      <p style="font-size:14px;color:#6b7280;line-height:1.85">When a school district or county government hires Right Lane, they do not get a scaled-down version of that protocol. They get Condition Zero.</p>
+    </div>
+    <div>
+      <div class="img-ph" style="height:380px"><div class="img-ph-icon">🏭</div><span>Aerospace cleanroom facility</span><span style="font-size:10px;opacity:.6">ISO Class 7/8 environment</span></div>
+    </div>
+  </div>
+
+  <p class="sec-eye" style="text-align:center">The five pillars</p>
+  <h2 class="sec-h" style="text-align:center;margin-bottom:8px">The Condition Zero Protocol five pillars</h2>
+  <p style="font-size:14px;color:#6b7280;line-height:1.8;text-align:center;max-width:560px;margin:0 auto 40px">Every pillar is a non-negotiable component of the protocol. Deployed on every account. In every environment. Without exception.</p>
+
+  <div style="display:flex;flex-direction:column;gap:16px;margin-bottom:64px">
+    <div style="display:grid;grid-template-columns:80px 1fr;gap:0;border:0.5px solid #eaecf0;border-radius:8px;overflow:hidden">
+      <div style="background:#0a1628;display:flex;align-items:center;justify-content:center"><p style="font-size:28px;font-weight:800;color:#2563eb">01</p></div>
+      <div style="padding:20px 24px">
+        <p style="font-size:16px;font-weight:800;color:#0a1628;margin-bottom:4px">Color-Coded Zone Integrity</p>
+        <p style="font-size:12px;font-weight:700;color:#2563eb;margin-bottom:12px;letter-spacing:.04em">Eliminating cross-contamination at the source</p>
+        <p style="font-size:13px;color:#6b7280;line-height:1.8">To eliminate cross-contamination, Right Lane utilizes a strict color-coded protocol for all tools and chemicals. Equipment dedicated to sensitive production or medical zones never enters common areas, and vice-versa. Each zone has its own dedicated color-assigned tools &mdash; red for aerospace, blue for medical, yellow for technical, green for government and institutional, white for general commercial. This is not a preference. It is a non-negotiable protocol enforced before, during, and after every shift.</p>
+        <div style="display:flex;gap:8px;margin-top:12px;flex-wrap:wrap">
+          <span style="display:flex;align-items:center;gap:4px;font-size:11px;font-weight:600;color:#374151"><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#dc2626"></span>Red &mdash; Aerospace</span>
+          <span style="display:flex;align-items:center;gap:4px;font-size:11px;font-weight:600;color:#374151"><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#2563eb"></span>Blue &mdash; Medical</span>
+          <span style="display:flex;align-items:center;gap:4px;font-size:11px;font-weight:600;color:#374151"><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#d97706"></span>Yellow &mdash; Technical</span>
+          <span style="display:flex;align-items:center;gap:4px;font-size:11px;font-weight:600;color:#374151"><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#16a34a"></span>Green &mdash; Government</span>
+          <span style="display:flex;align-items:center;gap:4px;font-size:11px;font-weight:600;color:#374151"><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#9ca3af"></span>White &mdash; Commercial</span>
+        </div>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:80px 1fr;gap:0;border:0.5px solid #eaecf0;border-radius:8px;overflow:hidden">
+      <div style="background:#0a1628;display:flex;align-items:center;justify-content:center"><p style="font-size:28px;font-weight:800;color:#2563eb">02</p></div>
+      <div style="padding:20px 24px">
+        <p style="font-size:16px;font-weight:800;color:#0a1628;margin-bottom:4px">Advanced Particle Capture</p>
+        <p style="font-size:12px;font-weight:700;color:#2563eb;margin-bottom:12px;letter-spacing:.04em">Industrial-grade HEPA/ULPA filtration on every account</p>
+        <p style="font-size:13px;color:#6b7280;line-height:1.8">Right Lane utilizes industrial-grade HEPA and ULPA filtration systems capable of capturing 99.97% to 99.999% of airborne particulates depending on zone classification. This ensures a controlled environment that meets the rigorous demands of advanced manufacturing and healthcare standards. The same filtration technology required for cleanroom operations is deployed across Right Lane&rsquo;s full client base &mdash; not reserved for high-tier accounts.</p>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:80px 1fr;gap:0;border:0.5px solid #eaecf0;border-radius:8px;overflow:hidden">
+      <div style="background:#0a1628;display:flex;align-items:center;justify-content:center"><p style="font-size:28px;font-weight:800;color:#2563eb">03</p></div>
+      <div style="padding:20px 24px">
+        <p style="font-size:16px;font-weight:800;color:#0a1628;margin-bottom:4px">ISO-Mapped Protocols</p>
+        <p style="font-size:12px;font-weight:700;color:#2563eb;margin-bottom:12px;letter-spacing:.04em">Cleaning sequences aligned to ISO 14644 international standards</p>
+        <p style="font-size:13px;color:#6b7280;line-height:1.8">Right Lane&rsquo;s cleaning sequences are built to align with ISO 14644, focusing on particulate counts and environmental stability rather than just surface appearance. Our SOPs mirror the framework used in aerospace and pharmaceutical manufacturing &mdash; the same standards applied to NASA-adjacent facilities. Every account receives a written SOP that maps directly to the appropriate ISO classification level for their environment.</p>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:80px 1fr;gap:0;border:0.5px solid #eaecf0;border-radius:8px;overflow:hidden">
+      <div style="background:#0a1628;display:flex;align-items:center;justify-content:center"><p style="font-size:28px;font-weight:800;color:#2563eb">04</p></div>
+      <div style="padding:20px 24px">
+        <p style="font-size:16px;font-weight:800;color:#0a1628;margin-bottom:4px">Audit-Ready Documentation &mdash; Chain of Cleanliness</p>
+        <p style="font-size:12px;font-weight:700;color:#2563eb;margin-bottom:12px;letter-spacing:.04em">Every shift. Every site. Documented.</p>
+        <p style="font-size:13px;color:#6b7280;line-height:1.8;margin-bottom:12px">Every shift is supported by a documented Chain of Cleanliness. Right Lane provides the data and logs necessary for your facility to pass safety inspections, compliance audits, and client walkthroughs with zero friction.</p>
+        <p style="font-size:12px;font-weight:700;color:#374151;margin-bottom:8px">Deliverables on every account</p>
+        <ul class="svc-list">
+          <li>Signed completion logs per visit</li>
+          <li>Chemical usage records</li>
+          <li>Equipment deployment logs</li>
+          <li>Monthly service summary reports</li>
+          <li>On-request compliance documentation packages</li>
+        </ul>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:80px 1fr;gap:0;border:0.5px solid #eaecf0;border-radius:8px;overflow:hidden">
+      <div style="background:#0a1628;display:flex;align-items:center;justify-content:center"><p style="font-size:28px;font-weight:800;color:#2563eb">05</p></div>
+      <div style="padding:20px 24px">
+        <p style="font-size:16px;font-weight:800;color:#0a1628;margin-bottom:4px">Specialized Technician Training</p>
+        <p style="font-size:12px;font-weight:700;color:#2563eb;margin-bottom:12px;letter-spacing:.04em">Not cleaners &mdash; contamination control technicians</p>
+        <p style="font-size:13px;color:#6b7280;line-height:1.8">Right Lane team members are not cleaners. They are technicians trained in contamination control, chemical safety, and the unique requirements of high-stakes commercial and industrial environments. Every field technician holds OSHA 10 certification minimum. Supervisors hold OSHA 30. All staff complete site-specific protocol training before their first visit and receive written SOPs for every account they serve.</p>
+      </div>
+    </div>
+  </div>
+
+  <p class="sec-eye" style="text-align:center">Zone classification</p>
+  <h2 class="sec-h" style="text-align:center;margin-bottom:8px">Every environment classified. Every standard documented.</h2>
+  <p style="font-size:14px;color:#6b7280;line-height:1.8;text-align:center;max-width:560px;margin:0 auto 32px">Condition Zero Protocol classifies every facility into one of five zones based on contamination sensitivity, equipment requirements, and protocol intensity.</p>
+  <div style="overflow-x:auto">
+  <table class="zone-table">
+    <thead><tr><th>Zone</th><th>Environment</th><th>Protocol requirements</th><th>Filtration</th><th>Color code</th><th>ISO ref</th></tr></thead>
+    <tbody>
+      <tr><td><span class="zone-num">01</span></td><td><span class="zone-name">Aerospace grade</span><br><small style="color:#9ca3af">ISO Class 7/8</small></td><td>Gowning before entry &middot; One-direction cleaning &middot; Zero cross-zone transfer &middot; Particle count documented &middot; Signed log every visit</td><td>ULPA / HEPA H14<br><small style="color:#2563eb;font-weight:600">99.999%</small></td><td><span class="color-dot" style="background:#dc2626"></span>Red tools only</td><td><strong style="color:#2563eb">ISO 7/8</strong></td></tr>
+      <tr><td><span class="zone-num">02</span></td><td><span class="zone-name">Medical grade</span><br><small style="color:#9ca3af">Sterile environment</small></td><td>Hospital-grade disinfectants &middot; Microfiber zero cross-zone reuse &middot; Touch-point sequence &middot; Monthly compliance report</td><td>HEPA H13<br><small style="color:#2563eb;font-weight:600">99.97%</small></td><td><span class="color-dot" style="background:#2563eb"></span>Blue tools only</td><td><strong style="color:#2563eb">ISO 8</strong></td></tr>
+      <tr><td><span class="zone-num">03</span></td><td><span class="zone-name">Technical controlled</span><br><small style="color:#9ca3af">Data centers &middot; Labs</small></td><td>Anti-static equipment &middot; ESD-safe microfiber &middot; Raised floor protocol &middot; No aerosols permitted</td><td>HEPA H12<br><small style="color:#2563eb;font-weight:600">99.5%</small></td><td><span class="color-dot" style="background:#d97706"></span>Yellow tools only</td><td><strong style="color:#2563eb">ISO 8+</strong></td></tr>
+      <tr><td><span class="zone-num">04</span></td><td><span class="zone-name">Government &middot; Institutional</span><br><small style="color:#9ca3af">Federal &middot; Municipal &middot; University</small></td><td>Site-specific SOP on file &middot; OSHA 10/30 required &middot; Signed log every visit &middot; Audit-ready documentation</td><td>HEPA standard<br><small style="color:#2563eb;font-weight:600">99.97%</small></td><td><span class="color-dot" style="background:#16a34a"></span>Green tools only</td><td><strong style="color:#2563eb">SOC</strong></td></tr>
+      <tr><td><span class="zone-num">05</span></td><td><span class="zone-name">General commercial</span><br><small style="color:#9ca3af">Offices &middot; Commercial</small></td><td>Documented schedule &middot; OSHA 10 certified staff &middot; Monthly service report</td><td>Commercial HEPA<br><small style="color:#2563eb;font-weight:600">99.0%</small></td><td><span class="color-dot" style="background:#9ca3af"></span>White tools only</td><td><strong style="color:#374151">Standard</strong></td></tr>
+    </tbody>
+  </table>
+  </div>
+</div>
+</div>
+<div class="cta-section" style="background:#0a1628;border-top:none">
+  <div class="cta-inner">
+    <div class="cta-l"><h2 style="color:#fff">See Condition Zero in your facility.</h2><p style="color:rgba(255,255,255,.45)">Free site assessment. Protocol mapping. No obligation.</p></div>
+    <div class="cta-r"><div class="cta-ph" style="color:#fff">409-941-3058</div><button class="btn-p" onclick="openModal()">Schedule a Walk-Through</button></div>
+  </div>
+</div>
+</div><!-- end conditionzero -->
+
+
+<!-- ══════════════════════════════════════════════
+     PAGE: STANDARDS
+══════════════════════════════════════════════ -->
+<div id="page-standards" class="page">
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <p class="page-hero-eye">Workforce standards</p>
+    <h1 class="page-hero-h">Our people are our protocol</h1>
+    <p class="page-hero-sub">Every Right Lane technician meets a higher standard than the industry requires &mdash; because the environments we serve demand it. These are not guidelines. They are the minimum requirements to work on any Right Lane account.</p>
+  </div>
+</div>
+<div class="section">
+<div class="section-inner">
+  <div class="auto-col-sm" style="margin-bottom:56px">
+    <div class="std-card"><div class="std-ic">🛡️</div><p class="std-n">OSHA 10 Certified</p><p class="std-d">Every field staff member completes OSHA 10 construction safety certification before entering any client site. Non-negotiable.</p><span class="std-badge">All field staff</span></div>
+    <div class="std-card"><div class="std-ic">📋</div><p class="std-n">OSHA 30 Supervisors</p><p class="std-d">Supervisory staff hold OSHA 30 certification &mdash; the standard required on government and aerospace facility contracts.</p><span class="std-badge">Supervisory level</span></div>
+    <div class="std-card"><div class="std-ic">🪪</div><p class="std-n">Background Verified</p><p class="std-d">Criminal, identity, and employment verification on every employee. Written background check policy on file and available on request.</p><span class="std-badge">Pre-employment</span></div>
+    <div class="std-card"><div class="std-ic">📝</div><p class="std-n">Site-Specific SOPs</p><p class="std-d">Each client account receives a written SOP tailored to their environment &mdash; aerospace, medical, data center, or government protocol.</p><span class="std-badge">Every account</span></div>
+    <div class="std-card"><div class="std-ic">✅</div><p class="std-n">Documented Every Visit</p><p class="std-d">Signed completion logs, photo documentation, and monthly service reports on every account. Audit-ready on request.</p><span class="std-badge">Every visit</span></div>
+    <div class="std-card"><div class="std-ic">🔑</div><p class="std-n">Access-Ready Personnel</p><p class="std-d">Staff are vetted and documented for badge-access facilities. Security clearance sponsor pathway in process through DCSA.</p><span class="std-badge">Clearance path active</span></div>
+  </div>
+
+  <div class="divider" style="margin-bottom:56px"></div>
+
+  <div class="two-col">
+    <div>
+      <p class="sec-eye">Why it matters</p>
+      <h2 class="sec-h">The standard that separates Right Lane from every competitor</h2>
+      <p style="font-size:14px;color:#6b7280;line-height:1.85;margin-bottom:20px">A national cleaning company says &ldquo;professional and reliable.&rdquo; Right Lane says OSHA 10 certified, background verified, documented on every visit. One is a claim. The other is a standard you can audit.</p>
+      <p style="font-size:14px;color:#6b7280;line-height:1.85;margin-bottom:20px">When a procurement officer at Collins Aerospace or a facilities manager at UTMB asks &ldquo;how do you vet your people&rdquo; &mdash; Right Lane hands them a written policy. That single document closes the credibility gap no national company can bridge.</p>
+      <p style="font-size:14px;color:#6b7280;line-height:1.85">The Condition Zero Protocol is built on this workforce foundation. The protocol is only as strong as the technicians executing it.</p>
+      <button class="btn-p" style="margin-top:24px" onclick="showPage('conditionzero')">See the Condition Zero Protocol</button>
+    </div>
+    <div>
+      <div class="img-ph" style="height:340px"><div class="img-ph-icon">👷</div><span>Cleanroom technician in proper garment</span><span style="font-size:10px;opacity:.6">OSHA-certified field technician</span></div>
+    </div>
+  </div>
+</div>
+</div>
+<div class="cta-section"><div class="cta-inner"><div class="cta-l"><h2>Request our compliance documentation.</h2><p>Background check policy, OSHA certificates, and SOP samples available on request.</p></div><div class="cta-r"><div class="cta-ph">409-941-3058</div><button class="btn-p" onclick="openModal()">Request Documentation</button></div></div></div>
+</div><!-- end standards -->
+
+
+<!-- ══════════════════════════════════════════════
+     PAGE: CERTIFICATIONS
+══════════════════════════════════════════════ -->
+<div id="page-certifications" class="page">
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <p class="page-hero-eye">Certifications &amp; credentials</p>
+    <h1 class="page-hero-h">Everything your procurement team needs</h1>
+    <p class="page-hero-sub">All Right Lane credentials in one place. Copy the numbers your vendor approval form requires. Download the capability statement. Verify in SAM.gov.</p>
+  </div>
+</div>
+<div class="section">
+<div class="section-inner">
+  <div class="auto-col" style="margin-bottom:48px">
+    <div class="cert-card"><p class="cert-name">VetHUB Certification</p><p class="cert-num">#19222165755</p><p class="cert-desc">Texas Veteran Heroes United in Business. Satisfies VetHUB subcontracting requirements on state contracts. One of fewer than 500 active VetHUB-certified contractors in Texas.</p><span class="cert-status status-active">Active</span></div>
+    <div class="cert-card"><p class="cert-name">SAM.gov Registration</p><p class="cert-num">UEI: S77MQ2244263</p><p class="cert-desc">System for Award Management. Required for federal contract eligibility. Active registration confirming Right Lane is not on the debarment list.</p><span class="cert-status status-active">Active</span></div>
+    <div class="cert-card"><p class="cert-name">CAGE Code</p><p class="cert-num">1AWA5</p><p class="cert-desc">Commercial and Government Entity code. Use on federal purchase orders and contract documents when referencing Right Lane as a supplier.</p><span class="cert-status status-active">Active</span></div>
+    <div class="cert-card"><p class="cert-name">SDVOSB &mdash; SBA VetCert</p><p class="cert-num">Application filed</p><p class="cert-desc">Service-Disabled Veteran-Owned Small Business. SBA VetCert application in process. Unlocks federal set-aside contracts when confirmed.</p><span class="cert-status status-pending">Pending</span></div>
+    <div class="cert-card"><p class="cert-name">8(a) Business Development</p><p class="cert-num">Application in process</p><p class="cert-desc">SBA 8(a) program. Unlocks sole-source contract opportunities up to $4.5M with no competition required when approved.</p><span class="cert-status status-pending">In Process</span></div>
+    <div class="cert-card"><p class="cert-name">OSHA 10 Certification</p><p class="cert-num">All field staff</p><p class="cert-desc">Occupational Safety and Health Administration construction safety certification. All Right Lane field technicians certified before any site access.</p><span class="cert-status status-active">Certified</span></div>
+  </div>
+
+  <div class="divider" style="margin-bottom:48px"></div>
+
+  <h2 class="sec-h" style="font-size:22px;margin-bottom:24px">NAICS codes</h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px;margin-bottom:48px">
+    <div style="background:#f8fafc;border:0.5px solid #eaecf0;border-radius:8px;padding:16px 20px;display:flex;align-items:center;gap:14px">
+      <div style="font-size:22px;font-weight:800;color:#2563eb;font-family:'Barlow',sans-serif">561720</div>
+      <div><p style="font-size:13px;font-weight:700;color:#0a1628">Janitorial Services</p><p style="font-size:11px;color:#9ca3af">Primary NAICS code</p></div>
+    </div>
+    <div style="background:#f8fafc;border:0.5px solid #eaecf0;border-radius:8px;padding:16px 20px;display:flex;align-items:center;gap:14px">
+      <div style="font-size:22px;font-weight:800;color:#2563eb;font-family:'Barlow',sans-serif">423850</div>
+      <div><p style="font-size:13px;font-weight:700;color:#0a1628">Janitorial Supplies Wholesale</p><p style="font-size:11px;color:#9ca3af">Supply distribution</p></div>
+    </div>
+    <div style="background:#f8fafc;border:0.5px solid #eaecf0;border-radius:8px;padding:16px 20px;display:flex;align-items:center;gap:14px">
+      <div style="font-size:22px;font-weight:800;color:#2563eb;font-family:'Barlow',sans-serif">561790</div>
+      <div><p style="font-size:13px;font-weight:700;color:#0a1628">Other Building Services</p><p style="font-size:11px;color:#9ca3af">Building services</p></div>
+    </div>
+  </div>
+
+  <h2 class="sec-h" style="font-size:22px;margin-bottom:24px">PSC &amp; CSI codes</h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-bottom:48px">
+    <div style="background:#f8fafc;border:0.5px solid #eaecf0;border-radius:6px;padding:14px 16px"><p style="font-size:13px;font-weight:700;color:#0a1628">PSC S201</p><p style="font-size:12px;color:#6b7280;margin-top:4px">Custodial &amp; Janitorial</p></div>
+    <div style="background:#f8fafc;border:0.5px solid #eaecf0;border-radius:6px;padding:14px 16px"><p style="font-size:13px;font-weight:700;color:#0a1628">PSC 7930</p><p style="font-size:12px;color:#6b7280;margin-top:4px">Cleaning &amp; Polishing Compounds</p></div>
+    <div style="background:#f8fafc;border:0.5px solid #eaecf0;border-radius:6px;padding:14px 16px"><p style="font-size:13px;font-weight:700;color:#0a1628">PSC 7920</p><p style="font-size:12px;color:#6b7280;margin-top:4px">Cleaning Devices</p></div>
+    <div style="background:#f8fafc;border:0.5px solid #eaecf0;border-radius:6px;padding:14px 16px"><p style="font-size:13px;font-weight:700;color:#0a1628">CSI 01 74 16</p><p style="font-size:12px;color:#6b7280;margin-top:4px">Final Cleaning</p></div>
+    <div style="background:#f8fafc;border:0.5px solid #eaecf0;border-radius:6px;padding:14px 16px"><p style="font-size:13px;font-weight:700;color:#0a1628">CSI 01 74 23</p><p style="font-size:12px;color:#6b7280;margin-top:4px">Final Cleaning</p></div>
+  </div>
+
+  <h2 class="sec-h" style="font-size:22px;margin-bottom:24px">Legal entity information</h2>
+  <div style="background:#f8fafc;border:0.5px solid #eaecf0;border-radius:8px;overflow:hidden">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))">
+      <div style="padding:16px 20px;border-right:0.5px solid #eaecf0;border-bottom:0.5px solid #eaecf0"><p style="font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#9ca3af;margin-bottom:6px">Legal name</p><p style="font-size:14px;font-weight:700;color:#0a1628">Right Lane Cleaning Solutions LLC</p></div>
+      <div style="padding:16px 20px;border-right:0.5px solid #eaecf0;border-bottom:0.5px solid #eaecf0"><p style="font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#9ca3af;margin-bottom:6px">EIN</p><p style="font-size:14px;font-weight:700;color:#0a1628">92-2216575</p></div>
+      <div style="padding:16px 20px;border-bottom:0.5px solid #eaecf0"><p style="font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#9ca3af;margin-bottom:6px">Service area</p><p style="font-size:14px;font-weight:700;color:#0a1628">Houston-Galveston Corridor &amp; Greater Texas</p></div>
+      <div style="padding:16px 20px;border-right:0.5px solid #eaecf0"><p style="font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#9ca3af;margin-bottom:6px">Business type</p><p style="font-size:14px;font-weight:700;color:#0a1628">Single-member LLC</p></div>
+      <div style="padding:16px 20px;border-right:0.5px solid #eaecf0"><p style="font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#9ca3af;margin-bottom:6px">Founded</p><p style="font-size:14px;font-weight:700;color:#0a1628">2022</p></div>
+      <div style="padding:16px 20px"><p style="font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#9ca3af;margin-bottom:6px">HQ</p><p style="font-size:14px;font-weight:700;color:#0a1628">La Marque, TX 77568</p></div>
+    </div>
+  </div>
+</div>
+</div>
+</div><!-- end certifications -->
+
+
+<!-- ══════════════════════════════════════════════
+     PAGE: ABOUT
+══════════════════════════════════════════════ -->
+<div id="page-about" class="page">
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <p class="page-hero-eye">About Right Lane</p>
+    <h1 class="page-hero-h">Veteran-Led. Community-Centered.<br>Built here.</h1>
+    <p class="page-hero-sub">Right Lane is a service-disabled veteran-owned facility services contractor based in La Marque, Texas &mdash; in the heart of the Houston Spaceport corridor. Founded on military discipline. Built for the most demanding environments on earth.</p>
+  </div>
+</div>
+<div class="section">
+<div class="section-inner">
+  <div class="two-col" style="margin-bottom:72px;align-items:center">
+    <div>
+      <div class="img-ph" style="height:360px"><div class="img-ph-icon">🇺🇸</div><span>Right Lane team &mdash; La Marque, TX</span><span style="font-size:10px;opacity:.6">Replace with team photography</span></div>
+    </div>
+    <div>
+      <p class="sec-eye">The story</p>
+      <h2 class="sec-h">Not a cleaning company. A professional contractor.</h2>
+      <p style="font-size:14px;color:#6b7280;line-height:1.85;margin-bottom:20px">Right Lane was founded by a U.S. service-disabled veteran with one conviction: the discipline that defines military service &mdash; zero tolerance for error, documented accountability on every action, chain of command on every decision &mdash; is exactly the discipline that facility services requires at the highest level.</p>
+      <p style="font-size:14px;color:#6b7280;line-height:1.85;margin-bottom:20px">Most cleaning companies are built to do the minimum required. Right Lane was built to operate at the standard the most demanding environments on earth demand &mdash; aerospace manufacturing, data centers, medical facilities &mdash; and apply that standard to every account, regardless of what environment it is.</p>
+      <p style="font-size:14px;color:#6b7280;line-height:1.85">That philosophy became the Condition Zero Protocol&trade;. That protocol is what separates Right Lane from every other facility services company in the Houston corridor.</p>
+    </div>
+  </div>
+
+  <div class="divider" style="margin-bottom:72px"></div>
+
+  <div class="two-col" style="margin-bottom:72px">
+    <div>
+      <p class="sec-eye">The mission</p>
+      <h2 class="sec-h" style="font-size:26px">Veteran-Led. Community-Centered. Protocol-Driven.</h2>
+      <p style="font-size:14px;color:#6b7280;line-height:1.85;margin-bottom:20px"><strong style="color:#0a1628">Veteran-Led</strong> means the company operates with military discipline and accountability. Every protocol is written. Every action is documented. Every standard is enforced.</p>
+      <p style="font-size:14px;color:#6b7280;line-height:1.85;margin-bottom:20px"><strong style="color:#0a1628">Community-Centered</strong> means Right Lane is invested in the Houston-Galveston corridor &mdash; not a national company managing a territory from somewhere else. The decision-maker is 25 minutes from your facility. Local hiring. Local investment. Local accountability.</p>
+      <p style="font-size:14px;color:#6b7280;line-height:1.85"><strong style="color:#0a1628">Protocol-Driven</strong> means every service Right Lane delivers is governed by a written standard. Not a preference. Not a habit. A protocol &mdash; documented, enforced, and auditable.</p>
+    </div>
+    <div>
+      <p class="sec-eye">The service area</p>
+      <h2 class="sec-h" style="font-size:26px">Houston-Galveston corridor &amp; Greater Texas</h2>
+      <div style="background:#f8fafc;border:0.5px solid #eaecf0;border-radius:8px;padding:24px;margin-top:16px">
+        <p style="font-size:13px;color:#6b7280;line-height:1.8;margin-bottom:16px">Right Lane is headquartered in La Marque, TX &mdash; positioned between the Houston Spaceport, UTMB League City, Port Houston, Texas City, and Clear Lake. Aerospace, medical, government, and maritime all within 30 minutes.</p>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:#374151;font-weight:500"><span>📍</span>La Marque, TX (HQ)</div>
+          <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:#374151;font-weight:500"><span>🚀</span>Houston Spaceport / Ellington Field corridor</div>
+          <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:#374151;font-weight:500"><span>🏥</span>League City / Clear Lake medical corridor</div>
+          <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:#374151;font-weight:500"><span>⚓</span>Port Houston / Galveston County</div>
+          <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:#374151;font-weight:500"><span>🌆</span>Greater Houston metro</div>
+          <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:#374151;font-weight:500"><span>🗺️</span>Greater Texas corridor on request</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<div class="cta-section"><div class="cta-inner"><div class="cta-l"><h2>Start the conversation.</h2><p>Every Right Lane relationship starts with a walk-through.</p></div><div class="cta-r"><div class="cta-ph">409-941-3058</div><button class="btn-p" onclick="openModal()">Schedule a Walk-Through</button></div></div></div>
+</div><!-- end about -->
+
+
+<!-- ══════════════════════════════════════════════
+     FOOTER (shown on all pages)
+══════════════════════════════════════════════ -->
+
+<!-- ══════════════════════════════════════════════
+     PAGE: CAREERS
+══════════════════════════════════════════════ -->
+<div id="page-careers" class="page">
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <p class="page-hero-eye">Join the team</p>
+    <h1 class="page-hero-h">We&rsquo;re not hiring cleaners.<br>We&rsquo;re building technicians.</h1>
+    <p class="page-hero-sub">Right Lane is a veteran-led facility services contractor operating to aerospace-grade contamination control standards. If you hold yourself to a higher standard — we want to talk.</p>
+  </div>
+</div>
+
+<div class="proof" style="background:#fff">
+  <span class="proof-lbl">What we require</span>
+  <div class="proof-items">
+    <span class="pi"><span class="pi-dot"></span>OSHA 10 certified (or willing to complete)</span>
+    <span class="pi"><span class="pi-dot"></span>Background check — all applicants</span>
+    <span class="pi"><span class="pi-dot"></span>Reliable transportation</span>
+    <span class="pi"><span class="pi-dot"></span>Attention to protocol and detail</span>
+  </div>
+</div>
+
+<div class="section">
+<div class="section-inner">
+  <div class="two-col" style="align-items:start;margin-bottom:64px">
+    <div>
+      <p class="sec-eye">Who we are looking for</p>
+      <h2 class="sec-h">The Right Lane standard starts with the right people</h2>
+      <p style="font-size:14px;color:#6b7280;line-height:1.85;margin-bottom:20px">Right Lane operates in aerospace facilities, data centers, medical buildouts, and government buildings. The environments we serve demand technicians &mdash; people who follow written protocols, document their work, and take pride in doing the job exactly right every single time.</p>
+      <p style="font-size:14px;color:#6b7280;line-height:1.85;margin-bottom:20px">If you have experience in technical, industrial, or government facility environments &mdash; or if you are disciplined, trainable, and take your work seriously &mdash; Right Lane is building a team that reflects those values.</p>
+      <p style="font-size:14px;color:#6b7280;line-height:1.85;margin-bottom:28px"><strong style="color:#0a1628">Veterans are strongly encouraged to apply.</strong> The discipline and accountability that define military service are exactly the qualities Right Lane is built on.</p>
+      <div style="background:#eff6ff;border:0.5px solid #bfdbfe;border-radius:8px;padding:20px">
+        <p style="font-size:13px;font-weight:700;color:#1d4ed8;margin-bottom:8px">Veteran-led company</p>
+        <p style="font-size:13px;color:#374151;line-height:1.7">Right Lane was founded by a U.S. service-disabled veteran. We understand military transition and actively support veteran employment. Your service is an asset here &mdash; not just a line on a resume.</p>
+      </div>
+    </div>
+    <div>
+      <div class="img-ph" style="height:320px;margin-bottom:20px">
+        <div class="img-ph-icon">👷</div>
+        <span>Right Lane field technician</span>
+        <span style="font-size:10px;opacity:.6">Replace with team photography</span>
+      </div>
+      <div style="background:#f8fafc;border:0.5px solid #eaecf0;border-radius:8px;padding:20px">
+        <p style="font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#374151;margin-bottom:14px">What Right Lane provides</p>
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <div style="display:flex;align-items:flex-start;gap:10px">
+            <span style="color:#2563eb;font-weight:700;flex-shrink:0">&mdash;</span>
+            <p style="font-size:13px;color:#374151;line-height:1.6"><strong>OSHA 10 training</strong> &mdash; Right Lane will sponsor OSHA 10 certification for qualified candidates who do not yet hold it</p>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:10px">
+            <span style="color:#2563eb;font-weight:700;flex-shrink:0">&mdash;</span>
+            <p style="font-size:13px;color:#374151;line-height:1.6"><strong>Written SOPs</strong> &mdash; every account comes with a written protocol so you always know exactly what is expected</p>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:10px">
+            <span style="color:#2563eb;font-weight:700;flex-shrink:0">&mdash;</span>
+            <p style="font-size:13px;color:#374151;line-height:1.6"><strong>Technical environment training</strong> &mdash; aerospace, data center, and medical facility protocols taught before your first account</p>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:10px">
+            <span style="color:#2563eb;font-weight:700;flex-shrink:0">&mdash;</span>
+            <p style="font-size:13px;color:#374151;line-height:1.6"><strong>Professional equipment</strong> &mdash; HEPA-filtered vacuums, color-coded microfiber systems, and environment-specific supplies provided</p>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:10px">
+            <span style="color:#2563eb;font-weight:700;flex-shrink:0">&mdash;</span>
+            <p style="font-size:13px;color:#374151;line-height:1.6"><strong>Growth opportunity</strong> &mdash; Right Lane is expanding. Early team members grow with the company</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider" style="margin-bottom:56px"></div>
+
+  <p class="sec-eye" style="text-align:center">What we look for</p>
+  <h2 class="sec-h" style="text-align:center;margin-bottom:32px">The qualities that define a Right Lane technician</h2>
+  <div class="auto-col-sm" style="margin-bottom:64px">
+    <div class="std-card">
+      <div class="std-ic">🛡️</div>
+      <p class="std-n">OSHA 10 certified</p>
+      <p class="std-d">Required before your first client site. Right Lane will sponsor certification for the right candidate.</p>
+    </div>
+    <div class="std-card">
+      <div class="std-ic">📋</div>
+      <p class="std-n">Protocol-driven mindset</p>
+      <p class="std-d">You follow written procedures exactly. You document your work. You do not cut corners.</p>
+    </div>
+    <div class="std-card">
+      <div class="std-ic">🪪</div>
+      <p class="std-n">Background check ready</p>
+      <p class="std-d">Criminal, identity, and employment verification required on all applicants before hire.</p>
+    </div>
+    <div class="std-card">
+      <div class="std-ic">⏰</div>
+      <p class="std-n">Reliable and accountable</p>
+      <p class="std-d">You show up on time, every time. Our clients depend on it. So does your team.</p>
+    </div>
+    <div class="std-card">
+      <div class="std-ic">🎖️</div>
+      <p class="std-n">Veterans encouraged</p>
+      <p class="std-d">Military service demonstrates exactly the discipline Right Lane is built on. Your experience is valued here.</p>
+    </div>
+    <div class="std-card">
+      <div class="std-ic">📈</div>
+      <p class="std-n">Growth-oriented</p>
+      <p class="std-d">Right Lane is building something. Team members who grow their skills grow with the company.</p>
+    </div>
+  </div>
+
+  <div class="divider" style="margin-bottom:56px"></div>
+
+  <!-- APPLICATION FORM -->
+  <div class="two-col" style="align-items:start">
+    <div>
+      <p class="sec-eye">Current openings</p>
+      <h2 class="sec-h" style="font-size:26px">We are always looking for qualified technicians</h2>
+      <p style="font-size:14px;color:#6b7280;line-height:1.85;margin-bottom:20px">Right Lane does not post and close positions on a rolling basis. If you meet the standard &mdash; OSHA certified, background check ready, and serious about technical facility work &mdash; we want your application on file.</p>
+      <p style="font-size:14px;color:#6b7280;line-height:1.85;margin-bottom:20px">As Right Lane grows into aerospace, data center, and government accounts, qualified technicians will be the first called. Getting your application in now puts you ahead of that curve.</p>
+      <div style="background:#f8fafc;border:0.5px solid #eaecf0;border-radius:8px;padding:20px;margin-top:8px">
+        <p style="font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#374151;margin-bottom:12px">Preferred experience</p>
+        <ul class="svc-list" style="gap:8px">
+          <li>Industrial, technical, or government facility cleaning</li>
+          <li>Medical or sterile environment experience</li>
+          <li>Construction site or post-construction cleanup</li>
+          <li>Military service &mdash; any branch</li>
+          <li>OSHA 10 or 30 certification already held</li>
+          <li>Experience with documented SOP-based work</li>
+        </ul>
+      </div>
+    </div>
+    <div>
+      <div style="background:#f8fafc;border:0.5px solid #eaecf0;border-radius:8px;padding:28px">
+        <h3 style="font-size:18px;font-weight:700;color:#0a1628;margin-bottom:6px">Apply now</h3>
+        <p style="font-size:13px;color:#6b7280;margin-bottom:24px">Submit your information and we will be in touch when the right opportunity opens.</p>
+        <div class="form-group">
+          <label class="form-label">Full name</label>
+          <input type="text" class="form-input" placeholder="Your full name">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Phone</label>
+          <input type="tel" class="form-input" placeholder="Your phone number">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Email</label>
+          <input type="email" class="form-input" placeholder="your@email.com">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Are you a veteran?</label>
+          <select class="form-select">
+            <option value="">Select one</option>
+            <option>Yes &mdash; U.S. military veteran</option>
+            <option>Yes &mdash; currently serving / reserve</option>
+            <option>No</option>
+            <option>Prefer not to say</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Do you hold OSHA 10 or 30?</label>
+          <select class="form-select">
+            <option value="">Select one</option>
+            <option>Yes &mdash; OSHA 10</option>
+            <option>Yes &mdash; OSHA 30</option>
+            <option>Both OSHA 10 and 30</option>
+            <option>No &mdash; willing to complete</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Relevant experience</label>
+          <textarea class="form-input" style="min-height:100px" placeholder="Briefly describe your facility services or related experience..."></textarea>
+        </div>
+        <button class="form-submit" onclick="submitCareerForm()">Submit Application</button>
+        <div class="success-msg" id="career-success" style="display:none">
+          &#10003; Application received. Right Lane will be in touch.<br>
+          <span style="font-weight:400;font-size:13px">Questions? Call 409-941-3058</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="cta-section">
+  <div class="cta-inner">
+    <div class="cta-l">
+      <h2>Questions about working at Right Lane?</h2>
+      <p>Call us directly or send an email. We respond within one business day.</p>
+    </div>
+    <div class="cta-r">
+      <div class="cta-ph">409-941-3058</div>
+      <a href="mailto:sales@rightlanecleaning.com" style="text-decoration:none"><button class="btn-p">Email Us</button></a>
+    </div>
+  </div>
+</div>
+</div><!-- end careers -->
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <p class="footer-logo-n">Right Lane</p>
+        <p class="footer-logo-s">Facility Solutions</p>
+        <p class="footer-tagline">Veteran-Led. Community-Centered. Protocol-Driven.<br>The Aerospace Standard &mdash; Applied Everywhere.</p>
+        <div style="display:flex;flex-direction:column;gap:6px">
+          <p style="font-size:12px;color:rgba(255,255,255,.5)">📞 409-941-3058</p>
+          <p style="font-size:12px;color:rgba(255,255,255,.5)">✉️ sales@rightlanecleaning.com</p>
+          <p style="font-size:12px;color:rgba(255,255,255,.5)">📍 La Marque, TX 77568</p>
+        </div>
+      </div>
+      <div>
+        <p class="footer-col-title">Pages</p>
+        <span class="footer-link" onclick="showPage('markets')">Markets</span>
+        <span class="footer-link" onclick="showPage('services')">Services</span>
+        <span class="footer-link" onclick="showPage('conditionzero')">Condition Zero Protocol&trade;</span>
+        <span class="footer-link" onclick="showPage('standards')">Workforce Standards</span>
+        <span class="footer-link" onclick="showPage('certifications')">Certifications</span>
+        <span class="footer-link" onclick="showPage('about')">About</span>
+      </div>
+      <div>
+        <p class="footer-col-title">Certifications</p>
+        <span class="footer-link">VetHUB #19222165755</span>
+        <span class="footer-link">SAM.gov &middot; UEI S77MQ2244263</span>
+        <span class="footer-link">CAGE 1AWA5</span>
+        <span class="footer-link">SDVOSB Pending</span>
+        <span class="footer-link">8(a) In Process</span>
+        <span class="footer-link">OSHA 10/30 Certified</span>
+      </div>
+      <div>
+        <p class="footer-col-title">Get in touch</p>
+        <p style="font-size:13px;color:rgba(255,255,255,.4);line-height:1.7;margin-bottom:16px">Every relationship starts with a walk-through. Free site assessment. No obligation.</p>
+        <button class="btn-p" onclick="openModal()" style="width:100%">Schedule a Walk-Through</button>
+        <div style="margin-top:16px">
+          <p class="footer-col-title" style="margin-bottom:8px">NAICS codes</p>
+          <p style="font-size:12px;color:rgba(255,255,255,.35);line-height:1.8">561720 &middot; 423850 &middot; 561790</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-divider"></div>
+    <div class="footer-bottom">
+      <span class="footer-copy">&copy; 2026 Right Lane Cleaning Solutions LLC &middot; La Marque, TX &middot; All rights reserved</span>
+      <div class="footer-codes">
+        <span class="footer-code">VetHUB #19222165755</span>
+        <span class="footer-code">CAGE 1AWA5</span>
+        <span class="footer-code">EIN 92-2216575</span>
+        <span class="footer-code">NAICS 561720</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ══════════════════════════════════════════════
+     MODAL: SCHEDULE WALK-THROUGH
+══════════════════════════════════════════════ -->
+<div class="modal-overlay" id="modal" onclick="closeModalOutside(event)">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()">&times;</button>
+    <p style="font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#2563eb;font-weight:700;margin-bottom:6px">Right Lane Facility Solutions</p>
+    <h2 class="modal-title">Schedule a Walk-Through</h2>
+    <p class="modal-sub">Free site assessment. Site-specific proposal. OSHA-certified crews. No obligation.</p>
+    <div class="form-group">
+      <label class="form-label">Full name</label>
+      <input type="text" class="form-input" id="f-name" placeholder="Your name">
+    </div>
+    <div class="form-group">
+      <label class="form-label">Organization</label>
+      <input type="text" class="form-input" id="f-org" placeholder="Company or agency name">
+    </div>
+    <div class="form-group">
+      <label class="form-label">Phone</label>
+      <input type="tel" class="form-input" id="f-phone" placeholder="Your phone number">
+    </div>
+    <div class="form-group">
+      <label class="form-label">Email</label>
+      <input type="email" class="form-input" id="f-email" placeholder="your@email.com">
+    </div>
+    <div class="form-group">
+      <label class="form-label">Facility type</label>
+      <select class="form-select" id="f-type">
+        <option value="">Select environment type</option>
+        <option>Aerospace &amp; defense</option>
+        <option>Data center</option>
+        <option>Medical &amp; hospital</option>
+        <option>Government &amp; federal</option>
+        <option>School district</option>
+        <option>General contractor &mdash; post-construction</option>
+        <option>Supply management inquiry</option>
+        <option>Other</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Message (optional)</label>
+      <textarea class="form-input" id="f-msg" placeholder="Tell us about your facility and what you need..."></textarea>
+    </div>
+    <button class="form-submit" onclick="submitForm()">Submit Walk-Through Request</button>
+    <div class="success-msg" id="success-msg">
+      ✓ Request received. Right Lane will be in touch within one business day.<br>
+      <span style="font-weight:400;font-size:13px">Questions? Call 409-941-3058 or email sales@rightlanecleaning.com</span>
+    </div>
+    <p style="font-size:11px;color:#9ca3af;margin-top:16px;text-align:center">Or call us directly: <strong style="color:#0a1628">409-941-3058</strong></p>
+  </div>
+</div>
+
+<script>
+function showPage(id) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.getElementById('page-' + id).classList.add('active');
+  document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+  // Highlight active nav link
+  document.querySelectorAll('.nav-link').forEach(l => {
+    if (l.getAttribute('onclick') && l.getAttribute('onclick').includes("'" + id + "'")) {
+      l.classList.add('active');
+    }
+  });
+  window.scrollTo({top: 0, behavior: 'smooth'});
+}
+
+// Set home as active on load
+window.addEventListener('DOMContentLoaded', function() {
+  document.querySelector('.nav-link[onclick*="home"]').classList.add('active');
+});
+
+function openModal() {
+  document.getElementById('modal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+  document.getElementById('modal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function closeModalOutside(e) {
+  if (e.target === document.getElementById('modal')) closeModal();
+}
+
+function submitForm() {
+  const name = document.getElementById('f-name').value;
+  const email = document.getElementById('f-email').value;
+  if (!name || !email) {
+    alert('Please enter your name and email to continue.');
+    return;
+  }
+  document.getElementById('success-msg').style.display = 'block';
+  document.querySelector('.form-submit').style.display = 'none';
+}
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeModal();
+});
+
+function submitCareerForm() {
+  document.getElementById('career-success').style.display = 'block';
+  document.querySelector('#page-careers .form-submit').style.display = 'none';
+}
+</script>
 </body>
 </html>
