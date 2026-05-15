@@ -21,10 +21,13 @@ jobs:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
         run: |
-          CHANGED_SITES=$(git diff --name-only HEAD~1 HEAD \
-            | grep '/' \
-            | cut -d'/' -f1 \
-            | sort -u)
+          # Detect changed site folders
+          if git rev-parse HEAD~1 >/dev/null 2>&1; then
+            CHANGED_SITES=$(git diff --name-only HEAD~1 HEAD \
+              | grep '/' | cut -d'/' -f1 | grep -v '^\.github$' | sort -u)
+          else
+            CHANGED_SITES=$(git ls-files | grep '/' | cut -d'/' -f1 | grep -v '^\.github$' | sort -u)
+          fi
 
           if [ -z "$CHANGED_SITES" ]; then
             echo "No site folders changed — nothing to deploy"
@@ -38,10 +41,14 @@ jobs:
               echo "Skipping $SITE_ID — not a directory"
               continue
             fi
-            echo "Deploying $SITE_ID..."
+
+            # CF Pages project names must be lowercase
+            PROJECT_NAME=$(echo "$SITE_ID" | tr '[:upper:]' '[:lower:]')
+            echo "Deploying $SITE_ID as project: $PROJECT_NAME"
+
             wrangler pages deploy "$SITE_ID" \
-              --project-name="$SITE_ID" \
+              --project-name="$PROJECT_NAME" \
               --branch=main \
               --commit-dirty=true \
-              || echo "Warning: deploy failed for $SITE_ID"
+              || echo "Warning: deploy failed for $SITE_ID (project $PROJECT_NAME)"
           done
