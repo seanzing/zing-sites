@@ -1,12 +1,12 @@
 {
   "slug": "castlerocknutrition",
   "sourceUrl": "https://www.castlerocknutrition.com/",
-  "crawledAt": "2026-04-27T20:43:55.473Z",
+  "crawledAt": "2026-05-15T16:21:00.316Z",
   "approach": "playwright-duda-v2",
   "pagesWritten": 23,
   "assetsDownloaded": 174,
-  "assetsMapped": 412,
-  "durationMs": 39261,
+  "assetsMapped": 413,
+  "durationMs": 42786,
   "errors": [],
   "navSlugs": [
     "castlerocknutrition",
